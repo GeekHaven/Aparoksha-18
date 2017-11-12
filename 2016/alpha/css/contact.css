@@ -1,0 +1,415 @@
+.contacts{
+	position: absolute;
+	width: 100%;
+	height: 90%;
+	min-height: 600px;
+	top: 10%;
+	left: 0;
+}
+
+.contacts ul.contact-list{
+	position: relative;
+	display: block;
+	list-style: none;
+	width: 80%;
+	margin: 0 auto;
+	height: 100%;
+}
+
+h1.section-title{
+	display:block;
+	width: 100%;
+	height: 50px; 
+	color: white;
+	font-size: 40px;
+	text-align: center;
+	font-family: 'Intro';
+}
+
+.contacts ul.contact-list li.group{
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	height: calc(100% - 50px);
+	text-align: center;
+	transition: visibility 0.1s,opacity 2s;
+}
+
+.contacts ul.contact-list li.group.on{
+	visibility: visible;
+	opacity: 1;
+}
+
+li.group div.contact-card{
+	display: inline-block;
+	width: 320px;
+	height: 84%;
+	margin: 2% 0%;
+	transition: margin 0.5s;
+}
+
+li.group div.contact-card:first-child{
+	margin-right: 40px;
+}
+
+li.group div.contact-card:last-child{
+	margin-left: 40px;
+}
+
+li.group .contact-card span{
+	display: block;
+	margin: 0px auto 10px auto;
+	width: 100%;
+}
+
+li.group .contact-card .contact-pic{
+	position: relative;
+	width: 74%;
+	height: 70%;
+	margin: 10px auto 10px auto;
+}
+
+li.group .contact-card .contact-pic img {
+	position: relative;
+	display: block;
+	height: 100%;
+	/*z-index required for solidTIles*/
+	z-index: 9;
+	width: 100%;
+}
+
+li.group .contact-card .contact-details{
+	font-family: "Intro";
+	font-size: 18px;
+	font-weight: bold;
+	color: white;
+}
+
+
+div.contacts span.group-control{
+	position: absolute;
+	top: 50%;
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	z-index: 3;
+}
+
+div.contacts .group-control.prev{
+	left: 10px;
+	background: url("../images/Contact/leftarrow.png") center left no-repeat;
+	background-size: auto 50px;
+}
+
+div.contacts .group-control.next{
+	left:calc( 100% - 162px);
+	background: url("../images/Contact/rightarrow.png") center right no-repeat;
+	background-size: auto 50px;
+}
+
+div.contacts span.group-control p{
+	position: absolute;
+	top: 0px;
+	width: 100px;
+	height: 100%;
+	font-family: "Intro";
+	font-size: 12px;
+	color: white;
+	text-align: center;
+}
+
+div.contacts span.group-control.prev p{
+	left: 50px;
+}
+
+div.contacts span.group-control.next p{
+	left: 0px;
+}
+
+@media(max-width: 1100px){
+	li.group div.contact-card:first-child{
+		margin-right: 20px;
+	}
+
+	li.group div.contact-card:last-child{
+		margin-left: 20px;
+	}
+}
+
+@media (min-width: 800px) and (max-width: 1000px){
+
+	li.group div.contact-card{
+		width: 270px;
+	}
+
+	li.group div.contact-card:first-child{
+		margin-right: 10px;
+	}
+
+	li.group div.contact-card:last-child{
+		margin-left: 10px;
+	}
+
+	li.group .contact-card .contact-pic img {
+		height: 90%;
+	}
+
+	div.contacts span.group-control{
+		width: 100px;
+		height: 30px;
+	}
+
+	div.contacts .group-control.prev{
+		left: 10px;
+		background: url("../images/Contact/leftarrow.png") center left no-repeat;
+		background-size: auto 30px;
+	}
+
+	div.contacts .group-control.next{
+		left:calc( 100% - 112px);
+		background: url("../images/Contact/rightarrow.png") center right no-repeat;
+		background-size: auto 30px;
+	}
+
+	div.contacts span.group-control p{
+		font-size: 10px;
+		width: 70px;
+	}
+
+	div.contacts .group-control.prev p{
+		left: 30px;
+	}
+
+}
+
+@media (min-width: 525px) and (max-width: 799px){
+	
+	h1.section-title{
+		height: 40px; 
+		font-size: 30px;
+	}
+
+	.contacts ul.contact-list li.group{
+		top: calc( 25% - 40px);
+		height: calc(100% - 40px);
+	}
+
+	li.group div.contact-card{
+		width: 200px;
+		height: 50%;
+	}
+
+	li.group .contact-card span{
+		margin: 0px auto 2px auto;
+	}
+
+	li.group .contact-card .contact-details{
+		font-size: 15px;
+	}
+
+	li.group div.contact-card:first-child{
+		margin-right: 0px;
+		margin-bottom: 20px;
+	}
+
+	li.group div.contact-card:last-child{
+		margin-left: 0px;
+	}
+
+	div.contacts span.group-control{
+		width: 100px;
+		height: 30px;
+	}
+
+	div.contacts .group-control.prev{
+		left: 10px;
+		background: url("../images/Contact/leftarrow.png") center left no-repeat;
+		background-size: auto 30px;
+	}
+
+	div.contacts .group-control.next{
+		left:calc( 100% - 112px);
+		background: url("../images/Contact/rightarrow.png") center right no-repeat;
+		background-size: auto 30px;
+	}
+
+	div.contacts span.group-control p{
+		font-size: 9px;
+		width: 70px;
+	}
+
+	div.contacts span.group-control.prev p{
+		left: 20px;
+	}
+}
+
+@media (max-width: 524px){
+
+	.contacts{
+		top: 2.5%;
+		height: 95%;
+	}
+
+	h1.section-title{
+		height: 30px; 
+		font-size: 20px;
+	}
+
+	.contacts ul.contact-list li.group{
+		top: 30px;
+		height: calc(100% - 30px);
+		text-align: center;
+	}
+
+	li.group div.contact-card{
+		min-width: 160px;
+		max-width: 240px;
+		height: 45%;
+		margin: 10px auto;
+	}
+
+	li.group div.contact-card:first-child{
+		margin-right: 0px;
+	}
+
+	li.group div.contact-card:last-child{
+		margin-left: 0px;
+	}
+
+	li.group .contact-card span{
+		margin: 0px auto 5px auto;
+	}
+
+	li.group .contact-card .contact-pic{
+		width: 74%;
+		height: 70%;
+		margin: 10px auto 10px auto;
+	}
+
+	li.group .contact-card .contact-pic img {
+		height: 100%;
+		width: 90%;
+	}
+
+	li.group .contact-card .contact-details{
+		font-size: 12px;
+	}
+
+	div.contacts span.group-control{
+		width: 30px;
+		height: 30px;
+	}
+
+	div.contacts .group-control.prev{
+		left: 10px;
+		background: url("../images/Contact/leftarrow.png") center left no-repeat;
+		background-size: auto 30px;
+	}
+
+	div.contacts .group-control.next{
+		left:calc( 100% - 42px);
+		background: url("../images/Contact/rightarrow.png") center right no-repeat;
+		background-size: auto 30px;
+	}
+
+	div.contacts span.group-control p{
+		display: none;
+	}
+}
+
+@media (min-device-width: 320px) and (max-device-width: 480px)  and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
+	.contacts{
+		top: 2.5%;
+		height: 95%;
+	}
+
+	h1.section-title{
+		height: 30px; 
+		font-size: 20px;
+	}
+
+	.contacts ul.contact-list li.group{
+		top: 30px;
+		height: calc(100% - 30px);
+		text-align: center;
+	}
+
+	li.group div.contact-card{
+		width: 160px;
+		height: 40%;
+		margin: 10px auto;
+	}
+
+	li.group div.contact-card:first-child{
+		margin-right: 0px;
+	}
+
+	li.group div.contact-card:last-child{
+		margin-left: 0px;
+	}
+
+	li.group .contact-card span{
+		margin: 0px auto 5px auto;
+	}
+
+	li.group .contact-card .contact-pic{
+		width: 74%;
+		height: 70%;
+		margin: 10px auto 10px auto;
+	}
+
+	li.group .contact-card .contact-pic img {
+		height: 100%;
+		z-index: 9;
+		width: 100%;
+	}
+
+	li.group .contact-card .contact-details{
+		font-size: 12px;
+	}
+
+	div.contacts span.group-control{
+		width: 30px;
+		height: 30px;
+	}
+
+	div.contacts .group-control.prev{
+		left: 10px;
+		background: url("../images/Contact/leftarrow.png") center left no-repeat;
+		background-size: auto 30px;
+	}
+
+	div.contacts .group-control.next{
+		left:calc( 100% - 42px);
+		background: url("../images/Contact/rightarrow.png") center right no-repeat;
+		background-size: auto 30px;
+	}
+
+	div.contacts span.group-control p{
+		display: none;
+	}
+}
+
+@media (min-device-width: 320px) and (max-device-width: 480px)  and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 3){
+	li.group div.contact-card{
+		width: 220px;
+		height: 47%;
+		margin: 15px auto;
+	}
+}
+
+@media (max-height: 481px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2){
+	
+	li.group div.contact-card{
+		width: 130px;
+		height: 30%;
+		margin: 10px auto;
+	}
+
+	li.group .contact-card .contact-details{
+		font-size: 10px;
+	}
+}

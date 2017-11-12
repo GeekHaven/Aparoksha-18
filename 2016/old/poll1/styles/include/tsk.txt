@@ -1,0 +1,16 @@
+-header // x
+
+-panel x
+
+-footer 
+
+-javascript to display slideshow  /x/
+
+-border to separate tshirt // d
+
+-place my order //
+
+-image light box fix
+	-image size./x/
+
+	

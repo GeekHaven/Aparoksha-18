@@ -1,0 +1,9 @@
+{      
+      success : 1, no_updates : 4 ,
+	updates : {
+         "update1" : "Registration for workshops have started" , 
+	 "update2"  : "Register for workshop on Android App Development, Data Analysis, Augmented Reality, Robotics and Cisco Networking" ,
+ 	   "update3" : "For more details, visit http://aparoksha.iiita.ac.in/workshops"  ,
+	 
+      }
+}

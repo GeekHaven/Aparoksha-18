@@ -1,0 +1,38 @@
+.events {
+top: 14%;
+right: 4%;
+position: absolute;
+}
+
+ul.event_list{
+list-style:none;
+}
+
+ul.event_list li{
+background-color: #4BC67F;
+background: -moz-radial-gradient(center, ellipse cover, white 0%, #4BC67F  100%);
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, white), color-stop(100%, #4BC67F ));
+background: -webkit-radial-gradient(center, ellipse cover, white 0%, #4BC67F  100%);
+background: -o-radial-gradient(center, ellipse cover, white 0%, #4BC67F  100%);
+background: -ms-radial-gradient(center, ellipse cover, white 0%, #4BC67F  100%);
+background: radial-gradient(ellipse at center, white 0%, #4BC67F  100%);
+width: 75px;
+height: 75px;
+border-radius: 50%;
+margin-bottom: 2em;
+cursor:pointer;
+text-align:center;
+}
+
+ul.event_list li span{
+position:relative;
+top:1.9em;
+color:rgb(22, 80, 14);
+font-size:1.535em;
+font-weight:500;
+
+}
+
+.event_id{
+display:none;
+}

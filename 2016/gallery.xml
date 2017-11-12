@@ -1,0 +1,52 @@
+<tiltviewergallery>
+	<photos>
+		<photo imageurl="images/Gallery/1.jpg">
+			<title>Image 1</title>
+		</photo>
+		<photo imageurl="images/Gallery/11.jpg">
+			<title>Image 2</title>
+		</photo>
+		<photo imageurl="images/Gallery/13.jpg" >
+			<title>Image 3</title>
+		</photo>
+		<photo imageurl="images/Gallery/17.jpg">
+			<title>Image 4</title>
+		</photo>
+		<photo imageurl="images/Gallery/18.jpg">
+			<title>Image 5</title>			
+		</photo>
+		<photo imageurl="images/Gallery/20.jpg">
+			<title>Image 6</title>			
+		</photo>
+		<photo imageurl="images/Gallery/4.jpg">
+			<title>Image 7</title>			
+		</photo>
+		<photo imageurl="images/Gallery/7.jpg">
+			<title>Image 8</title>			
+		</photo>
+		<photo imageurl="images/Gallery/15.jpg">
+			<title>Image 9</title>			
+		</photo>
+		<photo imageurl="images/Gallery/8.jpg">
+			<title>Image 10</title>			
+		</photo>
+		<photo imageurl="images/Gallery/16.jpg">
+			<title>Image 11</title>			
+		</photo>
+		<photo imageurl="images/Gallery/6.jpg">
+			<title>Image 12</title>			
+		</photo>
+		<photo imageurl="images/Gallery/5.jpg">
+			<title>Image 13</title>			
+		</photo>
+		<photo imageurl="images/Gallery/2.jpg">
+			<title>Image 14</title>			
+		</photo>	
+		<photo imageurl="images/Gallery/19.jpg">
+			<title>Image 15</title>			
+		</photo>
+		<photo imageurl="images/Gallery/3.jpg">
+			<title>Image 16</title>
+		</photo>								
+	</photos>
+</tiltviewergallery>

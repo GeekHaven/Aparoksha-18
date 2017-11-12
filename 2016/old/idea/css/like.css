@@ -1,0 +1,75 @@
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+
+.tab-tr a{ color: #000000; text-decoration: none;   }
+.tab-tr a img{ border: none;}
+.tab-tr a:hover{ text-decoration: underline;}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.wcd{width:33%; height:40px; float:left;}
+.wcd-logo{font-size: 36px; color: #fff;text-align: center; float:left; cursor: pointer;  color:#fff; font-size: 32px; font-family: 'Varela Round', sans-serif;
+-webkit-transition:color 0.3s ease-in;  -moz-transition:color 0.3s ease-in; x²-o-transition:color 0.3s ease-in; transition:color 0.3s ease-in;
+   }
+   .wcd-logo:hover{color:#3facff;}
+.wcd-tuto{ font-family: 'Varela Round', sans-serif; color: #fff; font-size: 16px; line-height: 36px;}
+.webcodo-top{width:100%; height:40px; background-color:#232323}
+.clear{clear: both;}
+
+ /********************************/
+
+.tab-cnt{height:auto; min-height: 400px; margin: 40px auto; padding: 20px;padding-bottom:5px ;background-color: #fafafa; border: #ccc 1px dotted; overflow: auto; font-style: 'Segoe UI', 'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;}
+.bg-green{ background-color: #559900;}
+.bg-red{background-color: #c9231a;}
+.tab-cnt h1{font-size: 22px; font-family: arial; margin-bottom: 15px;}
+.tab-tr{
+	width: 100%; height: 55px; 
+	border-bottom: #e6e6e6 1px solid; border-top: #e6e6e6 1px solid;
+	font-size:12px;	
+}
+.like-btn, .dislike-btn{
+	width: auto; height: 30px; padding: 0 15px 0 30px; 
+	float: left; margin-left: 10px; margin-top: 15px;
+	cursor: pointer; color: #333333; font-size: 13px; line-height: 30px;
+	border:#fff 1px solid;
+	-webkit-border-radius: 2px;-moz-border-radius: 2px;border-radius: 2px; /* border radius */
+}
+.like-btn{background: url(../images/like-ico.png) 5px 50% no-repeat; }
+.like-btn:hover, .like-h{
+	background: url(../images/like-ico-h.png) 5px 50% no-repeat; color: #0c6502;
+	background-color: #f0f0f0;	border: #c6c6c6 1px solid; 
+}
+.dislike-btn{background: url(../images/dislike-ico.png) 50% 50% no-repeat; }
+.dislike-btn:hover, .dislike-h{
+	background: url(../images/dislike-ico-h.png) 50% 50% no-repeat;
+	background-color: #f0f0f0;	border: #c6c6c6 1px solid; 
+}
+
+.stat-cnt{ 	width: 120px; height: 60px; float: right;}
+.stat-bar{	width: 120px; height: 3px;	margin-bottom: 5px;}
+.rate-count{ font-size: 20px; color: #333; text-align: right; font-weight: bold; }
+.stat-bar div{height: 3px; float: left;}
+.like-count{background: url(../images/like-ico2.png) 0% 50% no-repeat;}
+.dislike-count{background: url(../images/dislike-ico2.png) 0% 50% no-repeat; margin-left: 15px;}
+.like-count, .dislike-count{
+	width: auto; height: 18px; 
+	float: right; 
+	font-size: 12px; line-height: 18px; color: #666;
+	padding-left: 15px;
+}
+
+.share-btn{
+	height: 52px; display: inline-block; 
+	float: left;  font-size: 13px; line-height: 55px; 
+	padding: 0 10px; margin-left: 30px;
+	border-bottom: #fff 3px solid;
+	cursor: pointer; 
+}
+.share-btn:hover{ border-bottom: #009FDA 3px solid; }
+.share-cnt{
+	height: 30px; padding: 20px 10px 10px 10px;
+	border-bottom: #e6e6e6 1px solid; display: none;
+}

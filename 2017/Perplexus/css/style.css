@@ -1,0 +1,214 @@
+body {
+	background-color:#000000;
+	margin:15px;
+	color:#CCCCCC;
+	  overflow:hidden;
+	font-family:Arial, Helvetica, sans-serif;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f8ffe8+0,e3f5ab+33,b7df2d+100;Green+3D+%234 */
+ /* background: #fff65e; 
+background: -moz-radial-gradient(center, ellipse cover,  #fff65e 0%, #febf04 100%); 
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#fff65e), color-stop(100%,#febf04)); 
+background: -webkit-radial-gradient(center, ellipse cover,  #fff65e 0%,#febf04 100%); 
+background: -o-radial-gradient(center, ellipse cover,  #fff65e 0%,#febf04 100%); 
+background: -ms-radial-gradient(center, ellipse cover,  #fff65e 0%,#febf04 100%); 
+background: radial-gradient(ellipse at center,  #fff65e 0%,#febf04 100%); 
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff65e', endColorstr='#febf04',GradientType=1 ); */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fefcea+0,fefcea+40,f1da36+100;Gold+3D */
+/*background: #fefcea; */
+background: url(../images/bg.png);
+background-size: cover;
+/*background: -moz-radial-gradient(center, ellipse cover,  #fefcea 0%, #fefcea 40%, #f1da36 100%); 
+background: -webkit-radial-gradient(center, ellipse cover,  #fefcea 0%,#fefcea 40%,#f1da36 100%); 
+background: radial-gradient(ellipse at center,  #fefcea 0%,#fefcea 40%,#f1da36 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); */
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0.65+0,0+100;Neutral+Density */
+
+  transition: background-color 2s ease 1s;
+  -webkit-transition: background-color 2s ease 1s;
+	-moz-transition:background-color 2s ease 1s;
+  /*-webkit-filter:blur(5px);*/
+
+}
+.ferris {
+  position:relative;                   
+  margin-left: 8%;
+  margin-top: 4%;
+  width:30vw;
+  height:30vw;
+  position:relative;  
+  border-radius:50%;
+  /*border:4px solid #600;*/
+  border:4px solid grey;
+  visibility:hidden;
+  -webkit-filter:blur(5px);
+  filter:blur(5px);
+  -moz-filter:blur(5px);
+  -webkit-transition: all 2s ease 1s;
+  -moz-transition: all 2s ease 1s;
+  transition: all 2s ease 1s;
+
+}
+
+.pivot{
+  position:absolute;
+  width:1.5vw;
+  height:1.5vw;
+  /*background:#600;*/
+  background:grey;
+  
+  
+}
+
+.outer {
+  top:-15vw;
+  border-radius:50%;
+  background:black;
+}
+
+.basket {
+  position:absolute;
+  width:6.5vw;
+  height:5.25vw;
+  background:url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/basket.png);
+  background-size: cover;
+    left:-2.25vw;
+  top:0.75vw;
+  border-radius:6px;
+  -webkit-filter:brightness(0%);
+  -moz-filter:brightness(0%);
+  filter:brightness(0%);
+}
+
+.arm {
+  width:15vw;
+  height:0.45vw;
+  /*background:#600;*/
+  background:grey;
+  position:absolute;
+  left:0.75vw;
+  top:0.525vw;
+}
+#supportL{
+  width:15vw;
+  height:0.45vw;
+  background:#600;
+  position:relative;
+z-index: 999;
+    left:8.75vw;
+  top:12.825vw;
+  visibility: visible;
+
+}
+#supportR{
+  width:150vw;
+  height:0.45vw;
+  background:#600;
+  position:absolute;
+  left:0.75vw;
+  top:0.525vw;
+
+}
+
+#nav {
+  width:400px;
+  margin:20px auto;
+}
+
+.navBtn {
+  margin-top:8px;
+  padding:10px;
+  background-color:rgba(255, 255, 255, 0.3);
+  display:inline-block;
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  color:#655;
+  cursor:pointer;
+}
+
+.ui-widget-content {
+  background-color:rgba(255, 255, 255, 0.2);
+}
+
+.sliderSpeed{
+ 
+} 
+
+.bottom{
+  position: fixed;
+  bottom:0;
+  left: 0;
+  float: left;
+     height:30%;
+
+  -webkit-filter:blur(5px);
+  -moz-filter:blur(5px);
+   filter:blur(5px);
+
+      
+  -webkit-transition: all 2s ease 1s;
+  -moz-transition: all 2s ease 1s;
+   transition: all 2s ease 1s;
+	
+
+  
+  }
+  .btn-success{
+    margin-top: 3%;
+    width:21vw;
+    height:10vh;
+    margin-left:14%;
+    background-color:black;
+    border:none;
+    -webkit-transition: opacity 1s linear;
+    transition:opacity 1s linear;
+	-moz-transition:opacity 1s linear;
+  }
+#lbtn{
+    margin-top:20%;
+    width:25vw;
+    height:10vh;
+    margin-left:14%;
+    background:url(../images/fb_login.png);
+    background-size:cover;
+    border: none;
+    -webkit-transition: opacity 1s linear;
+    transition:opacity 1s linear;
+	-moz-transition:opacity 1s linear;
+
+}
+#bottomwrapper{
+
+      
+  -webkit-transition: all 2s ease 1s;
+  -moz-transition: all 2s ease 1s;
+   transition: all 2s ease 1s;
+
+
+}
+.type-wrap{
+  font-family:'Kaushan Script', cursive;
+  font-size:3rem;
+
+}
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.9s infinite;
+    -moz-animation: blink 0.9s infinite;
+    animation: blink 0.9s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
