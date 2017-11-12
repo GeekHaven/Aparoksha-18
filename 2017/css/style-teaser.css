@@ -1,0 +1,342 @@
+@import url(https://fonts.googleapis.com/css?family=Electrolize);
+.shuffle {
+  position: absolute;
+  top: 40vh;
+}
+.shuffle
+{
+  text-align: center;
+  margin : auto;
+}
+#anim {
+
+  padding-top: 40vh;
+  padding-left: 25vw;
+  width: 100%;
+  text-align: center;
+  margin: 15% auto;
+  font-family: 'Electrolize';
+  font-size: 4em;
+}
+
+#shuffle{
+  text-transform: ;
+  width: 100%;
+  text-align: center;
+  margin: 15% auto;
+  font-family: 'Electrolize';
+  font-size: 4em;
+}
+
+body {
+  background-color: black ;
+  margin:0;
+  overflow: hidden;
+    /* Firefox */
+    -moz-transition: all 1s ease-in;
+    /* WebKit */
+    -webkit-transition: all 1s ease-in;
+    /* Opera */
+    -o-transition: all 1s ease-in;
+    /* Standard */
+    transition: all 1s ease-in;
+}
+#Terminal
+{
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  margin:0 auto;
+  padding:5%;
+  width:90%;
+  height:100vh;
+  z-index: 1000;
+  transition:all 2s linear;
+  -webkit-transition:all 2s linear;
+
+
+}
+.fakeButtons {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  position: relative;
+  top: 4px;
+  left: 11px;
+  background-color: #ff3b47;
+  border-color: #9d252b;
+  display: inline-block;
+}
+
+.fakeMinimize {
+  left: 16px;
+  background-color: #ffc100;
+  border-color: #9d802c;
+}
+
+.fakeZoom {
+  left: 21px;
+  background-color: #00d742;
+  border-color: #049931;
+}
+
+.fakeMenu {
+  width: 100%;
+  box-sizing: border-box;
+  height: 40px;
+  background-color: #bbb;
+  margin: 0 auto;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.fakeTitle {
+  font-size: 1.7em;
+  font-family: Ubuntu;
+  font-weight: 500;
+  margin-left: 35%;
+  position: relative;
+  top: 4px;
+  left: 6px;
+  display: inline-block;
+}
+
+
+.fakeScreen {
+  background-color: #151515;
+  box-sizing: border-box;
+  width: 100%;
+  height: 80vh;
+  margin: 0 auto;
+  padding: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+p {
+  position: relative;
+  left: 1%;
+  /*margin-left: -8.5em;*/
+  text-align: left;
+  font-size: 1.25em;
+  font-family: monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+}
+
+span {
+  color: #fff;
+  font-weight: bold;
+}
+
+.line1 {
+  color: #9CD9F0;
+  -webkit-animation: type .5s 1s steps(20, end) forwards;
+  -moz-animation: type .5s 1s steps(20, end) forwards;
+  -o-animation: type .5s 1s steps(20, end) forwards;
+  animation: type .5s 1s steps(20, end) forwards;
+}
+
+.cursor1 {
+  -webkit-animation: blink 1s 2s 2 forwards;
+  -moz-animation: blink 1s 2s 2 forwards;
+  -o-animation: blink 1s 2s 2 forwards;
+  animation: blink 1s 2s 2 forwards;
+}
+
+.line2 {
+  color: #9CD9F0;
+  -webkit-animation: type .5s 4.25s steps(20, end) forwards;
+  -moz-animation: type .5s 4.25s steps(20, end) forwards;
+  -o-animation: type .5s 4.25s steps(20, end) forwards;
+  animation: type .5s 4.25s steps(20, end) forwards;
+}
+
+.cursor2 {
+  -webkit-animation: blink 1s 5.25s 2 forwards;
+  -moz-animation: blink 1s 5.25s 2 forwards;
+  -o-animation: blink 1s 5.25s 2 forwards;
+  animation: blink 1s 5.25s 2 forwards;
+}
+
+.line3 {
+  color: #fff;
+  -webkit-animation: type .5s 7.5s steps(20, end) forwards;
+  -moz-animation: type .5s 7.5s steps(20, end) forwards;
+  -o-animation: type .5s 7.5s steps(20, end) forwards;
+  animation: type .5s 7.5s steps(20, end) forwards;
+}
+
+.cursor3 {
+  -webkit-animation: blink 1s 8.5s 2 forwards;
+  -moz-animation: blink 1s 8.5s 2 forwards;
+  -o-animation: blink 1s 8.5s 2 forwards;
+  animation: blink 1s 8.5s 2 forwards;
+}
+
+.line4 {
+  color: #fff;
+  -webkit-animation: type .5s 10.75s steps(20, end) forwards;
+  -moz-animation: type .5s 10.75s steps(20, end) forwards;
+  -o-animation: type .5s 10.75s steps(20, end) forwards;
+  animation: type .5s 10.75s steps(20, end) forwards;
+}
+
+.cursor4 {
+  -webkit-animation: blink 1s 11.5s infinite;
+  -moz-animation: blink 1s 8.5s infinite;
+  -o-animation: blink 1s 8.5s infinite;
+  animation: blink 1s 8.5s infinite;
+}
+
+
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes type {
+  to {
+    width: 80%;
+  }
+}
+
+@-moz-keyframes type {
+  to {
+    width: 80%;
+  }
+}
+
+@-o-keyframes type {
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes type {
+  to {
+    width: 80%;
+  }
+}
+.page-home {
+  position: relative;
+}
+.page-home .img-wrapper {
+  position: absolute;
+  display: block;
+  right: 0;
+  bottom: 10%;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+.page-home .img-wrapper .img {
+  cursor: pointer;
+  opacity: 0.1;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.page-home .img-wrapper .img:hover, .page-home .img-wrapper .img.active {
+  opacity: 1;
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.contact{
+  position: fixed;
+  bottom: 0px;
+  padding: 15px;
+  color: white;
+  font-family: 'Electrolize';
+  font-size: 1.2em;
+  opacity: 0;
+  transition: opacity .4s;
+}
+.show{
+  opacity: 1;
+}
+#contact1{
+  left: 0px;
+}
+#contact2{
+  right: 0px;
+}
+#contact-middle{
+  left:42vw;
+}
+

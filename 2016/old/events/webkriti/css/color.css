@@ -1,0 +1,26 @@
+@charset "utf-8";
+/* CSS Document */
+::selection {background: #F56D45; color:#292929; }
+::-moz-selection {background: #F56D45; color:#292929;}
+ .button  , nav  a span , .arrow-nav a , .home-separator span , .about-button , .custom-skillbar ,   .services-holder li:hover , .serv-overlay , #options li.actcat, #options li:hover , .folio-overlay span, .popup-modal-dismiss  , #contact-form input[type="submit"] , #jprePercentage , .scroll-btn:after , .color-separator , .twitter-holder .customNavigation a , .testimonials-holder .customNavigation a , .clients-holder, .subscriptionForm input#submitButton , .contact-tooltip  , .scroll-nav a  , .about-image .customNavigation a ,.box-details h3:after , .social-list li a:before , #project-page-button a , .tagcloud a , .pagination a , .media-holder .customNavigation a{
+	background:#F56D45;
+}
+::-webkit-scrollbar-thumb , -moz-scrollbar {
+	background:#F56D45;
+}
+.services-holder li  i , .contact-info li i  , .policy-box  a  , .policy-box  i , .error_message , .twitts li a , .num , .resume-head h4 , #testimonials-slider a , .twitter-holder h4 a , .subscribe-holder h4 , #contact-form input[type=text]:focus, #contact-form textarea:focus, input[type=email]:focus , #contact-social  ul li a:hover , .side-site div i  ,  #success_page p , .post-meta li h6, .post-meta li a , .search-submit , .share-options ul li a:hover{
+	color:#F56D45;
+}  
+.page-title h2 span {
+	border-bottom:4px solid #F56D45;
+}
+#project-slider .owl-next{
+	background:#F56D45 url(../images/sr.png) no-repeat center;
+}
+#project-slider .owl-prev {
+	background: #F56D45 url(../images/sl.png) no-repeat center;
+}
+.contact-tooltip:after {
+	border-top-color: #F56D45;
+}
+ 

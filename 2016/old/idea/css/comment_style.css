@@ -1,0 +1,78 @@
+
+.new-com-bt{
+	width: 100%; 	height: 30px;
+	border: #d3d7dc 1px solid;
+	-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;
+	background-color: #f9f9f9;
+	color: #adb2bb;
+	cursor: text;
+}
+.new-com-bt span{
+	display: inline;
+	font-size: 13px;
+	margin-left: 10px;
+	line-height: 30px;
+}
+.new-com-cnt{ width: 100%; height: auto; min-height: 110px; }
+.the-new-com{ /* textarea */
+	width: 98%; height: auto; min-height: 70px;
+	padding: 5px; margin-bottom: 8px;
+	border: #d3d7dc 1px solid;
+	-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;
+	background-color: #f9f9f9;
+	color: #333;
+	resize: none;
+}
+.new-com-cnt input[type="text"]{
+	margin: 0;
+	height: 20px;
+	padding: 5px;
+	border: #d3d7dc 1px solid;
+	-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;
+	background-color: #f9f9f9;
+	color: #333;
+	margin-bottom:5px;
+}
+.cmt-container textarea:focus, .new-com-cnt input[type="text"]:focus{
+	border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.4);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.4);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.4);
+}
+.bt-add-com{
+	display: inline;
+	float: left;
+	padding: 8px 10px;  margin-right: 10px;
+	background-color: #3498db;
+	color: #fff; cursor: pointer;
+	opacity: 0.6;
+	-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;
+}
+.bt-cancel-com{
+	display: inline;
+	float: left;
+	padding: 8px 10px; 
+	border: #d9d9d9 1px solid;
+	background-color: #fff;
+	color: #404040;	cursor: pointer;
+	-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;
+}
+.new-com-cnt{ 
+	width:100%; height: auto; 
+	display: none;
+	padding-top: 10px; margin-bottom: 10px;
+	border-top: #d9d9d9 1px dotted;
+}
+
+
+/* Css Shadow Effect for the prod-box and prod-box-list div */
+ .shadow{
+    -webkit-box-shadow: 0px 0px 18px rgba(50, 50, 50, 0.31);
+    -moz-box-shadow:    0px 0px 10px rgba(50, 50, 50, 0.31);
+    box-shadow:         0px 0px 5px rgba(50, 50, 50, 0.31);
+}	
+
+

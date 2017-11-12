@@ -1,0 +1,4 @@
+/*
+    Soulwire namespace
+*/
+SOULWIRE = {};
