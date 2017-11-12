@@ -49,6 +49,7 @@ h2{
     bottom: -40px;
     position: fixed;
     right: -60px;
+    z-index: -100;
 }
 .notified {
     position: fixed;
@@ -67,6 +68,8 @@ h2{
 .logo {
     width: 180px;
     height: 160px;
+    margin-right: 50px;
+    margin-top: 30px;
 }
 .logo1 {
     width: 120px;
@@ -334,14 +337,16 @@ font-size: 100%;
 margin-top: 30%;
 }
 #rck{
-right: -200px
+right: -200px;
+z-index: -100;
 }
 }
 
 @media screen and (max-width: 890px) {
 
 #rck{
-right: -300px
+right: -300px;
+z-index: -100;
 }
 }
 @media screen and (max-width: 700px) {
@@ -371,6 +376,7 @@ letter-spacing: 8px;
 #rck {
 right: -350px ;
 bottom: -200px;
+z-index: -100;
 }
 }
 

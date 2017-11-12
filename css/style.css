@@ -16,6 +16,7 @@ svg {
   margin: -400px -200px 0 0;
   position: fixed;
   height: 100%;
+  z-index: -5;
 }
 
 .lines {
