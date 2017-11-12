@@ -14,14 +14,15 @@ ul li {
     display: inline;
     position: relative;
     left: 10px;
+    padding-right: 10px;
     top:20px;
 }
 
 i {
-    font-size: x-large;
+    color: white;
 }
 
-i, a {
+a {
     color: white;
 }
 
