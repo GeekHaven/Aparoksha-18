@@ -54,7 +54,7 @@
         .contacts {
             color: white;
             position: fixed;
-            left: 0;
+            
             bottom: 0;
             font-size: 1.1em;
         }
@@ -317,7 +317,39 @@ a.animated-button.thar-four:before {
 0s;
 }
 
+@media screen and (max-width: 950px) {
+    h2 {
+        font-size: 300%;
+    }
+    h1{
+        font-size: 100%;
+    }
+    .wrapper {
+        margin-top: 30%;
+    }
+    #rck{
+        right: -200px
+    }
+}
 
+@media screen and (max-width: 890px) {
+
+    #rck{
+        right: -300px
+    }
+}
+@media screen and (max-width: 700px) {
+
+    h2 {
+        font-size: 200%;
+    }
+    h1{
+        font-size: 80%;
+    }
+    .wrapper {
+        margin-top: 35%;
+    }
+}
 
 .bttn {
     margin: 0;
@@ -350,9 +382,12 @@ a.animated-button.thar-four:before {
         </div>
     </div>      
 
-    <div class="logos"><img src="logo.png" alt="" class="logo"><img src="iiita.png" alt="" class="logo1"></div>
+    <div class="logos"><img src="logo.png" alt="" class="logo"></div>
     <img src="rocket.png" alt="" id="rck">
-    <div class="contacts"><b>CHAITANYA YADAV</b> (+91 98765 4321) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b>HARIOM NIRANJAN</b> (+91 98765 4321)</div>
+    <div class="container-fluid contacts">
+        <div class="col-xs-5"><b>CHAITANYA&nbsp;YADAV</b><div class="col-xs-5">(+91&nbsp;987654321)</div></div>  
+        <div class="col-xs-5"><b>HARIOM&nbsp;NIRANJAN</b><div class="col-xs-5">(+91&nbsp;987654321)</div></div>
+    </div>
 
 
     <script>
