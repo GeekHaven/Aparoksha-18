@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aparoksha'18 - Registrations</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Raleway" rel="stylesheet">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function()  {
+
+      $("#form, #form1").hide();
+      $("#exit").hide();
+      
+      $("#left").mouseover(function() {
+        $(".logo, .name").css("color", "white");
+        $(".logo1, .name1").css("color", "black");
+        $("#left").css("background-color", "black");
+        $("#right").css("background-color", "white");
+      });
+      $("#right").mouseover(function() {
+        $(".logo1, .name1").css("color", "white");
+        $(".logo, .name").css("color", "black");
+        $("#right").css("background-color", "black");
+        $("#left").css("background-color", "white");
+      });
+      $("#left, #right").mouseleave(function() {
+        $(".logo, .name").css("color", "black");
+        $(".logo1, .name1").css("color", "black");
+        $("#right").css("background-color", "white");
+        $("#left").css("background-color", "white");
+      });
+
+
+      $("#left").click(function() {
+        var partw = $("#left").width();
+        var contw = $(".container").width();
+        $("#right").hide(700);
+        $("#left").css("width", contw);
+        $(".logo").hide();
+        $(".name").css("margin-top", "-15%");
+        $("#form").fadeIn(3000);
+        $("#left").mouseover(function() {
+          $("#left").css("background-color", "white");
+          $(".name").css("color", "black");
+        });
+        $("#exit").fadeIn();
+      });
+
+      $("#exit").click(function() {
+        var partw = $("#left").width();
+        var contw = $(".container").width();
+        $("#left").css("width", partw);
+        $("#right").show(700);
+        $(".logo").show();
+        $(".logo, .name").css("text-align", "center");
+        $(".name").css("padding-top", "25%");
+        $("#form").hide();
+        $("#left").mouseover(function() {
+          $(".logo, .name").css("color", "white");
+          $(".logo1, .name1").css("color", "black");
+          $("#left").css("background-color", "black");
+          $("#right").css("background-color", "white");
+        });  
+        $("#exit").fadeOut(); 
+      });
+
+      
+      $("#right").click(function() {
+        var partw = $("#left").width();
+        var contw = $(".container").width();
+
+        $("#left").hide(700);
+        $("#right").css("width", contw);
+
+        $(".logo1").hide();
+        $(".name1").css("margin-top", "-15%");
+        $("#form1").fadeIn(3000);
+        $("#right").mouseover(function() {
+          $("#right").css("background-color", "white");
+          $(".name1").css("color", "black");
+        });
+        $("#exit").fadeIn();
+      });
+
+      $("#exit").click(function() {
+        var partw = $("#left").width();
+        var contw = $(".container").width();
+        $("#right").css("width", partw);
+        $("#left").show(700);
+        $(".logo1").show();
+        $(".logo1, .name1").css("text-align", "center");
+        $(".name1").css("padding-top", "25%");
+        $("#form1").hide();
+        $("#right").mouseover(function() {
+          $(".logo1, .name1").css("color", "white");
+          $(".logo, .name").css("color", "black");
+          $("#right").css("background-color", "black");
+          $("#left").css("background-color", "white");
+        });
+        $("#exit").fadeOut(); 
+      });    
+
+      $("#sub").click(function(e) {
+        e.stopPropagation();
+        $("#form").submit();
+      }); 
+    }); 
+  </script>
+  <style type="text/css">
+  body {
+
+  }
+
+  html {
+    height: 100%;
+  }
+
+  #left, #right {
+    background-color: white;
+    border: 7px solid black;
+    border-radius: 12px;
+    height: 100%;
+    width: 98%;
+  }
+
+  #left:hover, #right:hover {
+    cursor: pointer;
+    border-radius: 16px;
+    /*box-shadow: 0 40px 48px 0 rgba(0, 0, 0, 0.4), 0 46px 60px 0 rgba(0, 0, 0, 0.4);*/
+    -webkit-box-shadow:0 0 200px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow:0 0 200px rgba(0, 0, 0, 0.5);
+    box-shadow:0 0 200px rgba(0, 0, 0, 0.7);
+    z-index: 100;
+  }
+
+  .columns {
+    height: 810px;
+    padding-top: 3.2%;
+  }
+
+  .logo {
+    text-align: center;
+    color: #000;
+    font-size: 240px;
+    padding-top: 15%;
+    padding-left: 32%;
+    z-index: 100;
+  }
+
+  .name {
+    padding-top: 15%;
+    font-size: 67px;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: 0.5px;
+    z-index: 100;
+  }
+
+  .logo1 {
+    text-align: center;
+    color: #000;
+    font-size: 240px;
+    padding-top: 15%;
+    padding-left: 32%;
+    z-index: 100;
+  }
+
+  .name1 {
+    padding-top: 15%;
+    font-size: 67px;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: 0.5px;
+    z-index: 100;
+  }
+
+  #exit {
+    float: right;
+    left: 30px;
+    top: -7px;
+    font-size: 450px;
+    z-index: 200;
+    background-color: black;
+  }
+
+
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="columns">
+      <a class="delete is-large" id="exit"></a>
+      <div class="column" id="left">
+
+        <i class="fa fa-certificate logo" aria-hidden="true"></i>
+        <p class="name">Workshops</p>
+        <form id="form" method="POST">
+          <div class="columns">
+            <div class="column is-one-quarter"></div>
+            <div class="column">
+
+              <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="e.g Alex Smith">
+                </div>
+              </div>
+              <div class="columns">
+                <div class="column">
+                  <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                      <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="field">
+                    <label class="label">Contact</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="+91-9920024922">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="column is-one-quarter"></div>
+          </div>
+          <div class="columns">
+           <i class="fa fa-arrow-right" aria-hidden="true" style="float: right;font-size: 50px;color: black;padding-top: -40px;" id="sub"></i>
+         </div>
+       </form>
+     </div>
+     &nbsp;&nbsp;&nbsp;&nbsp;
+     <div class="column" id="right">
+      <i class="fa fa-calendar-check-o logo1" aria-hidden="true"></i>
+      <p class="name1">Fest reg.</p>
+      <div id="form1">
+        <div class="columns">
+          <div class="column is-one-quarter"></div>
+          <div class="column">
+
+           <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="e.g Alex Smith">
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <label class="label">Email</label>
+                <div class="control">
+                  <input class="input" type="email" placeholder="e.g. alexsmith@gmail.com">
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="field">
+                <label class="label">Contact</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="9920024922">
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="column is-one-quarter"></div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
