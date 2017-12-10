@@ -1,9 +1,19 @@
 <?php
     session_start();
+    require 'vendor/autoload.php';
+    
+    $dotenv = new Dotenv\Dotenv(__DIR__);
+    if (file_exists('.env')) {
+        $dotenv->load('.env');
+    }
+    
+    $dbhost = getenv('DB_HOST');
+    $dbuser = getenv('DB_USER');
+    $dbpass = getenv('DB_PASS');
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
+    $servername = $dbhost;
+    $username = $dbuser;
+    $password = $dbpass;
     $dbname = "apk";
     $tbname = "users";
 

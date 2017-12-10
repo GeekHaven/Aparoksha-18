@@ -3,6 +3,17 @@
 session_start();
 include("php-mailer.php");
 
+require 'vendor/autoload.php';
+
+    $dotenv = new Dotenv\Dotenv(__DIR__);
+    if (file_exists('.env')) {
+       $dotenv->load('.env');
+    }
+
+    $dbhost = getenv('DB_HOST');
+    $dbuser = getenv('DB_USER');
+    $dbpass = getenv('DB_PASS');
+
     $clicked = false;
 
     if(isset($_POST['sub'])){
@@ -31,9 +42,9 @@ include("php-mailer.php");
             header("Refresh: 1; url=index.php");
         }
 
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
+        $servername = $dbhost;
+        $username = $dbuser;
+        $password = $dbpass;
         $dbname = "apk";
         $tbname = "users";
 
