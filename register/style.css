@@ -12,7 +12,7 @@ html {
     text-align: center;
 }
 
-.popup1 > .row {    
+.popup1 > .row > .card{    
     margin: 0 auto; /* Added */
     float: none;
     margin-bottom: 2em; /* Added */
@@ -106,7 +106,7 @@ html {
     padding-bottom: 0.2em;
 }
 
-@media (max-width: 2000px) {
+@media (max-width: 5000px) {
     .top-head-mobile {
         display: none;
         visibility: hidden;
