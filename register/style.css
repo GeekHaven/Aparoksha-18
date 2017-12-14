@@ -1,0 +1,136 @@
+html {
+  height: 100%;
+}
+
+.columns {
+    position: relative;
+    padding-top: 5em;
+}
+
+.popup1 > .card {
+    float: left;
+    text-align: center;
+    margin: 0.6em 1em 0.6em 1em;
+}
+
+.popup2 > .card {
+    float: left;
+    text-align: center;
+    margin: 0.6em 1em 0.6em 1em;
+}
+
+#left, #right {
+  background-color: white;
+  border: 7px solid black;
+  border-radius: 12px;
+  width: 98%;
+  margin-bottom: 5em;  
+}
+
+#left:hover, #right:hover {
+  cursor: pointer;
+  border-radius: 16px;
+  /*box-shadow: 0 40px 48px 0 rgba(0, 0, 0, 0.4), 0 46px 60px 0 rgba(0, 0, 0, 0.4);*/
+  -webkit-box-shadow:0 0 200px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow:0 0 200px rgba(0, 0, 0, 0.5);
+  box-shadow:0 0 200px rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
+
+.formopen {
+    margin-top: -15%;
+}
+
+.top-head {
+    position: relative;
+    text-align: center;
+    font-size: 4em;
+    font-family: "Comic Sans MS", Times, serif;
+}
+
+.logo {
+  text-align: center;
+  color: #000;
+  font-size: 5em;
+  padding-top: 15%;
+  padding-left: 41%;
+  z-index: 100;
+}
+
+.name {
+  padding-top: 15%;
+  font-size: 2em;
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+  font-family: 'Dosis', sans-serif;
+  letter-spacing: 0.1em;
+  z-index: 100;
+}
+
+.logo1 {
+  text-align: center;
+  color: #000;
+  font-size: 5em;
+  padding-top: 15%;
+  padding-left: 42%;
+  z-index: 100;
+}
+
+.name1 {
+  padding-top: 15%;
+  font-size: 2em;
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+  font-family: 'Dosis', sans-serif;
+  letter-spacing: 0.1em;
+  z-index: 100;
+}
+
+#exit {
+  left: 0.9em;
+  top: 0.3em;
+  font-size: 4em;
+  z-index: 200;
+  background-color: black;
+}
+
+.card-buttons {
+    text-align: center;
+    padding-bottom: 0.2em;
+}
+
+@media (max-width: 2000px) {
+    .top-head-mobile {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 800px) {
+    #exit {
+        left: 0.3em;
+        top: 0.8em;
+    }
+    .top-head {
+        font-size: 3em;
+    }
+    .top-head-mobile {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 600px) {
+    .top-head {
+        display: none;
+        visibility: hidden;
+    }
+    .top-head-mobile {
+        text-align: center;
+        font-size: 2em;
+        display: block;
+        visibility: visible;
+    }
+}
