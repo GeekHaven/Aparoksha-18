@@ -7,33 +7,38 @@ html {
     padding-top: 5em;
 }
 
-.popup1 > .card {
+.row > .card {
     float: left;
     text-align: center;
-    margin: 0.6em 1em 0.6em 1em;
 }
 
-.popup2 > .card {
-    float: left;
-    text-align: center;
-    margin: 0.6em 1em 0.6em 1em;
+.popup1 > .row {    
+    margin: 0 auto; /* Added */
+    float: none;
+    margin-bottom: 2em; /* Added */
+}
+
+.popup2 > .row {
+    margin: 0 auto; /* Added */
+    float: none; /* Added */
+    margin-bottom: 2em; /* Added */
 }
 
 #left, #right {
   background-color: white;
   border: 7px solid black;
-  border-radius: 12px;
+  border-radius: 20px;
   width: 98%;
   margin-bottom: 5em;  
 }
 
 #left:hover, #right:hover {
   cursor: pointer;
-  border-radius: 16px;
+  border-radius: 20px;
   /*box-shadow: 0 40px 48px 0 rgba(0, 0, 0, 0.4), 0 46px 60px 0 rgba(0, 0, 0, 0.4);*/
-  -webkit-box-shadow:0 0 200px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow:0 0 200px rgba(0, 0, 0, 0.5);
-  box-shadow:0 0 200px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow:0 0 50px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow:0 0 50px rgba(0, 0, 0, 0.5);
+  box-shadow:0 0 50px rgba(0, 0, 0, 0.7);
   z-index: 100;
 }
 
@@ -134,3 +139,4 @@ html {
         visibility: visible;
     }
 }
+  
