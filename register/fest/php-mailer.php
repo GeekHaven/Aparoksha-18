@@ -20,7 +20,7 @@ if(!$clicked){
 function mailsend($email,$hash){
 
     //Load composer's autoloader
-    require 'vendor/autoload.php';
+    require '../vendor/autoload.php';
 
     $dotenv = new Dotenv\Dotenv(__DIR__);
     if (file_exists('.env')) {
@@ -62,7 +62,7 @@ function mailsend($email,$hash){
         $mail->Body    = 'Greetings!<br><br>Thanks for registering with us, We have received
                             your request, however your registration is incomplete until you activate your account.
                             Kindly click on the following link to activate your account <br><br>
-                            https://aparoksha.org/registration-sample/approve.php?email='.$email.'&activate='.$hash.'<br><br> 
+                            https://aparoksha.org/register/fest/approve.php?email='.$email.'&activate='.$hash.'<br><br> 
                             Thanks, <br> Team Aparoksha';
 
         $mail->send();

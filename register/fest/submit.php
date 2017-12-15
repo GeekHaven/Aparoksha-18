@@ -3,7 +3,7 @@
 session_start();
 include("php-mailer.php");
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
     $dotenv = new Dotenv\Dotenv(__DIR__);
     if (file_exists('.env')) {
