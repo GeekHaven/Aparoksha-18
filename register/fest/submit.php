@@ -13,6 +13,8 @@ require 'vendor/autoload.php';
     $dbhost = getenv('DB_HOST');
     $dbuser = getenv('DB_USER');
     $dbpass = getenv('DB_PASS');
+    $dbn = getenv('DB_NAME');
+    $tbn = getenv('TB_NAME');
 
     $clicked = false;
 
@@ -25,6 +27,7 @@ require 'vendor/autoload.php';
         echo 'alert("Access Denied")';
         echo '</script>';   
         header("Refresh: 1; url=index.php");
+        exit;
     }
 
     else{
@@ -34,19 +37,32 @@ require 'vendor/autoload.php';
             $email = htmlentities($_POST['uemail']);
             $mobile = htmlentities($_POST['mobile']);
             $hash = md5( rand(0,1000) );
+            if(!isset($_POST['event']) || sizeof($_POST['event'])<2 ) {
+                $_SESSION['confirm'] = "Please select at least two events";
+                header("Refresh: 0; url=index.php#info");
+                exit;
+            }
+            else {
+                $events = $_POST['event'];
+                $event = "";
+                for($count = 0; $count < sizeof($events); $count++) {
+                    $event = $event.$events[$count].", ";
+                }
+            }
         }
         else{
             echo '<script language="javascript">';
             echo 'alert("Fill all values. Try Again!")';
             echo '</script>';   
             header("Refresh: 1; url=index.php");
+            exit;
         }
 
         $servername = $dbhost;
         $username = $dbuser;
         $password = $dbpass;
-        $dbname = "apk";
-        $tbname = "users";
+        $dbname = $dbn;
+        $tbname = $tbn;
 
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -59,35 +75,28 @@ require 'vendor/autoload.php';
 
             if($user != Null){
                 $_SESSION['confirm'] = "This email is already registered. If you want to check your registration status
-                                        click on link below or contact  ";
-                // echo '<script language="javascript">';
-                // echo 'alert("")';
-                // echo '</script>';   
-                header("Refresh: 0; url=index.php"); 
+                                        click on link above to or contact any person given below";
+                header("Refresh: 0; url=index.php#info"); 
+                exit;
             }
 
             else{
                 if(mailsend($email,$hash)){
 
-                    $sql = $conn->prepare("INSERT INTO $tbname (name,email,mobile,activate) VALUES (:name,:email,:mobile,:hash)");
-                    $do = $sql->execute(['name' => $name, 'email' => $email,'mobile' => $mobile, 'hash' => $hash]);
+                    $sql = $conn->prepare("INSERT INTO $tbname (name,email,mobile,events,activate) VALUES (:name,:email,:mobile,:events,:hash)");
+                    $do = $sql->execute(['name' => $name, 'email' => $email,'mobile' => $mobile, 'events' => $event, 'hash' => $hash]);
 
                     if($do){
-                        $_SESSION['confirm'] = "You have been registered successfully. Please verify your email 
-                                                by clicking the confirmation link sent to your email.";
-                        // echo '<script language="javascript">';
-                        // echo 'alert("")';
-                        // echo '</script>';   
-                        header("Refresh: 0; url=index.php"); 
+                        $_SESSION['confirm'] = "You have been registered successfully. Please verify your email by clicking on the
+                        link sent to your email"; 
+                        header("Refresh: 0; url=index.php#info"); 
+                        exit;
                     }
                   
                     else{
                         $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
-                                                try again after some time. If problem persists then drop a mail to ";
-                        // echo '<script language="javascript">';
-                        // echo 'alert("")';
-                        // echo '</script>';   
-                        header("Refresh: 0; url=index.php"); 
+                                                try again after some time. If problem persists please feel free to contact any person mentioned below ";
+                        header("Refresh: 0; url=index.php#info"); 
                     }
                 } 
             }
@@ -95,11 +104,8 @@ require 'vendor/autoload.php';
         
         catch(PDOException $e){
             $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
-            try again after some time. If problem persists then drop a mail to ";
-            // echo '<script language="javascript">';
-            // echo 'alert("")';
-            // echo '</script>';   
-            header("Refresh: 0; url=index.php");
+            try again after some time. If problem persists please feel free to contact any person mentioned below ";
+            header("Refresh: 0; url=index.php#info");
         }
         $clicked = false;
         $conn = null;

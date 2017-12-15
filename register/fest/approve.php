@@ -10,12 +10,14 @@
     $dbhost = getenv('DB_HOST');
     $dbuser = getenv('DB_USER');
     $dbpass = getenv('DB_PASS');
+    $dbn = getenv('DB_NAME');
+    $tbn = getenv("TB_NAME");
 
     $servername = $dbhost;
     $username = $dbuser;
     $password = $dbpass;
-    $dbname = "apk";
-    $tbname = "users";
+    $dbname = $dbn;
+    $tbname = $tbn;
 
     if (isset($_GET["activate"]) && isset($_GET["email"])) {
         $code = $_GET["activate"];
