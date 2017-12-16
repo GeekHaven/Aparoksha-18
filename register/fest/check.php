@@ -131,7 +131,7 @@ session_start();
             <ul class="footer-menu">
               <li><a href="https://www.facebook.com/aparoksha/" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
               <li><a href="https://twitter.com/aparoksha_org" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true" style="padding-left:0.6em;"></i></a></li>
-              <li><a href="" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true" style="padding-left:0.6em;"></i></a></li>
+              <li><a href="https://www.instagram.com/aparokshaiiita/" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true" style="padding-left:0.6em;"></i></a></li>
             </ul>
           </div>
         </div>

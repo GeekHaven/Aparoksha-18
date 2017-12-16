@@ -24,7 +24,7 @@ $(document).ready(function()  {
 
 
   $("#left").click(function() {
-    if($("#right").hasClass("col-md-6")){
+    if($("#left").hasClass("col-md-6")){
         $(this).toggleClass("col-md-6 col-md-12",1000);
     }
     $("#right").hide(1000);
