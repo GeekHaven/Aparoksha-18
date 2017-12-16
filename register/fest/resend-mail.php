@@ -2,7 +2,7 @@
     session_start();
     include("php-mailer.php");
 
-    require 'vendor/autoload.php';
+    require '../vendor/autoload.php';
     
     $dotenv = new Dotenv\Dotenv(__DIR__);
     if (file_exists('.env')) {
@@ -12,6 +12,8 @@
     $dbhost = getenv('DB_HOST');
     $dbuser = getenv('DB_USER');
     $dbpass = getenv('DB_PASS');
+    $dbn = getenv('DB_NAME');
+    $tbn = getenv('TB_NAME');
 
     $clicked = false;
 
@@ -36,14 +38,14 @@
             echo '<script language="javascript">';
             echo 'alert("Fill all values. Try Again!")';
             echo '</script>';   
-            header("Refresh: 1; url=resend.php");
+            header("Refresh: 1; url=resend.php#info");
         }
 
         $servername = $dbhost;
         $username = $dbuser;
         $password = $dbpass;
-        $dbname = "apk";
-        $tbname = "users";
+        $dbname = $dbn;
+        $tbname = $tbn;
 
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -56,10 +58,7 @@
 
             if($user == Null){
                 $_SESSION['confirm'] = "No records found!  Please try again with correct credentials.  ";
-                // echo '<script language="javascript">';
-                // echo 'alert("")';
-                // echo '</script>';   
-                header("Refresh: 0; url=resend.php"); 
+                header("Refresh: 0; url=resend.php#info"); 
             }
 
             else{
@@ -67,20 +66,20 @@
                     $_SESSION['confirm'] = "Your account is already activated. Details are given below.";
                     $_SESSION['name'] = $user['name'];
                     $_SESSION['email'] = $user['email'];
-                    $_SESSION['mobile'] = $user['mobile'];
+                    $_SESSION['events'] = $user['events'];
                     $_SESSION['verify'] = $user['status']; 
-                    header("Refresh: 0; url=check.php");
+                    header("Refresh: 0; url=check.php#info");
                 }
                 else{
                     if(mailsend($email,$hash)){
                         $sql = $conn->prepare("UPDATE $tbname SET activate = :hash WHERE email = :email");
                         $do = $sql->execute(['email' => $email,'hash' => $hash]);
                         $_SESSION['confirm'] = "Confirmation code has been resent. Please check your mail.";                
-                        header("Refresh: 0; url=resend.php");
+                        header("Refresh: 0; url=resend.php#info");
                     }
                     else{
                         $_SESSION['confirm'] = "Some error! Please try again. Or contact";
-                        header("Refresh: 0; url=resend.php"); 
+                        header("Refresh: 0; url=resend.php#info"); 
                     }
                 }                
             } 
@@ -89,10 +88,7 @@
         catch(PDOException $e){
             $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with resending mail to you. Please
             try again after some time. If problem persists then drop a mail to ";
-            // echo '<script language="javascript">';
-            // echo 'alert("")';
-            // echo '</script>';   
-            header("Refresh: 0; url=resend.php");
+            header("Refresh: 0; url=resend.php#info");
         }
         $clicked = false;
         $conn = null;

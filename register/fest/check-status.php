@@ -2,7 +2,7 @@
 <?php
 session_start();
 
-    require 'vendor/autoload.php';
+    require '../vendor/autoload.php';
 
     $dotenv = new Dotenv\Dotenv(__DIR__);
     if (file_exists('.env')) {
@@ -12,6 +12,8 @@ session_start();
     $dbhost = getenv('DB_HOST');
     $dbuser = getenv('DB_USER');
     $dbpass = getenv('DB_PASS');
+    $dbn = getenv('DB_NAME');
+    $tbn = getenv('TB_NAME');
 
     $clicked = false;
 
@@ -42,8 +44,8 @@ session_start();
         $servername = $dbhost;
         $username = $dbuser;
         $password = $dbpass;
-        $dbname = "apk";
-        $tbname = "users";
+        $dbname = $dbn;
+        $tbname = $tbn;
 
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
@@ -56,10 +58,7 @@ session_start();
 
             if($user == Null){
                 $_SESSION['confirm'] = "No records found!  Please try again with correct credentials.  ";
-                // echo '<script language="javascript">';
-                // echo 'alert("")';
-                // echo '</script>';   
-                header("Refresh: 0; url=check.php"); 
+                header("Refresh: 0; url=check.php#info"); 
             }
 
             else{
@@ -68,17 +67,15 @@ session_start();
                     $_SESSION['email'] = $user['email'];
                     $_SESSION['mobile'] = $user['mobile'];
                     $_SESSION['verify'] = $user['status'];
-                    header("Refresh: 0; url=check.php");
+                    $_SESSION['events'] = $user['events'];
+                    header("Refresh: 0; url=check.php#info");
             } 
         }
         
         catch(PDOException $e){
             $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
             try again after some time. If problem persists then drop a mail to ";
-            // echo '<script language="javascript">';
-            // echo 'alert("")';
-            // echo '</script>';   
-            header("Refresh: 0; url=index.php");
+            header("Refresh: 0; url=index.php#info");
         }
         $clicked = false;
         $conn = null;

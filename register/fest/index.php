@@ -4,6 +4,7 @@ unset($_SESSION['name']);
 unset($_SESSION['email']);
 unset($_SESSION['mobile']);
 unset($_SESSION['verify']);
+unset($_SESSION['events']);
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +32,7 @@ unset($_SESSION['verify']);
             <img src="../../img/apk-logo.png" class="logo img-circle img responsive">
             <h1>Aparoksha'18 Registrations</h1>
             <h3>Technical fest of IIIT,A</h3>
-            <h4>16<sup>th</sup> to 18<sup>nd</sup>  March, 2018</h4>
+            <h4>16<sup>th</sup> to 18<sup>th</sup>  March, 2018</h4>
           </div>
           <!-- <div class="col-md-5">
             <img src="../../img/frag.png" class="rocket animated bounce">
@@ -46,10 +47,10 @@ unset($_SESSION['verify']);
             </a>
           </div>
           <div class="col-md-4" style="margin-top:1em;">
-            <a href="status.php" class="btn btn-lg btn-yellow">Check your status<i class="fa fa-binoculars" aria-hidden="true" style="padding-left:0.6em;"></i></a>
+            <a href="check.php" class="btn btn-lg btn-yellow">Check your status<i class="fa fa-binoculars" aria-hidden="true" style="padding-left:0.6em;"></i></a>
           </div>
           <div class="col-md-3 col-md-offset-1" style="margin-top:1em;">
-              <a href="#" class="btn btn-lg btn-success">Event information<i class="fa fa-info-circle" aria-hidden="true" style="padding-left:0.6em;"></i></a>
+              <a href="https://www.facebook.com/aparoksha/" target=_blank" class="btn btn-lg btn-success">Event information<i class="fa fa-info-circle" aria-hidden="true" style="padding-left:0.6em;"></i></a>
           </div>
         </div>
 

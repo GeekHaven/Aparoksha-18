@@ -92,8 +92,21 @@ $(document).ready(function()  {
     $("#exit").fadeOut(); 
   });    
 
-  $("#sub").click(function(e) {
-    e.stopPropagation();
-    $("#form").submit();
-  }); 
+  var textArray = [
+    'Hack In The North Registrations have started! Check events and workshop tab for more.',
+    'Fest Registrations have started! Check fest registration tab for more.'
+  ];
+
+  var count = 0;
+
+  document.getElementById("info-mov").innerHTML = textArray[count];  
+
+  setInterval(function() {
+    count++;
+    if(count >= textArray.length) {
+      count = 0;
+    }
+    document.getElementById("info-mov").innerHTML = textArray[count];
+  }, 10000);
+
 }); 
