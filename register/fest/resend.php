@@ -24,9 +24,9 @@ session_start();
       <div class="container-fluid">
         <div class="row hero-header" id="home">
           <div class="col-md-12">
-            <img src="../../img/apk-logo.png" class="logo img-circle img responsive">
-            <h1>Aparoksha'18 Registrations</h1>
-            <h3>Technical fest of IIIT,A</h3>
+            <a href="https://aparoksha.org"><img src="../../img/apk-logo.png" class="logo img-circle img responsive"></a>
+            <h1>Aparoksha'18 Registration</h1>
+            <h3>Technical fest of IIITA</h3>
             <h4>16<sup>th</sup> to 18<sup>th</sup>  March, 2018</h4>
           </div>
           <!-- <div class="col-md-5">
@@ -38,7 +38,7 @@ session_start();
       <div class="container">
         <div class="row me-row content-ct">
           <div class="col-md-4" style="margin-top:1em;">
-            <a href="index.html" class="btn btn-lg btn-red">Register<i class="fa fa-calendar" aria-hidden="true" style="padding-left:0.6em;"></i>
+            <a href="index.php" class="btn btn-lg btn-red">Register<i class="fa fa-calendar" aria-hidden="true" style="padding-left:0.6em;"></i>
             </a>
           </div>
           <div class="col-md-4" style="margin-top:1em;">
@@ -102,6 +102,7 @@ session_start();
             <li><a href="https://www.facebook.com/aparoksha/" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
             <li><a href="https://twitter.com/aparoksha_org" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true" style="padding-left:0.6em;"></i></a></li>
             <li><a href="https://www.instagram.com/aparokshaiiita/" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true" style="padding-left:0.6em;"></i></a></li>
+            <li><a href="https://medium.com/the-aparoksha-blog" target="_blank"><i class="fa fa-medium fa-2x" aria-hidden="true" style="padding-left:0.4em;"></i></a></li>
           </ul>
           </div>
         </div>
