@@ -26,15 +26,15 @@ html {
 
 #left, #right {
   background-color: white;
-  border: 7px solid black;
-  border-radius: 20px;
+  border: 5px solid black;
+  border-radius: 30px;
   width: 98%;
   margin-bottom: 5em;  
 }
 
 #left:hover, #right:hover {
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 30px;
   /*box-shadow: 0 40px 48px 0 rgba(0, 0, 0, 0.4), 0 46px 60px 0 rgba(0, 0, 0, 0.4);*/
   -webkit-box-shadow:0 0 50px rgba(0, 0, 0, 0.5);
   -moz-box-shadow:0 0 50px rgba(0, 0, 0, 0.5);

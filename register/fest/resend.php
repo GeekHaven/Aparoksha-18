@@ -17,6 +17,8 @@ session_start();
   <link href="../css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='../../css/dosis-font.css' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.ico">
+
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".side-menu">
