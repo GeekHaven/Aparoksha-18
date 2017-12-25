@@ -2,6 +2,30 @@ html {
   height: 100%;
 }
 
+#apk-logo {
+    border: 2px solid white;
+}
+
+#mainreg-footer {
+    padding-bottom: 0em;
+    padding-top: 1em;
+    background-color: #0f1216;
+    color: white;
+}
+
+#reg-icons li i{
+    color: yellow;
+}
+
+@media (max-width: 600px) {
+    #reg-icons {
+        text-align: center;
+    }
+    .footer-credit {
+        text-align: center;
+    }
+}
+
 .columns {
     position: relative;
     padding-top: 5em;
@@ -59,7 +83,7 @@ html {
   color: #000;
   font-size: 7em;
   padding-top: 15%;
-  padding-left: 41%;
+  padding-left: 40%;
   z-index: 100;
 }
 
@@ -98,7 +122,7 @@ ul.footer-menu li a:hover {
   color: #000;
   font-size: 7em;
   padding-top: 15%;
-  padding-left: 42%;
+  padding-left: 40%;
   z-index: 100;
 }
 

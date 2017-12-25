@@ -4,6 +4,11 @@ body {
     font-size: 16px;
 	letter-spacing: 0.8px;
 }
+
+#apk-logo {
+    border: 2px solid white;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 200;
 }

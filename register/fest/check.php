@@ -26,7 +26,7 @@ session_start();
       <div class="container-fluid">
         <div class="row hero-header" id="home">
           <div class="col-md-12">
-          <a href="https://aparoksha.org"><img src="../../img/apk-logo.png" class="logo img-circle img responsive"></a>
+          <a href="https://aparoksha.org"><img src="../../img/apk-logo.png" id="apk-logo" class="logo img-circle img responsive"></a>
             <h1>Aparoksha'18 Registration</h1>
             <h3>Technical fest of IIITA</h3>
             <h4>16<sup>th</sup> to 18<sup>th</sup>  March, 2018</h4>

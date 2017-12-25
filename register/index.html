@@ -8,7 +8,6 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
   <link href="https://fonts.googleapis.com/css?family=Dosis|Raleway" rel="stylesheet">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
@@ -18,12 +17,12 @@
 
 <body>
 
-  <div class="top-head-mobile">
-    <img src="../img/apk-logo.png" class="img-responsive rounded-circle" width="100em" height="100em">
+  <div class="top-head-mobile" style="background-color:#0f1216; padding-bottom:0.2em; color:white;">
+    <img src="../img/apk-logo.png" id="apk-logo" class="img-responsive rounded-circle" width="100em" height="100em">
     <p>Aparoksha Registrations </p>
   </div>
   <div class="top-head" style="background-color:#0f1216; padding-bottom:0.2em; color:white;">
-    <p style="padding-top:0.1em;"><img src="../img/apk-logo.png" class="img-responsive rounded-circle" width="100em" height="100em">
+    <p style="padding-top:0.1em;"><img src="../img/apk-logo.png" id="apk-logo" class="img-responsive rounded-circle" width="100em" height="100em">
     Aparoksha Registrations </p>
   </div>
   <hr style="height:0.1em; margin-top:0;">
@@ -233,16 +232,14 @@
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
-
     </div>
   </div>
 </div>
+
 <br><br><br>
-  <div class="footer container-fluid">
+  <div class="footer container-fluid" id="mainreg-footer">
     <div class="col-sm-12" style="text-align:center; margin-top:1em; margin-bottom:0.5em;">
       <h2 style="text-transform: uppercase;">Contact info</h2>
       <br>
@@ -261,12 +258,12 @@
         <p> <b>events@aparoksha.org </b></p>
       </div>
     </div>
-    <div class="row footer-credit">
+    <div class="row footer-credit" style="padding:1em 0em 1em 0em;">
       <div class="col-md-6 col-sm-6">
         <p>&copy; 2018, <a href="http://aparoksha.org">Aparoksha</a></p>
       </div>
       <div class="col-md-6 col-sm-6"> 
-        <ul class="footer-menu">
+        <ul class="footer-menu" id="reg-icons">
           <li><a href="https://www.facebook.com/aparoksha/" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
           <li><a href="https://twitter.com/aparoksha_org" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true" style="padding-left:0.4em;"></i></a></li>
           <li><a href="https://www.instagram.com/aparokshaiiita/" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true" style="padding-left:0.4em;"></i></a></li>
