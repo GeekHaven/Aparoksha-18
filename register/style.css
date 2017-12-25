@@ -29,7 +29,8 @@ html {
   border: 5px solid black;
   border-radius: 30px;
   width: 98%;
-  margin-bottom: 5em;  
+  margin-bottom: 5em; 
+  /*height: 500px; */
 }
 
 #left:hover, #right:hover {
@@ -50,13 +51,13 @@ html {
     position: relative;
     text-align: center;
     font-size: 4em;
-    font-family: "Comic Sans MS", Times, serif;
+    font-family: 'Dosis', sans-serif;
 }
 
 .logo {
   text-align: center;
   color: #000;
-  font-size: 5em;
+  font-size: 7em;
   padding-top: 15%;
   padding-left: 41%;
   z-index: 100;
@@ -73,10 +74,29 @@ html {
   z-index: 100;
 }
 
+.footer {
+  font-family: 'Dosis', sans-serif;
+}
+
+ul.footer-menu {
+    text-align: right;
+}
+ul.footer-menu li {
+    display: inline-block;
+}
+ul.footer-menu li a {
+    font-size: 12px;
+    color: #2a2a2a;
+    padding-right: 20px;
+}
+ul.footer-menu li a:hover {
+    color: #dd5138;
+}
+
 .logo1 {
   text-align: center;
   color: #000;
-  font-size: 5em;
+  font-size: 7em;
   padding-top: 15%;
   padding-left: 42%;
   z-index: 100;
