@@ -38,6 +38,9 @@ require '../vendor/autoload.php';
             $mobile = htmlentities($_POST['mobile']);
             $hash = md5( rand(0,1000) );
             if(!isset($_POST['event']) || sizeof($_POST['event'])<2 ) {
+                $_SESSION['name'] = $name;
+                $_SESSION['email'] = $email;
+                $_SESSION['mobile'] = $mobile;
                 $_SESSION['confirm'] = "Please select at least two events";
                 header("Refresh: 0; url=index.php#info");
                 exit;

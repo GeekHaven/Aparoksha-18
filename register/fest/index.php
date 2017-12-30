@@ -1,9 +1,5 @@
 <?php
 session_start();
-unset($_SESSION['name']);
-unset($_SESSION['email']);
-unset($_SESSION['mobile']);
-unset($_SESSION['verify']);
 unset($_SESSION['events']);
 ?>
 
@@ -52,7 +48,7 @@ unset($_SESSION['events']);
             <a href="check.php" class="btn btn-lg btn-yellow">Check your status<i class="fa fa-binoculars" aria-hidden="true" style="padding-left:0.6em;"></i></a>
           </div>
           <div class="col-md-3 col-md-offset-1" style="margin-top:1em;">
-              <a href="https://www.facebook.com/aparoksha/" target=_blank" class="btn btn-lg btn-success">Event information<i class="fa fa-info-circle" aria-hidden="true" style="padding-left:0.6em;"></i></a>
+              <a href="https://www.facebook.com/aparoksha/" target="_blank" class="btn btn-lg btn-success">Event information<i class="fa fa-info-circle" aria-hidden="true" style="padding-left:0.6em;"></i></a>
           </div>
         </div>
 
@@ -68,7 +64,7 @@ unset($_SESSION['events']);
               <div class="form-group">
                 <label for="uname" class="col-sm-2 control-label">Name<sup>*</sup></label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="uname" name="uname" placeholder="Your Name" required>
+                  <input type="text" class="form-control" id="uname" name="uname" placeholder="Your Name" value="<?php if (isset($_SESSION['name'])){echo("{$_SESSION['name']}"); unset($_SESSION['name']);} ?>" required>
                   <div class="help-block with-errors pull-right"></div>
                   <span class="form-control-feedback" aria-hidden="true"></span>
                 </div>
@@ -76,7 +72,7 @@ unset($_SESSION['events']);
               <div class="form-group">
                 <label for="uemail" class="col-sm-2 control-label">Email<sup>*</sup></label>
                 <div class="col-sm-9">
-                  <input type="email" class="form-control" id="uemail" name="uemail" placeholder="you@youremail.com" required>
+                  <input type="email" class="form-control" id="uemail" name="uemail" placeholder="you@youremail.com" value="<?php if (isset($_SESSION['email'])){echo $_SESSION['email']; unset($_SESSION['email']);} ?>" required>
                   <div class="help-block with-errors pull-right"></div>
                   <span class="form-control-feedback" aria-hidden="true"></span>
                 </div>
@@ -84,7 +80,7 @@ unset($_SESSION['events']);
               <div class="form-group">
                   <label for="mobile" class="col-sm-2 control-label">Mobile<sup>*</sup></label>
                   <div class="col-sm-9">
-                    <input type="number" class="form-control" id="mobile" name="mobile" placeholder="xxxxxxxxxx" required>
+                    <input type="number" class="form-control" id="mobile" name="mobile" placeholder="xxxxxxxxxx" value="<?php if (isset($_SESSION['mobile'])){echo $_SESSION['mobile']; unset($_SESSION['mobile']);} ?>" required>
                     <div class="help-block with-errors pull-right"></div>
                     <span class="form-control-feedback" aria-hidden="true"></span>
                   </div>
