@@ -17,7 +17,7 @@ if(!$clicked){
     header("Refresh: 1; url=index.php");
 }
 
-function mailsend($email,$hash){
+function mailsend($email,$hash, $name){
 
     //Load composer's autoloader
     require '../vendor/autoload.php';
@@ -46,7 +46,7 @@ function mailsend($email,$hash){
 
         //Recipients
         $mail->setFrom('admin@aparoksha.org', 'Aparoksha, IIITA');
-        $mail->addAddress($email, 'Pradeep');     // Add a recipient
+        $mail->addAddress($email, $name);     // Add a recipient
         // $mail->addAddress('ellen@example.com');               // Name is optional
         // $mail->addReplyTo('info@example.com', 'Information');
         //$mail->addCC('cc@example.com');

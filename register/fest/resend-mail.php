@@ -71,7 +71,7 @@
                     header("Refresh: 0; url=check.php#info");
                 }
                 else{
-                    if(mailsend($email,$hash)){
+                    if(mailsend($email,$hash, $user['name'])){
                         $sql = $conn->prepare("UPDATE $tbname SET activate = :hash WHERE email = :email");
                         $do = $sql->execute(['email' => $email,'hash' => $hash]);
                         $_SESSION['confirm'] = "Confirmation code has been resent. Please check your mail.";                

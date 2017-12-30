@@ -84,7 +84,7 @@ require '../vendor/autoload.php';
             }
 
             else{
-                if(mailsend($email,$hash)){
+                if(mailsend($email,$hash,$name)){
 
                     $sql = $conn->prepare("INSERT INTO $tbname (name,email,mobile,events,activate) VALUES (:name,:email,:mobile,:events,:hash)");
                     $do = $sql->execute(['name' => $name, 'email' => $email,'mobile' => $mobile, 'events' => $event, 'hash' => $hash]);
