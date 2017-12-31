@@ -138,8 +138,8 @@ ul.footer-menu li a:hover {
 }
 
 #exit {
-  left: 0.9em;
-  top: 0.3em;
+  left: 1.0em;
+  top: 0.28em;
   font-size: 4em;
   z-index: 200;
   background-color: black;
@@ -157,6 +157,15 @@ ul.footer-menu li a:hover {
     }
 }
 
+@media (max-width: 990px) {
+    .logo {
+        padding-left: 34%;
+    }
+    .logo1 {
+        padding-left: 34%;
+    }
+}
+
 @media (max-width: 800px) {
     #exit {
         left: 0.3em;
@@ -168,6 +177,12 @@ ul.footer-menu li a:hover {
     .top-head-mobile {
         display: none;
         visibility: hidden;
+    }
+    .logo {
+        padding-left:36%;
+    }
+    .logo1 {
+        padding-left: 36%;
     }
 }
 
@@ -182,5 +197,19 @@ ul.footer-menu li a:hover {
         display: block;
         visibility: visible;
     }
+    .logo {
+        padding-left:36%;
+    }
+    .logo1 {
+        padding-left: 36%;
+    }
 }
-  
+
+@media (max-width: 380px) {
+    .logo {
+        padding-left:30%;
+    }
+    .logo1 {
+        padding-left: 30%;
+    }
+}
