@@ -100,6 +100,10 @@ session_start();
                   else{echo "(Verified)";} unset($_SESSION['verify']);}?></td>
             </tr>
             <tr>
+                <th scope="row" align="center">College</th>
+                <td align="center"><?php if(isset($_SESSION['college'])){echo("{$_SESSION['college']}"); unset($_SESSION['college']);} ?></td>
+            </tr>
+            <tr>
                 <th scope="row" align="center">Events Interested</th>
                 <td colspan="2" align="center"><?php if(isset($_SESSION['events'])){echo("{$_SESSION['events']}"); unset($_SESSION['events']);} ?> </td>
             </tr>
@@ -123,6 +127,7 @@ session_start();
               <hr>
               <p> Ashutosh Chandra </p>
               <p> events@aparoksha.org </p>
+              <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-7080397532</p>
           </div>
         </div>
         <div class="row footer-credit">

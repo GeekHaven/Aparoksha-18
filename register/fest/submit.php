@@ -32,15 +32,17 @@ require '../vendor/autoload.php';
 
     else{
         //ToDo Client Side handling of empty data
-        if(isset($_POST['uemail']) && isset($_POST['uname']) && isset($_POST['mobile'])){
+        if(isset($_POST['uemail']) && isset($_POST['uname']) && isset($_POST['mobile']) && isset($_POST['college'])){
             $name = htmlentities($_POST['uname']);
             $email = htmlentities($_POST['uemail']);
             $mobile = htmlentities($_POST['mobile']);
+            $college = htmlentities($_POST['college']);
             $hash = md5( rand(0,1000) );
             if(!isset($_POST['event']) || sizeof($_POST['event'])<2 ) {
                 $_SESSION['name'] = $name;
                 $_SESSION['email'] = $email;
                 $_SESSION['mobile'] = $mobile;
+                $_SESSION['college'] = $college;
                 $_SESSION['confirm'] = "Please select at least two events";
                 header("Refresh: 0; url=index.php#info");
                 exit;
@@ -86,8 +88,8 @@ require '../vendor/autoload.php';
             else{
                 if(mailsend($email,$hash,$name)){
 
-                    $sql = $conn->prepare("INSERT INTO $tbname (name,email,mobile,events,activate) VALUES (:name,:email,:mobile,:events,:hash)");
-                    $do = $sql->execute(['name' => $name, 'email' => $email,'mobile' => $mobile, 'events' => $event, 'hash' => $hash]);
+                    $sql = $conn->prepare("INSERT INTO $tbname (name,email,mobile,college,events,activate) VALUES (:name,:email,:mobile,:college,:events,:hash)");
+                    $do = $sql->execute(['name' => $name, 'email' => $email,'mobile' => $mobile,'college' => $college, 'events' => $event, 'hash' => $hash]);
 
                     if($do){
                         $_SESSION['confirm'] = "You have been registered successfully. Please verify your email by clicking on the

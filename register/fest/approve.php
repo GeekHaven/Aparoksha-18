@@ -36,16 +36,19 @@
         if($user == Null){
             $_SESSION['confirm'] = "No records found! Please try again with correct link or <a href='resend.php'>click here</a>
                                     to resend email. "; 
-            header("Refresh: 0; url=check.php#info"); 
+            header("Refresh: 0; url=check.php#info");
+            exit;
         }
         else{
             if($user['status'] == 'approved'){
                 $_SESSION['confirm'] = "Your account is already activated. Details are given below.";
                 $_SESSION['name'] = $user['name'];
                 $_SESSION['email'] = $user['email'];
+                $_SESSION['college'] = $user['college'];
                 $_SESSION['events'] = $user['events'];
                 $_SESSION['verify'] = $user['status']; 
                 header("Refresh: 0; url=check.php#info");
+                exit;
             }
             if($user['activate'] == $code){
                 $sql = $conn->prepare("UPDATE $tbname SET status = 'approved' WHERE email = :email");
@@ -57,20 +60,24 @@
                     $_SESSION['confirm'] = "Your account has been successfully activated. Details are given below.";
                     $_SESSION['name'] = $user['name'];
                     $_SESSION['email'] = $user['email'];
+                    $_SESSION['college'] = $user['college'];
                     $_SESSION['events'] = $user['events'];
                     $_SESSION['verify'] = $user['status']; 
                     //var_dump($_SESSION['verify']);
                     header("Refresh: 0; url=check.php#info");
+                    exit;
                 }
                 else{
                     $_SESSION['confirm'] = "Oops! we ran into some error. Try again or contact website administrator."; 
                     header("Refresh: 0; url=check.php#info"); 
+                    exit;
                 }
             }
             else{
                 $_SESSION['confirm'] = "Activation link incorrect or <a href='resend.php'>click here</a>
                                         to resend email or contact person mentioned in website below "; 
-                header("Refresh: 0; url=check.php#info"); 
+                header("Refresh: 0; url=check.php#info");
+                exit;
             }
         }
     }

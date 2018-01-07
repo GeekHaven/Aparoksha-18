@@ -66,6 +66,7 @@
                     $_SESSION['confirm'] = "Your account is already activated. Details are given below.";
                     $_SESSION['name'] = $user['name'];
                     $_SESSION['email'] = $user['email'];
+                    $_SESSION['college'] = $user['college'];
                     $_SESSION['events'] = $user['events'];
                     $_SESSION['verify'] = $user['status']; 
                     header("Refresh: 0; url=check.php#info");

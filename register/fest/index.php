@@ -86,6 +86,14 @@ unset($_SESSION['events']);
                   </div>
               </div>
               <div class="form-group">
+                  <label for="college" class="col-sm-2 control-label">College<sup>*</sup></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="college" name="college" placeholder="" value="<?php if (isset($_SESSION['college'])){echo $_SESSION['college']; unset($_SESSION['college']);} ?>" required>
+                    <div class="help-block with-errors pull-right"></div>
+                    <span class="form-control-feedback" aria-hidden="true"></span>
+                  </div>
+              </div>
+              <div class="form-group">
                   <label for="mobile" class="col-sm-2 control-label">Events Interested<sup>*</sup></label>
                   <div class="col-sm-10">
                     <div class="checkbox col-sm-3">
@@ -164,6 +172,7 @@ unset($_SESSION['events']);
               <hr>
               <p> Ashutosh Chandra </p>
               <p> events@aparoksha.org </p>
+              <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-7080397532</p>
           </div>
         </div>
         <div class="row footer-credit">
