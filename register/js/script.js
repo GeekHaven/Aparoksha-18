@@ -39,6 +39,7 @@ $(document).ready(function()  {
   });
 
   $("#exit").click(function() {
+    $(".popup1").hide();
     if($("#left").hasClass("col-md-12")){
       $("#left").toggleClass("col-md-12 col-md-6",2000);
     }
@@ -47,7 +48,6 @@ $(document).ready(function()  {
     $(".logo").show();
     $(".logo, .name").css("text-align", "center");
     $(".name").css("padding-top", "15%");
-    $(".popup1").hide();
     $("#left").mouseover(function() {
       $(".logo, .name").css("color", "white");
       $(".logo1, .name1").css("color", "#0f1216");
@@ -74,6 +74,7 @@ $(document).ready(function()  {
   });
 
   $("#exit").click(function() {
+    $(".popup2").hide();
     if($("#right").hasClass("col-md-12")){
       $("#right").toggleClass("col-md-12 col-md-6",2000);
     }
@@ -82,7 +83,6 @@ $(document).ready(function()  {
     $(".logo1").show();
     $(".logo1, .name1").css("text-align", "center");
     $(".name1").css("padding-top", "15%");
-    $(".popup2").hide();
     $("#right").mouseover(function() {
       $(".logo1, .name1").css("color", "white");
       $(".logo, .name").css("color", "#0f1216");
