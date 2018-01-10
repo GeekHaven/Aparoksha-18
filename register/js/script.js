@@ -62,7 +62,7 @@ $(document).ready(function()  {
     if($("#right").hasClass("col-md-6")){
         $(this).toggleClass("col-md-6 col-md-12",1000);
     }
-    $("#left").hide();
+    $("#left").hide(1000);
     $(".logo1").hide();
     $(".name1").addClass("formopen");
     $(".popup2").fadeIn(1000);
@@ -79,7 +79,7 @@ $(document).ready(function()  {
       $("#right").toggleClass("col-md-12 col-md-6",2000);
     }
     $(".name1").removeClass("formopen");
-    $("#left").show(2000);
+    $("#left").show(1000);
     $(".logo1").show();
     $(".logo1, .name1").css("text-align", "center");
     $(".name1").css("padding-top", "15%");
