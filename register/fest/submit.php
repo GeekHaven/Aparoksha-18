@@ -15,6 +15,7 @@ require '../vendor/autoload.php';
     $dbpass = getenv('DB_PASS');
     $dbn = getenv('DB_NAME');
     $tbn = getenv('TB_NAME');
+    $dev = getenv('DEVELOPMENT');
 
     $clicked = false;
 
@@ -86,7 +87,8 @@ require '../vendor/autoload.php';
             }
 
             else{
-                if(mailsend($email,$hash,$name)){
+                //If in development environment then do not send mail
+                if(!$dev && mailsend($email,$hash,$name)){
 
                     $sql = $conn->prepare("INSERT INTO $tbname (name,email,mobile,college,events,activate) VALUES (:name,:email,:mobile,:college,:events,:hash)");
                     $do = $sql->execute(['name' => $name, 'email' => $email,'mobile' => $mobile,'college' => $college, 'events' => $event, 'hash' => $hash]);
@@ -102,8 +104,27 @@ require '../vendor/autoload.php';
                         $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
                                                 try again after some time. If problem persists please feel free to contact any person mentioned below ";
                         header("Refresh: 0; url=index.php#info"); 
+                        exit;
                     }
-                } 
+                }
+                if($dev) {
+                    $sql = $conn->prepare("INSERT INTO $tbname (name,email,mobile,college,events,activate) VALUES (:name,:email,:mobile,:college,:events,:hash)");
+                    $do = $sql->execute(['name' => $name, 'email' => $email,'mobile' => $mobile,'college' => $college, 'events' => $event, 'hash' => $hash]);
+
+                    if($do){
+                        $_SESSION['confirm'] = "You have been registered successfully. Please verify your email by clicking on the
+                        link sent to your email"; 
+                        header("Refresh: 0; url=index.php#info"); 
+                        exit;
+                    }
+                  
+                    else{
+                        $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
+                                                try again after some time. If problem persists please feel free to contact any person mentioned below ";
+                        header("Refresh: 0; url=index.php#info");
+                        exit;
+                    }
+                }
             }
         }
         
@@ -111,6 +132,7 @@ require '../vendor/autoload.php';
             $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
             try again after some time. If problem persists please feel free to contact any person mentioned below ";
             header("Refresh: 0; url=index.php#info");
+            exit;
         }
         $clicked = false;
         $conn = null;

@@ -1,3 +1,4 @@
 apache/
 .env
 vendor/
+.DS_Store
