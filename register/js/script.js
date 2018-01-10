@@ -79,7 +79,7 @@ $(document).ready(function()  {
       $("#right").toggleClass("col-md-12 col-md-6",2000);
     }
     $(".name1").removeClass("formopen");
-    $("#left").show(1000);
+    $("#left").show(1500);
     $(".logo1").show();
     $(".logo1, .name1").css("text-align", "center");
     $(".name1").css("padding-top", "15%");
