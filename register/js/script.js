@@ -44,7 +44,7 @@ $(document).ready(function()  {
       $("#left").toggleClass("col-md-12 col-md-6",2000);
     }
     $(".name").removeClass("formopen");
-    $("#right").show(1000);
+    $("#right").show(1500);
     $(".logo").show();
     $(".logo, .name").css("text-align", "center");
     $(".name").css("padding-top", "15%");
