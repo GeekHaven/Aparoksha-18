@@ -62,7 +62,7 @@ $(document).ready(function()  {
     if($("#right").hasClass("col-md-6")){
         $(this).toggleClass("col-md-6 col-md-12",1000);
     }
-    $("#left").hide(1000);
+    $("#left").hide();
     $(".logo1").hide();
     $(".name1").addClass("formopen");
     $(".popup2").fadeIn(1000);
