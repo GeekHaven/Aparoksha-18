@@ -1,4 +1,4 @@
 <?php
-    header("Location: https://aparoksha.org/register");
+    header("Location: register/index.html");
     exit;
 ?>
