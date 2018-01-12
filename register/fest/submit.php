@@ -88,15 +88,14 @@ require '../vendor/autoload.php';
 
             else{
                 //If in development environment then do not send mail
-                if(!$dev && mailsend($email,$hash,$name)){
-
+                if(($dev !== "true") && mailsend($email,$hash,$name)){
                     $sql = $conn->prepare("INSERT INTO $tbname (name,email,mobile,college,events,activate) VALUES (:name,:email,:mobile,:college,:events,:hash)");
                     $do = $sql->execute(['name' => $name, 'email' => $email,'mobile' => $mobile,'college' => $college, 'events' => $event, 'hash' => $hash]);
 
                     if($do){
                         $_SESSION['confirm'] = "You have been registered successfully. Please verify your email by clicking on the
                         link sent to your email"; 
-                        header("Refresh: 0; url=index.php#info"); 
+                        header("Refresh: 0; url=index.php#info");
                         exit;
                     }
                   
@@ -107,7 +106,7 @@ require '../vendor/autoload.php';
                         exit;
                     }
                 }
-                if($dev) {
+                if($dev === "true") {
                     $sql = $conn->prepare("INSERT INTO $tbname (name,email,mobile,college,events,activate) VALUES (:name,:email,:mobile,:college,:events,:hash)");
                     $do = $sql->execute(['name' => $name, 'email' => $email,'mobile' => $mobile,'college' => $college, 'events' => $event, 'hash' => $hash]);
 

@@ -75,14 +75,14 @@
                 }
                 else{
                     //Disable mail sending if environment is development
-                    if(!$dev && mailsend($email,$hash, $user['name'])){
+                    if(($dev !== "true") && mailsend($email,$hash, $user['name'])){
                         $sql = $conn->prepare("UPDATE $tbname SET activate = :hash WHERE email = :email");
                         $do = $sql->execute(['email' => $email,'hash' => $hash]);
                         $_SESSION['confirm'] = "Confirmation code has been resent. Please check your mail.";                
                         header("Refresh: 0; url=resend.php#info");
                         exit;
                     }
-                    if($dev) {
+                    if($dev === "true") {
                         $sql = $conn->prepare("UPDATE $tbname SET activate = :hash WHERE email = :email");
                         $do = $sql->execute(['email' => $email,'hash' => $hash]);
                         $_SESSION['confirm'] = "Confirmation code has been resent. Please check your mail.";                

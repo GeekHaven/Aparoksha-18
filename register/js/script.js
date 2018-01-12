@@ -26,6 +26,7 @@ $(document).ready(function()  {
   $("#left").click(function() {
     if($("#left").hasClass("col-md-6")){
         $(this).toggleClass("col-md-6 col-md-12",1000);
+        $(".delete.is-large").attr("style","margin: 10px 0px 0px 0px");
     }
     $("#right").hide(1000);
     $(".logo").hide();
@@ -39,15 +40,15 @@ $(document).ready(function()  {
   });
 
   $("#exit").click(function() {
+    $(".popup1").hide();
     if($("#left").hasClass("col-md-12")){
       $("#left").toggleClass("col-md-12 col-md-6",2000);
     }
     $(".name").removeClass("formopen");
-    $("#right").show(1000);
+    $("#right").show(1500);
     $(".logo").show();
     $(".logo, .name").css("text-align", "center");
     $(".name").css("padding-top", "15%");
-    $(".popup1").hide();
     $("#left").mouseover(function() {
       $(".logo, .name").css("color", "white");
       $(".logo1, .name1").css("color", "#0f1216");
@@ -61,6 +62,7 @@ $(document).ready(function()  {
   $("#right").click(function() {
     if($("#right").hasClass("col-md-6")){
         $(this).toggleClass("col-md-6 col-md-12",1000);
+        $(".delete.is-large").attr("style","margin: 10px -20px 0px 0px");
     }
     $("#left").hide();
     $(".logo1").hide();
@@ -74,15 +76,15 @@ $(document).ready(function()  {
   });
 
   $("#exit").click(function() {
+    $(".popup2").hide();
     if($("#right").hasClass("col-md-12")){
       $("#right").toggleClass("col-md-12 col-md-6",2000);
     }
     $(".name1").removeClass("formopen");
-    $("#left").show(2000);
+    $("#left").show(1500);
     $(".logo1").show();
     $(".logo1, .name1").css("text-align", "center");
     $(".name1").css("padding-top", "15%");
-    $(".popup2").hide();
     $("#right").mouseover(function() {
       $(".logo1, .name1").css("color", "white");
       $(".logo, .name").css("color", "#0f1216");

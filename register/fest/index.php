@@ -23,7 +23,7 @@ unset($_SESSION['events']);
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".side-menu">
-      <i class="fa fa-arrow-left" aria-hidden="true" style="color: black; font-size: 25px;padding-left: 1%;padding-top: 1%;padding-bottom: 1%;"></i>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://aparoksha.org/register/" style="text-decoration: none;color: black;"><b style="font-size: 20px;font-weight: 400;">BACK</b></a>
+      <i class="fa fa-arrow-left" aria-hidden="true" style="color: black; font-size: 25px;padding-left: 1%;padding-top: 1%;padding-bottom: 1%;"></i>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html" style="text-decoration: none;color: black;"><b style="font-size: 20px;font-weight: 400;">BACK</b></a>
       <div class="container-fluid">
         <div class="row hero-header" id="home">
           <div class="col-md-12">
