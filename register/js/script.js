@@ -26,6 +26,7 @@ $(document).ready(function()  {
   $("#left").click(function() {
     if($("#left").hasClass("col-md-6")){
         $(this).toggleClass("col-md-6 col-md-12",1000);
+        $(".delete.is-large").attr("style","margin: 10px 0px 0px 0px");
     }
     $("#right").hide(1000);
     $(".logo").hide();
@@ -61,6 +62,7 @@ $(document).ready(function()  {
   $("#right").click(function() {
     if($("#right").hasClass("col-md-6")){
         $(this).toggleClass("col-md-6 col-md-12",1000);
+        $(".delete.is-large").attr("style","margin: 10px -20px 0px 0px");
     }
     $("#left").hide();
     $(".logo1").hide();
