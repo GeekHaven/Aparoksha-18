@@ -10,7 +10,7 @@ RewriteRule ^Madridista profile.html
 RewriteRule ^Pen_and_Prafull profile.html
 RewriteRule ^Piyush profile.html
 RewriteRule ^radix profile.html
-RewriteRule ^Somendra profile.html
+RewriteRule ^somendra profile.html
 RewriteRule ^sud0 profile.html
 RewriteRule ^WickedBrat profile.html
 RewriteRule ^ashutosh profile.html
@@ -28,7 +28,7 @@ RewriteRule ^niharikaxx profile.html
 RewriteRule ^Pradeep profile.html
 RewriteRule ^RGHVNDRA profile.html
 RewriteRule ^Shubhi_Khandelwal profile.html
-RewriteRule ^SiriusDagar profile.html
+RewriteRule ^siriusdagar profile.html
 RewriteRule ^SUBHAM profile.html
 RewriteRule ^thelittlewonder profile.html
 RewriteRule ^betterclever profile.html
@@ -36,6 +36,7 @@ RewriteRule ^Praneetha profile.html
 RewriteRule ^Srishti profile.html
 RewriteRule ^akshatj profile.html
 RewriteRule ^fiscallyFit profile.html
+RewriteRule ^fiscallyfit profile.html
 RewriteRule ^Garuda profile.html
 RewriteRule ^pradeepgangwar profile.html
 RewriteRule ^rohit profile.html
@@ -44,3 +45,5 @@ RewriteRule ^theCrazyOne profile.html
 RewriteRule ^aotoge profile.html
 RewriteRule ^CosmicCoder96 profile.html
 RewriteRule ^Sashank profile.html
+RewriteRule ^mubaris profile.html
+RewriteRule ^anshu profile.html
