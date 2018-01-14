@@ -45,5 +45,6 @@ RewriteRule ^theCrazyOne profile.html
 RewriteRule ^aotoge profile.html
 RewriteRule ^CosmicCoder96 profile.html
 RewriteRule ^Sashank profile.html
+RewriteRule ^sashank profile.html
 RewriteRule ^mubaris profile.html
 RewriteRule ^anshu profile.html

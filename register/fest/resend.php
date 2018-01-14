@@ -93,7 +93,7 @@ session_start();
               <hr>
               <p> Ashutosh Chandra </p>
               <p> events@aparoksha.org </p>
-              <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-7080397532</p>
+              <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-9919241909</p>
           </div>
         </div>
         <div class="row footer-credit">
