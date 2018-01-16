@@ -386,7 +386,7 @@ a:focus {
 	position: absolute;
 	top: 3vw;
 	right: 3vw;
-	color: #939391;
+	color: #000;
 	pointer-events: visible;
 }
 
@@ -425,8 +425,9 @@ a:focus {
 	list-style-type: none;
 	padding: 20vh 3em;
 	margin: 0;
-	background: #fcf652;
+	background: #000;
 	overflow: hidden;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .menu__item {
@@ -436,10 +437,14 @@ a:focus {
 .js .menu__item {
 	transform: translate3d(-13em,0,0);
 	transition: transform 0s 0.4s;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 45px;
+	color: white;
 }
 
 .btn--close {
-	opacity: 0;
+	opacity: 1;
+	color: white;
 }
 
 .menu--open .menu__item,
@@ -470,7 +475,7 @@ a:focus {
 .menu .menu__link:hover,
 .menu .menu__link:focus {
 	outline: none;
-	color: #000;
+	color: #fff;
 	text-decoration: line-through;
 }
 
