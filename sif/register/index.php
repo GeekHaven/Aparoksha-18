@@ -15,26 +15,27 @@ unset($_SESSION['events']);
 
   <!-- Bootstrap -->
   <link href="../../css/bootstrap.min.css" rel="stylesheet">
-  <link href="../../register/css/style.css" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href='../../css/dosis-font.css' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.ico">
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".side-menu">
+<body id="page-top" data-spy="scroll" data-target=".side-menu" style="background-image: url(../../img/sif-bg.png);">
       <i class="fa fa-arrow-left" aria-hidden="true" style="color: black; font-size: 25px;padding-left: 1%;padding-top: 1%;padding-bottom: 1%;"></i>&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html" style="text-decoration: none;color: black;"><b style="font-size: 20px;font-weight: 400;">BACK</b></a>
       <div class="container-fluid">
-        <div class="row hero-header" id="home">
-          <div class="col-md-12">
-          <a href="https://aparoksha.org"><img src="../../img/apk-logo.png" id="apk-logo" class="logo img-circle img responsive"></a>
-            <h1>Startup Intern Fair Registration</h1>
-            <h3>Aparoksha'18</h3>
+        <div class="row hero-header" id="home"  style="color:black; background-color:transparent;"> 
+          <div class="col-md-7">
+            <img src="../../img/sif-2.png" class="logo img-rounded">
+            <h1 id="startupheading">Startup Intern Fair</h1>
+            <h3>Aparoksha'18 | IIIT Allahabad</h3>
             <h4>16<sup>th</sup> to 18<sup>th</sup>  March, 2018</h4>
+
           </div>
-          <!-- <div class="col-md-5">
-            <img src="../../img/frag.png" class="rocket animated bounce">
-          </div> -->
+          <div class="col-md-5 hidden-xs">
+            <img src="../../img/sif.svg" class="rocket animated bounce">
+          </div>
         </div>
       </div>
 
@@ -53,8 +54,8 @@ unset($_SESSION['events']);
         </div>
 
         <div class="col-md-12 contact-form">
-            <h2 class="content-ct" style="font-weight:bold; margin-bottom:1em;"><span class="ti-email"></span> Register your startup here</h2>
-            <h5 class="content-ct" style="font-weight:bold; margin-bottom:1em;"><span class="ti-email"></span>Fields marked with <sup>*</sup> are mandatory</h5>
+            <h2 class="content-ct" style="font-weight:bold;"><span class="ti-email"></span> Register your startup here</h2>
+            <h5 class="content-ct" style="font-weight:bold; margin-bottom:3em;"><span class="ti-email"></span>Fields marked with <sup>*</sup> are mandatory</h5>
             
             <div class="alert alert-info col-sm-12" id="info" style="margin-bottom:1em; 
             <?php if(isset($_SESSION['confirm'])){echo("display:block;");} else {echo("display:none;");} ?> ">
@@ -120,7 +121,7 @@ unset($_SESSION['events']);
                     </div>
                     <div class="checkbox col-sm-3">
                       <label>
-                        <input type="checkbox" name="profiles[]" value="Graphics" id="graphicscheck"> Graphics Designer
+                        <input type="checkbox" name="profiles[]" value="Graphics" id="graphicscheck"> Graphic Designer
                       </label>
                     </div>
                     <div class="checkbox col-sm-4">
@@ -128,9 +129,9 @@ unset($_SESSION['events']);
                         <input type="checkbox" name="profiles[]" value="Content Writing" id="contentcheck"> Content Writing
                       </label>
                     </div>
-                    <div class="checkbox col-sm-3">
+                    <div class="checkbox col-sm-4">
                       <label>
-                        <input type="checkbox" name="profiles[]" value="Business" id="businesscheck"> Business Developer
+                        <input type="checkbox" name="profiles[]" value="Business" id="businesscheck"> Business Development
                       </label>
                     </div>
                   </div>
@@ -165,7 +166,7 @@ unset($_SESSION['events']);
                     </div>
                 </div>
                 <div class="form-group col-sm-10 col-md-6" id="graphicsfield">
-                    <label for="graphics" class="col-sm-2 col-md-6 control-label">Graphics Designer</label>
+                    <label for="graphics" class="col-sm-2 col-md-6 control-label">Graphic Designer</label>
                     <div class="col-sm-3 col-md-5">
                       <input type="number" class="form-control" id="graphics" name="graphics" placeholder="0" value="<?php if (isset($_SESSION['graphics'])){echo $_SESSION['graphics']; unset($_SESSION['graphics']);} else {echo 0;}?>" disabled="true">
                       <div class="help-block with-errors pull-right"></div>
@@ -183,7 +184,7 @@ unset($_SESSION['events']);
                     </div>
                 </div>
                 <div class="form-group col-sm-10 col-md-6" id="businessfield">
-                    <label for="business" class="col-sm-2 col-md-6 control-label">Business Developer</label>
+                    <label for="business" class="col-sm-2 col-md-6 control-label">Business Development</label>
                     <div class="col-sm-3 col-md-5">
                       <input type="number" class="form-control" id="business" name="business" placeholder="0" value="<?php if (isset($_SESSION['business'])){echo $_SESSION['business']; unset($_SESSION['business']);} else {echo 0;}?>" disabled="true">
                       <div class="help-block with-errors pull-right"></div>
