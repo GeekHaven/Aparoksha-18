@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Coming Soon</title>
+<link href="tools/style.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<script type="text/javascript" src="tools/jquery.min.js"></script> 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script> 
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto+Slab:700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
+<style type="text/css">
+	body{
+  background:-webkit-linear-gradient( #b2d8ff , #8bb5e0);
+  height:700px;
+}
+#cloud1{
+  width:300px;
+  height:100px;
+  background:#e5f3ff;
+  margin:140px 0 0 0;
+  border-radius:50px;
+   -webkit-transform:translateX(-400px);
+  -webkit-animation: move 7s linear infinite ;
+  display:block-inline;
+}
+#cloud1:before{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  background:#e5f3ff;
+  border-radius:50%;
+  margin:-100px 0 0 20px;
+}
+#cloud1:after{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:120px;
+  background:#e5f3ff;
+  border-radius:50%;
+  margin:-60px 0 0 165px;
+}
+#cloud2{
+  width:200px;
+  height:70px;
+  background:#e5f3ff;
+  margin:60px 0 0 300px;
+  border-radius:50px;
+  -webkit-transform:translateX(-520px);
+  -webkit-animation: move 12s linear infinite ;
+  display:block-inline;
+}
+#cloud2:before{
+  content:"";
+  position:absolute;
+  width:120px;
+  height:120px;
+  background:#e5f3ff;
+  border-radius:50%;
+  margin:-70px 0 0 20px;
+}
+#cloud2:after{
+  content:"";
+  position:absolute;
+  width:90px;
+  height:90px;
+  background:#e5f3ff;
+  border-radius:50%;
+  margin:-40px 0 0 100px;
+}
+@-webkit-keyframes move {
+  0%{-webkit-transform:translateX(-340px);opacity:0.5;}
+  20%{opacity:1;}
+  90%{opacity:1;}
+  100%{-webkit-transform:translateX(1650px);opacity:0.3;}
+}
+</style>
+
+</head>
+<body>
+<div id="cloud1" style="z-index: -10;opacity: 0.5;"></div>
+<div id="cloud2" style="z-index: -10;opacity: 0.4;"></div>
+
+<div class="wrapper" style="padding-top: 1em;position: absolute;z-index: 10;margin-left: 12em;margin-top: -17em;">
+	<div class="left-section"><img src="images/watch.png" /></div>
+	<div class="right-section">
+		<h1 id="logo" style="letter-spacing: 1px;width: 490px;">COMING SOON...</h1>
+		<div class="seprator"></div>
+		<div class="main-content">
+			<!-- <h2>Our Website is coming soon</h2> -->
+			<p style="font-family: 'Open Sans', sans-serif;"><b>In the mean time connect with us with the information provided</b></p>
+		</div>
+		<ul class="social" id="reg-icons" style="color: black;border: none;margin-left: -1em;">
+          <li><a href="https://www.facebook.com/aparoksha/" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+          <li><a href="https://twitter.com/aparoksha_org" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true" style="padding-left:0.4em;"></i></a></li>
+          <li><a href="https://www.instagram.com/aparokshaiiita/" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true" style="padding-left:0.4em;"></i></a></li>
+          <li><a href="https://medium.com/the-aparoksha-blog" target="_blank"><i class="fa fa-medium fa-2x" aria-hidden="true" style="padding-left:0.4em;"></i></a></li>
+        </ul>
+		<ul class="info" style="font-family: 'Open Sans', sans-serif;font-weight: 700;">
+			<li><i class="fa fa-phone-square"></i>+91-9919241909</li>
+			<li><i class="fa fa-map-marker"></i>IIIT Allahabad, Jhalwa, Allahabad</li>
+			<li><i class="fa fa-envelope"></i><a href="#">events@aparoksha.org</a></li>
+		</ul>
+
+		<div class="social-links">
+			<ul class="social2">
+				<li id="facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+				<li id="twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+				<li id="linkedin"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+			</ul>
+		</div>
+		
+		
+	</div>
+	<div class="watch-section"><img src="images/watch.png" /></div>
+</div>
+
+
+</body>
+</html>
