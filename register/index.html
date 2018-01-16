@@ -16,12 +16,79 @@
 </head>
 
 <body>
-<div class='tetris'>
-  <div class='block1'></div>
-  <div class='block2'></div>
-  <div class='block3'></div>
-  <div class='block4'></div>
-</div>
+
+
+   
+    <div class="loader">
+        <div class='loader loader1'>
+                <div>
+                  <div>
+                    <div>
+                      <div>
+                        <div>
+                          <div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class='loader loader2'>
+                <div>
+                  <div>
+                    <div>
+                      <div>
+                        <div>
+                          <div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class='loader loader3'>
+                <div>
+                  <div>
+                    <div>
+                      <div>
+                        <div>
+                          <div></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class='loader loader4'>
+                <div>
+                  <div>
+                    <div>
+                      <div>
+                        <div>
+                          <div>
+                            <div>
+                              <div>
+                                <div>
+                                  <div></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    </div>
+ 
+    
+
+
 
   <div class="top-head-mobile" style="background-color:#0f1216; padding-bottom:0.2em; color:white;">
     <img src="../img/apk-logo.png" id="apk-logo" class="img-responsive rounded-circle" width="100em" height="100em">
@@ -40,7 +107,7 @@
  <div class="container">
 
   <div class="columns">
-    <a class="delete is-large" id="exit"></a>
+    <a class="delete is-large" id="exit" style="margin-top:10px"></a>
     <div class="column col-md-6" id="left">
       <i class="fa fa-calendar-check-o logo" aria-hidden="true"></i>
       <p class="name">Fest Registration</p>
@@ -62,7 +129,7 @@
                 details so that we provide you best hospitality.
               </p>
               <div class="card-buttons">
-                <a href="https://aparoksha.org/register/fest" target="_blank" class="btn btn-primary">Register</a>
+                <a href="fest" target="_blank" class="btn btn-primary">Register</a>
                 <a href="https://www.facebook.com/aparoksha/" target="_blank" class="btn btn-success">More</a>
               </div>
             </div>
@@ -72,7 +139,6 @@
     </div>
 
       &nbsp;&nbsp;&nbsp;&nbsp;
-
       <div class="column col-md-6" id="right">
         <i class="fa fa-certificate logo1" aria-hidden="true"></i> 
         <p class="name1">Events & Workshops</p>
@@ -108,7 +174,7 @@
                  games as CS-GO, FIFA and DOTA.
                </p>
                <div class="card-buttons">
-                <a href="https://aparoksha.org/register/frag-fest" target="_blank" class="btn btn-primary disabled">Registration not open</a>
+                <a href="frag-fest" target="_blank" class="btn btn-primary disabled">Registration not open</a>
                 <a href="https://aparoksha.org/frag-fest" target="_blank" class="btn btn-success">Event Link</a>
               </div>
             </div>
@@ -178,6 +244,7 @@
     </div>
   </div>
 </div>
+</div>
 
 <br><br><br>
   <div class="footer container-fluid" id="mainreg-footer">
@@ -197,7 +264,7 @@
         <hr>
         <p> Ashutosh Chandra</p>
         <p>events@aparoksha.org</p>
-        <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-7080397532</p>
+        <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-9919241909</p>
       </div>
     </div>
     <div class="row footer-credit" style="padding:1em 0em 1em 0em;">
@@ -214,11 +281,18 @@
       </div>
     </div>
 </div>
-</div>
+
 <!-- JS scripts start here -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
-<script type="text/javascript" src="js/loader.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script>
+        $(document).ready(function () { /* When the content is loaded */
+            $(".load").fadeIn(2000); /* Display the content */
+            $(".loader").fadeOut(); /* Hide the loader */
+        });
+        </script>
+
 </body>
 </html>
