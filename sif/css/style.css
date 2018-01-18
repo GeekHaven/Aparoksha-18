@@ -1,3 +1,18 @@
+@font-face {
+    font-family: Metropolis-Bold;
+    src: url("../../fonts/Metropolis-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url("../../fonts/Roboto-Regular.ttf") format("opentype");
+}
+
+@font-face {
+    font-family: Roboto-Medium;
+    src: url("../../fonts/Roboto-Medium.ttf") format("opentype");
+}
+
 body {
 	font-family: Roboto-Regular;
     color: #4A4A4A;
@@ -38,11 +53,11 @@ a:hover, a:focus, a:active, a:visited {
     border-radius: 4px;
 }
 .btn-red {
-	background-color: #dd5138;
+	background-color: #E6562A;
 	color: #fff;
 }
 .btn-yellow {
-	background-color: #fcd93b;
+	background-color: #5BD1F4;
 	color: #2a2a2a;
 	opacity: 0.8;
 }

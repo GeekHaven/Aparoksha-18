@@ -1,6 +1,6 @@
 <?php
 session_start();
-unset($_SESSION['events']);
+unset($_SESSION['profiles']);
 ?>
 
 <!DOCTYPE html>
@@ -40,17 +40,30 @@ unset($_SESSION['events']);
       </div>
 
       <div class="container">
-        <div class="row me-row content-ct">
-          <div class="col-md-4" style="margin-top:1em;">
+        <div class="row me-row content-ct hidden-sm hidden-xs">
+          <div class="col-md-6 col-sm-5" style="margin-top:1em;">
             <a href="index.php" class="btn btn-lg btn-red">Register<i class="fa fa-calendar" aria-hidden="true" style="padding-left:0.6em;"></i>
             </a>
           </div>
-          <div class="col-md-4" style="margin-top:1em;">
+          <div class="col-md-5 col-sm-5" style="margin-top:1em;">
             <a href="check.php" class="btn btn-lg btn-yellow">Check your status<i class="fa fa-binoculars" aria-hidden="true" style="padding-left:0.6em;"></i></a>
           </div>
-          <div class="col-md-3 col-md-offset-1" style="margin-top:1em;">
+          <!--div class="col-md-3 col-md-offset-1" style="margin-top:1em;">
               <a href="https://www.facebook.com/aparoksha/" target="_blank" class="btn btn-lg btn-success">Event information<i class="fa fa-info-circle" aria-hidden="true" style="padding-left:0.6em;"></i></a>
+          </div-->
+        </div>
+
+        <div class="row me-row content-ct hidden-lg hidden-md">
+          <div class="col-md-6 col-sm-5" style="margin-top:1em;">
+            <a href="index.php" class="btn btn-md btn-red">Register<i class="fa fa-calendar" aria-hidden="true" style="padding-left:0.6em;"></i>
+            </a>
           </div>
+          <div class="col-md-5 col-sm-5" style="margin-top:1em;">
+            <a href="check.php" class="btn btn-md btn-yellow">Check your status<i class="fa fa-binoculars" aria-hidden="true" style="padding-left:0.6em;"></i></a>
+          </div>
+          <!--div class="col-md-3 col-md-offset-1" style="margin-top:1em;">
+              <a href="https://www.facebook.com/aparoksha/" target="_blank" class="btn btn-lg btn-success">Event information<i class="fa fa-info-circle" aria-hidden="true" style="padding-left:0.6em;"></i></a>
+          </div-->
         </div>
 
         <div class="col-md-12 contact-form">
@@ -90,7 +103,7 @@ unset($_SESSION['events']);
               <div class="form-group">
                   <label for="company" class="col-sm-2 control-label">Company Name<sup>*</sup></label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" id="company" name="companyname" placeholder="" value="<?php if (isset($_SESSION['college'])){echo $_SESSION['college']; unset($_SESSION['college']);} ?>" required>
+                    <input type="text" class="form-control" id="company" name="companyname" placeholder="" value="<?php if (isset($_SESSION['companyname'])){echo $_SESSION['companyname']; unset($_SESSION['companyname']);} ?>" required>
                     <div class="help-block with-errors pull-right"></div>
                     <span class="form-control-feedback" aria-hidden="true"></span>
                   </div>
@@ -98,7 +111,7 @@ unset($_SESSION['events']);
               <div class="form-group">
                   <label for="info" class="col-sm-2 control-label">Company Info</label>
                   <div class="col-sm-9">
-                    <textarea class="form-control" rows="5" id="info" name="companyinfo" placeholder="Provide Info about your startup (optional)"></textarea>
+                    <textarea class="form-control" rows="5" id="info" name="companyinfo" placeholder="Provide Info about your startup (optional)"><?php if (isset($_SESSION['companyinfo'])){echo $_SESSION['companyinfo']; unset($_SESSION['companyinfo']);} else{echo '';}?></textarea>
                   </div>
               </div>
               <div class="form-group">
@@ -150,7 +163,7 @@ unset($_SESSION['events']);
                 <div class="form-group col-sm-10 col-md-6" id="backendfield">
                     <label for="backend" class="col-sm-2 col-md-6 control-label">Backend Developer</label>
                     <div class="col-sm-3 col-md-5">
-                      <input type="number" class="form-control" id="backend" name="backend" placeholder="0" value="<?php if (isset($_SESSION['backend'])){echo $_SESSION['baclend']; unset($_SESSION['backend']);} else {echo 0;}?>" disabled="true">
+                      <input type="number" class="form-control" id="backend" name="backend" placeholder="0" value="<?php if (isset($_SESSION['backend'])){echo $_SESSION['backend']; unset($_SESSION['backend']);} else {echo 0;}?>" disabled="true">
                       <div class="help-block with-errors pull-right"></div>
                       <span class="form-control-feedback" aria-hidden="true"></span>
                     </div>
