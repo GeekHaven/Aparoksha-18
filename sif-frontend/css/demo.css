@@ -9,17 +9,19 @@ html, body {
 	overflow-x: hidden;
 }
 
-/*body {
+body {
 	font-family: 'Inconsolata', monospace;
 	color: #141417;
-	background: #d0cfc5;
+	background-image: url('../bg-1.png');
+	background-position: center;
+	background-size: cover;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}*/
-/*
+}
+
 h2, .menu__link {
 	font-family: 'Poppins', sans-serif;
-}*/
+}
 
 a {
 	text-decoration: none;
@@ -386,7 +388,7 @@ a:focus {
 	position: absolute;
 	top: 3vw;
 	right: 3vw;
-	color: #fff;
+	color: #939391;
 	pointer-events: visible;
 }
 
@@ -425,9 +427,8 @@ a:focus {
 	list-style-type: none;
 	padding: 20vh 3em;
 	margin: 0;
-	background: #000;
+	background: #fcf652;
 	overflow: hidden;
-	font-family: 'Open Sans', sans-serif;
 }
 
 .menu__item {
@@ -437,14 +438,10 @@ a:focus {
 .js .menu__item {
 	transform: translate3d(-13em,0,0);
 	transition: transform 0s 0.4s;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 30px;
-	color: white;
 }
 
 .btn--close {
-	opacity: 1;
-	color: white;
+	opacity: 0;
 }
 
 .menu--open .menu__item,
@@ -467,7 +464,7 @@ a:focus {
 }
 
 .menu .menu__link {
-	font-size: 2.8vw;
+	font-size: 3.5vw;
 	color: #4f4f54;
 	font-weight: bold;
 }
@@ -475,7 +472,7 @@ a:focus {
 .menu .menu__link:hover,
 .menu .menu__link:focus {
 	outline: none;
-	color: #fff;
+	color: #000;
 	text-decoration: line-through;
 }
 
@@ -751,7 +748,7 @@ a:focus {
 
 /* Demo themes */
 
-/*.demo-menu { background: #4f4f54; color: #828282; }
+.demo-menu { background: #4f4f54; color: #828282; }
 .demo-menu a { color: #c5c149; }
 .demo-menu a:hover, .demo-menu a:focus { color: #fcf652; }
 
@@ -763,7 +760,7 @@ a:focus {
 .demo-form a:not(.pater) { color: #fff; }
 .demo-form a:hover, .demo-form a:focus { color: #252527; }
 
-.demo-modal { background: #6f6f6f; color: #bfbfbf; }*/
+.demo-modal { background: #6f6f6f; color: #bfbfbf; }
 
 @media screen and (max-width: 56.250em) {
 	.btn--tool {
