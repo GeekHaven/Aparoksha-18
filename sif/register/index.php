@@ -46,7 +46,7 @@ unset($_SESSION['profiles']);
             </a>
           </div>
           <div class="col-md-5 col-sm-5" style="margin-top:1em;">
-            <a href="check.php" class="btn btn-lg btn-yellow">Check your status<i class="fa fa-binoculars" aria-hidden="true" style="padding-left:0.6em;"></i></a>
+            <a href="check.php" class="btn btn-lg btn-yellow disabled">Check your status<i class="fa fa-binoculars" aria-hidden="true" style="padding-left:0.6em;"></i></a>
           </div>
           <!--div class="col-md-3 col-md-offset-1" style="margin-top:1em;">
               <a href="https://www.facebook.com/aparoksha/" target="_blank" class="btn btn-lg btn-success">Event information<i class="fa fa-info-circle" aria-hidden="true" style="padding-left:0.6em;"></i></a>
@@ -59,7 +59,7 @@ unset($_SESSION['profiles']);
             </a>
           </div>
           <div class="col-md-5 col-sm-5" style="margin-top:1em;">
-            <a href="check.php" class="btn btn-md btn-yellow">Check your status<i class="fa fa-binoculars" aria-hidden="true" style="padding-left:0.6em;"></i></a>
+            <a href="check.php" class="btn btn-md btn-yellow disabled">Check your status<i class="fa fa-binoculars" aria-hidden="true" style="padding-left:0.6em;"></i></a>
           </div>
           <!--div class="col-md-3 col-md-offset-1" style="margin-top:1em;">
               <a href="https://www.facebook.com/aparoksha/" target="_blank" class="btn btn-lg btn-success">Event information<i class="fa fa-info-circle" aria-hidden="true" style="padding-left:0.6em;"></i></a>
@@ -119,32 +119,32 @@ unset($_SESSION['profiles']);
                   <div class="col-sm-10">
                     <div class="checkbox col-sm-3">
                       <label>
-                        <input type="checkbox" name="profiles[]" value="Frontend Developer" id="frontendcheck"> Frontend Developer
+                        <input type="checkbox" name="profiles[]" value="Frontend Developer" id="frontendcheck" <?php if (isset($_SESSION['frontend'])){echo "checked";} unset($_SESSION['frontend']);?>> Frontend Developer
                       </label>
                     </div>
                     <div class="checkbox col-sm-4">
                       <label>
-                        <input type="checkbox" name="profiles[]" value="Backend Developer" id="backendcheck"> Backend Developer
+                        <input type="checkbox" name="profiles[]" value="Backend Developer" id="backendcheck" <?php if (isset($_SESSION['backend'])){echo "checked";} unset($_SESSION['backend']);?>> Backend Developer
                       </label>
                     </div>
                     <div class="checkbox col-sm-3">
                       <label>
-                        <input type="checkbox" name="profiles[]" value="Full-Stack Developer" id="fullstackcheck"> Full-Stack Developer
+                        <input type="checkbox" name="profiles[]" value="Full-Stack Developer" id="fullstackcheck" <?php if (isset($_SESSION['fullstack'])){echo "checked";} unset($_SESSION['fullstack']);?>> Full-Stack Developer
                       </label>
                     </div>
                     <div class="checkbox col-sm-3">
                       <label>
-                        <input type="checkbox" name="profiles[]" value="Graphics" id="graphicscheck"> Graphic Designer
+                        <input type="checkbox" name="profiles[]" value="Graphics" id="graphicscheck" <?php if (isset($_SESSION['graphics'])){echo "checked";} unset($_SESSION['graphics']);?>> Graphic Designer
                       </label>
                     </div>
                     <div class="checkbox col-sm-4">
                       <label>
-                        <input type="checkbox" name="profiles[]" value="Content Writing" id="contentcheck"> Content Writing
+                        <input type="checkbox" name="profiles[]" value="Content Writing" id="contentcheck" <?php if (isset($_SESSION['content'])){echo "checked";} unset($_SESSION['content']);?>> Content Writing
                       </label>
                     </div>
                     <div class="checkbox col-sm-4">
                       <label>
-                        <input type="checkbox" name="profiles[]" value="Business" id="businesscheck"> Business Development
+                        <input type="checkbox" name="profiles[]" value="Business" id="businesscheck" <?php if (isset($_SESSION['business'])){echo "checked";} unset($_SESSION['business']);?>> Business Development
                       </label>
                     </div>
                   </div>

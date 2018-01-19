@@ -47,5 +47,34 @@ $(document).ready(function()  {
             $('#graphics').prop('disabled', false);
         }        
     });
+    $('#terms').change(function () {
+        if (!this.checked) {
+            $('#submit').prop('disabled', true);
+        }
+        else {
+            $('#submit').prop('disabled', false);
+        }        
+    });
+    if(!$("#terms").checked) {
+        $('#submit').prop('disabled', true);
+    }
+    if(!$("#frontendcheck").checked) {
+        $('#frontend').prop('disabled', true);
+    }
+    if(!$("#backendcheck").checked) {
+        $('#backend').prop('disabled', true);
+    }
+    if(!$("#contentcheck").checked) {
+        $('#content').prop('disabled', true);
+    }
+    if(!$("#businesscheck").checked) {
+        $('#business').prop('disabled', true);
+    }
+    if(!$("#graphicscheck").checked) {
+        $('#graphics').prop('disabled', true);
+    }
+    if(!$("#fullstackcheck").checked) {
+        $('#fullstack').prop('disabled', true);
+    }
   }); 
   

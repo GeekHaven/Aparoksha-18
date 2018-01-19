@@ -9,6 +9,8 @@ require '../../register/vendor/autoload.php';
        $dotenv->load('.env');
     }
 
+    date_default_timezone_set('Asia/Kolkata');
+
     $dbhost = getenv('DB_HOST');
     $dbuser = getenv('DB_USER');
     $dbpass = getenv('DB_PASS');
@@ -45,17 +47,17 @@ require '../../register/vendor/autoload.php';
             $_SESSION['companyinfo'] = $companyinfo;
 
             $frontend = isset($_POST['frontend']) ? $_POST['frontend'] : 0;
-            $_SESSION['frontend'] = $frontend;
+            if(isset($_POST['backend'])){$_SESSION['frontend'] = $frontend;}
             $backend = isset($_POST['backend']) ? $_POST['backend'] : 0;
-            $_SESSION['backend'] = $backend;                
+            if(isset($_POST['backend'])){$_SESSION['backend'] = $backend;}                
             $fullstack = isset($_POST['fullstack']) ? $_POST['fullstack'] : 0;
-            $_SESSION['fullstack'] = $fullstack;
+            if(isset($_POST['backend'])){$_SESSION['fullstack'] = $fullstack;}
             $graphics = isset($_POST['graphics']) ? $_POST['graphics'] : 0;
-            $_SESSION['graphics'] = $graphics;  
+            if(isset($_POST['backend'])){$_SESSION['graphics'] = $graphics;} 
             $content = isset($_POST['content']) ? $_POST['content'] : 0;
-            $_SESSION['content'] = $content;                
+            if(isset($_POST['backend'])){$_SESSION['content'] = $content;}            
             $business = isset($_POST['business']) ? $_POST['business'] : 0;
-            $_SESSION['business'] = $business;
+            if(isset($_POST['backend'])){$_SESSION['business'] = $business;}
       
             $restrict = htmlentities($_POST['restrict']);
             $year = htmlentities($_POST['year']);
