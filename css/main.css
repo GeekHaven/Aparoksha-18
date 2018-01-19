@@ -1,7 +1,6 @@
 .wrapper {
-    max-width: 80%;
     margin: auto;
-    margin-top: 20%;
+    text-align: center;
 }
 body{
     font-family: 'Catamaran', sans-serif;
@@ -33,14 +32,8 @@ h1, h2 {
 }
 h1{
     font-family: 'Open+Sans', sans-serif;
-    font-size: 150%;
-    letter-spacing: 5px;
-    
 }
-h2{
-    letter-spacing: 20px;
-    font-size: 500%;
-}
+
 .bar {
     height: 1px;
     width: 30%;
@@ -68,20 +61,19 @@ h2{
 }
 .logo {
     width: 180px;
-    height: 160px;
-    margin-right: 50px;
     margin-top: 30px;
 }
 .logo1 {
     width: 120px;
     height: 120px;
 }
-.logos {
-    position: fixed;
-    top: 30px;
-    right: 40px;
+.logos{
+    text-align: center;
 }
-
+a{
+    text-decoration: none !important;
+    background-color: transparent;
+}
 .overlay {
     height: 0%;
     width: 100%;
@@ -134,10 +126,7 @@ h2{
     right: 35px;
 }
 }
-h5{
-    color: white;
-    font-size: 1.5em;
-}
+
 a.animated-button:link, a.animated-button:visited {
 position: relative;
 display: block;
@@ -327,61 +316,186 @@ transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1);
 0s;
 }
 
-@media screen and (max-width: 950px) {
-h2 {
-font-size: 300%;
-}
-h1{
-font-size: 100%;
-}
-.wrapper {
-margin-top: 30%;
-}
-#rck{
-right: -200px;
-z-index: -100;
-}
-}
-
-@media screen and (max-width: 890px) {
-
-#rck{
-right: -300px;
-z-index: -100;
-}
-}
-@media screen and (max-width: 700px) {
-
-h2 {
-font-size: 200%;
-}
-h1{
-font-size: 80%;
-}
-.wrapper {
-margin-top: 35%;
-}
-}
-@media screen and (max-width: 570px) {
-
-.wrapper {
-margin-top: 48%;
-}
-h1{
-font-size: 80%;
-}
-h2 {
-font-size:180%;
-letter-spacing: 8px;
-}
-#rck {
-right: -350px ;
-bottom: -200px;
-z-index: -100;
-}
-}
-
 .bttn {
 margin: 0;
 max-width: 300px;
+}
+
+@media (max-width: 2000px) {
+    #clock {
+        margin-left: 27em;
+    }
+    #month1 {
+        width: 60px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 1500px) {
+    #clock {
+        margin-left: 24em;
+    }
+}
+
+@media (max-width: 1300px) {
+    #clock {
+        margin-left: 20em;
+    }
+}
+
+@media (max-width: 1200px) {
+    #clock {
+        margin-left: 11em;
+    }
+}
+
+@media (max-width: 1000px) {
+    #clock {
+        margin-left: 7em;
+    }
+}
+
+@media (max-width: 900px) {
+    #clock {
+        margin-left: 6em;
+    }
+    .social {
+        text-align:center;
+    }
+}
+
+@media (max-width: 800px) {
+    #clock {
+        margin-left: 0em;
+    }
+}
+
+@media (max-width: 700px) {
+    #clock {
+        margin-left: 0em;
+    }
+    .social {
+        text-align:center;
+    }
+}
+
+@media (max-width: 600px) {
+    #clock {
+        margin-left: 0em;
+        display: none;
+    }
+    #footer{
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    #clock {
+        margin-left: 0em;
+        display: none;
+    }
+    #footer{
+        text-align: center;
+    }
+}
+
+@media (max-width: 200px) {
+    #clock {
+        margin-left: 0em;
+        display: none;
+    }
+    #footer{
+        text-align: center;
+    }
+}
+
+#month1{
+text-align: center;
+float: left;
+width: 60px;
+height: 100px;
+top: ;
+background-repeat: no-repeat;
+background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
+}
+#month2{
+text-align: center;
+float: left;
+width: 60px;
+margin-right: 1em;
+height: 100px;
+background-repeat: no-repeat;
+background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
+}
+#day1{
+float: left;;
+width: 60px;
+height: 100px;
+background-repeat: no-repeat;
+background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
+text-align: center;
+}
+#day2{
+text-align: center;
+float: left;
+width: 60px;
+margin-right: 1em;
+height: 100px;
+background-repeat: no-repeat;
+background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
+}
+#hour1{
+text-align: center;
+float: left;
+width: 60px;
+height: 100px;
+background-repeat: no-repeat;
+background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
+}
+#hour2{
+text-align: center;
+float: left;
+width: 60px;
+height: 100px;
+margin-right: 1em;
+left: 340px;
+background-repeat: no-repeat;
+background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
+}
+#minute1{
+text-align: center;    
+float: left;
+width: 60px;
+height: 100px;
+background-repeat: no-repeat;
+background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
+color:red;
+font-weight:bold;
+}
+#minute2{
+text-align: center;    
+float: left;
+position: ;
+width: 60px;
+height: 100px;
+margin-right: 1em;
+background-repeat: no-repeat;
+background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
+}
+#second1{
+text-align: center;    
+float: left;
+width: 60px;
+height: 100px;
+background-repeat: no-repeat;
+background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
+}
+#second2{
+text-align: center;
+float: left;
+width: 60px;
+height: 100px;
+background-repeat: no-repeat;
+margin-right: 1em;
+background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
 }
