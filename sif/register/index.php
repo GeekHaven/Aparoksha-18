@@ -95,7 +95,7 @@ unset($_SESSION['profiles']);
               <div class="form-group">
                   <label for="mobile" class="col-sm-2 control-label">Mobile<sup>*</sup></label>
                   <div class="col-sm-9">
-                    <input type="number" class="form-control" id="mobile" name="mobile" placeholder="xxxxxxxxxx" value="<?php if (isset($_SESSION['mobile'])){echo $_SESSION['mobile']; unset($_SESSION['mobile']);} ?>" required>
+                    <input type="tel" pattern="[0-9]{10}" class="form-control" id="mobile" data-error="Please enter a 10 digit mobile number" name="mobile" placeholder="xxxxxxxxxx" value="<?php if (isset($_SESSION['mobile'])){echo $_SESSION['mobile']; unset($_SESSION['mobile']);} ?>" required>
                     <div class="help-block with-errors pull-right"></div>
                     <span class="form-control-feedback" aria-hidden="true"></span>
                   </div>
@@ -155,15 +155,15 @@ unset($_SESSION['profiles']);
                 <div class="form-group col-sm-10 col-md-6" id="frontendfield">
                     <label for="frontend" class="col-sm-2 col-md-6 control-label">Frontend Developer</label>
                     <div class="col-sm-3 col-md-5">
-                      <input type="number" class="form-control" id="frontend" name="frontend" placeholder="0" value="<?php if (isset($_SESSION['frontend'])){echo $_SESSION['frontend']; unset($_SESSION['frontend']);} else {echo 0;}?>" disabled="true">
-                      <div class="help-block with-errors pull-right"></div>
-                      <span class="form-control-feedback" aria-hidden="true"></span>
+                      <input type="number" class="form-control" id="frontend" name="frontend" placeholder="0" max="15" value="<?php if (isset($_SESSION['frontend'])){echo $_SESSION['frontend']; unset($_SESSION['frontend']);} else {echo 0;}?>" disabled="true">
+                      <div class="help-block with-errors pull-right" id="frontenderror"></div>
+                      <span class="form-control-feedback" aria-hidden="true" id="frontendspan"></span>
                     </div>
                 </div>
                 <div class="form-group col-sm-10 col-md-6" id="backendfield">
                     <label for="backend" class="col-sm-2 col-md-6 control-label">Backend Developer</label>
                     <div class="col-sm-3 col-md-5">
-                      <input type="number" class="form-control" id="backend" name="backend" placeholder="0" value="<?php if (isset($_SESSION['backend'])){echo $_SESSION['backend']; unset($_SESSION['backend']);} else {echo 0;}?>" disabled="true">
+                      <input type="number" class="form-control" id="backend" name="backend" placeholder="0" max="15" value="<?php if (isset($_SESSION['backend'])){echo $_SESSION['backend']; unset($_SESSION['backend']);} else {echo 0;}?>" disabled="true">
                       <div class="help-block with-errors pull-right"></div>
                       <span class="form-control-feedback" aria-hidden="true"></span>
                     </div>
@@ -173,7 +173,7 @@ unset($_SESSION['profiles']);
                 <div class="form-group col-sm-10 col-md-6" id="fullstackfield">
                     <label for="fullstack" class="col-sm-2 col-md-6 control-label">Full Stack Developer</label>
                     <div class="col-sm-3 col-md-5">
-                      <input type="number" class="form-control" id="fullstack" name="fullstack" placeholder="0" value="<?php if (isset($_SESSION['fullstack'])){echo $_SESSION['fullstack']; unset($_SESSION['fullstack']);} else {echo 0;}?>" disabled="true">
+                      <input type="number" class="form-control" id="fullstack" name="fullstack" placeholder="0" max="15" value="<?php if (isset($_SESSION['fullstack'])){echo $_SESSION['fullstack']; unset($_SESSION['fullstack']);} else {echo 0;}?>" disabled="true">
                       <div class="help-block with-errors pull-right"></div>
                       <span class="form-control-feedback" aria-hidden="true"></span>
                     </div>
@@ -181,7 +181,7 @@ unset($_SESSION['profiles']);
                 <div class="form-group col-sm-10 col-md-6" id="graphicsfield">
                     <label for="graphics" class="col-sm-2 col-md-6 control-label">Graphic Designer</label>
                     <div class="col-sm-3 col-md-5">
-                      <input type="number" class="form-control" id="graphics" name="graphics" placeholder="0" value="<?php if (isset($_SESSION['graphics'])){echo $_SESSION['graphics']; unset($_SESSION['graphics']);} else {echo 0;}?>" disabled="true">
+                      <input type="number" class="form-control" id="graphics" name="graphics" placeholder="0" max="15" value="<?php if (isset($_SESSION['graphics'])){echo $_SESSION['graphics']; unset($_SESSION['graphics']);} else {echo 0;}?>" disabled="true">
                       <div class="help-block with-errors pull-right"></div>
                       <span class="form-control-feedback" aria-hidden="true"></span>
                     </div>
@@ -191,7 +191,7 @@ unset($_SESSION['profiles']);
                 <div class="form-group col-sm-10 col-md-6" id="contentfield">
                     <label for="content" class="col-sm-2 col-md-6 control-label">Content Writing</label>
                     <div class="col-sm-3 col-md-5">
-                      <input type="number" class="form-control" id="content" name="content" placeholder="0" value="<?php if (isset($_SESSION['content'])){echo $_SESSION['content']; unset($_SESSION['content']);} else {echo 0;}?>" disabled="true">
+                      <input type="number" class="form-control" id="content" name="content" placeholder="0" max="15" value="<?php if (isset($_SESSION['content'])){echo $_SESSION['content']; unset($_SESSION['content']);} else {echo 0;}?>" disabled="true">
                       <div class="help-block with-errors pull-right"></div>
                       <span class="form-control-feedback" aria-hidden="true"></span>
                     </div>
@@ -199,7 +199,7 @@ unset($_SESSION['profiles']);
                 <div class="form-group col-sm-10 col-md-6" id="businessfield">
                     <label for="business" class="col-sm-2 col-md-6 control-label">Business Development</label>
                     <div class="col-sm-3 col-md-5">
-                      <input type="number" class="form-control" id="business" name="business" placeholder="0" value="<?php if (isset($_SESSION['business'])){echo $_SESSION['business']; unset($_SESSION['business']);} else {echo 0;}?>" disabled="true">
+                      <input type="number" class="form-control" id="business" name="business" placeholder="0" max="15" value="<?php if (isset($_SESSION['business'])){echo $_SESSION['business']; unset($_SESSION['business']);} else {echo 0;}?>" disabled="true">
                       <div class="help-block with-errors pull-right"></div>
                       <span class="form-control-feedback" aria-hidden="true"></span>
                     </div>
