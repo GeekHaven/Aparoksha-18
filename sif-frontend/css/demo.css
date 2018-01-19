@@ -25,13 +25,14 @@ h2, .menu__link {
 
 a {
 	text-decoration: none;
-	color: #000;
+	color: #E6562A;
+	border-bottom: 1px solid black;
 	outline: none;
 }
 
 a:hover,
 a:focus {
-	color: #2d2d30;
+	color: #F0A21A;
 }
 
 .hidden {
@@ -392,6 +393,10 @@ a:focus {
 	pointer-events: visible;
 }
 
+.btn--menu:hover {
+	cursor: pointer;
+}
+
 .btn--close {
 	position: absolute;
 	top: 3vw;
@@ -427,7 +432,7 @@ a:focus {
 	list-style-type: none;
 	padding: 20vh 3em;
 	margin: 0;
-	background: #fcf652;
+	background: #000;
 	overflow: hidden;
 }
 
@@ -464,7 +469,7 @@ a:focus {
 }
 
 .menu .menu__link {
-	font-size: 3.5vw;
+	font-size: 2.7vw;
 	color: #4f4f54;
 	font-weight: bold;
 }
@@ -472,7 +477,7 @@ a:focus {
 .menu .menu__link:hover,
 .menu .menu__link:focus {
 	outline: none;
-	color: #000;
+	color: #fff;
 	text-decoration: line-through;
 }
 

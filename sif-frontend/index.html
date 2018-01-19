@@ -4,24 +4,64 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Block Reveal Effects | Overview | Codrops</title>
+	<title>Startup Intern Fair'18 - IIIT Allahabad</title>
 	<meta name="description" content="Ideas for revealing content in a schematic box look." />
 	<meta name="keywords" content="javascript, plugin, reveal, effect, demo, web development, web design, template" />
 	<meta name="author" content="Codrops" />
 	<link rel="shortcut icon" href="favicon.ico">
-	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Poppins:700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Poppins:700" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="css/revealer.css" />
 	<link rel="stylesheet" type="text/css" href="css/pater.css" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>document.documentElement.className = 'js';</script>
+	<style type="text/css">
+		#navbar {
+			position: absolute;
+		}
+	</style>
 </head>
 <body>
+	<!-- <nav id="navbar" style="width: 100%;">
+		<table id="top" style="margin-top: 0.4em;margin-left: 77%;">
+			<tr style="font-size: 20px;font-family: 'Open Sans', sans-serif;font-weight: 400;">
+				<td>REGISTER</td>
+				<td>&nbsp;|&nbsp;</td>
+				<td>STUDENT POOL</td>	
+			</tr>
+		</table>
+	</nav> -->
+	<svg class="hidden">
+		<symbol id="icon-menu" viewBox="0 0 17.6 9.9">
+			<title>menu</title>
+			<path d="M17.6,1H0V0h17.6V1z M17.6,4.3h-12v1h12V4.3z M17.6,8.9h-6.9v1h6.9V8.9z"/>
+		</symbol>
+		<symbol id="icon-cross" viewBox="0 0 10.2 10.2">
+			<title>cross</title>
+			<path d="M5.8,5.1l4.4,4.4l-0.7,0.7L5.1,5.8l-4.4,4.4L0,9.5l4.4-4.4L0,0.7L0.7,0l4.4,4.4L9.5,0l0.7,0.7L5.8,5.1z"/>
+		</symbol>
+	</svg>
 	<main>
-		<section class="content content--full flexy intro">
+		<header class="codrops-header">
+		<button class="btn btn--menu" style="font-size: 25px;color: black;"><svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg></button>
+		</header>
+		<nav class="menu" style="position: absolute;">
+			<button class="btn btn--close" style="font-size: 20px;color: white;"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
+			<ul class="menu__inner">
+				<li class="menu__item"><a class="menu__link" href="#">Register</a></li>
+				<br><br>
+				<li class="menu__item"><a class="menu__link" href="#">Student pool</a></li>
+				<br><br>
+				<li class="menu__item"><a class="menu__link" href="#">Past recruiters</a></li>
+			</ul>
+		</nav>
+		<!-- <p style="position: absolute;font-size: 20px;font-family: 'Open Sans', sans-serif;font-weight: 400;margin-left: 76%;margin-top: 10%;">REGISTER</p> -->
+		<section class="content content--full flexy intro" style="position: relative;margin-left: -2.5em;">
 			<h2 class="content__title content__title--center">
 				<div id="rev-1" class="content__title__inner" style="font-size: 100px;color: #000;">Startup Intern Fair</div><br/>
-				<div id="rev-2" class="content__title__inner content__title__inner--offset-1" style="font-size: 70px;color:#E6562A;">March 16-18, IIIT Allahabad</div>
+				<div id="rev-2" class="content__title__inner content__title__inner--offset-1" style="font-size: 70px;color:#E6562A;">March 16-18, <a href="#" id="college">IIIT Allahabad</a></div>
 			</h2>
 		</section>
 		<section class="content content--full flexy flexy--row">
@@ -66,7 +106,7 @@
 									</h2>
 									<div id="rev-9" class="content__image-wrap content__image-wrap--half" style="margin-left: 16em;">
 										<h2>IIITA is destined to produce employers rather employees and to widen the
-										startup base in the institute, <b style="color: #F0A21A; ">a dedicated Incubation Centre</b> has been set up.
+											startup base in the institute, <b style="color: #F0A21A; ">a dedicated Incubation Centre</b> has been set up.
 											The incubation centre provides an eco-system that helps to foster the culture
 											of innovation and also provide all support to prospective incubates in setting
 											up their business at various levels. monetary assistance apart from being able
@@ -79,6 +119,56 @@
 								<script src="js/anime.min.js"></script>
 								<script src="js/scrollMonitor.js"></script>
 								<script src="js/main.js"></script>
+								<!-- <script type="text/javascript">
+									$(document).ready(function() {
+										console.log('ll');
+										$(".menu").hide();
+										$(".btn--menu").click(function() {
+											$(".menu").show(700);
+											$(".btn--close").show();
+										}); 
+										$(".btn--close").click(function() {
+											$(".btn--close").hide();
+											$(".menu").hide(500);
+										});
+									});
+								</script> -->
+								<script>
+									(function() {
+										var navEl = document.querySelector('nav.menu'),
+										revealer = new RevealFx(navEl),
+										closeCtrl = navEl.querySelector('.btn--close');
+
+										document.querySelector('.btn--menu').addEventListener('click', function() {
+											revealer.reveal({
+												bgcolor: '#7f40f1',
+												duration: 400, 
+												easing: 'easeInOutCubic',
+												onCover: function(contentEl, revealerEl) {
+													navEl.classList.add('menu--open');
+													contentEl.style.opacity = 1;
+												},
+												onComplete: function() {
+													closeCtrl.addEventListener('click', closeMenu);
+												}
+											});
+										});
+
+										function closeMenu() {
+											closeCtrl.removeEventListener('click', closeMenu);
+											navEl.classList.remove('menu--open');
+											revealer.reveal({
+												bgcolor: '#7f40f1',
+												duration: 400, 
+												easing: 'easeInOutCubic',
+												onCover: function(contentEl, revealerEl) {
+													navEl.classList.remove('menu--open');
+													contentEl.style.opacity = 0;
+												}
+											});
+										}
+									})();
+								</script>
 								<script>
 									(function() {
 			// Fake loading.
@@ -102,7 +192,7 @@
 				var rev2 = new RevealFx(document.querySelector('#rev-2'), {
 					revealSettings : {
 						bgcolor: '#000',
-						delay: 200,
+						delay: 100,
 						onCover: function(contentEl, revealerEl) {
 							contentEl.style.opacity = 1;
 						}
