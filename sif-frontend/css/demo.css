@@ -15,8 +15,8 @@ body {
 	background-image: url('../bg-1.png');
 	background-position: center;
 	background-size: cover;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	/*-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;*/
 }
 
 h2, .menu__link {
@@ -256,8 +256,8 @@ a:focus {
 }
 
 .content__title__inner--offset-1 {
-	top: -0.25em;
-	left: 13.6vw;
+	top: -0.15em;
+	left: -4.6vw;
 }
 
 .content__title__inner--offset-2 {
