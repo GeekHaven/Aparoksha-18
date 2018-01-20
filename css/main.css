@@ -26,7 +26,7 @@ a {
 }
 
 
-h1, h2 {
+h1, h2, h3 {
     color: white;
     margin: 0;
 }
@@ -321,13 +321,27 @@ margin: 0;
 max-width: 300px;
 }
 
+@media (max-width: 2200px) {
+    #clock {
+        margin-left: 35em;
+    }
+}
+
 @media (max-width: 2000px) {
     #clock {
-        margin-left: 27em;
+        margin-left: 42em;
     }
-    #month1 {
-        width: 60px;
-        height: 100px;
+}
+
+@media (max-width: 1900px) {
+    #clock {
+        margin-left: 35em;
+    }
+}
+
+@media (max-width: 1700px) {
+    #clock {
+        margin-left: 28em;
     }
 }
 
