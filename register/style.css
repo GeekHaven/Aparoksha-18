@@ -2,6 +2,10 @@ html {
   height: 100%;
 }
 
+.loading {
+    display: none;
+}
+
 #apk-logo {
     border: 2px solid white;
 }
