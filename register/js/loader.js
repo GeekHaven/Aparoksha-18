@@ -1,7 +1,6 @@
 $(document).ready(function($) {
-    // make loader of full size here.
-    //var Body = $('body');
-    //Body.addClass('loader');
+    $('.tetris').css('width','100%');
+    $('.tetris').css('height','100%');
 });
 $(window).on('load', function () {
     $('.tetris').fadeOut();
