@@ -1,9 +1,8 @@
 $(document).ready(function($) {
-    $('.tetris').css('width','100%');
-    $('.tetris').css('height','100%');
+    $('#main-content').addClass('loading');
+    $(.tetris').css('margin', '18em auto');
 });
 $(window).on('load', function () {
     $('.tetris').fadeOut();
-    //make site visible again
-    //$('body').removeClass('loader');
+    $('#main-content').removeClass('loading');
 });
