@@ -25,6 +25,14 @@ a {
     color: white;
 }
 
+a:hover {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
 
 h1, h2, h3 {
     color: white;
