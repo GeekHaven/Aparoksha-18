@@ -6,8 +6,10 @@
 	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="css/component.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Luckiest+Guy|Monoton" rel="stylesheet">
+	<script src="js/modernizr.custom.js"></script>
 	<style type="text/css">
 		/*font-family: 'Monoton', cursive;
 		font-family: 'Luckiest Guy', cursive;
@@ -24,8 +26,8 @@
 		}
 		#cimage {
 			width: 690px;
-			height: 920px;
-			margin-top: -20.5vw;
+			height: 850px;
+			margin-top: -21.5vw;
 			margin-left: 14vw;
 			position: relative;
 		}
@@ -107,7 +109,7 @@
 			width: 300px;
 			height: 90px;
 			background-color: #1c3c67;
-			margin-top: 1.5vw;
+			margin-top: 2.5vw;
 			border-radius: 20px;
 			color: #fff;
 			font-size: 19px;
@@ -120,7 +122,7 @@
 			width: 300px;
 			height: 110px;
 			background-color: #1c3c67;
-			margin-top: 9vw;
+			margin-top: 10vw;
 			border-radius: 20px;
 			color: #fff;
 			font-size: 18px;
@@ -133,13 +135,29 @@
 			width: 300px;
 			height: 110px;
 			background-color: #1c3c67;
-			margin-top: 19vw;
+			margin-top: 20vw;
 			border-radius: 20px;
 			color: #fff;
 			font-size: 18px;
 			font-family: 'Open Sans', sans-serif;
 			text-align: center;
 			padding-top: 1vw;
+		}
+		#app {
+			position: absolute;
+			margin-left: 25.2vw;
+			margin-top: -16.7vw;
+			color: white;
+			font-family: 'Open Sans', sans-serif;
+			font-size: 17px;
+			font-weight: 500;
+			text-transform: uppercase;
+			width: 180px;
+			height: 60px;
+			text-align: center;
+		}
+		#appLink {
+			text-decoration: none;
 		}
 	</style>
 </head>
@@ -172,8 +190,45 @@
 			<div id="certiInfo">Token of Appreciation</div>
 			<div id="more">and more ...</div>
 			<img src="center-cartoon.png" id="cimage">
+			<div id="app">
+				<a href="" class="btnn btn-1 btn-1c" id="appLink">download App</a>
+			</div>
 		</div>
 
 	</div>
-</body>
-</html>
+	<script src="js/classie.js"></script>
+	<script>
+		var buttons7Click = Array.prototype.slice.call( document.querySelectorAll( '#btn-click button' ) ),
+		buttons9Click = Array.prototype.slice.call( document.querySelectorAll( 'button.btn-8g' ) ),
+		totalButtons7Click = buttons7Click.length,
+		totalButtons9Click = buttons9Click.length;
+
+		buttons7Click.forEach( function( el, i ) { el.addEventListener( 'click', activate, false ); } );
+		buttons9Click.forEach( function( el, i ) { el.addEventListener( 'click', activate, false ); } );
+
+		function activate() {
+			var self = this, activatedClass = 'btn-activated';
+
+			if( classie.has( this, 'btn-7h' ) ) {
+					// if it is the first of the two btn-7h then activatedClass = 'btn-error';
+					// if it is the second then activatedClass = 'btn-success'
+					activatedClass = buttons7Click.indexOf( this ) === totalButtons7Click-2 ? 'btn-error' : 'btn-success';
+				}
+				else if( classie.has( this, 'btn-8g' ) ) {
+					// if it is the first of the two btn-8g then activatedClass = 'btn-success3d';
+					// if it is the second then activatedClass = 'btn-error3d'
+					activatedClass = buttons9Click.indexOf( this ) === totalButtons9Click-2 ? 'btn-success3d' : 'btn-error3d';
+				}
+
+				if( !classie.has( this, activatedClass ) ) {
+					classie.add( this, activatedClass );
+					setTimeout( function() { classie.remove( self, activatedClass ) }, 1000 );
+				}
+			}
+
+			document.querySelector( '.btn-7i' ).addEventListener( 'click', function() {
+				classie.add( document.querySelector( '#trash-effect' ), 'trash-effect-active' );
+			}, false );
+		</script>
+	</body>
+	</html>
