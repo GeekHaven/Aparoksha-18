@@ -119,7 +119,7 @@ session_start();
           <div class="col-md-6 contact-form">
             <h4> For website issues:</h4>
               <hr>
-              <p> Pradeep Gangwar </p>
+              <p> Team Web Operations </p>
               <p> pradeepgangwar39@gmail.com </p>
           </div>
           <div class="col-md-6 contact-form" style="text-align:right;">

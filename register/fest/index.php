@@ -170,7 +170,7 @@ unset($_SESSION['events']);
           <div class="col-md-6 contact-form" style="text-align:right;">
             <h4> For event related information:</h3>
               <hr>
-              <p> Ashutosh Chandra </p>
+              <p> Team Web Operations </p>
               <p> events@aparoksha.org </p>
               <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-9919241909</p>
           </div>
