@@ -80,7 +80,7 @@ unset($_SESSION['events']);
               <div class="form-group">
                   <label for="mobile" class="col-sm-2 control-label">Mobile<sup>*</sup></label>
                   <div class="col-sm-9">
-                    <input type="number" class="form-control" id="mobile" name="mobile" placeholder="xxxxxxxxxx" value="<?php if (isset($_SESSION['mobile'])){echo $_SESSION['mobile']; unset($_SESSION['mobile']);} ?>" required>
+                    <input type="tel" pattern="[0-9]{10}" class="form-control" id="mobile" data-error="Please enter a 10 digit mobile number" name="mobile" placeholder="xxxxxxxxxx" value="<?php if (isset($_SESSION['mobile'])){echo $_SESSION['mobile']; unset($_SESSION['mobile']);} ?>" required>
                     <div class="help-block with-errors pull-right"></div>
                     <span class="form-control-feedback" aria-hidden="true"></span>
                   </div>
