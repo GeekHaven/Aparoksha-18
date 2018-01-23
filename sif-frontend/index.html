@@ -14,17 +14,52 @@
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="css/revealer.css" />
 	<link rel="stylesheet" type="text/css" href="css/pater.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />	
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/modernizr.custom.js"></script>
 	<script>document.documentElement.className = 'js';</script>
 	<style type="text/css">
 		#navbar {
 			position: absolute;
 		}
+		#reg {
+			position: absolute;
+			width: 220px;
+			height: 65px;
+			font-size: 20px;
+			font-weight: 400;
+			color: black;
+			background-color: transparent;
+			text-align: center;
+			border: 1px solid black;
+			padding-top: 0.9em;
+			margin-left: 20em;
+			margin-top: 1.5em;
+			font-family: 'Open Sans', sans-serif;
+		}
+		#reg:hover {
+			border: 2px solid #F0A21A;
+		}
+		#menu {
+			margin-left: 48%;
+		}
+		#list {
+			list-style: none;
+			text-align: center;
+		}
+		#list li {
+			display: inline-block;
+			margin-left: 10%;
+			font-size: 15px;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 700;
+		}
+
 	</style>
 </head>
 <body>
-	<svg class="hidden">
+	<!-- <svg class="hidden">
 		<symbol id="icon-menu" viewBox="0 0 17.6 9.9">
 			<title>menu</title>
 			<path d="M17.6,1H0V0h17.6V1z M17.6,4.3h-12v1h12V4.3z M17.6,8.9h-6.9v1h6.9V8.9z"/>
@@ -36,7 +71,7 @@
 	</svg>
 	<main>
 		<header class="codrops-header">
-		<button class="btn btn--menu" style="font-size: 25px;color: black;"><svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg></button>
+			<button class="btn btn--menu" style="font-size: 25px;color: black;"><svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg></button>
 		</header>
 		<nav class="menu" style="position: absolute;">
 			<button class="btn btn--close" style="font-size: 20px;color: white;"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
@@ -49,18 +84,30 @@
 				<br><br>
 				<li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
 			</ul>
-		</nav>
+		</nav> -->
 		<!-- <p style="position: absolute;font-size: 20px;font-family: 'Open Sans', sans-serif;font-weight: 400;margin-left: 76%;margin-top: 10%;">REGISTER</p> -->
+		<nav id="navbar" style="position: fixed;top: 0;width: 100%;">
+			<div id="menu">
+				<ul id="list">
+					<li><a href="stdpool.html" style="text-decoration: none;color: black;">STUDENT POOL</a></li>
+					<li><a href="past.html"  style="text-decoration: none;color: black;">PAST RECRUITERS</a></li>
+					<li><a href="contact.html"  style="text-decoration: none;color: black;">CONTACT US</a></li>
+				</ul>
+			</div>
+		</nav>
 		<section class="content content--full flexy intro" style="position: relative;margin-left: -2.5em;">
 			<h2 class="content__title content__title--center">
-				<div id="rev-1" class="content__title__inner" style="font-size: 100px;color: #000;top: -10vw;">Startup Intern Fair</div><br/>
-				<div id="rev-2" class="content__title__inner content__title__inner--offset-1" style="font-size: 70px;color:#E6562A;left: 13.6vw;top: -10vw;">March 16-18, <a href="college.html" id="college">IIIT Allahabad</a></div>
+				<div id="rev-1" class="content__title__inner" style="font-size: 100px;color: #000;">Startup Intern Fair</div><br/>
+				<div id="rev-2" class="content__title__inner content__title__inner--offset-1" style="font-size: 70px;color:#E6562A;left: 13.6vw;">March 16-18, <a href="college.html" id="college">IIIT Allahabad</a></div>
+				<div id="regButton">
+					<a href="#" class="btnn btn-4 btn-4c icon-arrow-right" id="reg">REGISTER</a>
+				</div>
 			</h2>
 		</section>
 		<section class="content content--full flexy flexy--row">
 			<h2 class="content__title content__title--medium content__title--half content__title--right">
-				<div id="rev-4" class="content__title__inner">Startup</div><br/>
-				<div id="rev-5" class="content__title__inner content__title__inner--offset-2">intern fair</div>
+				<div id="rev-4" class="content__title__inner">About</div><br/>
+				<div id="rev-5" class="content__title__inner content__title__inner--offset-2">Our event</div>
 			</h2>
 			<div id="rev-3" class="content__image-wrap content__image-wrap--half" style="margin-left: 15em;letter-spacing: 0.5px;">
 				<h2>StartUp Intern Fair is a flagship event held during Aparoksha. We at IIITA
@@ -112,58 +159,86 @@
 								<script src="js/anime.min.js"></script>
 								<script src="js/scrollMonitor.js"></script>
 								<script src="js/main.js"></script>
-								<!-- <script type="text/javascript">
+								<script src="js/classie.js"></script>
+								<script type="text/javascript">
 									$(document).ready(function() {
-										console.log('ll');
-										$(".menu").hide();
-										$(".btn--menu").click(function() {
-											$(".menu").show(700);
-											$(".btn--close").show();
-										}); 
-										$(".btn--close").click(function() {
-											$(".btn--close").hide();
-											$(".menu").hide(500);
-										});
+										$("#reg, #list").hide();
+										setTimeout(function() {
+											$("#reg, #list").fadeIn(2000);
+										}, 2000);
 									});
-								</script> -->
-								<script>
-									(function() {
-										var navEl = document.querySelector('nav.menu'),
-										revealer = new RevealFx(navEl),
-										closeCtrl = navEl.querySelector('.btn--close');
-
-										document.querySelector('.btn--menu').addEventListener('click', function() {
-											revealer.reveal({
-												bgcolor: '#7f40f1',
-												duration: 400, 
-												easing: 'easeInOutCubic',
-												onCover: function(contentEl, revealerEl) {
-													navEl.classList.add('menu--open');
-													contentEl.style.opacity = 1;
-												},
-												onComplete: function() {
-													closeCtrl.addEventListener('click', closeMenu);
-												}
-											});
-										});
-
-										function closeMenu() {
-											closeCtrl.removeEventListener('click', closeMenu);
-											navEl.classList.remove('menu--open');
-											revealer.reveal({
-												bgcolor: '#7f40f1',
-												duration: 400, 
-												easing: 'easeInOutCubic',
-												onCover: function(contentEl, revealerEl) {
-													navEl.classList.remove('menu--open');
-													contentEl.style.opacity = 0;
-												}
-											});
-										}
-									})();
 								</script>
 								<script>
-									(function() {
+									var buttons7Click = Array.prototype.slice.call( document.querySelectorAll( '#btn-click button' ) ),
+									buttons9Click = Array.prototype.slice.call( document.querySelectorAll( 'button.btn-8g' ) ),
+									totalButtons7Click = buttons7Click.length,
+									totalButtons9Click = buttons9Click.length;
+
+									buttons7Click.forEach( function( el, i ) { el.addEventListener( 'click', activate, false ); } );
+									buttons9Click.forEach( function( el, i ) { el.addEventListener( 'click', activate, false ); } );
+
+									function activate() {
+										var self = this, activatedClass = 'btn-activated';
+
+										if( classie.has( this, 'btn-7h' ) ) {
+					// if it is the first of the two btn-7h then activatedClass = 'btn-error';
+					// if it is the second then activatedClass = 'btn-success'
+					activatedClass = buttons7Click.indexOf( this ) === totalButtons7Click-2 ? 'btn-error' : 'btn-success';
+				}
+				else if( classie.has( this, 'btn-8g' ) ) {
+					// if it is the first of the two btn-8g then activatedClass = 'btn-success3d';
+					// if it is the second then activatedClass = 'btn-error3d'
+					activatedClass = buttons9Click.indexOf( this ) === totalButtons9Click-2 ? 'btn-success3d' : 'btn-error3d';
+				}
+
+				if( !classie.has( this, activatedClass ) ) {
+					classie.add( this, activatedClass );
+					setTimeout( function() { classie.remove( self, activatedClass ) }, 1000 );
+				}
+			}
+
+			document.querySelector( '.btn-7i' ).addEventListener( 'click', function() {
+				classie.add( document.querySelector( '#trash-effect' ), 'trash-effect-active' );
+			}, false );
+		</script>
+		<script>
+			(function() {
+				var navEl = document.querySelector('nav.menu'),
+				revealer = new RevealFx(navEl),
+				closeCtrl = navEl.querySelector('.btn--close');
+
+				document.querySelector('.btn--menu').addEventListener('click', function() {
+					revealer.reveal({
+						bgcolor: '#7f40f1',
+						duration: 400, 
+						easing: 'easeInOutCubic',
+						onCover: function(contentEl, revealerEl) {
+							navEl.classList.add('menu--open');
+							contentEl.style.opacity = 1;
+						},
+						onComplete: function() {
+							closeCtrl.addEventListener('click', closeMenu);
+						}
+					});
+				});
+
+				function closeMenu() {
+					closeCtrl.removeEventListener('click', closeMenu);
+					navEl.classList.remove('menu--open');
+					revealer.reveal({
+						bgcolor: '#7f40f1',
+						duration: 400, 
+						easing: 'easeInOutCubic',
+						onCover: function(contentEl, revealerEl) {
+							navEl.classList.remove('menu--open');
+							contentEl.style.opacity = 0;
+						}
+					});
+				}
+			})();
+		</script>
+		<script>
+			(function() {
 			// Fake loading.
 			setTimeout(init, 1000);
 
@@ -209,7 +284,7 @@
 				rev4 = new RevealFx(document.querySelector('#rev-4'), {
 					revealSettings : {
 						bgcolor: '#fff',
-						delay: 250,
+						delay: 100,
 						onCover: function(contentEl, revealerEl) {
 							contentEl.style.opacity = 1;
 						}
@@ -218,7 +293,7 @@
 				rev5 = new RevealFx(document.querySelector('#rev-5'), {
 					revealSettings : {
 						bgcolor: '#fff',
-						delay: 250,
+						delay: 100,
 						onCover: function(contentEl, revealerEl) {
 							contentEl.style.opacity = 1;
 						}
@@ -239,7 +314,7 @@
 					revealSettings : {
 						bgcolor: '#fff',
 						direction: 'rl',
-						delay: 200,
+						delay: 100,
 						onCover: function(contentEl, revealerEl) {
 							contentEl.style.opacity = 1;
 						}
@@ -249,7 +324,7 @@
 					revealSettings : {
 						bgcolor: '#fff',
 						direction: 'rl',
-						delay: 250,
+						delay: 100,
 						onCover: function(contentEl, revealerEl) {
 							contentEl.style.opacity = 1;
 						}
@@ -270,7 +345,7 @@
 				rev10 = new RevealFx(document.querySelector('#rev-10'), {
 					revealSettings : {
 						bgcolor: '#fff',
-						delay: 250,
+						delay: 100,
 						onCover: function(contentEl, revealerEl) {
 							contentEl.style.opacity = 1;
 						}
@@ -279,7 +354,7 @@
 				rev11 = new RevealFx(document.querySelector('#rev-11'), {
 					revealSettings : {
 						bgcolor: '#fff',
-						delay: 500,
+						delay: 100,
 						onCover: function(contentEl, revealerEl) {
 							contentEl.style.opacity = 1;
 						}
