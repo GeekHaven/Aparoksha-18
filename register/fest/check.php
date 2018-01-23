@@ -22,7 +22,7 @@ session_start();
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".side-menu">
-  
+    <a href="../index.html" style="text-decoration: none;color: black;"><i class="fa fa-arrow-left" aria-hidden="true" style="color: black; font-size: 25px;padding-left: 1%;padding-top: 1%;padding-bottom: 1%;"></i>&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size: 20px;font-weight: 400;">BACK</b></a>
       <div class="container-fluid">
         <div class="row hero-header" id="home">
           <div class="col-md-12">
