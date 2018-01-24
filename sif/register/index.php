@@ -23,7 +23,7 @@ unset($_SESSION['profiles']);
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".side-menu" style="background-image: url(../../img/sif-bg.png);">
-      <a href="https://aparoksha.org" style="text-decoration: none;color: black;"><i class="fa fa-arrow-left" aria-hidden="true" style="color: black; font-size: 25px;padding-left: 1%;padding-top: 1%;padding-bottom: 1%;"></i>&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size: 20px;font-weight: 400;">BACK</b></a>
+      <a href="../index.html" style="text-decoration: none;color: black;"><i class="fa fa-arrow-left" aria-hidden="true" style="color: black; font-size: 25px;padding-left: 1%;padding-top: 1%;padding-bottom: 1%;"></i>&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size: 20px;font-weight: 400;">BACK</b></a>
       <div class="container-fluid">
         <div class="row hero-header" id="home"  style="color:black; background-color:transparent;"> 
           <div class="col-md-7">

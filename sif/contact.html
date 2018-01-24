@@ -4,88 +4,29 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Startup Intern Fair'18 - IIIT Allahabad</title>
-	<meta name="description" content="Ideas for revealing content in a schematic box look." />
-	<meta name="keywords" content="javascript, plugin, reveal, effect, demo, web development, web design, template" />
-	<meta name="author" content="Codrops" />
-	<link rel="shortcut icon" href="favicon.ico">
+	<title>Startup Intern Fair'18 | IIIT Allahabad</title>
+	<meta name="description" content="Startup-Intern Fair of Aparoksha'18| IIITA" />
+	<meta name="keywords" content="Startup Intern Fair" />
+	<meta name="author" content="Aparoksha'18" />
+
+	<link rel="shortcut icon" href="../img/favicon.ico">
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Poppins:700" rel="stylesheet"> 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="css/revealer.css" />
 	<link rel="stylesheet" type="text/css" href="css/pater.css" />
-	<link rel="stylesheet" type="text/css" href="css/component.css" />	
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="js/modernizr.custom.js"></script>
 	<script>document.documentElement.className = 'js';</script>
 	<style type="text/css">
 		#navbar {
 			position: absolute;
-			background-color: white;
-			-webkit-box-shadow: 20px 20px 20px #f0f0f0;
-			-moz-box-shadow:    20px 20px 20px #f0f0f0;
-			box-shadow:         10px 10px 10px #f0f0f0;
-			z-index:999;
-			line-height: 40px;
 		}
-		#reg {
-			position: absolute;
-			width: 220px;
-			height: 65px;
-			font-size: 20px;
-			font-weight: 700;
-			color: black;
-			background-color: transparent;
-			text-align: center;
-			border: 1px solid black;
-			padding-top: 0.9em;
-			margin-left: 20em;
-			margin-top: 1.5em;
-			font-family: 'Open Sans', sans-serif;
-			border: 2px solid #F0A21A;
-			transition-property: background-color border;
-			transition-duration: 0.5s;
-			transition-timing-function: linear;
-		}
-		#reg:hover {
-			border: 2px solid #F0A21A;
-			background-color: #F0A21A;
-			color: white;
-			font-weight: 700;
-		}
-		#menu {
-			margin-left: 48%;
-		}
-		#list {
-			list-style: none;
-			text-align: center;
-		}
-		#list li {
-			display: inline-block;
-			margin-left: 10%;
-			font-size: 15px;
-			font-family: 'Open Sans', sans-serif;
-			font-weight: 700;
-			height: 45px;
-		}
-		#stdp, #contactus, #pastr {
-			color: black;
-		}
-		#stdp:hover {
-			color: #F0A21A;
-		}
-		#contactus:hover {
-			color: #F0A21A;
-		}
-		#pastr:hover {
-			color: #F0A21A;
-		}
-
 	</style>
 </head>
 <body>
-	<!-- <svg class="hidden">
+	<svg class="hidden">
 		<symbol id="icon-menu" viewBox="0 0 17.6 9.9">
 			<title>menu</title>
 			<path d="M17.6,1H0V0h17.6V1z M17.6,4.3h-12v1h12V4.3z M17.6,8.9h-6.9v1h6.9V8.9z"/>
@@ -102,131 +43,59 @@
 		<nav class="menu" style="position: absolute;">
 			<button class="btn btn--close" style="font-size: 20px;color: white;"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
 			<ul class="menu__inner">
+				<li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
+				<br><br>
 				<li class="menu__item"><a class="menu__link" href="reg.html">Register</a></li>
 				<br><br>
 				<li class="menu__item"><a class="menu__link" href="stdpool.html">Student pool</a></li>
 				<br><br>
 				<li class="menu__item"><a class="menu__link" href="past.html">Past recruiters</a></li>
-				<br><br>
-				<li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
 			</ul>
-		</nav> -->
-		<!-- <p style="position: absolute;font-size: 20px;font-family: 'Open Sans', sans-serif;font-weight: 400;margin-left: 76%;margin-top: 10%;">REGISTER</p> -->
-		<nav id="navbar" style="position: fixed;top: 0;width: 100%;">
-			<div id="menu">
-				<ul id="list">
-					<li><a href="stdpool.html" style="text-decoration: none;border: none;" id="stdp">STUDENT POOL</a></li>
-					<li ><a href="past.html"  style="text-decoration: none;border: none;" id="pastr">PAST RECRUITERS</a></li>
-					<li><a href="contact.html"  style="text-decoration: none;border: none;"  id="contactus">CONTACT US</a></li>
-				</ul>
-			</div>
 		</nav>
-		<section class="content content--full flexy intro" style="position: relative;margin-left: -2.5em;">
-			<h2 class="content__title content__title--center">
-				<div id="rev-1" class="content__title__inner" style="font-size: 100px;color: #000;">Startup Intern Fair</div><br/>
-				<div id="rev-2" class="content__title__inner content__title__inner--offset-1" style="font-size: 70px;color:#E6562A;left: 13.6vw;">March 16-18, <a href="college.html" id="college">IIIT Allahabad</a></div>
-				<div id="regButton">
-					<a href="#" class="btnn btn-4 btn-4c" id="reg">REGISTER</a>
-				</div>
-			</h2>
-		</section>
-		<section class="content content--full flexy flexy--row">
+		<section class="content content--full flexy flexy--row" style="top: -6vw;">
 			<h2 class="content__title content__title--medium content__title--half content__title--right">
-				<div id="rev-4" class="content__title__inner">About</div><br/>
-				<div id="rev-5" class="content__title__inner content__title__inner--offset-2">Our event</div>
+				<div id="rev-4" class="content__title__inner">Got any queries ?</div><br/>
+				<div id="rev-5" class="content__title__inner content__title__inner--offset-2" style="top: 0.6vw;">Contact</div>
 			</h2>
-			<div id="rev-3" class="content__image-wrap content__image-wrap--half" style="margin-left: 15em;letter-spacing: 0.5px;">
-				<h2>StartUp Intern Fair is a flagship event held during Aparoksha. We at IIITA
-					promote the culture of StartUps and wish to expand our horizons by making
-					you a part of this grand family. <b style="color: #F0A21A;">We ourselves house some prominent startups
-					and wish to inculcate the startup culture in the budding technocrats of the
-					nation.</b> SIF’s 2018 edition will be held from <b style="color: #E6562A;">16th-18th</b> March during
-					Aparoksha</h2>
-					<h2>>SIF provides a <b style="color: #F0A21A;">hassle-free and an aggregated hiring process</b> alongside giving
-						you a chance to unleash your ideas and innovation amidst the students.</h2>
-					</div>
-				</section>
-				<section class="content content--full flexy flexy--row" style="margin-top: 3em;">
-					<h2 class="content__title content__title--medium content__title--half content__title--left" style="margin-left: 2em;">
-						<div id="rev-7" class="content__title__inner">For the </div><br/>
-						<div id="rev-8" class="content__title__inner content__title__inner--offset-2">Startups</div>
-					</h2>
-					<div id="rev-6" class="content__image-wrap content__image-wrap--half" style="margin-top: 0.5em;margin-left: 25em;">
-						<h2>It’s a great opportunity for startups to <b style="color: #F0A21A;">hire best talents not just from IIIT</b>
-							Allahabad but also from other top institutes of national importance across
-							North India like <b style="color: #F0A21A;">IIT BHU, IIT Kanpur, MNNIT Allahabad</b> etc.</h2>
-							<h2>Startups will get the opportunity to hire skilled interns from <b>various streams
-								and colleges, technical and non-technical both alike.</b></h2>
-								<h2>Before the commencement of the interview sessions, a pitching session is
-									held, in which you'll get a chance to pitch about your startup, internship
-									profiles and requirements for them.</h2>
-									<h2>Your <b style="color: #F0A21A; ">startup would be shown on the official website</b> of the startup
-										internship fair that is equipped with massive outreach amongst the
-										students.</h2>
-									</div>
-								</section>
-								<section class="content content--full flexy flexy--row" style="margin-top: 10em;">
-									<h2 class="content__title content__title--medium content__title--half content__title--right">
-										<div id="rev-10" class="content__title__inner">Startup culture</div><br/>
-										<div id="rev-11" class="content__title__inner content__title__inner--offset-2" style="margin-top: 0.2em;margin-left: 2em;">at IIITA - IIIC</div>
-									</h2>
-									<div id="rev-9" class="content__image-wrap content__image-wrap--half" style="margin-left: 16em;">
-										<h2>IIITA is destined to produce employers rather employees and to widen the
-											startup base in the institute, <b style="color: #F0A21A; ">a dedicated Incubation Centre</b> has been set up.
-											The incubation centre provides an eco-system that helps to foster the culture
-											of innovation and also provide all support to prospective incubates in setting
-											up their business at various levels. monetary assistance apart from being able
-											to hire from highly skilled college students are some of the best offerings of
-											IIIC.</h2>
-										</div>
-									</section>
+			<div id="rev-3" class="content__image-wrap content__image-wrap--half" style="margin-left: 10em;letter-spacing: 0.5px;width: 73%;">
+				<table style="width: 100%;">
+					<tr>
+						<td><h2 style="color: #F0A21A;font-size: 45px;">Chaitanya Yadav</h2></td>
+						<td><h2 style="color: #F0A21A;font-size: 45px;">Abhishek Sharma</h2></td>
+					</tr>
+					<tr>
+						<td><h2>+91-9628380537</h2></td>
+						<td><h2>+91-9918992179</h2></td>
+					</tr>
+					<br><br>
+				</table>
+				<br><br><br>
+				<h2 style="color: #E6562A;font-size: 40px;">Reach us at :</h2>
+				<table>
+					<tr>
+						<td><h2><img src="icons/world.svg" style="width: 25px;height: 25px;top: 1.5em;">&nbsp;&nbsp;aparoksha.org</h2></td>
+					</tr>
+					<tr>
+						<td><h2><img src="icons/email.svg" style="width: 25px;height: 25px;top: 1.5em;">&nbsp;&nbsp;team.aparoksha@iiita.ac.in</h2></td>
+					</tr>
+					<tr>
+						<td><h2><img src="icons/fb.svg" style="width: 25px;height: 25px;top: 1.5em;">&nbsp;&nbsp;www.facebook.com/aparoksha</h2></td>
+					</tr>
+					<tr>
+						<td><h2><img src="icons/location.svg" style="width: 25px;height: 25px;top: 1.5em;">&nbsp;&nbsp;Indian Insitute of Information
+							Technology, Allahabad
+							Uttar Pradesh 211015</h2></td>
+						</tr>
 
-								</main>
-								<script src="js/anime.min.js"></script>
-								<script src="js/scrollMonitor.js"></script>
-								<script src="js/main.js"></script>
-								<script src="js/classie.js"></script>
-								<script type="text/javascript">
-									$(document).ready(function() {
-										$("#reg, #list").hide();
-										setTimeout(function() {
-											$("#reg, #list").fadeIn(2000);
-										}, 2000);
-									});
-								</script>
-								<script>
-									var buttons7Click = Array.prototype.slice.call( document.querySelectorAll( '#btn-click button' ) ),
-									buttons9Click = Array.prototype.slice.call( document.querySelectorAll( 'button.btn-8g' ) ),
-									totalButtons7Click = buttons7Click.length,
-									totalButtons9Click = buttons9Click.length;
+					</table>
 
-									buttons7Click.forEach( function( el, i ) { el.addEventListener( 'click', activate, false ); } );
-									buttons9Click.forEach( function( el, i ) { el.addEventListener( 'click', activate, false ); } );
-
-									function activate() {
-										var self = this, activatedClass = 'btn-activated';
-
-										if( classie.has( this, 'btn-7h' ) ) {
-					// if it is the first of the two btn-7h then activatedClass = 'btn-error';
-					// if it is the second then activatedClass = 'btn-success'
-					activatedClass = buttons7Click.indexOf( this ) === totalButtons7Click-2 ? 'btn-error' : 'btn-success';
-				}
-				else if( classie.has( this, 'btn-8g' ) ) {
-					// if it is the first of the two btn-8g then activatedClass = 'btn-success3d';
-					// if it is the second then activatedClass = 'btn-error3d'
-					activatedClass = buttons9Click.indexOf( this ) === totalButtons9Click-2 ? 'btn-success3d' : 'btn-error3d';
-				}
-
-				if( !classie.has( this, activatedClass ) ) {
-					classie.add( this, activatedClass );
-					setTimeout( function() { classie.remove( self, activatedClass ) }, 1000 );
-				}
-			}
-
-			document.querySelector( '.btn-7i' ).addEventListener( 'click', function() {
-				classie.add( document.querySelector( '#trash-effect' ), 'trash-effect-active' );
-			}, false );
-		</script>
+				</div>
+			</section>
+			<br><br><br>
+		</main>
+		<script src="js/anime.min.js"></script>
+		<script src="js/scrollMonitor.js"></script>
+		<script src="js/main.js"></script>
 		<script>
 			(function() {
 				var navEl = document.querySelector('nav.menu'),
@@ -297,7 +166,7 @@
 				//************************ Example 2 - reveal on scroll ********************************
 				
 				var scrollElemToWatch_1 = document.getElementById('rev-3'),
-				watcher_1 = scrollMonitor.create(scrollElemToWatch_1, -200),				
+				watcher_1 = scrollMonitor.create(scrollElemToWatch_1, -400),				
 				rev3 = new RevealFx(scrollElemToWatch_1, {
 					revealSettings : {
 						bgcolor: '#F0A21A',
@@ -310,7 +179,7 @@
 				rev4 = new RevealFx(document.querySelector('#rev-4'), {
 					revealSettings : {
 						bgcolor: '#fff',
-						delay: 100,
+						delay: 250,
 						onCover: function(contentEl, revealerEl) {
 							contentEl.style.opacity = 1;
 						}
@@ -319,7 +188,7 @@
 				rev5 = new RevealFx(document.querySelector('#rev-5'), {
 					revealSettings : {
 						bgcolor: '#fff',
-						delay: 100,
+						delay: 250,
 						onCover: function(contentEl, revealerEl) {
 							contentEl.style.opacity = 1;
 						}
@@ -340,7 +209,7 @@
 					revealSettings : {
 						bgcolor: '#fff',
 						direction: 'rl',
-						delay: 100,
+						delay: 200,
 						onCover: function(contentEl, revealerEl) {
 							contentEl.style.opacity = 1;
 						}
@@ -350,7 +219,7 @@
 					revealSettings : {
 						bgcolor: '#fff',
 						direction: 'rl',
-						delay: 100,
+						delay: 250,
 						onCover: function(contentEl, revealerEl) {
 							contentEl.style.opacity = 1;
 						}
@@ -371,7 +240,7 @@
 				rev10 = new RevealFx(document.querySelector('#rev-10'), {
 					revealSettings : {
 						bgcolor: '#fff',
-						delay: 100,
+						delay: 250,
 						onCover: function(contentEl, revealerEl) {
 							contentEl.style.opacity = 1;
 						}
@@ -380,7 +249,7 @@
 				rev11 = new RevealFx(document.querySelector('#rev-11'), {
 					revealSettings : {
 						bgcolor: '#fff',
-						delay: 100,
+						delay: 500,
 						onCover: function(contentEl, revealerEl) {
 							contentEl.style.opacity = 1;
 						}
