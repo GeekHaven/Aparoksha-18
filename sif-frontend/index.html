@@ -22,13 +22,19 @@
 	<style type="text/css">
 		#navbar {
 			position: absolute;
+			background-color: white;
+			-webkit-box-shadow: 20px 20px 20px #f0f0f0;
+			-moz-box-shadow:    20px 20px 20px #f0f0f0;
+			box-shadow:         10px 10px 10px #f0f0f0;
+			z-index:999;
+			line-height: 40px;
 		}
 		#reg {
 			position: absolute;
 			width: 220px;
 			height: 65px;
 			font-size: 20px;
-			font-weight: 400;
+			font-weight: 700;
 			color: black;
 			background-color: transparent;
 			text-align: center;
@@ -37,9 +43,16 @@
 			margin-left: 20em;
 			margin-top: 1.5em;
 			font-family: 'Open Sans', sans-serif;
+			border: 2px solid #F0A21A;
+			transition-property: background-color border;
+			transition-duration: 0.5s;
+			transition-timing-function: linear;
 		}
 		#reg:hover {
 			border: 2px solid #F0A21A;
+			background-color: #F0A21A;
+			color: white;
+			font-weight: 700;
 		}
 		#menu {
 			margin-left: 48%;
@@ -54,6 +67,19 @@
 			font-size: 15px;
 			font-family: 'Open Sans', sans-serif;
 			font-weight: 700;
+			height: 45px;
+		}
+		#stdp, #contactus, #pastr {
+			color: black;
+		}
+		#stdp:hover {
+			color: #F0A21A;
+		}
+		#contactus:hover {
+			color: #F0A21A;
+		}
+		#pastr:hover {
+			color: #F0A21A;
 		}
 
 	</style>
@@ -89,9 +115,9 @@
 		<nav id="navbar" style="position: fixed;top: 0;width: 100%;">
 			<div id="menu">
 				<ul id="list">
-					<li><a href="stdpool.html" style="text-decoration: none;color: black;">STUDENT POOL</a></li>
-					<li><a href="past.html"  style="text-decoration: none;color: black;">PAST RECRUITERS</a></li>
-					<li><a href="contact.html"  style="text-decoration: none;color: black;">CONTACT US</a></li>
+					<li><a href="stdpool.html" style="text-decoration: none;border: none;" id="stdp">STUDENT POOL</a></li>
+					<li ><a href="past.html"  style="text-decoration: none;border: none;" id="pastr">PAST RECRUITERS</a></li>
+					<li><a href="contact.html"  style="text-decoration: none;border: none;"  id="contactus">CONTACT US</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -100,7 +126,7 @@
 				<div id="rev-1" class="content__title__inner" style="font-size: 100px;color: #000;">Startup Intern Fair</div><br/>
 				<div id="rev-2" class="content__title__inner content__title__inner--offset-1" style="font-size: 70px;color:#E6562A;left: 13.6vw;">March 16-18, <a href="college.html" id="college">IIIT Allahabad</a></div>
 				<div id="regButton">
-					<a href="#" class="btnn btn-4 btn-4c icon-arrow-right" id="reg">REGISTER</a>
+					<a href="#" class="btnn btn-4 btn-4c" id="reg">REGISTER</a>
 				</div>
 			</h2>
 		</section>
