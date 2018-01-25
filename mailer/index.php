@@ -75,6 +75,13 @@
 </form>
 
 <br>
+
+    <footer class="footer" style="position: absolute;">
+      <div class="container">
+        <b><p class="text-muted" style="float: left;">&copy; Aparoksha 2018</p></b>
+        <b><p class="text-muted" style="float: right; padding-right: 10px;">Credits: Shreyansh Dwivedi & Pradeep Gangwar </p></b>        
+      </div>
+    </footer>
    
 <!-- Scripts -->
 

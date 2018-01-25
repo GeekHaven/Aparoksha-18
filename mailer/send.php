@@ -69,38 +69,38 @@
 
   <form class="form-horizontal" method="POST" action="php-mailer.php">
   <div class="form-group">
-    <label for="inputText2" class="col-sm-2 control-label">Company Name</label>
+    <label for="inputText2" class="col-sm-2 control-label">Company Name<sup>*</sup></label>
     <div class="col-sm-8">
       <input type="text" class="form-control" id="inputText2" placeholder="Company Name" name="company_name" required>
     </div>
   </div>
   <div class="form-group">
-    <label for="inputText9" class="col-sm-2 control-label">Mail Type</label>
+    <label for="inputText9" class="col-sm-2 control-label">Mail Type<sup>*</sup></label>
     <div class="radio col-sm-8" id="inputText9">
       <label><input type="radio" name="mail_type" value="personal" id="employee_radio">Employee Email</label>
       <label><input type="radio" name="mail_type" value="company" id="company_radio" checked>Company Email</label>
     </div> 
   </div>
   <div class="form-group" id="employee_name">
-    <label for="inputText11" class="col-sm-2 control-label">Employee Name</label>
+    <label for="inputText11" class="col-sm-2 control-label">Employee Name<sup>*</sup></label>
     <div class="col-sm-8">
       <input type="text" class="form-control" id="inputText11" placeholder="Employee Name" name="employee_name">
     </div>
   </div>
   <div class="form-group" id="employee_email">
-    <label for="inputText10" class="col-sm-2 control-label">Employee Email</label>
+    <label for="inputText10" class="col-sm-2 control-label">Employee Email<sup>*</sup></label>
     <div class="col-sm-8">
       <input type="email" class="form-control" id="inputText10" placeholder="Employee Email" name="employee_email">
     </div>
   </div>
   <div class="form-group" id="company_email">
-    <label for="inputText3" class="col-sm-2 control-label">Company Email</label>
+    <label for="inputText3" class="col-sm-2 control-label">Company Email<sup>*</sup></label>
     <div class="col-sm-8">
       <input type="email" class="form-control" id="inputText3" placeholder="Company Email" name="email">
     </div>
   </div>
   <div class="form-group">
-    <label for="inputText8" class="col-sm-2 control-label">Company Type</label>
+    <label for="inputText8" class="col-sm-2 control-label">Company Type<sup>*</sup></label>
     <div class="radio col-sm-8" id="inputText8">
       <label><input type="radio" name="company_type" value="Domestic" checked>Domestic</label>
       <label><input type="radio" name="company_type" value="International">International</label>
@@ -119,13 +119,13 @@
     </div>
   </div>
   <div class="form-group">
-    <label for="inputText6" class="col-sm-2 control-label">Sender Name</label>
+    <label for="inputText6" class="col-sm-2 control-label">Sender Name<sup>*</sup></label>
     <div class="col-sm-8">
       <input type="text" class="form-control" id="inputText6" placeholder="Sender Name" name="sender_name" required>
     </div>
   </div>
   <div class="form-group">
-    <label for="inputText7" class="col-sm-2 control-label">Sender Contact</label>
+    <label for="inputText7" class="col-sm-2 control-label">Sender Contact<sup>*</sup></label>
     <div class="col-sm-8">
       <input type="tel" pattern="{0-9}[10]" class="form-control" id="inputText7" placeholder="Sender Contact" name="sender_contact" required>
     </div>
