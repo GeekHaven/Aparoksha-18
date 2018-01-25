@@ -1,6 +1,7 @@
 <?php
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
+session_start();
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -65,15 +66,15 @@ if(!$clicked){
             $mail->addBCC($bcc);
         }
 
-        //Attachments
-        // if($company_type == "Domestic" ) {
-        //     $mail->addAttachment('attachment/Sponsorship Brochure-Domestic-Aparoksha 2018-IIIT Allahabad.pdf');
-        //     $mail->addAttachment('attachment/Avenues-of-Branding-Domestic-Aparoksha-2018-IIIT-Allahabad.pdf');
-        // }
-        // else if($company_type == "International" ) {
-        //     $mail->addAttachment('attachment/Sponsorship Brochure-International-Aparoksha 2018-IIIT Allahabad.pdf');
-        //     $mail->addAttachment('attachment/Avenues-of-Branding-International-Aparoksha-2018-IIIT-Allahabad.pdf');
-        // }
+       // Attachments
+        if($company_type == "Domestic" ) {
+            $mail->addAttachment('attachment/Sponsorship Brochure-Domestic-Aparoksha 2018-IIIT Allahabad.pdf');
+            $mail->addAttachment('attachment/Avenues-of-Branding-Domestic-Aparoksha-2018-IIIT-Allahabad.pdf');
+        }
+        else if($company_type == "International" ) {
+            $mail->addAttachment('attachment/Sponsorship Brochure-International-Aparoksha 2018-IIIT Allahabad.pdf');
+            $mail->addAttachment('attachment/Avenues-of-Branding-International-Aparoksha-2018-IIIT-Allahabad.pdf');
+        }
 
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
@@ -119,11 +120,46 @@ Aparoksha, 2018<br/>
 IIIT Allahabad';
 
         $mail->send();
-        //$_SESSION['success'] = "Your mail has been sent successfully";
-        echo "done";
-        exit;
+        $mailed = true;
     } catch (Exception $e) {
-        $_SESSION['success'] = "There was an error sending mail. Please try again.";
+        $mailed = false;
     }
-//}
+
+
+    $servername = getenv('DB_HOST');
+    $username = getenv('DB_USER');
+    $password = getenv('DB_PASS');
+    $dbname = getenv('DB_NAME');
+    $tbname = getenv('TB_NAME');
+
+    try {
+        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    
+        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        //If in development environment then do not send mail
+        $sql = $conn->prepare("INSERT INTO $tbname (company_name,company_email,sender_name,sender_mobile) VALUES (:company_name,:company_email,:mailed,:sender_name,:sender_mobile)");
+        $do = $sql->execute(['company_name' => $company_name, 'company_email' => $company_email,'mailed' => $mailed,'sender_name' => $sender_name, 'sender_mobile' => $sender_mobile]);
+
+        if($do){
+            $_SESSION['confirm'] = "Mail was sent successfully and data was enterd into database"; 
+            header("Refresh: 0; url=send.php");
+            exit;
+        }
+          
+        else{
+            $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
+                                    try again after some time. If problem persists please feel free to contact website admministrator ";
+            header("Refresh: 0; url=send.php"); 
+            exit;
+        }
+    }
+    
+    catch(PDOException $e){
+        $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
+        try again after some time. If problem persists please feel free to contact website administrator";
+        header("Refresh: 0; url=send.php");
+        exit;
+    }
+    $conn = null;
 ?>

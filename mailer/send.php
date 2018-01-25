@@ -9,8 +9,8 @@
             exit();
 		}
 		else{
-			$user = $_SESSION['user'];
-      		$id = $_SESSION['id'];
+			  $user = $_SESSION['user'];
+      	$id = $_SESSION['id'];
 		}
 ?>
 
@@ -61,6 +61,11 @@
 
   <h2 class="text-center"> <b> Enter details to send mail: </b></h2>
   <br>
+
+  <div class="alert alert-info col-sm-12" id="info" style="margin-bottom:1em; 
+  <?php if(isset($_SESSION['confirm'])){echo("display:block;");} else {echo("display:none;");} ?> ">
+  <?php if(isset($_SESSION['confirm'])){echo("{$_SESSION['confirm']}"); unset($_SESSION['confirm']);} ?>
+ </div>
 
   <form class="form-horizontal" method="POST" action="php-mailer.php">
   <div class="form-group">
