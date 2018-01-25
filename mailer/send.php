@@ -76,6 +76,13 @@
     </div>
   </div>
   <div class="form-group">
+    <label for="inputText8" class="col-sm-2 control-label">Company Type</label>
+    <div class="radio col-sm-8" id="inputText8">
+      <label><input type="radio" name="company_type" value="Domestic" checked>Domestic</label>
+      <label><input type="radio" name="company_type" value="International">International</label>
+    </div> 
+  </div>
+  <div class="form-group">
     <label for="inputText4" class="col-sm-2 control-label">CC</label>
     <div class="col-sm-8">
       <input type="text" class="form-control" id="inputText4" placeholder="Add cc" name="cc">

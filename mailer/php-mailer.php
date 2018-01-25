@@ -16,7 +16,7 @@ $sender_contact = $_POST['sender_contact'];
 $company_type = $_POST['company_type'];
 $sender_name = $_POST['sender_name'];
 
-if(isset($_POST['sub'] && $_POST['company_name']) && isset($_POST['email']) && isset($_POST['sender_contact']) && isset($_POST['sender_name'])){
+if(isset($_POST['sub']) && isset($_POST['company_name']) && isset($_POST['email']) && isset($_POST['sender_contact']) && isset($_POST['sender_name'])){
     $clicked = true;
 }
 
@@ -123,7 +123,7 @@ IIIT Allahabad';
         $mail->send();
         $_SESSION['success'] = "Your mail has been sent successfully";
     } catch (Exception $e) {
-        $_SESSION['success'] = "There was an error sending mail. Please try again."
+        $_SESSION['success'] = "There was an error sending mail. Please try again.";
     }
 //}
 ?>
