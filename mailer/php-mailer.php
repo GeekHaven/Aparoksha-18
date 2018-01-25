@@ -10,8 +10,6 @@ $clicked = false;
 
 $company_name = $_POST['company_name'];
 $email = $_POST['email'];
-$cc = $_POST['cc'];
-$bcc = $_POST['bcc'];
 $sender_contact = $_POST['sender_contact'];
 $company_type = $_POST['company_type'];
 $sender_name = $_POST['sender_name'];
@@ -55,73 +53,75 @@ if(!$clicked){
 
         //Recipients
         $mail->setFrom('events@aparoksha.org', 'Aparoksha, IIITA');
-        $mail->addAddress($email, $name);     // Add a recipient
+        $mail->addAddress($email, $sender_name);     // Add a recipient
         // $mail->addAddress('ellen@example.com');               // Name is optional
         // $mail->addReplyTo('info@example.com', 'Information');
-        if(isset($cc)) {
+        if($_POST['cc'] != "") {
+            $cc = $_POST['cc'];
             $mail->addCC($cc);
         }
-        if(isset($bcc)) {
+        if($_POST['bcc'] != "") {
+            $bcc = $_POST['bcc'];
             $mail->addBCC($bcc);
         }
 
         //Attachments
-        if($company_type == "Domestic" ) {
-            $mail->addAttachment('attachment/Sponsorship Brochure-Domestic-Aparoksha 2018-IIIT Allahabad.pdf');
-            $mail->addAttachment('attachment/Avenues-of-Branding-Domestic-Aparoksha-2018-IIIT-Allahabad.pdf');
-        }
-        else if($company_type == "International" ) {
-            $mail->addAttachment('attachment/Sponsorship Brochure-International-Aparoksha 2018-IIIT Allahabad.pdf');
-            $mail->addAttachment('attachment/Avenues-of-Branding-International-Aparoksha-2018-IIIT-Allahabad.pdf');
-        }
+        // if($company_type == "Domestic" ) {
+        //     $mail->addAttachment('attachment/Sponsorship Brochure-Domestic-Aparoksha 2018-IIIT Allahabad.pdf');
+        //     $mail->addAttachment('attachment/Avenues-of-Branding-Domestic-Aparoksha-2018-IIIT-Allahabad.pdf');
+        // }
+        // else if($company_type == "International" ) {
+        //     $mail->addAttachment('attachment/Sponsorship Brochure-International-Aparoksha 2018-IIIT Allahabad.pdf');
+        //     $mail->addAttachment('attachment/Avenues-of-Branding-International-Aparoksha-2018-IIIT-Allahabad.pdf');
+        // }
 
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
         $mail->Subject = 'Avenues of branding for '.$company_name.' in Aparoksha, 2018';
-        $mail->Body    = 'Respected Sir/Mam,  
+        $mail->Body    = 'Respected Sir/Mam,<br/><br/>  
+
+<b>Aparoksha</b> is the annual technical fest of <b>IIIT Allahabad</b> (A Centre of Excellence in Information Technology established by Ministry of HRD, Govt. of India). <br/><br/>
+
+<b>Aparoksha</b> is a collaboration of tech enthusiasts to code, design and build innovative solutions to transform India into a digitally empowered society and a knowledge based economy and provides a venue for self-expression and creativity through technology. <br/><br/>
 
  
 
-<b>Aparoksha</b> is the annual technical fest of <b>IIIT Allahabad</b> (A Centre of Excellence in Information Technology established by Ministry of HRD, Govt. of India). 
+Building upon last year’s impressive footfall of 5000+, <b>Aparoksha ’18</b> is expected to have a promising footfall of 7000+ technophiles who come together to interact, share and discuss the latest happenings in the fields of Information Technology and Electronics. <br/><br/>
 
-<b>Aparoksha</b> is a collaboration of tech enthusiasts to code, design and build innovative solutions to transform India into a digitally empowered society and a knowledge based economy and provides a venue for self-expression and creativity through technology.
+<b>Aparoksha ’18</b> has a plethora of intensive and gripping technical events which attract participants and audience from technical circles all over the country. Our flagship events include: <br/><br/>
 
- 
+<b>Hack In the North</b>, the largest student held Hackathon in North India organised by <b>GitHub</b> and <b>TopCoder</b>. <br/><br/>
 
-Building upon last year’s impressive footfall of 5000+, <b>Aparoksha ’18</b> is expected to have a promising footfall of 7000+ technophiles who come together to interact, share and discuss the latest happenings in the fields of Information Technology and Electronics.
+<b>Gray Hound</b>, a national level quizzing event organised across various schools and colleges in all parts of the country. <b>Nova</b>, a national level design contest for all the Machiavelli’s of the digital era. <br/><br/>
 
-<b>Aparoksha ’18</b> has a plethora of intensive and gripping technical events which attract participants and audience from technical circles all over the country. Our flagship events include: 
+<b>Tech Tour</b>, an initiative taken by the Technical Society of IIIT Allahabad to conduct workshops and talks in various colleges in order to increase technical awareness and build enthusiasm of people from all backgrounds of Science. Topbot, the flagship Robotics contest of Aparoksha ‘18 caters to the hunger of robogeeks with captivating themes like Bolt Hurdle Race and JARVIS. <br/><br/>
 
-<b>Hack In the North</b>, the largest student held Hackathon in North India organised by <b>GitHub</b> and <b>TopCoder</b>. 
+<b>FragFest</b>, one of the most anticipated events of Aparoksha is every gamer’s asylum, seeing participation in the hundreds every year comes together this year as an overnight onstage gaming event in the format of the big leagues.<br/><br/>
 
-<b>Gray Hound</b>, a national level quizzing event organised across various schools and colleges in all parts of the country. <b>Nova</b>, a national level design contest for all the Machiavelli’s of the digital era. 
+<b>TopCoder Humblefool Cup</b>,a 2-tier ACM-ICPC style national level coding contest organised in honor of Harsha Suryanarayana, an alumnus of IIIT Allahabad, who was one of the greatest coders India has ever produced.<br/><br/>
 
-<b>Tech Tour</b>, an initiative taken by the Technical Society of IIIT Allahabad to conduct workshops and talks in various colleges in order to increase technical awareness and build enthusiasm of people from all backgrounds of Science. Topbot, the flagship Robotics contest of Aparoksha ‘18 caters to the hunger of robogeeks with captivating themes like Bolt Hurdle Race and JARVIS.
+Apart from core technical events, <b>Aparoksha ’18</b> boasts of riveting quizzes, movie screenings, a much awaited <b>Comedy Night</b> and to end it all, a grand after party.<br/><br/>
 
-<b>FragFest</b>, one of the most anticipated events of Aparoksha is every gamer’s asylum, seeing participation in the hundreds every year comes together this year as an overnight onstage gaming event in the format of the big leagues.
+<b>Aparoksha, 2018</b> promises to deliver on the success of yesteryear and shall continue to captivate everyone over the course of 3 days.<br/><br/>
 
-<b>TopCoder Humblefool Cup</b>,a 2-tier ACM-ICPC style national level coding contest organised in honor of Harsha Suryanarayana, an alumnus of IIIT Allahabad, who was one of the greatest coders India has ever produced.
+On this note, I, Shreyansh Dwivedi, would like to take this opportunity to request a sponsorship association between <b>Aparoksha</b> and <b>'.$company_name.'</b>. We hope that this leads to the development of a long and fruitful relationship between <b>'.$company_name.'</b> and <b>IIIT Allahabad</b>.<br/><br/>
 
-Apart from core technical events, <b>Aparoksha ’18</b> boasts of riveting quizzes, movie screenings, a much awaited <b>Comedy Night</b> and to end it all, a grand after party.
+Attached is the <b>Sponsorship Brochure</b> <b>Avenues of Branding Brochure</b> elaborating on the branding opportunities in Aparoksha, 2018.<br/><br/>
 
-<b>Aparoksha, 2018</b> promises to deliver on the success of yesteryear and shall continue to captivate everyone over the course of 3 days.    
+We look forward to have an in-person or video meeting with you.<br/><br/>
 
-On this note, I, Shreyansh Dwivedi, would like to take this opportunity to request a sponsorship association between <b>Aparoksha</b> and <b>'.$company_name.'</b>. We hope that this leads to the development of a long and fruitful relationship between <b>'.$company_name.'</b> and <b>IIIT Allahabad</b>.  
+Thanking You,<br/>
 
-Attached is the <b>Sponsorship Brochure</b> <b>Avenues of Branding Brochure</b> elaborating on the branding opportunities in Aparoksha, 2018.
+'.$sender_name.' | '.$sender_contact.'<br/>
 
-We look forward to have an in-person or video meeting with you.
-
-Thanking You,
-
-'.$sender_name.' | '.$sender_contact.'
-
-Aparoksha, 2018
+Aparoksha, 2018<br/>
 
 IIIT Allahabad';
 
         $mail->send();
-        $_SESSION['success'] = "Your mail has been sent successfully";
+        //$_SESSION['success'] = "Your mail has been sent successfully";
+        echo "done";
+        exit;
     } catch (Exception $e) {
         $_SESSION['success'] = "There was an error sending mail. Please try again.";
     }

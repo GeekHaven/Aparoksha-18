@@ -110,7 +110,7 @@
   
   <div class="form-group text-center" style="margin-left: 12%;">
     <div class="col-sm-10">
-      <button type="submit" class="btn btn-primary" name="submit2">Submit</button>
+      <button type="submit" class="btn btn-primary" name="sub">Submit</button>
     </div>
   </div>
 
