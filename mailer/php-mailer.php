@@ -13,6 +13,7 @@ $company_name = $_POST['company_name'];
 $email = $_POST['email'];
 $sender_contact = $_POST['sender_contact'];
 $company_type = $_POST['company_type'];
+$mail_type = $_POST['mail_type'];
 $sender_name = $_POST['sender_name'];
 
 if(isset($_POST['sub']) && isset($_POST['company_name']) && isset($_POST['email']) && isset($_POST['sender_contact']) && isset($_POST['sender_name'])){
@@ -76,10 +77,17 @@ if(!$clicked){
             $mail->addAttachment('attachment/Avenues-of-Branding-International-Aparoksha-2018-IIIT-Allahabad.pdf');
         }
 
+        if($mail_type == "personal") {
+            $greeting = 'Respected '.$company_name.' , ';
+        }
+        else {
+            $greeting = 'Respected Sir/Mam,'
+        }
+
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
         $mail->Subject = 'Avenues of branding for '.$company_name.' in Aparoksha, 2018';
-        $mail->Body    = 'Respected Sir/Mam,<br/><br/>  
+        $mail->Body    = ''.$greeting.'<br/><br/>  
 
 <b>Aparoksha</b> is the annual technical fest of <b>IIIT Allahabad</b> (A Centre of Excellence in Information Technology established by Ministry of HRD, Govt. of India). <br/><br/>
 
@@ -120,9 +128,9 @@ Aparoksha, 2018<br/>
 IIIT Allahabad';
 
         $mail->send();
-        $mailed = true;
+        $mailed = 'true';
     } catch (Exception $e) {
-        $mailed = false;
+        $mailed = 'false';
     }
 
 
@@ -138,11 +146,17 @@ IIIT Allahabad';
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         //If in development environment then do not send mail
-        $sql = $conn->prepare("INSERT INTO $tbname (company_name,company_email,sender_name,sender_mobile) VALUES (:company_name,:company_email,:mailed,:sender_name,:sender_mobile)");
+        $sql = $conn->prepare("INSERT INTO $tbname (company_name,company_email,mailed,sender_name,sender_mobile) VALUES (:company_name,:company_email,:mailed,:sender_name,:sender_mobile)");
         $do = $sql->execute(['company_name' => $company_name, 'company_email' => $company_email,'mailed' => $mailed,'sender_name' => $sender_name, 'sender_mobile' => $sender_mobile]);
 
         if($do){
-            $_SESSION['confirm'] = "Mail was sent successfully and data was enterd into database"; 
+            if($mailed === "true"){
+                $_SESSION['confirm'] = "Mail was sent successfully and data was enterd into database";
+            }
+            else {
+                $_SESSION['confirm'] = "Data was enterd into database but there was some error sending mail. Check your email addresses once again
+                and try sending mail again";
+            } 
             header("Refresh: 0; url=send.php");
             exit;
         }

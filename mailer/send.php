@@ -69,10 +69,17 @@
 
   <form class="form-horizontal" method="POST" action="php-mailer.php">
   <div class="form-group">
-    <label for="inputText2" class="col-sm-2 control-label">Company Name</label>
+    <label for="inputText2" class="col-sm-2 control-label">Company/Individual Name</label>
     <div class="col-sm-8">
       <input type="text" class="form-control" id="inputText2" placeholder="Company Name" name="company_name" required>
     </div>
+  </div>
+  <div class="form-group">
+    <label for="inputText9" class="col-sm-2 control-label">Mail Type</label>
+    <div class="radio col-sm-8" id="inputText9">
+      <label><input type="radio" name="mail_type" value="personal">Personal Email</label>
+      <label><input type="radio" name="mail_type" value="company" checked>Company Email</label>
+    </div> 
   </div>
   <div class="form-group">
     <label for="inputText3" class="col-sm-2 control-label">Company Email</label>
