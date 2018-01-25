@@ -22,37 +22,75 @@
 	<style type="text/css">
 		#navbar {
 			position: absolute;
+			background-color: white;
+			-webkit-box-shadow: 20px 20px 20px #f0f0f0;
+			-moz-box-shadow:    20px 20px 20px #f0f0f0;
+			box-shadow:         10px 10px 10px #f0f0f0;
+			z-index:999;
+			line-height: 40px;
+		}
+		#menu {
+			margin-left: 60%;
+		}
+		#list {
+			list-style: none;
+			text-align: center;
+		}
+		#list li {
+			display: inline-block;
+			margin-left: 10%;
+			font-size: 15px;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 700;
+			height: 40px;
+		}
+		#stdp, #pastr, #contactus {
+			color: black;
+		}
+		#contactus:hover {
+			color: #F0A21A;
+		}
+		#stdp:hover {
+			color: #F0A21A;
+		}
+		#pastr:hover {
+			color: #F0A21A;
+		}
+		#leftList {
+			 display: flex;
+			font-size: 15px;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: 700;
+			height: 40px;
+			float: left;
+			list-style: none;
+			border: none;
+		}
+		#home {
+			text-decoration: none;
+			color: black;
+			border: none;
+		}
+		#home:hover {
+			color: #F0A21A;
 		}
 	</style>
 </head>
 <body>
-	<svg class="hidden">
-		<symbol id="icon-menu" viewBox="0 0 17.6 9.9">
-			<title>menu</title>
-			<path d="M17.6,1H0V0h17.6V1z M17.6,4.3h-12v1h12V4.3z M17.6,8.9h-6.9v1h6.9V8.9z"/>
-		</symbol>
-		<symbol id="icon-cross" viewBox="0 0 10.2 10.2">
-			<title>cross</title>
-			<path d="M5.8,5.1l4.4,4.4l-0.7,0.7L5.1,5.8l-4.4,4.4L0,9.5l4.4-4.4L0,0.7L0.7,0l4.4,4.4L9.5,0l0.7,0.7L5.8,5.1z"/>
-		</symbol>
-	</svg>
-	<main>
-		<header class="codrops-header">
-			<button class="btn btn--menu" style="font-size: 25px;color: black;"><svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg></button>
-		</header>
-		<nav class="menu" style="position: absolute;">
-			<button class="btn btn--close" style="font-size: 20px;color: white;"><svg class="icon icon--cross"><use xlink:href="#icon-cross"></use></svg></button>
-			<ul class="menu__inner">
-				<li class="menu__item"><a class="menu__link" href="index.html">Home</a></li>
-				<br><br>
-				<li class="menu__item"><a class="menu__link" href="#">Register</a></li>
-				<br><br>
-				<li class="menu__item"><a class="menu__link" href="stdpool.html">Student pool</a></li>
-				<br><br>
-				<li class="menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
-			</ul>
+		<nav id="navbar" style="position: fixed;top: 0;width: 100%;">
+			<div id="menuLeft">
+				<ul id="leftList">
+					<li><a href="index.html" id="home">HOME</a></li>
+				</ul>
+			</div>
+			<div id="menu">
+				<ul id="list">
+					<li><a href="stdpool.html" style="text-decoration: none;border: none;" id="stdp">STUDENT POOL</a></li>
+					<li><a href="contact.html"  style="text-decoration: none;border: none;"  id="contactus">CONTACT US</a></li>
+				</ul>
+			</div>
 		</nav>
-		<section class="content content--full flexy flexy--row" style="top: -4vw;">
+		<section class="content content--full flexy flexy--row" style="top: 4vw;">
 			<h2 class="content__title content__title--medium content__title--half content__title--right">
 				<div id="rev-4" class="content__title__inner" style="left: -4vw;">Past</div><br/>
 				<div id="rev-5" class="content__title__inner content__title__inner--offset-2">Recruiters</div>
