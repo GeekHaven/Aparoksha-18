@@ -90,13 +90,13 @@
   <div class="form-group" id="employee_email">
     <label for="inputText10" class="col-sm-2 control-label">Employee Email</label>
     <div class="col-sm-8">
-      <input type="text" class="form-control" id="inputText10" placeholder="Employee Email" name="email" required>
+      <input type="email" class="form-control" id="inputText10" placeholder="Employee Email" name="employee_email">
     </div>
   </div>
   <div class="form-group" id="company_email">
     <label for="inputText3" class="col-sm-2 control-label">Company Email</label>
     <div class="col-sm-8">
-      <input type="text" class="form-control" id="inputText3" placeholder="Company Email" name="email" required>
+      <input type="email" class="form-control" id="inputText3" placeholder="Company Email" name="email">
     </div>
   </div>
   <div class="form-group">

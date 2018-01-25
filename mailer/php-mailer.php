@@ -9,11 +9,16 @@ require '../register/vendor/autoload.php';
 
 $clicked = false;
 
+$mail_type = $_POST['mail_type'];
 $company_name = $_POST['company_name'];
-$email = $_POST['email'];
+if($mail_type == "personal") {
+    $email = $_POST['employee_email'];
+}
+else {
+    $email = $_POST['email'];
+}
 $sender_contact = $_POST['sender_contact'];
 $company_type = $_POST['company_type'];
-$mail_type = $_POST['mail_type'];
 $sender_name = $_POST['sender_name'];
 
 if(isset($_POST['sub']) && isset($_POST['company_name']) && isset($_POST['email']) && isset($_POST['sender_contact']) && isset($_POST['sender_name'])){
