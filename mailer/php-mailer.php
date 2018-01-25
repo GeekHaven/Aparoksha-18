@@ -54,8 +54,8 @@ if(!$clicked){
         $mail->Port = $mailport;                                    // TCP port to connect to
 
         //Recipients
-        $mail->setFrom('events@aparoksha.org', 'Aparoksha, IIITA');
-        $mail->addAddress($email, $sender_name);     // Add a recipient
+        $mail->setFrom('team.aparoksha@iiita.ac.in', 'Aparoksha, IIITA');
+        $mail->addAddress($email, $company_name);     // Add a recipient
         // $mail->addAddress('ellen@example.com');               // Name is optional
         // $mail->addReplyTo('info@example.com', 'Information');
         if($_POST['cc'] != "") {
@@ -81,7 +81,7 @@ if(!$clicked){
             $greeting = 'Respected '.$company_name.' , ';
         }
         else {
-            $greeting = 'Respected Sir/Mam,'
+            $greeting = 'Respected Sir/Mam,';
         }
 
         //Content
@@ -113,7 +113,7 @@ Apart from core technical events, <b>Aparoksha ’18</b> boasts of riveting quiz
 
 <b>Aparoksha, 2018</b> promises to deliver on the success of yesteryear and shall continue to captivate everyone over the course of 3 days.<br/><br/>
 
-On this note, I, Shreyansh Dwivedi, would like to take this opportunity to request a sponsorship association between <b>Aparoksha</b> and <b>'.$company_name.'</b>. We hope that this leads to the development of a long and fruitful relationship between <b>'.$company_name.'</b> and <b>IIIT Allahabad</b>.<br/><br/>
+On this note, I '.$sender_name.', would like to take this opportunity to request a sponsorship association between <b>Aparoksha</b> and <b>'.$company_name.'</b>. We hope that this leads to the development of a long and fruitful relationship between <b>'.$company_name.'</b> and <b>IIIT Allahabad</b>.<br/><br/>
 
 Attached is the <b>Sponsorship Brochure</b> <b>Avenues of Branding Brochure</b> elaborating on the branding opportunities in Aparoksha, 2018.<br/><br/>
 
@@ -147,7 +147,7 @@ IIIT Allahabad';
 
         //If in development environment then do not send mail
         $sql = $conn->prepare("INSERT INTO $tbname (company_name,company_email,mailed,sender_name,sender_mobile) VALUES (:company_name,:company_email,:mailed,:sender_name,:sender_mobile)");
-        $do = $sql->execute(['company_name' => $company_name, 'company_email' => $company_email,'mailed' => $mailed,'sender_name' => $sender_name, 'sender_mobile' => $sender_mobile]);
+        $do = $sql->execute(['company_name' => $company_name, 'company_email' => $email,'mailed' => $mailed,'sender_name' => $sender_name, 'sender_mobile' => $sender_contact]);
 
         if($do){
             if($mailed === "true"){

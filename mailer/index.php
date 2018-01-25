@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if(isset($_SESSION['user'])){  
+        header("location: send.php"); 
+    }
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +47,12 @@
 
   <h3 class="text-center"> Login now to access mailer scripts </h3>
   <br>
- 
+
+  <div class="alert alert-info col-sm-12" id="info" style="margin-bottom:1em; 
+  <?php if(isset($_SESSION['confirm'])){echo("display:block;");} else {echo("display:none;");} ?> ">
+  <?php if(isset($_SESSION['confirm'])){echo("{$_SESSION['confirm']}"); unset($_SESSION['confirm']);} ?>
+ </div>
+
  <form class="form-horizontal" method="POST" action="logincheck.php">
   <div class="form-group">
     <label for="inputEmail3" class="col-sm-2 control-label">Username</label>

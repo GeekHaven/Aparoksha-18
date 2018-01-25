@@ -115,7 +115,7 @@
   <div class="form-group">
     <label for="inputText7" class="col-sm-2 control-label">Sender Contact</label>
     <div class="col-sm-8">
-      <input type="text" class="form-control" id="inputText7" placeholder="Sender Contact" name="sender_contact" required>
+      <input type="tel" pattern="{0-9}[10]" class="form-control" id="inputText7" placeholder="Sender Contact" name="sender_contact" required>
     </div>
   </div>
   
