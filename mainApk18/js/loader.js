@@ -62,7 +62,7 @@ class Loader {
 	}
 
 	setupTime() {
-		this.timescale = 1;
+		this.timescale = 2;
 		this.clock = new THREE.Clock();
 		this.deltaTimeSeconds = this.clock.getDelta() * this.timescale;
 		this.deltaTimeMilliseconds = this.deltaTimeSeconds * 1000;
