@@ -84,10 +84,10 @@ if(!$clicked){
 
         if($mail_type == "personal") {
             $employee_name = $_POST['employee_name'];
-            $greeting = 'Respected '.$employee_name.' , ';
+            $greeting = 'Respected '.$employee_name.', ';
         }
         else {
-            $greeting = 'Respected Sir/Mam,';
+            $greeting = "Respected Sir/Ma'am,";
         }
 
         //Content
