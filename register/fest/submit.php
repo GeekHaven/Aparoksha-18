@@ -5,6 +5,9 @@ include("php-mailer.php");
 
 require '../vendor/autoload.php';
 
+date_default_timezone_set('Asia/Kolkata');
+
+
     $dotenv = new Dotenv\Dotenv(__DIR__);
     if (file_exists('.env')) {
        $dotenv->load('.env');
@@ -21,6 +24,7 @@ require '../vendor/autoload.php';
 
     if(isset($_POST['sub'])){
         $clicked = true;
+        $date_clicked = date('Y-m-d H:i:s');
     }
 
     if(!$clicked){
@@ -89,8 +93,8 @@ require '../vendor/autoload.php';
             else{
                 //If in development environment then do not send mail
                 if(($dev !== "true") && mailsend($email,$hash,$name)){
-                    $sql = $conn->prepare("INSERT INTO $tbname (name,email,mobile,college,events,activate) VALUES (:name,:email,:mobile,:college,:events,:hash)");
-                    $do = $sql->execute(['name' => $name, 'email' => $email,'mobile' => $mobile,'college' => $college, 'events' => $event, 'hash' => $hash]);
+                 $sql = $conn->prepare("INSERT INTO $tbname (stime,name,email,mobile,college,events,activate) VALUES (:stime,:name,:email,:mobile,:college,:events,:hash)");
+                    $do = $sql->execute(['stime' => $date_clicked ,'name' => $name, 'email' => $email,'mobile' => $mobile,'college' => $college, 'events' => $event, 'hash' => $hash ]);
 
                     if($do){
                         $_SESSION['confirm'] = "You have been registered successfully. Please verify your email by clicking on the
@@ -107,8 +111,9 @@ require '../vendor/autoload.php';
                     }
                 }
                 if($dev === "true") {
-                    $sql = $conn->prepare("INSERT INTO $tbname (name,email,mobile,college,events,activate) VALUES (:name,:email,:mobile,:college,:events,:hash)");
-                    $do = $sql->execute(['name' => $name, 'email' => $email,'mobile' => $mobile,'college' => $college, 'events' => $event, 'hash' => $hash]);
+                    $sql = $conn->prepare("INSERT INTO $tbname (stime,name,email,mobile,college,events,activate) VALUES (:stime,:name,:email,:mobile,:college,:events,:hash)");
+                    $do = $sql->execute(['stime' => $date_clicked ,'name' => $name, 'email' => $email,'mobile' => $mobile,'college' => $college, 'events' => $event, 'hash' => $hash]);
+
 
                     if($do){
                         $_SESSION['confirm'] = "You have been registered successfully. Please verify your email by clicking on the
