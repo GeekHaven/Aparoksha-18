@@ -5,6 +5,9 @@ include("php-mailer.php");
 
 require '../vendor/autoload.php';
 
+date_default_timezone_set('Asia/Kolkata');
+
+
     $dotenv = new Dotenv\Dotenv(__DIR__);
     if (file_exists('.env')) {
        $dotenv->load('.env');
