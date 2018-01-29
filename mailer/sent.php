@@ -5,41 +5,7 @@
     if(!(isset($_SESSION['user']))){  
         header("location: index.php"); 
         exit;
-    }
-
-    //Load composer's autoloader
-    require '../register/vendor/autoload.php';
-
-    $dotenv = new Dotenv\Dotenv(__DIR__);
-    if (file_exists('.env')) {
-        $dotenv->load('.env');
-    }
-            
-    $servername = getenv('DB_HOST');
-    $username = getenv('DB_USER');
-    $password = getenv('DB_PASS');
-    $dbname = getenv('DB_NAME');
-    $tbname = getenv('TB_NAME');
-
-    try {
-        $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-            
-        $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-        $stmt = $conn->prepare('SELECT * FROM $tbname');
-    	$stmt->execute();
-        $entries = $stmt->fetchAll();
-
-    }
-    	
-    catch(PDOException $e){
-        echo '<script language="javascript">';
-        echo '$sql . "<br>" . $e->getMessage();';
-        echo '</script>';     
-  		header("Refresh: 1; url=index.php");
-    }
-
-    $conn = null;
+    } 
 ?>
 
 <html>
@@ -61,26 +27,63 @@
     <thead>
       <tr>
         <th>Date Time</th>
-        <th>Name</th>
         <th>Email</th>
+        <th>Name</th>
         <th>Sent</th>
         <th>Sender Name</th>
-        <th>Sender Email</th>
+        <th>Sender Phone</th>
       </tr>
     </thead>
     <tbody>
         <?php
-            foreach($entries as $entry) {
-                echo '<tr>';
-                echo '<td>'.$entry['dated'].'</td>';
-                echo '<td>'.$entry['company_email'].'</td>';
-                echo '<td>'.$entry['company_name'].'</td>';
-                echo '<td>'.$entry['mailed'].'</td>';
-                echo '<td>'.$entry['sender_name'].'</td>';
-                echo '<td>'.$entry['sender_mobile'].'</td>';
-                echo '</td>';
+
+            //Load composer's autoloader
+            require '../register/vendor/autoload.php';
+
+            $dotenv = new Dotenv\Dotenv(__DIR__);
+            if (file_exists('.env')) {
+                $dotenv->load('.env');
             }
+                    
+            $servername = getenv('DB_HOST');
+            $username = getenv('DB_USER');
+            $password = getenv('DB_PASS');
+            $dbname = getenv('DB_NAME');
+            $tbname = getenv('TB_NAME');
+
+            try {
+                $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+                
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                $stmt = $conn->prepare("SELECT * FROM $tbname");
+                $stmt->execute();
+                $entries = $stmt->fetchAll();
+
+                foreach($entries as $entry) {
+                    echo '<tr>';
+                    echo '<td>'.$entry['dated'].'</td>';
+                    echo '<td>'.$entry['company_email'].'</td>';
+                    echo '<td>'.$entry['company_name'].'</td>';
+                    echo '<td>'.$entry['mailed'].'</td>';
+                    echo '<td>'.$entry['sender_name'].'</td>';
+                    echo '<td>'.$entry['sender_mobile'].'</td>';
+                    echo '</td>';
+                }
+
+            }
+                
+            catch(PDOException $e){
+                echo '<script language="javascript">';
+                echo '$sql . "<br>" . $e->getMessage();';
+                echo '</script>';     
+                header("Refresh: 1; url=index.php");
+            }
+
+            $conn = null;
+            
         ?>
+
     </tbody>
   </table>
 </div>

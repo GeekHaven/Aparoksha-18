@@ -50,7 +50,7 @@
 
       
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="sent.php"></a>Sent Mails</li>
+        <li><a href="sent.php">Sent Mails</a></li>
         <li><a href="logout.php">Logout</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->

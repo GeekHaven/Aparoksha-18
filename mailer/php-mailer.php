@@ -156,7 +156,7 @@ IIIT Allahabad';
         //If in development environment then do not send mail
         $date_clicked = date('Y-m-d H:i:s');
         $sql = $conn->prepare("INSERT INTO $tbname (dated,company_name,company_email,mailed,sender_name,sender_mobile) VALUES (:dated,:company_name,:company_email,:mailed,:sender_name,:sender_mobile)");
-        $do = $sql->execute(['dated' => $dated, 'company_name' => $company_name, 'company_email' => $email,'mailed' => $mailed,'sender_name' => $sender_name, 'sender_mobile' => $sender_contact]);
+        $do = $sql->execute(['dated' => $date_clicked, 'company_name' => $company_name, 'company_email' => $email,'mailed' => $mailed,'sender_name' => $sender_name, 'sender_mobile' => $sender_contact]);
 
         if($do){
             if($mailed === "true"){
