@@ -7,6 +7,8 @@ use PHPMailer\PHPMailer\Exception;
 
 require '../register/vendor/autoload.php';
 
+date_default_timezone_set('Asia/Kolkata');
+
 $clicked = false;
 
 $mail_type = $_POST['mail_type'];
@@ -152,8 +154,9 @@ IIIT Allahabad';
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         //If in development environment then do not send mail
-        $sql = $conn->prepare("INSERT INTO $tbname (company_name,company_email,mailed,sender_name,sender_mobile) VALUES (:company_name,:company_email,:mailed,:sender_name,:sender_mobile)");
-        $do = $sql->execute(['company_name' => $company_name, 'company_email' => $email,'mailed' => $mailed,'sender_name' => $sender_name, 'sender_mobile' => $sender_contact]);
+        $date_clicked = date('Y-m-d H:i:s');
+        $sql = $conn->prepare("INSERT INTO $tbname (dated,company_name,company_email,mailed,sender_name,sender_mobile) VALUES (:dated,:company_name,:company_email,:mailed,:sender_name,:sender_mobile)");
+        $do = $sql->execute(['dated' => $dated, 'company_name' => $company_name, 'company_email' => $email,'mailed' => $mailed,'sender_name' => $sender_name, 'sender_mobile' => $sender_contact]);
 
         if($do){
             if($mailed === "true"){
