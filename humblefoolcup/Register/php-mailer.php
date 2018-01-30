@@ -20,7 +20,7 @@ if(!$clicked){
 function mailsend($email,$hash, $name){
 
     //Load composer's autoloader
-    require '../vendor/autoload.php';
+    require '../../register/vendor/autoload.php';
 
     $dotenv = new Dotenv\Dotenv(__DIR__);
     if (file_exists('.env')) {
