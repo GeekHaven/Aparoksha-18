@@ -59,8 +59,10 @@ require '../../register/vendor/autoload.php';
             $business = isset($_POST['business']) ? $_POST['business'] : 0;
             if(isset($_POST['backend'])){$_SESSION['business'] = $business;}
       
+            $stipend = htmlentities($_POST['stipend']);
             $restrict = htmlentities($_POST['restrict']);
             $year = htmlentities($_POST['year']);
+            $_SESSION['stipend'] = $stipend;
             $_SESSION['restrict'] = $restrict;
             $_SESSION['year'] = $year;
 
@@ -92,11 +94,11 @@ require '../../register/vendor/autoload.php';
             $date_clicked = date('Y-m-d H:i:s');
 
             $sql = $conn->prepare("INSERT INTO $tbname (dated,name,email,mobile,companyname,companyinfo,frontend,backend,
-                    fullstack,graphic,content,business,restriction,yearallowed) VALUES (:dated,:name,:email,:mobile,:companyname,
-                    :companyinfo,:frontend,:backend,:fullstack,:graphic,:content,:business,:restriction,:yearallowed)");
+                    fullstack,graphic,content,business,stipend,restriction,yearallowed) VALUES (:dated,:name,:email,:mobile,:companyname,
+                    :companyinfo,:frontend,:backend,:fullstack,:graphic,:content,:business,:stipend,:restriction,:yearallowed)");
             $do = $sql->execute(['dated' => $date_clicked, 'name' => $name, 'email' => $email,'mobile' => $mobile,'companyname' => $companyname,
                  'companyinfo' => $companyinfo, 'frontend' => $frontend, 'backend' => $backend, 'fullstack' => $fullstack,
-                 'graphic' => $graphics, 'content' => $content, 'business' => $business, 'restriction' => $restrict,
+                 'graphic' => $graphics, 'content' => $content, 'business' => $business, 'stipend' => $stipend, 'restriction' => $restrict,
                  'yearallowed' => $year]);
 
             if($do){
@@ -112,6 +114,7 @@ require '../../register/vendor/autoload.php';
                 unset($_SESSION['content']);
                 unset($_SESSION['fullstack']);
                 unset($_SESSION['graphics']);
+                unset($_SESSION['stipend']);
                 unset($_SESSION['year']);
                 unset($_SESSION['restrict']);
                 header("Refresh: 0; url=index.php#info");

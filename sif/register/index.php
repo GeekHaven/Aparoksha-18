@@ -206,6 +206,14 @@ unset($_SESSION['profiles']);
                 </div>
               </div>
               <div class="form-group">
+                <label for="stipend" class="col-sm-2 control-label">Stipend</label>
+                <div class="col-sm-9">
+                  <input type="number" class="form-control" id="stipend" name="stipend" placeholder="Stipend in Rs" value="<?php if (isset($_SESSION['stipend'])){echo $_SESSION['stipend']; unset($_SESSION['stipend']);} ?>" required>
+                  <div class="help-block with-errors pull-right"></div>
+                  <span class="form-control-feedback" aria-hidden="true"></span>
+                </div>
+              </div>
+              <div class="form-group">
                 <label for="restrict" class="col-sm-2 control-label">Restriction on branch</label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" id="restrict" name="restrict" placeholder="CSE, EE" value="<?php if (isset($_SESSION['restrict'])){echo $_SESSION['restrict']; unset($_SESSION['restrict']);} ?>">
