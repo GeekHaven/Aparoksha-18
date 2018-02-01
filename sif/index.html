@@ -38,6 +38,9 @@
 	<script src="js/modernizr.custom.js"></script>
 	<script>document.documentElement.className = 'js';</script>
 	<style type="text/css">
+		html {
+			overflow: auto;
+		}
 		#navbar {
 			position: absolute;
 			background-color: white;
@@ -277,7 +280,7 @@
 				var rev2 = new RevealFx(document.querySelector('#rev-2'), {
 					revealSettings : {
 						bgcolor: '#000',
-						delay: 100,
+						delay: 50,
 						onCover: function(contentEl, revealerEl) {
 							contentEl.style.opacity = 1;
 						}
@@ -288,7 +291,7 @@
 				//************************ Example 2 - reveal on scroll ********************************
 				
 				var scrollElemToWatch_1 = document.getElementById('rev-3'),
-				watcher_1 = scrollMonitor.create(scrollElemToWatch_1, -200),				
+				watcher_1 = scrollMonitor.create(scrollElemToWatch_1, -100),				
 				rev3 = new RevealFx(scrollElemToWatch_1, {
 					revealSettings : {
 						bgcolor: '#F0A21A',
@@ -310,7 +313,7 @@
 				rev5 = new RevealFx(document.querySelector('#rev-5'), {
 					revealSettings : {
 						bgcolor: '#fff',
-						delay: 100,
+						delay: 50,
 						onCover: function(contentEl, revealerEl) {
 							contentEl.style.opacity = 1;
 						}
@@ -318,7 +321,7 @@
 				}),
 
 				scrollElemToWatch_2 = document.getElementById('rev-6'),
-				watcher_2 = scrollMonitor.create(scrollElemToWatch_2, -200),
+				watcher_2 = scrollMonitor.create(scrollElemToWatch_2, -100),
 				rev6 = new RevealFx(scrollElemToWatch_2, {
 					revealSettings : {
 						bgcolor: '#F0A21A',
@@ -341,7 +344,7 @@
 					revealSettings : {
 						bgcolor: '#fff',
 						direction: 'rl',
-						delay: 100,
+						delay: 50,
 						onCover: function(contentEl, revealerEl) {
 							contentEl.style.opacity = 1;
 						}
@@ -349,7 +352,7 @@
 				}),
 
 				scrollElemToWatch_3 = document.getElementById('rev-9'),
-				watcher_3 = scrollMonitor.create(scrollElemToWatch_3, -200),
+				watcher_3 = scrollMonitor.create(scrollElemToWatch_3, -100),
 				rev9 = new RevealFx(scrollElemToWatch_3, {
 					revealSettings : {
 						bgcolor: '#000',
@@ -371,7 +374,7 @@
 				rev11 = new RevealFx(document.querySelector('#rev-11'), {
 					revealSettings : {
 						bgcolor: '#fff',
-						delay: 100,
+						delay: 50,
 						onCover: function(contentEl, revealerEl) {
 							contentEl.style.opacity = 1;
 						}
