@@ -5,7 +5,7 @@
 body{
     font-family: 'Catamaran', sans-serif;
     background-color: rgb(0, 0, 0);
-    
+    width: 98%;
 }
 
 ul li {
@@ -62,7 +62,6 @@ h1{
 }
 .contacts {
     color: white;
-    position: fixed;
     
     bottom: 0;
     font-size: 1.1em;
