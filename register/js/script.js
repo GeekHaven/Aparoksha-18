@@ -96,6 +96,7 @@ $(document).ready(function()  {
 
   var textArray = [
     'Hack In The North Registrations have started! Check events and workshop tab for more.',
+    'Startup-Intern Fair registrations have started. Chack Fest Registration tab for more. Register your startup now.',
     'Fest Registrations have started! Check fest registration tab for more.'
   ];
 
@@ -109,6 +110,6 @@ $(document).ready(function()  {
       count = 0;
     }
     document.getElementById("info-mov").innerHTML = textArray[count];
-  }, 10000);
+  }, 13000);
 
 }); 
