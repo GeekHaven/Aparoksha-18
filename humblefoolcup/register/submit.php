@@ -86,14 +86,14 @@ date_default_timezone_set('Asia/Kolkata');
 
                     if($do){
                         $_SESSION['confirm'] = "You have been registered successfully. We have sent you a mail containing detailed instructions for
-                        using topcoder for HumblefoolCup Best wishes."; 
+                        using topcoder for HumblefoolCup. Best wishes."; 
                         header("Refresh: 0; url=index.php#info");
                         exit;
                     }
                   
                     else{
                         $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
-                                                try again after some time. If problem persists please feel free to contact person mentioned below ";
+                                                try again after some time. If problem persists please feel free to contact website administrator";
                         header("Refresh: 0; url=index.php#info"); 
                         exit;
                     }
@@ -112,7 +112,7 @@ date_default_timezone_set('Asia/Kolkata');
                   
                     else{
                         $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
-                                                try again after some time. If problem persists please feel free to contact any person mentioned below ";
+                                                try again after some time. If problem persists please feel free to contact website administrator ";
                         header("Refresh: 0; url=index.php#info");
                         exit;
                     }
@@ -128,7 +128,7 @@ date_default_timezone_set('Asia/Kolkata');
         
         catch(PDOException $e){
             $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
-            try again after some time. If problem persists please feel free to contact any person mentioned below ";
+            try again after some time. If problem persists please feel free to contact website administrator ";
             header("Refresh: 0; url=index.php#info");
             exit;
         }

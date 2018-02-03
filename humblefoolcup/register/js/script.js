@@ -13,6 +13,7 @@ $(document).ready(function()  {
                     $("#topcoder").removeClass('has-error');
                 }
                 else{
+                    $('#submit').prop('disabled', true);
                     $("#topcoder").addClass('has-error').removeClass('has-success');
                     $('#topcoder-error').html("Please Enter a valid Topcoder handle.");
                 }
