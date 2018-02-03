@@ -45,7 +45,7 @@ function mailsend($email, $tid, $name){
         $mail->Port = $mailport;                                    // TCP port to connect to
 
         //Recipients
-        $mail->setFrom('events@aparoksha.org', 'Aparoksha, IIITA');
+        $mail->setFrom('team.aparoksha@iiita.ac.in', 'Aparoksha, IIITA');
         $mail->addAddress($email, $name);     // Add a recipient
         // $mail->addAddress('ellen@example.com');               // Name is optional
         // $mail->addReplyTo('info@example.com', 'Information');
@@ -58,7 +58,7 @@ function mailsend($email, $tid, $name){
 
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
-        $mail->Subject = 'Account Activation | Participation Details | HumblefoolCup 2018';
+        $mail->Subject = 'HumblefoolCup 2018 | Participation Details | Aparoksha IIITA';
         $mail->Body    = 'Hi <b>'.$tid.'</b>, best wishes of the day from <b>Team Aparoksha</b>.<br><br>
         Your registration for Humblefool Cup’18 is accepted. 
         Prelims for onsite round will be on  <b>Tuesday, 20th Feb, 5:30PM IST</b>. Please make sure that you have registered for the Humblefool Cup on Topcoder Website.
@@ -83,7 +83,7 @@ function mailsend($email, $tid, $name){
          Please refer to the details in the guide here)</li> 
         </ul>       
         <br><br>
-        Please find attached guides for setting up Topcoder applet on your machine, and feel free to shoot us a mail at <a href="mailto:events@aparoksha.org"><b>events@aproksha.org</b></a> in case of any trouble.
+        Please find attached guides for setting up Topcoder applet on your machine, and feel free to shoot us a mail at <a href="mailto:team.aparoksha@iiita.ac.in"><b>team.aparoksha@iiita.ac.in</b></a> in case of any trouble.
         <br><br>
         Thank You<br>
         Happy Coding :))<br>
