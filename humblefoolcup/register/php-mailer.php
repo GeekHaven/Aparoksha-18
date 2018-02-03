@@ -59,8 +59,9 @@ function mailsend($email, $tid, $name){
         //Content
         $mail->isHTML(true);                                  // Set email format to HTML
         $mail->Subject = 'Account Activation | Participation Details | HumblefoolCup 2018';
-        $mail->Body    = 'Hi <b>'.$tid.'</b>, best wishes of the day from <b>Team Aparoksha</b>. Your registration for Humblefool Cup’18 is accepted. 
-        Prelims for onsite round will be on  Tuesday, 20th Feb, 5:30PM IST. Please make sure that you have registered for the Humblefool Cup on Topcoder Website.
+        $mail->Body    = 'Hi <b>'.$tid.'</b>, best wishes of the day from <b>Team Aparoksha</b>.<br><br>
+        Your registration for Humblefool Cup’18 is accepted. 
+        Prelims for onsite round will be on  <b>Tuesday, 20th Feb, 5:30PM IST</b>. Please make sure that you have registered for the Humblefool Cup on Topcoder Website.
         <br><br>
         Please make note of following points:
         <ul>
@@ -73,17 +74,19 @@ function mailsend($email, $tid, $name){
         <li>Basic travel reimbursement would be provided to the top performers of the onsite rounds.</li> 
         <br><br>
         <b>Don’t know how to compete in Topcoder SRMs?</b>
+        <br>
         Check out <a href="https://www.topcoder.com/member-onboarding/competing-in-an-algorithm-match-srm/">this guide</a> to successfully compete in an algorithm match.
-        You can compete using either the
+        You can compete using either the:
         <ul>
         <li><a href="https://arena.topcoder.com/">Topcoder Web Arena(Beta)</a> - Please watch this video for step by step guide.</li>
         <li><a href="http://www.topcoder.com/contest/arena/ContestAppletProd.jnlp">Topcoder Java Applet</a> - You can refer to <a href="https://drive.google.com/open?id=1gVJZxhWYMuUNx3PfSSTkkk-b9AeJkL4j"this guide</a> here to set up the applet. (Note that those who have Java 8 installed on their machines will see a security issue - You will have to add Topcoder in security exceptions in Java Control Panel.
-         Please refer to the details in the guide here)</li>        
+         Please refer to the details in the guide here)</li> 
+        </ul>       
         <br><br>
         Please find attached guides for setting up Topcoder applet on your machine, and feel free to shoot us a mail at <a href="mailto:events@aparoksha.org"><b>events@aproksha.org</b></a> in case of any trouble.
         <br><br>
-        Thank You
-        Happy Coding :))
+        Thank You<br>
+        Happy Coding :))<br>
         Regards, <b>Team Aparoksha</b>';
 
         $mail->send();

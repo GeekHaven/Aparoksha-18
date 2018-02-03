@@ -152,7 +152,7 @@
         </div>
         <div class="row footer-credit">
           <div class="col-md-6 col-sm-6">
-            <p>&copy; 2018, <a href="http://aparoksha.org">Aparoksha</a></p>
+            <p>&copy; 2018, <a href="https://aparoksha.org">Aparoksha</a></p>
           </div>
           <div class="col-md-6 col-sm-6"> 
             <ul class="footer-menu">
@@ -166,7 +166,7 @@
       </div>
 
       <script
-			  src="http://code.jquery.com/jquery-3.3.1.min.js"
+			  src="https://code.jquery.com/jquery-3.3.1.min.js"
 			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
 			  crossorigin="anonymous"></script>
       <script src="../../js/bootstrap.min.js"></script>
