@@ -84,10 +84,10 @@
     </div>
 
     <div class="row">
-        <div class="col-sm-5 text-right" style="padding: 0; width:4.5em;">
+        <div class="col-sm-5 col-xs-5 text-right" id="head-logo" style="padding: 0; width:4.5em;">
             <img src="img/apk-logo-white.svg" style="padding: 0px 0px 0px 0px; background-blend-mode:screen;" height="40px" width="40px">
         </div>
-        <div class="social col-lg-2 col-md-2 col-sm-5 col-xs-12 text-left" style="padding: 0px 0.8em;">
+        <div class="social col-lg-2 col-md-2 col-sm-5 col-xs-6 text-left" style="padding: 0px 0.8em;">
             <h2 class="top-heading" style="padding-top:0.18em; font-size:1.5em;">APAROKSHA</h2>
             <h5 class="top-heading" style="color: white; margin:0px auto; letter-spacing:0.1em; font-size:1em; text-transform: uppercase;">IIIT Allahabad</h5>
         </div>
@@ -112,33 +112,34 @@
         </div>
     </div>
 
-    <div class="logos" style="margin:1em 0em 2em 0em;">
-        <img src="img/apk-logo.png" alt="" class="logo" style="border-radius:50%;">
-    </div>
-
-    <div id="clock" class="col-md-9 col-sm-11 col-lg-8 col-xs-12 hidden-xs" style="color: white; text-align:center;">
-        <div id="month1"></div>
-        <div id="month2"></div> 
-        <div id="day1"></div>
-        <div id="day2"></div>  
-        <div id="hour1"></div>
-        <div id="hour2"></div>
-        <div id="minute1"></div>
-        <div id="minute2"></div>
-        <div id="second1"></div>
-        <div id="second2"></div>
-    </div>
-        
+    <ul id="countdown">
+        <li id="days">
+          <div class="number">00</div>
+          <div class="label">Days</div>
+        </li>
+        <li id="hours">
+          <div class="number">00</div>
+          <div class="label">Hours</div>
+        </li>
+        <li id="minutes">
+          <div class="number">00</div>
+          <div class="label">Minutes</div>
+        </li>
+        <li id="seconds">
+          <div class="number">00</div>
+          <div class="label">Seconds</div>
+        </li>
+    </ul>
 
     <div class="wrapper">
-        <h1 style="padding:10% 0em 0em 0em;">Aparoksha'18</h1>
-        <h3 style="padding:1% 0em 0em 0em;">16<sup>th</sup> to 18<sup>th</sup> March 2018</h3>  
+        <!-- <h1 style="padding:10% 0em 0em 0em;">Aparoksha'18</h1> -->
+        <h3 style="padding:10% 0em 0em 0em;">16<sup>th</sup> - 18<sup>th</sup> March 2018</h3>  
         <h5 style="padding:0em 0em 0em 0em; color:white;">We are on our way. Hold tight!</h5>
     </div>  
 
     <!-- <img src="img/rocket.png" class="img-responsive" alt="" id="rck"> -->
 
-    <div class="container-fluid row"  style="z-index:10; margin-top:1%;" id="footer">
+    <div class="container-fluid row"  style="z-index:10;" id="footer">
         <div class="col-xs-5 col-md-1 col-lg-1 col-sm-5" style="padding: 1.7em 1em 0em 0em;"><b><a href="2017/index.html">APAROKSHA'17</a></b></div>  
         <div class="col-xs-5 col-md-1 col-sm-5 col-lg-1" style="padding: 1.7em 1em 0em 1em;"><b><a href="2016/index.html">APAROKSHA'16</a></b></div>
         <div class="social col-lg-10 col-md-10 col-sm-5 col-xs-12 text-right" style="padding: 0px 0px;">
@@ -155,12 +156,14 @@
 
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
-    <script src="js/index.js"></script>
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
     integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
     crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
     <script>
         function openNav() {
             document.getElementById("myNav").style.height = "100%";
