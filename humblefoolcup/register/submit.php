@@ -37,18 +37,17 @@ date_default_timezone_set('Asia/Kolkata');
 
     else{
         //ToDo Client Side handling of empty data
-        if(isset($_POST['firstname']) && isset($_POST['lastname']) && isset($_POST['email']) && isset($_POST['cname'])
+        if(isset($_POST['uname']) && isset($_POST['mobile']) && isset($_POST['uemail']) && isset($_POST['college'])
             && isset($_POST['tid'])) {
 
-            $firstname = htmlentities($_POST['firstname']);
-            $lastname = htmlentities($_POST['lastname']);
-            $email = htmlentities($_POST['email']);
-            $college = htmlentities($_POST['cname']);
-            if(isset($_POST['cid'])){
-                $collegeid = htmlentities($_POST['cid']);
+            $name = htmlentities($_POST['uname']);
+            $email = htmlentities($_POST['uemail']);
+            $mobile = htmlentities($_POST['mobile']);
+            $college = htmlentities($_POST['college']);
+            if(isset($_POST['collegeid'])){
+                $collegeid = htmlentities($_POST['collegeid']);
             }
             $topcoderid = htmlentities($_POST['tid']);
-            $hash = md5( rand(0,1000) );
         }
         else{
             echo '<script language="javascript">';
@@ -74,40 +73,39 @@ date_default_timezone_set('Asia/Kolkata');
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
             if($user != Null){
-                $_SESSION['confirm'] = "This email is already registered. If you want to check your registration status
-                                        click on link above to or contact any person given below";
+                $_SESSION['confirm'] = "This email is already registered. If you want any help please contact any person mentioned below.";
                 header("Refresh: 0; url=index.php#info"); 
                 exit;
             }
 
             else{
                 //If in development environment then do not send mail
-                if(($dev !== "true") && mailsend($email,$hash,$firstname)){
-                 $sql = $conn->prepare("INSERT INTO $tbname (dated,firstname,lastname,email,college_name,college_id,topcoder_id,activate) VALUES (:dated,:firstname,:lastname,:email,:college_name,:college_id,:topcoder_id,:hash)");
-                    $do = $sql->execute(['dated' => $date_clicked ,'firstname' => $firstname,'lastname' => $lastname, 'email' => $email,'college_name' => $college,'college_id' => $collegeid, 'topcoder_id' => $topcoderid, 'hash' => $hash ]);
+                if(($dev !== "true") && mailsend($email,$topcoderid, $name)){
+                 $sql = $conn->prepare("INSERT INTO $tbname (dated,name,email,mobile,college_name,college_id,topcoder_id,mailed) VALUES (:dated,:name,:email,:mobile,:college_name,:college_id,:topcoder_id,:mailed)");
+                    $do = $sql->execute(['dated' => $date_clicked ,'name' => $name, 'email' => $email, 'mobile' => $mobile, 'college_name' => $college,'college_id' => $collegeid, 'topcoder_id' => $topcoderid, 'mailed' => 'true' ]);
 
                     if($do){
-                        $_SESSION['confirm'] = "You have been registered successfully. Please verify your email by clicking on the
-                        link sent to your email"; 
+                        $_SESSION['confirm'] = "You have been registered successfully. We have sent you a mail containing detailed instructions for
+                        using topcoder for HumblefoolCup Best wishes."; 
                         header("Refresh: 0; url=index.php#info");
                         exit;
                     }
                   
                     else{
                         $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
-                                                try again after some time. If problem persists please feel free to contact any person mentioned below ";
+                                                try again after some time. If problem persists please feel free to contact person mentioned below ";
                         header("Refresh: 0; url=index.php#info"); 
                         exit;
                     }
                 }
                 if($dev === "true") {
-                    $sql = $conn->prepare("INSERT INTO $tbname (dated,firstname,lastname,email,college_name,college_id,topcoder_id,activate) VALUES (:dated,:firstname,:lastname,:email,:college_name,:college_id,:topcoder_id,:hash)");
-                    $do = $sql->execute(['dated' => $date_clicked ,'firstname' => $firstname,'lastname' => $lastname, 'email' => $email,'college_name' => $college,'college_id' => $collegeid, 'topcoder_id' => $topcoderid, 'hash' => $hash ]);
+                    $sql = $conn->prepare("INSERT INTO $tbname (dated,name,email,mobile,college_name,college_id,topcoder_id,mailed) VALUES (:dated,:name,:email,:mobile,:college_name,:college_id,:topcoder_id,:mailed)");
+                    $do = $sql->execute(['dated' => $date_clicked ,'name' => $name, 'email' => $email, 'mobile' => $mobile, 'college_name' => $college,'college_id' => $collegeid, 'topcoder_id' => $topcoderid, 'mailed' => 'false' ]);
 
 
                     if($do){
-                        $_SESSION['confirm'] = "You have been registered successfully. Please verify your email by clicking on the
-                        link sent to your email"; 
+                        $_SESSION['confirm'] = "You have been registered successfully. We have some trouble sending you mail. Feel free to contact person
+                        mentioned below if you don't recieve mail in few days."; 
                         header("Refresh: 0; url=index.php#info"); 
                         exit;
                     }
@@ -118,6 +116,12 @@ date_default_timezone_set('Asia/Kolkata');
                         header("Refresh: 0; url=index.php#info");
                         exit;
                     }
+                }
+                else {
+                    $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
+                                        try again after some time. If problem persists please feel free to contact website administrator";
+                    header("Refresh: 0; url=index.php#info");
+                    exit;
                 }
             }
         }
