@@ -48,6 +48,17 @@ date_default_timezone_set('Asia/Kolkata');
                 $collegeid = htmlentities($_POST['collegeid']);
             }
             $topcoderid = htmlentities($_POST['tid']);
+
+            $url="https://api.topcoder.com/v3/users/validateHandle?handle=".$topcoderid;
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_URL,$url);
+            $result=curl_exec($ch);
+            curl_close($ch);
+
+            $item = json_decode($result, true);
+
         }
         else{
             echo '<script language="javascript">';
@@ -57,83 +68,98 @@ date_default_timezone_set('Asia/Kolkata');
             exit;
         }
 
-        $servername = $dbhost;
-        $username = $dbuser;
-        $password = $dbpass;
-        $dbname = $dbn;
-        $tbname = $tbn;
+        if($item['result']['content']['reasonCode'] === "ALREADY_TAKEN") {
+            $servername = $dbhost;
+            $username = $dbuser;
+            $password = $dbpass;
+            $dbname = $dbn;
+            $tbname = $tbn;
 
-        try {
-            $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        
-            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-            $stmt = $conn->prepare("SELECT * FROM $tbname WHERE email = :email");
-            $stmt->execute(['email' => $email]);
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
-
-            if($user != Null){
-                $_SESSION['confirm'] = "This email is already registered. If you want any help please contact any person mentioned below.";
-                header("Refresh: 0; url=index.php#info"); 
-                exit;
-            }
-
-            else{
-                //If in development environment then do not send mail
-                if(($dev !== "true") && mailsend($email,$topcoderid, $name)){
-                 $sql = $conn->prepare("INSERT INTO $tbname (dated,name,email,mobile,college_name,college_id,topcoder_id,mailed) VALUES (:dated,:name,:email,:mobile,:college_name,:college_id,:topcoder_id,:mailed)");
-                    $do = $sql->execute(['dated' => $date_clicked ,'name' => $name, 'email' => $email, 'mobile' => $mobile, 'college_name' => $college,'college_id' => $collegeid, 'topcoder_id' => $topcoderid, 'mailed' => 'true' ]);
-
-                    if($do){
-                        $_SESSION['confirm'] = "You have been registered successfully. We have sent you a mail containing detailed instructions for
-                        using topcoder for HumblefoolCup. Best wishes."; 
-                        header("Refresh: 0; url=index.php#info");
-                        exit;
-                    }
-                  
-                    else{
-                        $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
-                                                try again after some time. If problem persists please feel free to contact website administrator";
-                        header("Refresh: 0; url=index.php#info"); 
-                        exit;
-                    }
-                }
-                if($dev === "true") {
-                    $sql = $conn->prepare("INSERT INTO $tbname (dated,name,email,mobile,college_name,college_id,topcoder_id,mailed) VALUES (:dated,:name,:email,:mobile,:college_name,:college_id,:topcoder_id,:mailed)");
-                    $do = $sql->execute(['dated' => $date_clicked ,'name' => $name, 'email' => $email, 'mobile' => $mobile, 'college_name' => $college,'college_id' => $collegeid, 'topcoder_id' => $topcoderid, 'mailed' => 'false' ]);
-
-
-                    if($do){
-                        $_SESSION['confirm'] = "You have been registered successfully. We have some trouble sending you mail. Feel free to contact person
-                        mentioned below if you don't recieve mail in few days."; 
-                        header("Refresh: 0; url=index.php#info"); 
-                        exit;
-                    }
-                  
-                    else{
-                        $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
-                                                try again after some time. If problem persists please feel free to contact website administrator ";
-                        header("Refresh: 0; url=index.php#info");
-                        exit;
-                    }
-                }
-                else {
-                    $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
-                                        try again after some time. If problem persists please feel free to contact website administrator";
-                    header("Refresh: 0; url=index.php#info");
+            try {
+                $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+            
+                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    
+                $stmt = $conn->prepare("SELECT * FROM $tbname WHERE email = :email");
+                $stmt->execute(['email' => $email]);
+                $user = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+                if($user != Null){
+                    $_SESSION['confirm'] = "This email is already registered. If you want any help please contact any person mentioned below.";
+                    header("Refresh: 0; url=index.php#info"); 
                     exit;
                 }
+    
+                else{
+                    //If in development environment then do not send mail
+                    if(($dev !== "true") && mailsend($email,$topcoderid, $name)){
+                     $sql = $conn->prepare("INSERT INTO $tbname (dated,name,email,mobile,college_name,college_id,topcoder_id,mailed) VALUES (:dated,:name,:email,:mobile,:college_name,:college_id,:topcoder_id,:mailed)");
+                        $do = $sql->execute(['dated' => $date_clicked ,'name' => $name, 'email' => $email, 'mobile' => $mobile, 'college_name' => $college,'college_id' => $collegeid, 'topcoder_id' => $topcoderid, 'mailed' => 'true' ]);
+    
+                        if($do){
+                            $_SESSION['confirm'] = "You have been registered successfully. We have sent you a mail containing detailed instructions for
+                            using topcoder for HumblefoolCup. Best wishes."; 
+                            header("Refresh: 0; url=index.php#info");
+                            exit;
+                        }
+                      
+                        else{
+                            $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
+                                                    try again after some time. If problem persists please feel free to contact website administrator";
+                            header("Refresh: 0; url=index.php#info"); 
+                            exit;
+                        }
+                    }
+                    if($dev === "true") {
+                        $sql = $conn->prepare("INSERT INTO $tbname (dated,name,email,mobile,college_name,college_id,topcoder_id,mailed) VALUES (:dated,:name,:email,:mobile,:college_name,:college_id,:topcoder_id,:mailed)");
+                        $do = $sql->execute(['dated' => $date_clicked ,'name' => $name, 'email' => $email, 'mobile' => $mobile, 'college_name' => $college,'college_id' => $collegeid, 'topcoder_id' => $topcoderid, 'mailed' => 'false' ]);
+    
+    
+                        if($do){
+                            $_SESSION['confirm'] = "You have been registered successfully. We have some trouble sending you mail. Feel free to contact person
+                            mentioned below if you don't recieve mail in few days."; 
+                            header("Refresh: 0; url=index.php#info"); 
+                            exit;
+                        }
+                      
+                        else{
+                            $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
+                                                    try again after some time. If problem persists please feel free to contact website administrator ";
+                            header("Refresh: 0; url=index.php#info");
+                            exit;
+                        }
+                    }
+                    else {
+                        $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
+                                            try again after some time. If problem persists please feel free to contact website administrator";
+                        header("Refresh: 0; url=index.php#info");
+                        exit;
+                    }
+                }
             }
+            
+            catch(PDOException $e){
+                $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
+                try again after some time. If problem persists please feel free to contact website administrator ";
+                header("Refresh: 0; url=index.php#info");
+                exit;
+            }
+            $clicked = false;
+            $conn = null;
         }
-        
-        catch(PDOException $e){
-            $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
-            try again after some time. If problem persists please feel free to contact website administrator ";
-            header("Refresh: 0; url=index.php#info");
+        else{
+            $_SESSION['name'] = $name;
+            $_SESSION['mobile'] = $mobile;
+            $_SESSION['tid'] = $topcoderid;
+            $_SESSION['email'] = $email;
+            $_SESSION['college'] = $college;
+            $_SESSION['collegeid'] = $collegeid;
+
+            $_SESSION['confirm'] = "Hey! Are you sure that's your topcoderID? If no, please try again with correct topcoderID.
+            Else, if there is something wrong with this portal, feel free to contact person mentioned below.";
+                header("Refresh: 0; url=index.php#info");
             exit;
         }
-        $clicked = false;
-        $conn = null;
     }
 
 ?>

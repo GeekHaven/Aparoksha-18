@@ -25,8 +25,8 @@
       <div class="container-fluid">
         <div class="row hero-header" id="home">
           <div class="col-md-12 col-xs-12 col-sm-12">
-            <a href="https://www.topcoder.com" class="col-md-4 col-md-offset-2"><img src="../../img/topcoder-1.png" id="" style="width:18em; height:7em;" class="logo img responsive"></a>
-            <a href="https://aparoksha.org" class="col-md-4"><img src="../../img/apk-logo-white.svg" style="width:7em; height:7em;" id="" class="logo img responsive"></a>
+            <a href="https://aparoksha.org" class="col-md-4 col-md-offset-2"><img src="../../img/apk-logo-white.svg" id="" style="width:7em; height:7em;" class="logo img responsive"></a>
+            <a href="https://www.topcoder.com" class="col-md-4"><img src="../../img/topcoder-1.png" style="width:18em; height:7em;" id="" class="logo img responsive"></a>
           </div>
           <div class="col-md-12">
             <h4>Presents</h4>
@@ -138,7 +138,7 @@
           <div class="col-md-6 contact-form">
             <h4> For website issues:</h3>
               <hr>
-              <p> Team Web Operations </p>
+              <p> Pradeep Gangwar </p>
               <p> pradeepgangwar39@gmail.com </p>
               <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-9458120350</p>
           </div>

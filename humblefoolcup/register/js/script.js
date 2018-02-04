@@ -7,7 +7,7 @@ $(document).ready(function()  {
             type: "GET",
             dataType: "json",
             success: function(data){
-                if(data.result.content['valid'] == false){
+                if(data.result.content['reasonCode'] === "ALREADY_TAKEN"){
                     $('#submit').prop('disabled', false);
                     $('#topcoder-error').html('');
                     $("#topcoder").removeClass('has-error');
