@@ -58,6 +58,8 @@ require '../../register/vendor/autoload.php';
             if(isset($_POST['backend'])){$_SESSION['content'] = $content;}            
             $business = isset($_POST['business']) ? $_POST['business'] : 0;
             if(isset($_POST['backend'])){$_SESSION['business'] = $business;}
+            $marketing = isset($_POST['marketing']) ? $_POST['marketing'] : 0;  
+            if(isset($_POST['marketing'])){$_SESSION['marketing'] = $marketing;}
       
             $stipend = htmlentities($_POST['stipend']);
             $restrict = htmlentities($_POST['restrict']);
@@ -94,11 +96,11 @@ require '../../register/vendor/autoload.php';
             $date_clicked = date('Y-m-d H:i:s');
 
             $sql = $conn->prepare("INSERT INTO $tbname (dated,name,email,mobile,companyname,companyinfo,frontend,backend,
-                    fullstack,graphic,content,business,stipend,restriction,yearallowed) VALUES (:dated,:name,:email,:mobile,:companyname,
-                    :companyinfo,:frontend,:backend,:fullstack,:graphic,:content,:business,:stipend,:restriction,:yearallowed)");
+                    fullstack,graphic,content,business,marketing,stipend,restriction,yearallowed) VALUES (:dated,:name,:email,:mobile,:companyname,
+                    :companyinfo,:frontend,:backend,:fullstack,:graphic,:content,:business,:marketing,:stipend,:restriction,:yearallowed)");
             $do = $sql->execute(['dated' => $date_clicked, 'name' => $name, 'email' => $email,'mobile' => $mobile,'companyname' => $companyname,
                  'companyinfo' => $companyinfo, 'frontend' => $frontend, 'backend' => $backend, 'fullstack' => $fullstack,
-                 'graphic' => $graphics, 'content' => $content, 'business' => $business, 'stipend' => $stipend, 'restriction' => $restrict,
+                 'graphic' => $graphics, 'content' => $content, 'business' => $business, 'marketing' => $marketing, 'stipend' => $stipend, 'restriction' => $restrict,
                  'yearallowed' => $year]);
 
             if($do){
@@ -115,6 +117,7 @@ require '../../register/vendor/autoload.php';
                 unset($_SESSION['fullstack']);
                 unset($_SESSION['graphics']);
                 unset($_SESSION['stipend']);
+                unset($_SESSION['marketing']);
                 unset($_SESSION['year']);
                 unset($_SESSION['restrict']);
                 header("Refresh: 0; url=index.php#info");
