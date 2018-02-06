@@ -25,8 +25,8 @@
       <div class="container-fluid">
         <div class="row hero-header" id="home">
           <div class="col-md-12 col-xs-12 col-sm-12">
-            <a href="https://aparoksha.org" class="col-md-4 col-md-offset-2"><img src="../../img/apk-logo-white.svg" id="" style="width:7em; height:7em;" class="logo img responsive"></a>
-            <a href="https://www.topcoder.com" class="col-md-4"><img src="../../img/topcoder-1.png" style="width:18em; height:7em;" id="" class="logo img responsive"></a>
+            <a href="https://aparoksha.org" class="col-md-4 col-md-offset-2"><img src="../../img/apk-logo-white.svg" id="" style="width:9em; height:10em; margin: 0 auto;" class="logo img-responsive text-center"></a>
+            <a href="https://www.topcoder.com" class="col-md-4"><img src="../../img/TopcoderLogo.png" style="width:20em; height:10em;" id="" class="img-responsive" id=""></a>
           </div>
           <div class="col-md-12">
             <h4>Presents</h4>
