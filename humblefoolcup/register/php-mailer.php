@@ -79,14 +79,14 @@ function mailsend($email, $tid, $name){
         You can compete using either the:
         <ul>
         <li><a href="https://arena.topcoder.com/">Topcoder Web Arena(Beta)</a> - Please watch this video for step by step guide.</li>
-        <li><a href="http://www.topcoder.com/contest/arena/ContestAppletProd.jnlp">Topcoder Java Applet</a> - You can refer to <a href="https://drive.google.com/open?id=1gVJZxhWYMuUNx3PfSSTkkk-b9AeJkL4j"this guide</a> here to set up the applet. (Note that those who have Java 8 installed on their machines will see a security issue - You will have to add Topcoder in security exceptions in Java Control Panel.
+        <li><a href="http://www.topcoder.com/contest/arena/ContestAppletProd.jnlp">Topcoder Java Applet</a> - You can refer to <a href="https://drive.google.com/open?id=1gVJZxhWYMuUNx3PfSSTkkk-b9AeJkL4j">this guide</a> here to set up the applet. (Note that those who have Java 8 installed on their machines will see a security issue - You will have to add Topcoder in security exceptions in Java Control Panel.
          Please refer to the details in the guide here)</li> 
         </ul>       
         <br><br>
         Please find attached guides for setting up Topcoder applet on your machine, and feel free to shoot us a mail at <a href="mailto:team.aparoksha@iiita.ac.in"><b>team.aparoksha@iiita.ac.in</b></a> in case of any trouble.
         <br><br>
         Thank You<br>
-        Happy Coding :))<br>
+        Happy Coding :)<br>
         Regards, <b>Team Aparoksha</b>';
 
         $mail->send();

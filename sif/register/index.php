@@ -270,7 +270,8 @@ unset($_SESSION['profiles']);
           <div class="col-md-6 contact-form">
             <h4> For website issues:</h3>
               <hr>
-              <p> Web Operations Team </p>
+              <p> Pradeep Gangwar </p>
+              <p> pradeepgangwar39@gmail.com </p>
               <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-9458120350</p>
           </div>
           <div class="col-md-6 contact-form" style="text-align:right;">
