@@ -123,7 +123,7 @@ header {
     text-align: center;
     position: absolute;
     top: 55%;
-    left: 50%;
+    left: 49.5%;
     transform: translate(-50%, -50%);
 }
 
@@ -217,10 +217,14 @@ h2:after {
     font-size: 130%;
 }
 
-.round:first-of-type {
-    border-right: solid 2px #F00000;
+.round{
+    width:100%;
+    text-align: center;
 }
 
+.round:first-of-type{
+    margin-bottom: 50px;
+}
 .rounds i {
     font-size: 300%;
     color: #F00000;
@@ -233,7 +237,7 @@ h2:after {
 .invite {
     width: 70%;
     margin: 0 auto;
-    padding: 40px 0;
+    
     font-size: 125%;
     color: white;
 }
@@ -320,20 +324,20 @@ a:visited {
     display: block;
     margin: 0 auto;
     height: 2px;
-    width: 10%;
+    width: 25%;
     margin-top: 10px;
     margin-bottom:30px;
     background-image: linear-gradient(to right, rgba(240, 0, 0, 0.1), rgba(240, 0, 0, 0.9), rgba(240, 0, 0, 0.1));
 }
 
 .section-rules .row.rules{
-    width:70%;
+    width:65%;
     
 }
 
 .section-rules .rule{
     text-align:left;
-    margin:25px 0;
+    margin:30px 0;
     
 }
 
