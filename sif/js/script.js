@@ -47,6 +47,14 @@ $(document).ready(function()  {
             $('#graphics').prop('disabled', false);
         }        
     });
+    $('#marketingcheck').change(function () {
+        if (!this.checked) {
+            $('#marketing').prop('disabled', true);
+        }
+        else {
+            $('#marketing').prop('disabled', false);
+        }        
+    });
     $('#terms').change(function () {
         if (!this.checked) {
             $('#submit').prop('disabled', true);
@@ -75,6 +83,9 @@ $(document).ready(function()  {
     }
     if(!$("#fullstackcheck").checked) {
         $('#fullstack').prop('disabled', true);
+    }
+    if(!$("#marketingcheck").checked) {
+        $('#marketing').prop('disabled', true);
     }
   }); 
   

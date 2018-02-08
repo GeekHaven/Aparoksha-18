@@ -2,10 +2,37 @@
     margin: auto;
     text-align: center;
 }
+
+@font-face {
+    font-family: Metropolis-Bold;
+    src: url("../fonts/Metropolis-Bold.woff") format("opentype");
+}
+
+@font-face {
+    font-family: Metropolis-Regular;
+    src: url("../fonts/Metropolis-Regular.woff") format("opentype");
+}
+
 body{
-    font-family: 'Catamaran', sans-serif;
     background-color: rgb(0, 0, 0);
-    
+    max-width: 99%;
+    width: 100%;
+    padding: 0.6em;
+    max-height: 100vh;
+    font-family: "Metropolis-Regular";
+}
+
+.top-heading {
+    font-family: "Metropolis-Bold";
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Metropolis-Regular";
+}
+
+#footer {
+    padding: 0;
+    margin: 0;
 }
 
 ul li {
@@ -38,9 +65,6 @@ h1, h2, h3 {
     color: white;
     margin: 0;
 }
-h1{
-    font-family: 'Open+Sans', sans-serif;
-}
 
 .bar {
     height: 1px;
@@ -62,7 +86,6 @@ h1{
 }
 .contacts {
     color: white;
-    position: fixed;
     
     bottom: 0;
     font-size: 1.1em;
@@ -330,56 +353,104 @@ max-width: 300px;
 }
 
 @media (max-width: 2200px) {
+    ul#countdown{
+        top: 15em;
+    }
     #clock {
         margin-left: 35em;
+    }
+    #footer {
+        margin-top:14%;
     }
 }
 
 @media (max-width: 2000px) {
+    ul#countdown{
+        top: 15em;
+    }
     #clock {
         margin-left: 42em;
+    }
+    #footer {
+        margin-top:14%;
     }
 }
 
 @media (max-width: 1900px) {
+    ul#countdown{
+        top: 15em;
+    }
     #clock {
         margin-left: 35em;
+    }
+    #footer {
+        margin-top:14%;
     }
 }
 
 @media (max-width: 1700px) {
+    ul#countdown{
+        top: 15em;
+    }
     #clock {
         margin-left: 28em;
+    }
+    #footer {
+        margin-top:13%;
     }
 }
 
 @media (max-width: 1500px) {
+    ul#countdown{
+        top: 15em;
+    }
     #clock {
         margin-left: 24em;
+    }
+    #footer {
+        margin-top:4%;
     }
 }
 
 @media (max-width: 1300px) {
+    ul#countdown{
+        top: 15em;
+    }
     #clock {
         margin-left: 20em;
+    }
+    #footer {
+        margin-top:6%;
     }
 }
 
 @media (max-width: 1200px) {
+    ul#countdown{
+        top: 11em;
+    }
     #clock {
         margin-left: 11em;
+    }
+    #footer {
+        margin-top:11%;
     }
 }
 
 @media (max-width: 1000px) {
+    ul#countdown{
+        top: 10em;
+    }
     #clock {
         margin-left: 7em;
+    }
+    #footer {
+        margin-top:13%;
     }
 }
 
 @media (max-width: 900px) {
-    #clock {
-        margin-left: 6em;
+    ul#countdown{
+        top: 9em;
     }
     .social {
         text-align:center;
@@ -387,137 +458,88 @@ max-width: 300px;
 }
 
 @media (max-width: 800px) {
+    ul#countdown{
+        top: 8em;
+    }
     #clock {
         margin-left: 0em;
     }
 }
 
 @media (max-width: 700px) {
-    #clock {
-        margin-left: 0em;
+    ul#countdown{
+        top: 6em;
     }
     .social {
         text-align:center;
     }
+    #head-logo{
+        margin-left: 2.2em;
+    }
 }
 
 @media (max-width: 600px) {
-    #clock {
-        margin-left: 0em;
-        display: none;
+    ul#countdown{
+        top: 4em;
     }
     #footer{
         text-align: center;
+    }
+    #head-logo{
+        margin-left: 6em;
     }
 }
 
 @media (max-width: 400px) {
-    #clock {
-        margin-left: 0em;
-        display: none;
+    ul#countdown{
+        top: 4em;
     }
     #footer{
         text-align: center;
+    }
+    #head-logo{
+        margin-left: 3em;
     }
 }
 
 @media (max-width: 200px) {
-    #clock {
-        margin-left: 0em;
-        display: none;
+    ul#countdown{
+        top: 4em;
     }
     #footer{
         text-align: center;
     }
+    #head-logo{
+        margin-left: 2.2em;
+    }
 }
 
-#month1{
-text-align: center;
-float: left;
-width: 60px;
-height: 100px;
-top: ;
-background-repeat: no-repeat;
-background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
-}
-#month2{
-text-align: center;
-float: left;
-width: 60px;
-margin-right: 1em;
-height: 100px;
-background-repeat: no-repeat;
-background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
-}
-#day1{
-float: left;;
-width: 60px;
-height: 100px;
-background-repeat: no-repeat;
-background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
-text-align: center;
-}
-#day2{
-text-align: center;
-float: left;
-width: 60px;
-margin-right: 1em;
-height: 100px;
-background-repeat: no-repeat;
-background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
-}
-#hour1{
-text-align: center;
-float: left;
-width: 60px;
-height: 100px;
-background-repeat: no-repeat;
-background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
-}
-#hour2{
-text-align: center;
-float: left;
-width: 60px;
-height: 100px;
-margin-right: 1em;
-left: 340px;
-background-repeat: no-repeat;
-background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
-}
-#minute1{
-text-align: center;    
-float: left;
-width: 60px;
-height: 100px;
-background-repeat: no-repeat;
-background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
-color:red;
-font-weight:bold;
-}
-#minute2{
-text-align: center;    
-float: left;
-position: ;
-width: 60px;
-height: 100px;
-margin-right: 1em;
-background-repeat: no-repeat;
-background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
-}
-#second1{
-text-align: center;    
-float: left;
-width: 60px;
-height: 100px;
-background-repeat: no-repeat;
-background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
-}
-#second2{
-text-align: center;
-float: left;
-width: 60px;
-height: 100px;
-background-repeat: no-repeat;
-margin-right: 1em;
-background-image: url(http://www.chabudai.org/temp/wonderfl/honehone/img/honehone1.gif);
-}
+
+ul#countdown {
+    position: relative;
+    transform: translateY(-50%);
+    width: 50%;
+    margin: 0 auto;
+    padding: 15px 0 20px 0;
+    color: #fff;
+    border-width: 1px 0;
+    overflow: hidden;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+  }
+  ul#countdown li {
+    margin: 0 -3px 0 0;
+    padding: 0;
+    display: inline-block;
+    width: 25%;
+    font-size: 72px;
+    font-size: 6vw;
+    text-align: center;
+  }
+  ul#countdown li .label {
+    color: #adafb2;
+    font-size: 18px;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+  }
+  

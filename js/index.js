@@ -21,69 +21,91 @@ var diffTime = newYearTime - currentTime; //better to handle this in Controller 
 var duration = moment.duration(diffTime, 'seconds');
 var interval = 1;
 
-setInterval(function () {
-    duration = moment.duration(duration.asSeconds() - interval, 'seconds');
+/* --------------------------
+ * GLOBAL VARS
+ * -------------------------- */
+// The date you want to count down to
+var targetDate = new Date("2018/03/17 00:00:00");   
 
-    var _url = "http://www.chabudai.org/temp/wonderfl/honehone/img/";
+// Other date related variables
+var days;
+var hrs;
+var min;
+var sec;
 
-    var month1;
-    var month = duration.months();
-    if(month < 10){
-      month1 = 0;
-    }else{
-      month1 = Math.floor(month / 10);
-    }
+/* --------------------------
+ * ON DOCUMENT LOAD
+ * -------------------------- */
+$(function() {
+   // Calculate time until launch date
+   timeToLaunch();
+  // Transition the current countdown from 0 
+  numberTransition('#days .number', days, 1000, 'easeOutQuad');
+  numberTransition('#hours .number', hrs, 1000, 'easeOutQuad');
+  numberTransition('#minutes .number', min, 1000, 'easeOutQuad');
+  numberTransition('#seconds .number', sec, 1000, 'easeOutQuad');
+  // Begin Countdown
+  setTimeout(countDownTimer,1001);
+});
 
-    var month2 = month%10;
-  
-    var day1;
-    var day = duration.days();
-    if(day < 10){
-      day1 = 0;
-    }else{
-      day1 = Math.floor(day / 10);
-    }
+/* --------------------------
+ * FIGURE OUT THE AMOUNT OF 
+   TIME LEFT BEFORE LAUNCH
+ * -------------------------- */
+function timeToLaunch(){
+    // Get the current date
+    var currentDate = new Date();
 
-    var day2 = day%10;
+    // Find the difference between dates
+    var diff = (currentDate - targetDate)/1000;
+    var diff = Math.abs(Math.floor(diff));  
 
-    var hour1;
-    var hour = duration.hours();
-    if(hour < 10){
-      hour1 = 0;
-    }else{
-      hour1 = Math.floor(hour / 10);
-    }
+    // Check number of days until target
+    days = Math.floor(diff/(24*60*60));
+    sec = diff - days * 24*60*60;
 
-    var hour2 = hour%10;
+    // Check number of hours until target
+    hrs = Math.floor(sec/(60*60));
+    sec = sec - hrs * 60*60;
 
-    var minute1;
-    var minute = duration.minutes();
-    if(minute < 10){
-      minute1 = 0;
-    }else{
-      minute1 = Math.floor(minute / 10);
-    }
-
-    var minute2 = minute%10;
-
-    var second1;
-    var second = duration.seconds();
-    if(second < 10){
-      second1 = 0;
-    }else{
-      second1 = Math.floor(second / 10);
-    }
-    var second2 = second%10;
-
-    $('#month1').css("background-image", "url("+_url+"h" + month1 + ".gif)");
-    $('#month2').css("background-image", "url("+_url+"hh" + month2 + ".gif)").text('Months');
-    $('#day1').css("background-image", "url("+_url+"h" + day1 + ".gif)");
-    $('#day2').css("background-image", "url("+_url+"hh" + day2 + ".gif)").text('Days');
-    $('#hour1').css("background-image", "url("+_url+"h" + hour1 + ".gif)");
-    $('#hour2').css("background-image", "url("+_url+"hh" + hour2 + ".gif)").text('Hours');
-    $('#minute1').css("background-image", "url("+_url+"m" + minute1 + ".gif)");
-    $('#minute2').css("background-image", "url("+_url+"mm" + minute2 + ".gif)").text('Minutes');
-    $('#second1').css("background-image", "url("+_url+"s" + second1 + ".gif)");
-    $('#second2').css("background-image", "url("+_url+"ss" + second2 + ".gif)").text('Seconds');
+    // Check number of minutes until target
+    min = Math.floor(sec/(60));
+    sec = sec - min * 60;
 }
-, 1000);
+
+/* --------------------------
+ * DISPLAY THE CURRENT 
+   COUNT TO LAUNCH
+ * -------------------------- */
+function countDownTimer(){ 
+    
+    // Figure out the time to launch
+    timeToLaunch();
+    
+    // Write to countdown component
+    $( "#days .number" ).text(days);
+    $( "#hours .number" ).text(hrs);
+    $( "#minutes .number" ).text(min);
+    $( "#seconds .number" ).text(sec);
+    
+    // Repeat the check every second
+    setTimeout(countDownTimer,1000);
+}
+
+/* --------------------------
+ * TRANSITION NUMBERS FROM 0
+   TO CURRENT TIME UNTIL LAUNCH
+ * -------------------------- */
+function numberTransition(id, endPoint, transitionDuration, transitionEase){
+  // Transition numbers from 0 to the final number
+  $({numberCount: $(id).text()}).animate({numberCount: endPoint}, {
+      duration: transitionDuration,
+      easing:transitionEase,
+      step: function() {
+        $(id).text(Math.floor(this.numberCount));
+      },
+      complete: function() {
+        $(id).text(this.numberCount);
+      }
+   }); 
+};

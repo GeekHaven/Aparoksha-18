@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 30, 2018 at 11:20 AM
+-- Generation Time: Feb 03, 2018 at 08:17 AM
 -- Server version: 10.1.21-MariaDB
 -- PHP Version: 7.1.1
 
@@ -29,14 +29,13 @@ SET time_zone = "+00:00";
 CREATE TABLE `humblefoolcup` (
   `id` int(50) NOT NULL,
   `dated` varchar(100) NOT NULL,
-  `firstname` varchar(100) NOT NULL,
-  `lastname` varchar(100) NOT NULL,
+  `name` varchar(100) NOT NULL,
   `email` varchar(250) NOT NULL,
+  `mobile` varchar(100) NOT NULL,
   `college_name` varchar(300) NOT NULL,
   `college_id` varchar(100) NOT NULL,
   `topcoder_id` varchar(100) NOT NULL,
-  `approved` enum('true','false') NOT NULL DEFAULT 'false',
-  `activate` varchar(200) NOT NULL
+  `mailed` enum('true','false') NOT NULL DEFAULT 'false'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
