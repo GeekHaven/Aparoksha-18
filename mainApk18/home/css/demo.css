@@ -414,7 +414,7 @@ a:focus {
 
 /* Demo themes */
 .demo-2 {
-	--background-color: #1d1b22;
+	--background-color: #000;
 	--background-color-2: #342560;
 	--background-color-3: #553e9a;
 	--text-color: #fff;
