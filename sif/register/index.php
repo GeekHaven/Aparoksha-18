@@ -147,9 +147,14 @@ unset($_SESSION['profiles']);
                         <input type="checkbox" name="profiles[]" value="Business" id="businesscheck" <?php if (isset($_SESSION['business'])){echo "checked";} unset($_SESSION['business']);?>> Business Development
                       </label>
                     </div>
-                    <div class="checkbox col-sm-4">
+                    <div class="checkbox col-sm-3">
                       <label>
                         <input type="checkbox" name="profiles[]" value="Marketing" id="marketingcheck" <?php if (isset($_SESSION['marketing'])){echo "checked";} unset($_SESSION['marketing']);?>> Marketing
+                      </label>
+                    </div>
+                    <div class="checkbox col-sm-4">
+                      <label>
+                        <input type="checkbox" name="profiles[]" value="Data Science" id="datasciencecheck" <?php if (isset($_SESSION['datascience'])){echo "checked";} unset($_SESSION['datascience']);?>> Data Science
                       </label>
                     </div>
                   </div>
@@ -213,6 +218,14 @@ unset($_SESSION['profiles']);
                     <label for="marketing" class="col-sm-2 col-md-6 control-label">Marketing</label>
                     <div class="col-sm-3 col-md-5">
                       <input type="number" class="form-control" id="marketing" name="marketing" placeholder="0" max="15" value="<?php if (isset($_SESSION['marketing'])){echo $_SESSION['marketing']; unset($_SESSION['marketing']);} else {echo 0;}?>" disabled="true">
+                      <div class="help-block with-errors pull-right"></div>
+                      <span class="form-control-feedback" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="form-group col-sm-10 col-md-6" id="datasciencefield">
+                    <label for="datascience" class="col-sm-2 col-md-6 control-label">Data Science</label>
+                    <div class="col-sm-3 col-md-5">
+                      <input type="number" class="form-control" id="datascience" name="datascience" placeholder="0" max="15" value="<?php if (isset($_SESSION['datascience'])){echo $_SESSION['datascience']; unset($_SESSION['datascience']);} else {echo 0;}?>" disabled="true">
                       <div class="help-block with-errors pull-right"></div>
                       <span class="form-control-feedback" aria-hidden="true"></span>
                     </div>

@@ -55,6 +55,14 @@ $(document).ready(function()  {
             $('#marketing').prop('disabled', false);
         }        
     });
+    $('#datasciencecheck').change(function () {
+        if (!this.checked) {
+            $('#datascience').prop('disabled', true);
+        }
+        else {
+            $('#datascience').prop('disabled', false);
+        }        
+    });
     $('#terms').change(function () {
         if (!this.checked) {
             $('#submit').prop('disabled', true);
@@ -86,6 +94,9 @@ $(document).ready(function()  {
     }
     if(!$("#marketingcheck").checked) {
         $('#marketing').prop('disabled', true);
+    }
+    if(!$("#datasciencecheck").checked) {
+        $('#datascience').prop('disabled', true);
     }
   }); 
   

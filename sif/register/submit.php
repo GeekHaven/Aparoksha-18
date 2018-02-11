@@ -60,6 +60,8 @@ require '../../register/vendor/autoload.php';
             if(isset($_POST['backend'])){$_SESSION['business'] = $business;}
             $marketing = isset($_POST['marketing']) ? $_POST['marketing'] : 0;  
             if(isset($_POST['marketing'])){$_SESSION['marketing'] = $marketing;}
+            $datascience = isset($_POST['datascience']) ? $_POST['datascience'] : 0;  
+            if(isset($_POST['datascience'])){$_SESSION['datascience'] = $datascience;}
       
             $stipend = htmlentities($_POST['stipend']);
             $restrict = htmlentities($_POST['restrict']);
@@ -94,13 +96,13 @@ require '../../register/vendor/autoload.php';
         
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $date_clicked = date('Y-m-d H:i:s');
-
+    
             $sql = $conn->prepare("INSERT INTO $tbname (dated,name,email,mobile,companyname,companyinfo,frontend,backend,
-                    fullstack,graphic,content,business,marketing,stipend,restriction,yearallowed) VALUES (:dated,:name,:email,:mobile,:companyname,
-                    :companyinfo,:frontend,:backend,:fullstack,:graphic,:content,:business,:marketing,:stipend,:restriction,:yearallowed)");
+                    fullstack,graphic,content,business,marketing,datascience,stipend,restriction,yearallowed) VALUES (:dated,:name,:email,:mobile,:companyname,
+                    :companyinfo,:frontend,:backend,:fullstack,:graphic,:content,:business,:marketing,:datascience,:stipend,:restriction,:yearallowed)");
             $do = $sql->execute(['dated' => $date_clicked, 'name' => $name, 'email' => $email,'mobile' => $mobile,'companyname' => $companyname,
                  'companyinfo' => $companyinfo, 'frontend' => $frontend, 'backend' => $backend, 'fullstack' => $fullstack,
-                 'graphic' => $graphics, 'content' => $content, 'business' => $business, 'marketing' => $marketing, 'stipend' => $stipend, 'restriction' => $restrict,
+                 'graphic' => $graphics, 'content' => $content, 'business' => $business, 'marketing' => $marketing, 'datascience' => $datascience, 'stipend' => $stipend, 'restriction' => $restrict,
                  'yearallowed' => $year]);
 
             if($do){
@@ -118,6 +120,7 @@ require '../../register/vendor/autoload.php';
                 unset($_SESSION['graphics']);
                 unset($_SESSION['stipend']);
                 unset($_SESSION['marketing']);
+                unset($_SESSION['datascience']);
                 unset($_SESSION['year']);
                 unset($_SESSION['restrict']);
                 header("Refresh: 0; url=index.php#info");
