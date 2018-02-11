@@ -1,46 +1,46 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Morphing Background Shapes | Demo 2 | Codrops</title>
-		<meta name="description" content="A page background effect where SVG shapes morph and transform on scroll" />
-		<meta name="keywords" content="background, svg, morph, animation, scroll, shape, web development, css, javascript" />
-		<meta name="author" content="Codrops" />
-		<link rel="shortcut icon" href="favicon.ico">
-		<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
-		<link rel="stylesheet" type="text/css" href="css/demo.css" />
-		<link rel="stylesheet" type="text/css" href="sponsor/pater.css" />
-		<script>
-			document.documentElement.className = 'js';
-			var supportsCssVars = function() {
-				var s = document.createElement('style'),
-				support;
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Homepage - Aparoksha'18</title>
+	<meta name="description" content="A page background effect where SVG shapes morph and transform on scroll" />
+	<meta name="keywords" content="background, svg, morph, animation, scroll, shape, web development, css, javascript" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="img/apk-logo-black.svg">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="sponsor/pater.css" />
+	<script>
+		document.documentElement.className = 'js';
+		var supportsCssVars = function() {
+			var s = document.createElement('style'),
+			support;
 
-				s.innerHTML = "root: { --tmp-var: bold; }";
-				document.head.appendChild(s);
-				support = !!(window.CSS && window.CSS.supports && window.CSS.supports('font-weight', 'var(--tmp-var)'));
-				s.parentNode.removeChild(s);
-				return support;
-			}
-			if (!supportsCssVars()) alert('Please view this demo in a modern browser that supports CSS Variables.')
-		</script>
-	</head>
-	<body class="demo-2 loading">
-		<svg class="hidden">
-			
-			<symbol id="shape-demo" viewBox="0 0 200 100">
-				<title>shape demo</title>
-				<path d="M 6.144,74.1 C 20.4,107.4 70.13,94.33 94.22,95.74 121.3,97.41 130.8,101.1 154.7,99.38 178.6,97.72 201.9,78.95 199.4,46.86 197.1,14.96 174.9,4.781 161.4,1.827 147.9,-1.128 119.8,8.284 105.6,8.766 85.34,9.449 81.91,7.628 51.08,2.334 17.26,-3.482 -8.105,40.84 6.144,74.1 Z" />
-			</symbol>
-		</svg>
-		<main>
-			<div class="morph-wrap">
-				<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
-					<path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
-				</svg>
-			</div>
+			s.innerHTML = "root: { --tmp-var: bold; }";
+			document.head.appendChild(s);
+			support = !!(window.CSS && window.CSS.supports && window.CSS.supports('font-weight', 'var(--tmp-var)'));
+			s.parentNode.removeChild(s);
+			return support;
+		}
+		if (!supportsCssVars()) alert('Please view this demo in a modern browser that supports CSS Variables.')
+	</script>
+</head>
+<body class="demo-2 loading">
+	<svg class="hidden">
+
+		<symbol id="shape-demo" viewBox="0 0 200 100">
+			<title>shape demo</title>
+			<path d="M 6.144,74.1 C 20.4,107.4 70.13,94.33 94.22,95.74 121.3,97.41 130.8,101.1 154.7,99.38 178.6,97.72 201.9,78.95 199.4,46.86 197.1,14.96 174.9,4.781 161.4,1.827 147.9,-1.128 119.8,8.284 105.6,8.766 85.34,9.449 81.91,7.628 51.08,2.334 17.26,-3.482 -8.105,40.84 6.144,74.1 Z" />
+		</symbol>
+	</svg>
+	<main>
+		<div class="morph-wrap">
+			<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
+				<path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
+			</svg>
+		</div>
 			<!-- <div id="abs">
 				<p style="font-family: 'Roboto Mono', monospace;position: absolute;text-transform: uppercase; top: 15%;left: 1%;">Scroll to explore...</p>
 			</div> -->
@@ -70,10 +70,10 @@
 			<div class="content-wrap">
 				<div class="content content--layout content--layout-3">
 					<img class="content__img" src="img/1.jpg" alt="Some image" />
-					<h3 class="content__title">Workshops</h3>
+					<h3 class="content__title">Sponsors</h3>
 					<p class="content__author">Gregory Mourisha</p>
 					<p class="content__desc">Finding the heart when paradise is lost.</p>
-					<a href="#" class="content__link">Discover</a>
+					<a href="../sponsors/index.html" class="content__link">Discover</a>
 				</div>
 			</div>
 			<div class="content-wrap">
@@ -95,21 +95,15 @@
 				</div>
 			</div>
 			<!-- Related demos -->
-			<section class="content content--related">
-				<!-- <p class="content__info">If you enjoyed this demo you might also like:</p>
-				<a class="content__related-item" href="https://tympanus.net/Development/ElasticSVGElements/">
-					<img class="content__related-img" src="img/related/ItemRevealer.jpg">
-					<h3 class="content__related-title">Elastic SVG Elements</h3>
-				</a>
-				<a class="content__related-item" href="https://tympanus.net/Development/ItemRevealer/">
-					<img class="content__related-img" src="img/related/ElasticSVGElements.jpg">
-					<h3 class="content__related-title">Item Revealer</h3>
-				</a> -->
-			</section>
-		</main>
-		<script src="js/imagesloaded.pkgd.min.js"></script>
-		<script src="js/anime.min.js"></script>
-		<script src="js/scrollMonitor.js"></script>
-		<script src="js/demo2.js"></script>
-	</body>
-</html>
+				<section class="content content--related">
+					<h3 class="content__title" style="color: black;">Contact:</h3>
+					<h3 class="content__title" style="font-size: 30px;position: relative; display: inline-block;top: 20%;">  team.aparoksha@iiita.ac.in</h3>
+					<h3 class="content__title" style="font-size: 30px;position: relative; display: inline-block;top: 40%;"> Indian Insitute of Information Technology, Allahabad Uttar Pradesh 211015</h3>
+				</section>
+			</main>
+			<script src="js/imagesloaded.pkgd.min.js"></script>
+			<script src="js/anime.min.js"></script>
+			<script src="js/scrollMonitor.js"></script>
+			<script src="js/demo2.js"></script>
+		</body>
+		</html>
