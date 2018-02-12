@@ -59,7 +59,8 @@
 						<div class="glitch__img"></div>
 						<div class="glitch__img"></div>
 					</div>
-					<h1 class="content__title" style="font-family: 'Roboto Mono', monospace;font-size: 45px;text-align: center;">looks like we're ready ...</h1>
+					<h1 class="content__title" style="font-family: 'Roboto Mono', monospace;font-size: 45px;text-align: center;" id="first">Almost done ...</h1>
+					<h1 class="content__title" style="font-family: 'Roboto Mono', monospace;font-size: 45px;text-align: center;" id="second">looks like we're ready !</h1>
 					<a href="#" class="replay-animation" style="display: none;">ENTER</a>
 					<a href="./home/index2.html" class="enterButton" style="text-align: center;margin-top: 8vw;margin-left: -40%;">ENTER</a>
 				</div>
@@ -78,5 +79,18 @@
 	<script src="js/vendorJSFiles/fast-simplex-noise.js"></script>
 	<script src="dist/js/demo-7/index.bundle.js"></script>
 	<script src="js/imagesloaded.pkgd.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$(".enterButton").hide();
+			$("#second").hide();
+			setTimeout(function() {
+				$("#first").fadeOut();
+				$("#second").fadeIn(500);
+			}, 15000);
+			setTimeout(function() {
+				$(".enterButton").show(1000);
+			}, 17000);
+		});
+	</script>
 </body>
 </html>
