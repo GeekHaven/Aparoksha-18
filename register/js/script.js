@@ -96,6 +96,7 @@ $(document).ready(function()  {
 
   var textArray = [
     'Hack In The North Registrations have started! Check events and workshop tab for more.',
+    'TopBot Registrations have started! Check events and workshop tab for more.',
     'Startup-Intern Fair registrations have started. Chack Fest Registration tab for more. Register your startup now.',
     'CodeRed, our flagship coding competition registrations have started for qualification round. Check events & workshop tab for more.',
     'Fest Registrations have started! Check fest registration tab for more.'

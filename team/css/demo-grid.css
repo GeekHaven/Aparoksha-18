@@ -26,13 +26,13 @@
 	margin: 0;
 	font-weight: normal;
 	position: relative;
-	color: var(--content-title-text);
+	color: gray;
 }
 
 .content__subtitle {
 	font-size: 1.25em;
 	margin: 0;
-	padding: 0.25em 1em;
+	padding: 2.55em 1em 0em 1em;
 	font-weight: normal;
 	color: var(--highlight-text);
 }
