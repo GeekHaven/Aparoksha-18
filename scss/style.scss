@@ -1,0 +1,30 @@
+.container{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  background: #222222
+}
+svg{
+  position: absolute;
+  height: 100%;
+}
+.lines {
+  opacity: 0.05; 
+}
+
+.line {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #4C3A90; }
+
+.lights {
+  opacity: 0.9;
+}
+
+.light {
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+  fill: #7A6BB5; }
