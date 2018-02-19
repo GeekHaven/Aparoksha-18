@@ -30,11 +30,13 @@ a:visited {
 }
 
 .platinum {
-  height: 10em;
+  height: 16em;
+  margin-top: 1.5em;
 }
 
 .gold {
   height: 100px;
+  margin-top: 3em;
 }
 
 .silver {
