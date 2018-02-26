@@ -43,8 +43,8 @@
       <div class="container">
 
         <div class="col-md-12 contact-form">
-            <h2 class="content-ct" style="font-weight:bold; margin-bottom:0em;"><span class="ti-email"></span> Register Here</h2>
-            <h5 class="content-ct" style="margin-bottom:2em;"><span class="ti-email"></span> Fields marked with <sup>*</sup> are compulsory </h5>
+            <h2 class="content-ct" style="font-weight:bold; margin-bottom:0em;"><span class="ti-email"></span> Registration Closed</h2>
+            <!-- <h5 class="content-ct" style="margin-bottom:2em;"><span class="ti-email"></span> Fields marked with <sup>*</sup> are compulsory </h5>
             
             <div class="alert alert-info col-sm-12" id="info" style="margin-bottom:1em; 
             <?php if(isset($_SESSION['confirm'])){echo("display:block;");} else {echo("display:none;");} ?> ">
@@ -109,7 +109,7 @@
                 </div>
               </div>
             </form>
-          </div>
+          </div> -->
       </div>
 
       <!-- <div class="container-fluid tickets" id="tickets">
