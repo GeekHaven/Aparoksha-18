@@ -67,7 +67,7 @@ date_default_timezone_set('Asia/Kolkata');
 
         try {
             $target_dir = "/var/www/uploads/";
-            $target_file = $target_dir . basename($_FILES["input-file-preview"]["name"]);
+            $target_file = $target_dir . $topcoder_handle;
             $uploadOk = 1;
             $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
             // Check if image file is a actual image or fake image
@@ -120,8 +120,7 @@ date_default_timezone_set('Asia/Kolkata');
             $do = $sql->execute(['dated' => $date_clicked ,'topcoder_handle' => $topcoder_handle ,'name' => $name, 'email' => $email, 'mobile' => $mobile, 'attending' => $attend,'arrival_date_time' => $date, 'id_card' => $target_file]);
 
             if($do){
-                $_SESSION['confirm'] = "You have been registered successfully. We have sent you a mail containing detailed instructions for
-                    using topcoder for HumblefoolCup. Best wishes."; 
+                $_SESSION['confirm'] = "Your details have been recorded. We are looking forward to welcome you at IIITA. All the best :)"; 
                     header("Refresh: 0; url=index.php#info");
                     exit;
             }
