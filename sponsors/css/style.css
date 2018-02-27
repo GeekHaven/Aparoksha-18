@@ -1,0 +1,65 @@
+/*!
+ * Start Bootstrap - Thumbnail Gallery (https://startbootstrap.com/template-overviews/thumbnail-gallery)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-thumbnail-gallery/blob/master/LICENSE)
+ */
+
+ @font-face {
+  font-family: 'nexa_boldregular';
+  font-weight: bold;
+  font-style: normal;
+  src: url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.eot');
+  src: url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.woff2') format('woff2'), url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.woff') format('woff'), url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.ttf') format('truetype'), url('../fonts/nexa_boldfree_macroman/Nexa_Free_Bold-webfont.svg#nexa_boldregular') format('svg');
+}
+
+body {
+  padding-top: 74px;
+  font-family: 'nexa_boldregular', sans-serif;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+.platinum {
+  height: 16em;
+  margin-top: 1.5em;
+}
+
+.gold {
+  height: 100px;
+  margin-top: 3em;
+}
+
+.silver {
+  height: 70px;
+}
+
+#logo {
+  padding-right: 5px;
+}
+
+#black-nav {
+  background-color: black;
+  margin-bottom: 2em;
+}
+
+#black-footer {
+  background-color: black;
+  color: white;
+  margin: 1em 0em 0em 0em;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}

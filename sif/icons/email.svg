@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="28px" viewBox="0 0 42 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>ion-ios-email-outline - Ionicons</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="8" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1219.000000, -883.000000)">
+        <g id="Group-2" transform="translate(1219.000000, 809.000000)" fill="#4A4A4A">
+            <path d="M0,74 L42,74 L42,102 L0,102 L0,74 Z M21,89.3125 L38.828125,75.75 L3.171875,75.75 L21,89.3125 Z M1.75,100.25 L40.25,100.25 L40.25,76.84375 L27.671875,86.46875 L35.109375,94.890625 L34.890625,95.109375 L26.25,87.453125 L21,91.5 L15.75,87.453125 L7.109375,95.109375 L6.890625,94.890625 L14.328125,86.46875 L1.75,76.84375 L1.75,100.25 Z" id="ion-ios-email-outline---Ionicons"></path>
+        </g>
+    </g>
+</svg>

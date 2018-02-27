@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Homepage - Aparoksha'18</title>
+	<meta name="description" content="A page background effect where SVG shapes morph and transform on scroll" />
+	<meta name="keywords" content="background, svg, morph, animation, scroll, shape, web development, css, javascript" />
+	<meta name="author" content="Codrops" />
+	<link rel="shortcut icon" href="../img/apk-logo-black.svg">
+	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu.css" />
+	<script src="js/modernizr-custom.js"></script>
+	<script>
+		document.documentElement.className = 'js';
+		var supportsCssVars = function() {
+			var s = document.createElement('style'),
+			support;
+
+			s.innerHTML = "root: { --tmp-var: bold; }";
+			document.head.appendChild(s);
+			support = !!(window.CSS && window.CSS.supports && window.CSS.supports('font-weight', 'var(--tmp-var)'));
+			s.parentNode.removeChild(s);
+			return support;
+		}
+		if (!supportsCssVars()) alert('Please view this demo in a modern browser that supports CSS Variables.')
+	</script>
+<style type="text/css">
+.content__link {
+	border: 2px solid black;
+	background-color: black;
+	border-radius: 5px;
+}
+@media only screen and (max-width: 500px) {
+	.content__title {
+		font-size: 5em;
+	}
+	.content__image {
+		width: 100px;
+		height: 100px;
+	}
+}
+@media only screen and (max-width: 770px) {
+	.content__title {
+		font-size: 5em;
+	}
+	.content__image {
+		width: 100px;
+		height: 100px;
+	}
+}
+@media only screen and (max-width: 1250px) {
+	.content__title {
+		font-size: 6em;
+	}
+	.content__image {
+		width: 100px;
+		height: 100px;
+	}
+}
+#know_more {
+	cursor: default;
+}
+</style>
+</head>
+<body class="demo-2 loading" style="background: url(img/bg.png);">
+	<svg class="hidden">
+
+		<symbol id="shape-demo" viewBox="0 0 200 100">
+			<title>shape demo</title>
+			<path d="M 6.144,74.1 C 20.4,107.4 70.13,94.33 94.22,95.74 121.3,97.41 130.8,101.1 154.7,99.38 178.6,97.72 201.9,78.95 199.4,46.86 197.1,14.96 174.9,4.781 161.4,1.827 147.9,-1.128 119.8,8.284 105.6,8.766 85.34,9.449 81.91,7.628 51.08,2.334 17.26,-3.482 -8.105,40.84 6.144,74.1 Z" />
+		</symbol>
+	</svg>
+
+		<main>
+			<nav class="pages-nav">
+				<div class="pages-nav__item"><a class="link link--page" href="#page-home" style="color: black;font-size: 20px;">HOME</a></div>
+				<div class="pages-nav__item"><a class="link link--page" href="#page-software" style="color: black;font-size: 20px;">EVENTS</a></div>
+				<div class="pages-nav__item"><a class="link link--page" href="#page-custom" style="color: black;font-size: 20px;">SPONSORS</a></div>
+				<div class="pages-nav__item"><a class="link link--page" href="#page-training" style="color: black;font-size: 20px;">TEAM</a></div>
+				<div class="pages-nav__item pages-nav__item--small"><a class="link link--page link--faded" href="#page-buy" style="color: black;font-size: 20px;">GALLERY</a></div>
+				<div class="pages-nav__item pages-nav__item--small"><a class="link link--page link--faded" href="#page-blog" style="color: black;font-size: 20px;">DEVELOPERS</a></div>
+				<div class="pages-nav__item pages-nav__item--small"><a class="link link--page link--faded" href="#page-contact" style="color: black;font-size: 20px;">CONTACT</a></div>
+				<div class="pages-nav__item pages-nav__item--social">
+					<a class="link link--social link--faded" href="#"><i class="fa fa-twitter"></i><span class="text-hidden">Twitter</span></a>
+					<a class="link link--social link--faded" href="#"><i class="fa fa-linkedin"></i><span class="text-hidden">LinkedIn</span></a>
+					<a class="link link--social link--faded" href="#"><i class="fa fa-facebook"></i><span class="text-hidden">Facebook</span></a>
+					<a class="link link--social link--faded" href="#"><i class="fa fa-youtube-play"></i><span class="text-hidden">YouTube</span></a>
+				</div>
+			</nav>
+			<div class="pages-stack">
+				
+					<div class="page" id="page-home">
+						<div class="morph-wrap">
+							<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
+								<path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
+							</svg>
+						</div>
+					
+						<div class="content content--fixed">
+							<div class="deco deco--title" id="theme">THE DIGITAL RENAISSANCE</div>
+						</div>
+
+					
+						<div class="content-wrap">
+							<div class="content content--layout content--layout-1">
+								<img class="content__img" src="img/apk-logo-white.svg" alt="Some image" id="im" />
+								<h3 class="content__title" id="tit">&nbsp;&nbsp;&nbsp;paroksha'18</h3>
+								<!-- <p class="content__author">Digital renaissance</p> -->
+								<p class="content__desc" id="col">IIIT ALLAHABAD </p>
+								<a href="#" id="know_more" class="content__link" style="text-transform: uppercase;" >march 16<sup style="text-transform: lowercase;">th</sup> - 18<sup style="text-transform: lowercase;">th</sup> </a>
+							</div>
+						</div>
+					</div>
+
+					<div class="page" id="page-software">
+
+						<div class="content-wrap">
+							<div class="content content--layout content--layout-2">
+								<!-- <img class="content__img" src="img/4.jpg" alt="Some image" /> -->
+								<i class="far fa-calendar-alt content__img" style="color: black;opacity: 0.5;width: 310px; height: 310px;"></i>
+								<h3 class="content__title" style="color: black;">Events</h3>
+								<!-- <p class="content__author">Nikimo Westlane</p> -->
+								<p class="content__desc">The neverending quest, once and forever.</p>
+								<a href="../events1/events.html" class="content__link">Discover</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="page" id="page-custom">
+						<div class="content-wrap">
+							<div class="content content--layout content--layout-3">
+								<i class="fas fa-suitcase content__img" style="color: black;opacity: 0.5;width: 320px; height: 320px;"></i>
+								<!-- <img class="content__img" src="img/1.jpg" alt="Some image" />
+								-->					<h3 class="content__title">Sponsors</h3>
+								<!-- 	<p class="content__author">Gregory Mourisha</p> -->
+								<p class="content__desc">It takes both sides to build a bridge ;)</p>
+								<a href="../sponsors" class="content__link">Discover</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="page" id="page-training">
+						<div class="content-wrap">
+							<div class="content content--layout content--layout-4">
+								<i class="fas fa-users content__img" style="color: black;opacity: 0.5;width: 370px; height: 370px;"></i>
+								<!-- <img class="content__img" src="img/2.jpg" alt="Some image" /> -->
+								<h3 class="content__title">Team</h3>
+								<!-- <p class="content__author">Walter Mastricht</p> -->
+								<p class="content__desc">Alone we can do so little. Together we can do so much.</p>
+								<a href="../team/" class="content__link">Discover</a>
+							</div>
+						</div>
+					</div>	
+
+					<div class="page" id="page-buy">
+						<div class="content-wrap">
+							<div class="content content--layout content--layout-1">
+								<i class="fas fa-camera-retro content__img" style="color: black;opacity: 0.5;width: 340px; height: 340px;"></i>
+								<!-- 	<img class="content__img" src="img/5.jpg" alt="Some image" /> -->
+								<h3 class="content__title">Gallery</h3>
+								<!-- <p class="content__author">Frank Cherry</p> -->
+								<p class="content__desc">Let's revisit past and relive those moments.</p>
+								<a href="../gallery/" class="content__link">Discover</a>
+							</div>
+						</div>
+					</div>	
+					<!-- Related demos -->
+					<div class="page" id="page-blog">
+						<section class="content content--related">
+							<!-- <h3 class="content__title" style="color: black;">Contact:</h3>
+							<h3 class="content__title" style="font-size: 30px;position: relative; display: inline-block;top: 20%;">  team.aparoksha@iiita.ac.in</h3>
+							<h3 class="content__title" style="font-size: 30px;position: relative; display: inline-block;top: 40%;"> Indian Insitute of Information Technology, Allahabad Uttar Pradesh 211015</h3> -->
+							<div class="content content--layout content--layout-1">
+								<i class="fas fa-code content__img" style="color: black;opacity: 0.5;width: 360px; height: 360px;"></i>
+								<h3 class="content__title">Developers</h3>
+								<p class="content__desc">Only work nothing more.</p>
+								<a href="#" class="content__link">Discover</a>
+							</div>
+						</section>
+					</div>	
+				</div>
+			</div>
+			<button class="menu-button" style="color: black;"><span>Menu</span></button>
+			<script src="js/classie.js"></script>
+			<script src="js/main.js"></script>
+		</main>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/anime.min.js"></script>
+		<script src="js/scrollMonitor.js"></script>
+		<script src="js/demo2.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#tit, #im, #know_more, #col, #theme").hide();
+				setTimeout(function() {
+					$("#im").fadeIn(500);
+					$("#tit").fadeIn(2500);
+					$("#col").fadeIn(4500);
+					$("#know_more, #theme").fadeIn(6500);
+
+				}, 1000);
+			});
+		</script>
+	</body>
+	</html>

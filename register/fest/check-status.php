@@ -26,6 +26,7 @@ session_start();
         echo 'alert("Access Denied")';
         echo '</script>';   
         header("Refresh: 1; url=index.php");
+        exit;
     }
 
     else{
@@ -39,6 +40,7 @@ session_start();
             echo 'alert("Fill all values. Try Again!")';
             echo '</script>';   
             header("Refresh: 1; url=check.php");
+            exit;
         }
 
         $servername = $dbhost;
@@ -59,6 +61,7 @@ session_start();
             if($user == Null){
                 $_SESSION['confirm'] = "No records found!  Please try again with correct credentials.  ";
                 header("Refresh: 0; url=check.php#info"); 
+                exit;
             }
 
             else{
@@ -66,9 +69,11 @@ session_start();
                     $_SESSION['name'] = $user['name'];
                     $_SESSION['email'] = $user['email'];
                     $_SESSION['mobile'] = $user['mobile'];
+                    $_SESSION['college'] = $user['college'];
                     $_SESSION['verify'] = $user['status'];
                     $_SESSION['events'] = $user['events'];
                     header("Refresh: 0; url=check.php#info");
+                    exit;
             } 
         }
         
@@ -76,6 +81,7 @@ session_start();
             $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
             try again after some time. If problem persists then drop a mail to ";
             header("Refresh: 0; url=index.php#info");
+            exit;
         }
         $clicked = false;
         $conn = null;

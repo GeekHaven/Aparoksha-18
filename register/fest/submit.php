@@ -5,6 +5,9 @@ include("php-mailer.php");
 
 require '../vendor/autoload.php';
 
+date_default_timezone_set('Asia/Kolkata');
+
+
     $dotenv = new Dotenv\Dotenv(__DIR__);
     if (file_exists('.env')) {
        $dotenv->load('.env');
@@ -15,11 +18,13 @@ require '../vendor/autoload.php';
     $dbpass = getenv('DB_PASS');
     $dbn = getenv('DB_NAME');
     $tbn = getenv('TB_NAME');
+    $dev = getenv('DEVELOPMENT');
 
     $clicked = false;
 
     if(isset($_POST['sub'])){
         $clicked = true;
+        $date_clicked = date('Y-m-d H:i:s');
     }
 
     if(!$clicked){
@@ -32,15 +37,17 @@ require '../vendor/autoload.php';
 
     else{
         //ToDo Client Side handling of empty data
-        if(isset($_POST['uemail']) && isset($_POST['uname']) && isset($_POST['mobile'])){
+        if(isset($_POST['uemail']) && isset($_POST['uname']) && isset($_POST['mobile']) && isset($_POST['college'])){
             $name = htmlentities($_POST['uname']);
             $email = htmlentities($_POST['uemail']);
             $mobile = htmlentities($_POST['mobile']);
+            $college = htmlentities($_POST['college']);
             $hash = md5( rand(0,1000) );
             if(!isset($_POST['event']) || sizeof($_POST['event'])<2 ) {
                 $_SESSION['name'] = $name;
                 $_SESSION['email'] = $email;
                 $_SESSION['mobile'] = $mobile;
+                $_SESSION['college'] = $college;
                 $_SESSION['confirm'] = "Please select at least two events";
                 header("Refresh: 0; url=index.php#info");
                 exit;
@@ -84,10 +91,29 @@ require '../vendor/autoload.php';
             }
 
             else{
-                if(mailsend($email,$hash,$name)){
+                //If in development environment then do not send mail
+                if(($dev !== "true") && mailsend($email,$hash,$name)){
+                 $sql = $conn->prepare("INSERT INTO $tbname (stime,name,email,mobile,college,events,activate) VALUES (:stime,:name,:email,:mobile,:college,:events,:hash)");
+                    $do = $sql->execute(['stime' => $date_clicked ,'name' => $name, 'email' => $email,'mobile' => $mobile,'college' => $college, 'events' => $event, 'hash' => $hash ]);
 
-                    $sql = $conn->prepare("INSERT INTO $tbname (name,email,mobile,events,activate) VALUES (:name,:email,:mobile,:events,:hash)");
-                    $do = $sql->execute(['name' => $name, 'email' => $email,'mobile' => $mobile, 'events' => $event, 'hash' => $hash]);
+                    if($do){
+                        $_SESSION['confirm'] = "You have been registered successfully. Please verify your email by clicking on the
+                        link sent to your email"; 
+                        header("Refresh: 0; url=index.php#info");
+                        exit;
+                    }
+                  
+                    else{
+                        $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
+                                                try again after some time. If problem persists please feel free to contact any person mentioned below ";
+                        header("Refresh: 0; url=index.php#info"); 
+                        exit;
+                    }
+                }
+                if($dev === "true") {
+                    $sql = $conn->prepare("INSERT INTO $tbname (stime,name,email,mobile,college,events,activate) VALUES (:stime,:name,:email,:mobile,:college,:events,:hash)");
+                    $do = $sql->execute(['stime' => $date_clicked ,'name' => $name, 'email' => $email,'mobile' => $mobile,'college' => $college, 'events' => $event, 'hash' => $hash]);
+
 
                     if($do){
                         $_SESSION['confirm'] = "You have been registered successfully. Please verify your email by clicking on the
@@ -99,9 +125,10 @@ require '../vendor/autoload.php';
                     else{
                         $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
                                                 try again after some time. If problem persists please feel free to contact any person mentioned below ";
-                        header("Refresh: 0; url=index.php#info"); 
+                        header("Refresh: 0; url=index.php#info");
+                        exit;
                     }
-                } 
+                }
             }
         }
         
@@ -109,6 +136,7 @@ require '../vendor/autoload.php';
             $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
             try again after some time. If problem persists please feel free to contact any person mentioned below ";
             header("Refresh: 0; url=index.php#info");
+            exit;
         }
         $clicked = false;
         $conn = null;

@@ -14,6 +14,7 @@
     $dbpass = getenv('DB_PASS');
     $dbn = getenv('DB_NAME');
     $tbn = getenv('TB_NAME');
+    $dev = getenv('DEVELOPMENT');
 
     $clicked = false;
 
@@ -66,16 +67,27 @@
                     $_SESSION['confirm'] = "Your account is already activated. Details are given below.";
                     $_SESSION['name'] = $user['name'];
                     $_SESSION['email'] = $user['email'];
+                    $_SESSION['college'] = $user['college'];
                     $_SESSION['events'] = $user['events'];
                     $_SESSION['verify'] = $user['status']; 
                     header("Refresh: 0; url=check.php#info");
+                    exit;
                 }
                 else{
-                    if(mailsend($email,$hash, $user['name'])){
+                    //Disable mail sending if environment is development
+                    if(($dev !== "true") && mailsend($email,$hash, $user['name'])){
                         $sql = $conn->prepare("UPDATE $tbname SET activate = :hash WHERE email = :email");
                         $do = $sql->execute(['email' => $email,'hash' => $hash]);
                         $_SESSION['confirm'] = "Confirmation code has been resent. Please check your mail.";                
                         header("Refresh: 0; url=resend.php#info");
+                        exit;
+                    }
+                    if($dev === "true") {
+                        $sql = $conn->prepare("UPDATE $tbname SET activate = :hash WHERE email = :email");
+                        $do = $sql->execute(['email' => $email,'hash' => $hash]);
+                        $_SESSION['confirm'] = "Confirmation code has been resent. Please check your mail.";                
+                        header("Refresh: 0; url=resend.php#info");
+                        exit;
                     }
                     else{
                         $_SESSION['confirm'] = "Some error! Please try again. Or contact";

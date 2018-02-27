@@ -1,0 +1,256 @@
+#harsha_img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.top{
+	margin: 4px 4px;
+	text-align: center;
+}
+
+#type{
+	padding: 7px 7px;
+	margin-top: 100px;
+	margin-bottom: 20px;
+}
+
+.humblefool{
+	color: white;
+	margin-top: 3px;
+	padding-top: 2.5px;
+	font-size: 30px
+}
+
+#header_tribute{
+	color: #C29898;
+	font-size: 20px;
+}
+
+#intro{
+	font-size: 23px;
+}
+
+.responsive-self-choosen{
+	color: white;
+}
+
+
+#contact{
+	text-align: center;
+}
+
+
+#contact ul{
+	text-align: center;
+	margin: 5px 5px;
+}
+
+
+#contact ul li a{
+	padding-left: 10px;
+}
+
+
+#brief_about{
+	width: 48.3333%;
+}
+
+#short_about{
+		font-size: 20px;
+
+}
+
+#short_about1{
+		font-size: 20px;
+
+}
+
+#life-events{
+	margin: 5px 45px 10px 65px;
+}
+
+.life-events{
+	margin: 5px 15px 10px 15px;
+}
+
+#life-look{
+	text-align: center;
+}
+
+.year-header{
+	font-size:18px;
+	color: #2196F3;
+	text-align: left;
+	font-weight: bold;
+}
+
+.life-look-div ul li:nth-child(odd){
+	background-color: rgb(247,247,247);
+}
+
+.life-look-div{
+	margin-bottom: 60px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.life-description{
+	font-size: 14px;
+	padding: 5px 0px 5px 0px;
+}
+
+.tribute{
+	text-align: center;
+	background-color: #242943;
+	margin-bottom: 0px;
+	height: 265px;
+}
+
+#tribute{
+		font-size: 20px;
+		color: white;
+		margin-top: 25px;
+		line-height: 28px;
+}
+
+#cup_des p{
+	font-size: 17px;
+}
+
+#humblefoolcup{
+	font-size: 38px;
+}
+
+#love{
+	text-align: center;
+	width: 900px;
+	margin: auto auto;
+}
+
+#index-banner{
+	background: linear-gradient(0deg, #242943, #242943 90%) no-repeat #242943;
+  margin: 0;
+}
+
+header {
+  padding: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+#layers {
+	height: 400px;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	margin-left: 20px;
+	margin-right: 10px;
+	width: 98%;
+}
+
+#layers .layer {
+	background-size: auto 100%;
+	background-position: 50% 0;
+	background-repeat: repeat-x;
+	height: 300px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	transform: translate3d(0, 0, 0);
+	margin-left: 20px;
+	margin-right: 10px;
+	width: 98%;
+}
+
+@keyframes twinkle {
+	from { opacity: .3; }
+	to { opacity: 1; }
+}
+
+@keyframes layer-1 {
+	from { transform: translate3d(0, 0, 0); }
+	to { transform: translate3d(-689px, 0, 0); }
+}
+#layers .layer:nth-child(1) {
+	animation: twinkle 10s ease-in -5s infinite alternate, layer-1 344s linear infinite;
+	background-image: url('https://rogertalk.com/s/stars1.png');
+}
+
+@keyframes layer-2 {
+	from { transform: translate3d(0, 0, 0); }
+	to { transform: translate3d(-699px, 0, 0); }
+}
+#layers .layer:nth-child(2) {
+	animation: twinkle 3s ease-in -3s infinite alternate, layer-2 34s linear infinite;
+	background-image: url('https://rogertalk.com/s/stars2.png');
+}
+
+@keyframes layer-3 {
+	from { transform: translate3d(0, 0, 0); }
+	to { transform: translate3d(-699px, 0, 0); }
+}
+#layers .layer:nth-child(3) {
+	animation: twinkle 3.5s ease-in infinite alternate, layer-3 34s linear infinite;
+	background-image: url('https://rogertalk.com/s/stars3.png');
+}
+
+@keyframes layer-4 {
+	from { transform: translate3d(0, 0, 0); }
+	to { transform: translate3d(-480px, 0, 0); }
+}
+#layers .layer:nth-child(4) {
+	animation: twinkle 4s ease-in -2s infinite alternate, layer-4 80s linear infinite;
+	background-image: url('https://rogertalk.com/s/stars4.png');
+}
+
+@keyframes layer-5 {
+	from { transform: translate3d(0, 0, 0); }
+	to { transform: translate3d(-486px, 0, 0); }
+}
+#layers .layer:nth-child(5) {
+	animation: twinkle 5.5s ease-in infinite alternate, layer-5 243s linear infinite;
+	background-image: url('https://rogertalk.com/s/stars5.png');
+}
+
+@keyframes layer-6 {
+	from { transform: translate3d(0, 0, 0); }
+	to { transform: translate3d(-486px, 0, 0); }
+}
+#layers .layer:nth-child(6) {
+	animation: twinkle 5.5s ease-in infinite alternate, layer-5 143s linear infinite;
+	background-image: url('https://rogertalk.com/s/stars5.png');
+}
+
+@keyframes shooting-star {
+	0% {
+		opacity: 1;
+		transform: translate3d(0, 0, 0);
+	}
+	25% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translate3d(-270px, 180px, 0);
+	}
+}
+
+#layers:before {
+	animation: 1000ms linear 1s shooting-star;
+	background-image: url('https://rogertalk.com/s/shootingstar.png');
+	background-size: 72px 50px;
+	content: ' ';
+	height: 50px;
+	left: 80%;
+	position: absolute;
+	top: -50px;
+	width: 72px;
+	z-index: 100;
+}
+
+.footer-copyright{
+	text-align: center;
+	margin: auto;
+}

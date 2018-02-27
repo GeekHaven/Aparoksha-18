@@ -1,0 +1,106 @@
+@media only screen and (max-width:1200px){
+    .description {
+        width: 85%;
+       
+    }
+    
+    
+}
+
+@media only screen and (max-width:1023px){
+    .title img {
+        width: 70%;
+    }
+
+    .title-underline{
+        width:50%;
+    }
+
+    .description{
+        width:90%;
+        
+    }
+
+    .tagline{
+        font-size:110%;
+    }
+
+    html{
+        font-size:18px;
+    }
+
+    .round{
+        font-size:90%;
+    }
+    
+}
+
+@media only screen and (max-width:767px){
+    .description{
+        width:100%;
+        
+    }
+
+    html{
+        font-size:17px;
+    }
+
+    .invite{
+        width:90%;
+    }
+    
+}
+
+@media only screen and (max-width:675px){
+    .title img{
+        width:50%;
+    }
+
+    .title-underline{
+        width:30%;
+    }
+
+    .tagline{
+        font-size:95%;
+    }
+
+    .round:first-of-type {
+        border:none;
+    }
+    
+}
+@media only screen and (max-width:480px){
+    .title img{
+        width:30%;
+    }
+
+    .tagline{
+        font-size:110%;
+        width:50%;
+    }
+
+    .apk-logo {
+        padding:0 5px;
+    }
+
+    ul{
+        display: none;
+    }
+
+    .logo{
+        margin: 0 auto;
+    }
+
+    html{
+        font-size:15px;
+    }
+
+    .title .btn-full{
+        display: inline-block!important;
+    }
+   
+
+
+    
+}
+

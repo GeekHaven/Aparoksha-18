@@ -23,7 +23,11 @@ unset($_SESSION['events']);
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".side-menu">
+<<<<<<< HEAD
       <i class="fa fa-arrow-left" aria-hidden="true" style="color: black; font-size: 25px;padding-left: 1%;padding-top: 1%;padding-bottom: 1%;"></i>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://aparoksha.org/register/" style="text-decoration: none;color: black;"><b style="font-size: 20px;font-weight: 400;">BACK</b></a>
+=======
+      <a href="../index.html" style="text-decoration: none;color: black;"><i class="fa fa-arrow-left" aria-hidden="true" style="color: black; font-size: 25px;padding-left: 1%;padding-top: 1%;padding-bottom: 1%;"></i>&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size: 20px;font-weight: 400;">BACK</b></a>
+>>>>>>> a4ae0470c3446b0691a80907d1ea69b455dc52a3
       <div class="container-fluid">
         <div class="row hero-header" id="home">
           <div class="col-md-12">
@@ -80,7 +84,15 @@ unset($_SESSION['events']);
               <div class="form-group">
                   <label for="mobile" class="col-sm-2 control-label">Mobile<sup>*</sup></label>
                   <div class="col-sm-9">
-                    <input type="number" class="form-control" id="mobile" name="mobile" placeholder="xxxxxxxxxx" value="<?php if (isset($_SESSION['mobile'])){echo $_SESSION['mobile']; unset($_SESSION['mobile']);} ?>" required>
+                    <input type="tel" pattern="[0-9]{10}" class="form-control" id="mobile" data-error="Please enter a 10 digit mobile number" name="mobile" placeholder="xxxxxxxxxx" value="<?php if (isset($_SESSION['mobile'])){echo $_SESSION['mobile']; unset($_SESSION['mobile']);} ?>" required>
+                    <div class="help-block with-errors pull-right"></div>
+                    <span class="form-control-feedback" aria-hidden="true"></span>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="college" class="col-sm-2 control-label">College<sup>*</sup></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="college" name="college" placeholder="" value="<?php if (isset($_SESSION['college'])){echo $_SESSION['college']; unset($_SESSION['college']);} ?>" required>
                     <div class="help-block with-errors pull-right"></div>
                     <span class="form-control-feedback" aria-hidden="true"></span>
                   </div>
@@ -156,7 +168,7 @@ unset($_SESSION['events']);
           <div class="col-md-6 contact-form">
             <h4> For website issues:</h3>
               <hr>
-              <p> Pradeep Gangwar </p>
+              <p> Team Web Operations </p>
               <p> pradeepgangwar39@gmail.com </p>
           </div>
           <div class="col-md-6 contact-form" style="text-align:right;">
@@ -164,6 +176,7 @@ unset($_SESSION['events']);
               <hr>
               <p> Ashutosh Chandra </p>
               <p> events@aparoksha.org </p>
+              <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-9919241909</p>
           </div>
         </div>
         <div class="row footer-credit">

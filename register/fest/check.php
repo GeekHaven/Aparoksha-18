@@ -22,7 +22,7 @@ session_start();
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".side-menu">
-  
+    <a href="../index.html" style="text-decoration: none;color: black;"><i class="fa fa-arrow-left" aria-hidden="true" style="color: black; font-size: 25px;padding-left: 1%;padding-top: 1%;padding-bottom: 1%;"></i>&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size: 20px;font-weight: 400;">BACK</b></a>
       <div class="container-fluid">
         <div class="row hero-header" id="home">
           <div class="col-md-12">
@@ -100,6 +100,10 @@ session_start();
                   else{echo "(Verified)";} unset($_SESSION['verify']);}?></td>
             </tr>
             <tr>
+                <th scope="row" align="center">College</th>
+                <td align="center"><?php if(isset($_SESSION['college'])){echo("{$_SESSION['college']}"); unset($_SESSION['college']);} ?></td>
+            </tr>
+            <tr>
                 <th scope="row" align="center">Events Interested</th>
                 <td colspan="2" align="center"><?php if(isset($_SESSION['events'])){echo("{$_SESSION['events']}"); unset($_SESSION['events']);} ?> </td>
             </tr>
@@ -115,7 +119,7 @@ session_start();
           <div class="col-md-6 contact-form">
             <h4> For website issues:</h4>
               <hr>
-              <p> Pradeep Gangwar </p>
+              <p> Team Web Operations </p>
               <p> pradeepgangwar39@gmail.com </p>
           </div>
           <div class="col-md-6 contact-form" style="text-align:right;">
@@ -123,6 +127,7 @@ session_start();
               <hr>
               <p> Ashutosh Chandra </p>
               <p> events@aparoksha.org </p>
+              <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-9919241909</p>
           </div>
         </div>
         <div class="row footer-credit">
