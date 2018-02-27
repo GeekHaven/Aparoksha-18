@@ -281,7 +281,7 @@ html.js,
 	}
 	.pages-nav__item {
 		width: 50%;
-		min-height: 30px;
+		min-height: 50px;
 	}
 	.link--page {
 		overflow: hidden;
