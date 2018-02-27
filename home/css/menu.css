@@ -98,7 +98,7 @@ html.js,
 	width: 30px;
 	height: 2px;
 	margin: 5px 0 0 -15px;
-	background: #fff;
+	background: #000;
 	-webkit-transition: -webkit-transform 0.3s;
 	transition: transform 0.3s;
 	-webkit-transform: scale3d(0, 1, 1);
@@ -281,7 +281,7 @@ html.js,
 	}
 	.pages-nav__item {
 		width: 50%;
-		min-height: 20px;
+		min-height: 30px;
 	}
 	.link--page {
 		overflow: hidden;
