@@ -1,5 +1,18 @@
 <?php 
   session_start();
+
+    if(isset($_SESSION['username'])){
+        define('MyConst', TRUE);
+    }
+
+    if(!defined('MyConst')){
+        echo '<script language="javascript">';
+        echo 'alert("Access Denied")';
+        echo '</script>';   
+        header("Refresh: 1; url=../index.php");
+        exit();
+    }
+    $user = $_SESSION['username'];
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +29,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" />
   <link href='../../css/dosis-font.css' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.ico">
 
@@ -43,15 +57,21 @@
       <div class="container">
 
         <div class="col-md-12 contact-form">
-            <h2 class="content-ct" style="font-weight:bold; margin-bottom:0em;"><span class="ti-email"></span> Registration Closed</h2>
-            <!-- <h5 class="content-ct" style="margin-bottom:2em;"><span class="ti-email"></span> Fields marked with <sup>*</sup> are compulsory </h5>
+            <h2 class="content-ct" style="margin-bottom:0em;"><span class="ti-email"></span>Welcome <b><?php echo $user ?></b></h2>
+            <div class="form-group">
+                <div class="col-sm-12" style="text-align:center; margin-top:0.5em; margin-bottom:1em;">
+                  <a href="logout.php"><button id="logout" name="logout" class="btn btn-red">Logout</button></a>
+                </div>
+            </div>
+            <h5 class="content-ct" style="margin-bottom:0.5em; margin-top:2em;"><span class="ti-email"></span> Congrats! on being selected for OnSite round. Please fill this form so that we can serve you best </h5>
+            <h5 class="content-ct" style="margin-bottom:2em;"><span class="ti-email"></span> Fields marked with <sup>*</sup> are compulsory </h5>
             
             <div class="alert alert-info col-sm-12" id="info" style="margin-bottom:1em; 
             <?php if(isset($_SESSION['confirm'])){echo("display:block;");} else {echo("display:none;");} ?> ">
               <?php if(isset($_SESSION['confirm'])){echo("{$_SESSION['confirm']}"); unset($_SESSION['confirm']);} ?>
             </div>
 
-            <form class="form-horizontal" data-toggle="validator" action="submit.php" role="form" method="post" name="f">
+            <form class="form-horizontal" data-toggle="validator" action="submit.php" role="form" method="post" enctype="multipart/form-data" name="f">
               <div class="form-group">
                 <label for="uname" class="col-sm-2 control-label">Name<sup>*</sup></label>
                 <div class="col-sm-9">
@@ -77,27 +97,42 @@
                   </div>
               </div>
               <div class="form-group">
-                  <label for="college" class="col-sm-2 control-label">College<sup>*</sup></label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="college" name="college" placeholder="College Name" value="<?php if (isset($_SESSION['college'])){echo $_SESSION['college']; unset($_SESSION['college']);} ?>" required>
-                    <div class="help-block with-errors pull-right"></div>
-                    <span class="form-control-feedback" aria-hidden="true"></span>
+                  <label for="collegeid" class="col-sm-2 control-label">College ID<sup>*</sup></label>
+                  <div class="col-sm-9 input-group image-preview">
+                    <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
+                    <span class="input-group-btn">
+                      <!-- image-preview-clear button -->
+                      <button type="button" class="btn btn-default image-preview-clear" style="display:none;">
+                        <span class="glyphicon glyphicon-remove"></span> Clear
+                      </button>
+                      <!-- image-preview-input -->
+                      <div class="btn btn-default image-preview-input">
+                        <span class="glyphicon glyphicon-folder-open"></span>
+                        <span class="image-preview-input-title">Browse</span>
+                        <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/> <!-- rename it -->
+                      </div>
+                    </span>
                   </div>
               </div>
-              <div class="form-group">
-                  <label for="collegeid" class="col-sm-2 control-label">College ID</label>
+              <div class="form-group" id="attending">
+                  <label for="attend" class="col-sm-2 control-label">Are you attending onsite round?<sup>*</sup></label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" id="collegeid" name="collegeid" placeholder="College ID card number" value="<?php if (isset($_SESSION['collegeid'])){echo $_SESSION['collegeid']; unset($_SESSION['collegeid']);} ?>">
-                    <div class="help-block with-errors pull-right"></div>
-                    <span class="form-control-feedback" aria-hidden="true"></span>
-                  </div>
-              </div>
-              <div class="form-group" id="topcoder">
-                  <label for="tid" class="col-sm-2 control-label">Topcoder ID<sup>*</sup></label>
-                  <div class="col-sm-9">
-                    <input type="text" class="form-control" id="tid" name="tid" placeholder="Topcoder handle" value="<?php if (isset($_SESSION['tid'])){echo $_SESSION['tid']; unset($_SESSION['tid']);} ?>" required>
-                    <div class="help-block with-errors pull-right" id="topcoder-error">
+                    <label class="radio-inline"><input type="radio" id="attend_yes" name="attend" value="yes" checked="checked">Yes</label>
+                    <label class="radio-inline"><input type="radio" id="attend_no" name="attend" value="no">No</label>                    <div class="help-block with-errors pull-right" id="topcoder-error">
                     </div>
+                    <span class="form-control-feedback" aria-hidden="true"></span>
+                  </div>
+              </div>
+              <div class="form-group" id="datetime">
+                  <label for="date" class="col-sm-2 control-label">Date and time of arrival at IIITA (MM/DD/YYYY)<sup>*</sup></label>
+                  <div class="col-sm-9">
+                    <div class='input-group date' id='datetimepicker1'>
+                      <input id="date" type='text' name="date" class="form-control"/>
+                      <span class="input-group-addon">
+                          <span class="glyphicon glyphicon-calendar"></span>
+                      </span>
+                    </div>
+                    <div class="help-block with-errors pull-right"></div>
                     <span class="form-control-feedback" aria-hidden="true"></span>
                   </div>
               </div>
@@ -109,7 +144,7 @@
                 </div>
               </div>
             </form>
-          </div> -->
+          </div>
       </div>
 
       <!-- <div class="container-fluid tickets" id="tickets">
@@ -172,6 +207,8 @@
       <script src="../../js/bootstrap.min.js"></script>
       <script src="js/script.js"></script>
       <script src="../../js/scrolling-nav.js"></script>
+      <script type="text/javascript" src="js/moment.min.js"></script>
+      <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js"></script>
       <script src="../../js/validator.js"></script>
      
     </body>
