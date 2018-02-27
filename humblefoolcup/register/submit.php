@@ -67,7 +67,8 @@ date_default_timezone_set('Asia/Kolkata');
 
         try {
             $target_dir = "/var/www/uploads/";
-            $target_file = $target_dir . $topcoder_handle;
+            $temp = explode(".", $_FILES["input-file-preview"]["name"]);
+            $target_file = $target_dir . $topcoder_handle.'.'. end($temp);
             $uploadOk = 1;
             $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
             // Check if image file is a actual image or fake image
@@ -107,9 +108,6 @@ date_default_timezone_set('Asia/Kolkata');
                     //echo "Sorry, there was an error uploading your file.";
                 }
             }
-            echo $target_dir;
-            echo $target_file;
-            exit;
 
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             

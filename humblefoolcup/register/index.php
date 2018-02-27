@@ -97,7 +97,7 @@
                   </div>
               </div>
               <div class="form-group">
-                  <label for="collegeid" class="col-sm-2 control-label">College ID<sup>*</sup></label>
+                  <label for="collegeid" class="col-sm-2 control-label">College ID (in .png, .jpg, .jpeg and less than 1 MB only)<sup>*</sup></label>
                   <div class="col-sm-9 input-group image-preview">
                     <input type="text" class="form-control image-preview-filename" disabled="disabled"> <!-- don't give a name === doesn't send on POST/GET -->
                     <span class="input-group-btn">
