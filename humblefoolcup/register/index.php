@@ -114,6 +114,18 @@
                     </span>
                   </div>
               </div>
+              <div class="form-group" id="shirt">
+                <label for="tshirt" class="col-sm-2 control-label">T-Shirt Size<sup>*</sup></label>
+                <div class="col-sm-9">
+                  <select class="form-control" id="tshirt" name-"tshirt">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                  </select>
+                </div>
+              </div> 
               <div class="form-group" id="attending">
                   <label for="attend" class="col-sm-2 control-label">Are you attending onsite round?<sup>*</sup></label>
                   <div class="col-sm-9">

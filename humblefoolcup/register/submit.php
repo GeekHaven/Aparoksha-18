@@ -45,6 +45,7 @@ date_default_timezone_set('Asia/Kolkata');
             $date = htmlentities($_POST['date']);
             $attend = htmlentities($_POST['attend']);
             $topcoder_handle = $_SESSION['username'];
+            $tshirt = htmlentities($_POST['tshirt']);
 
             if($attend === 'no'){
                 $date = "NA";
@@ -114,8 +115,8 @@ date_default_timezone_set('Asia/Kolkata');
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     
            
-            $sql = $conn->prepare("INSERT INTO $tbname (upload_date,topcoder_handle,name,email,mobile,attending,arrival_date_time,id_card) VALUES (:dated,:topcoder_handle,:name,:email,:mobile,:attending,:arrival_date_time,:id_card)");
-            $do = $sql->execute(['dated' => $date_clicked ,'topcoder_handle' => $topcoder_handle ,'name' => $name, 'email' => $email, 'mobile' => $mobile, 'attending' => $attend,'arrival_date_time' => $date, 'id_card' => $target_file]);
+            $sql = $conn->prepare("INSERT INTO $tbname (upload_date,topcoder_handle,name,email,mobile,attending,tshirt,arrival_date_time,id_card) VALUES (:dated,:topcoder_handle,:name,:email,:mobile,:attending,:tshirt,:arrival_date_time,:id_card)");
+            $do = $sql->execute(['dated' => $date_clicked ,'topcoder_handle' => $topcoder_handle ,'name' => $name, 'email' => $email, 'mobile' => $mobile, 'attending' => $attend, 'tshirt' => $tshirt, 'arrival_date_time' => $date, 'id_card' => $target_file]);
 
             if($do){
                 $_SESSION['confirm'] = "Your details have been recorded. We are looking forward to welcome you at IIITA. All the best :)"; 
