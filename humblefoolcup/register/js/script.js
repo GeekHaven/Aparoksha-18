@@ -28,7 +28,7 @@ $(document).ready(function()  {
     $(function () {
         $('#datetimepicker1').datetimepicker({
             minDate: new Date('2018-03-14'),
-            maxDate: new Date('2018-03-18'),
+            maxDate: new Date('2018-03-20'),
             format: 'LLL', 
         });
     });
