@@ -100,7 +100,10 @@ date_default_timezone_set('Asia/Kolkata');
             }
             // Check if $uploadOk is set to 0 by an error
             if ($uploadOk == 0) {
-                echo "Sorry, your file was not uploaded.";
+                $_SESSION['confirm'] = "Image was not uploaded successfully. Make sure it is in correct format and is less than 1MB. 
+                                        If problem persists contact person mentioned below."; 
+                    header("Refresh: 0; url=index.php#info");
+                    exit;
             // if everything is ok, try to upload file
             } else {
                 if (move_uploaded_file($_FILES["input-file-preview"]["tmp_name"], $target_file)) {
