@@ -47,17 +47,17 @@ require '../../register/vendor/autoload.php';
             $_SESSION['companyinfo'] = $companyinfo;
 
             $frontend = isset($_POST['frontend']) ? $_POST['frontend'] : 0;
-            if(isset($_POST['backend'])){$_SESSION['frontend'] = $frontend;}
+            if(isset($_POST['frontend'])){$_SESSION['frontend'] = $frontend;}
             $backend = isset($_POST['backend']) ? $_POST['backend'] : 0;
             if(isset($_POST['backend'])){$_SESSION['backend'] = $backend;}                
             $fullstack = isset($_POST['fullstack']) ? $_POST['fullstack'] : 0;
-            if(isset($_POST['backend'])){$_SESSION['fullstack'] = $fullstack;}
+            if(isset($_POST['fullstack'])){$_SESSION['fullstack'] = $fullstack;}
             $graphics = isset($_POST['graphics']) ? $_POST['graphics'] : 0;
-            if(isset($_POST['backend'])){$_SESSION['graphics'] = $graphics;} 
+            if(isset($_POST['graphics'])){$_SESSION['graphics'] = $graphics;} 
             $content = isset($_POST['content']) ? $_POST['content'] : 0;
-            if(isset($_POST['backend'])){$_SESSION['content'] = $content;}            
+            if(isset($_POST['content'])){$_SESSION['content'] = $content;}            
             $business = isset($_POST['business']) ? $_POST['business'] : 0;
-            if(isset($_POST['backend'])){$_SESSION['business'] = $business;}
+            if(isset($_POST['business'])){$_SESSION['business'] = $business;}
             $marketing = isset($_POST['marketing']) ? $_POST['marketing'] : 0;  
             if(isset($_POST['marketing'])){$_SESSION['marketing'] = $marketing;}
             $datascience = isset($_POST['datascience']) ? $_POST['datascience'] : 0;  

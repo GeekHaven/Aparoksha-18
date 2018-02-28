@@ -34,7 +34,7 @@ require '../../register/vendor/autoload.php';
 
     else{
         //ToDo Client Side handling of empty data
-        if(isset($_POST['uemail']) && isset($_POST['uname']) && isset($_POST['mobile']) && isset($_POST['course']) && isset($_POST['semester']) && isset($_POST['collegename'])){
+        if(isset($_POST['uemail']) && isset($_POST['uname']) && isset($_POST['mobile']) && isset($_POST['course']) && isset($_POST['semester']) && isset($_POST['collegename']) && isset($_POST['resumelink'])){
             $name = htmlentities($_POST['uname']);
             $_SESSION['name'] = $name;
             $email = htmlentities($_POST['uemail']);
@@ -49,18 +49,28 @@ require '../../register/vendor/autoload.php';
             $_SESSION['collegename'] = $collegename;
             $yourinfo = htmlentities($_POST['yourinfo']);
             $_SESSION['yourinfo'] = $yourinfo;
+            $resumelink = htmlentities($_POST['resumelink']);
+            $_SESSION['resumelink'] = $resumelink;
 
-            if(isset($_POST['frontend'])){$_SESSION['frontend'] = true;}
-            if(isset($_POST['backend'])){$_SESSION['backend'] = true;}  
-            if(isset($_POST['fullstack'])){$_SESSION['fullstack'] = true;}
-            if(isset($_POST['graphics'])){$_SESSION['graphics'] = true;}
-            if(isset($_POST['content'])){$_SESSION['content'] = true;} 
-            if(isset($_POST['business'])){$_SESSION['business'] = true;}  
-            if(isset($_POST['marketing'])){$_SESSION['marketing'] = true;}
-            if(isset($_POST['datascience'])){$_SESSION['datascience'] = true;}
+            $frontend = isset($_POST['frontend']) ? 1 : 0;
+            if(isset($_POST['frontend'])){$_SESSION['frontend'] = $frontend;}
+            $backend = isset($_POST['backend']) ? 1 : 0;
+            if(isset($_POST['backend'])){$_SESSION['backend'] = $backend;}                
+            $fullstack = isset($_POST['fullstack']) ? 1 : 0;
+            if(isset($_POST['fullstack'])){$_SESSION['fullstack'] = $fullstack;}
+            $graphics = isset($_POST['graphics']) ? 1 : 0;
+            if(isset($_POST['graphics'])){$_SESSION['graphics'] = $graphics;} 
+            $content = isset($_POST['content']) ? 1 : 0;
+            if(isset($_POST['content'])){$_SESSION['content'] = $content;}            
+            $business = isset($_POST['business']) ? 1 : 0;
+            if(isset($_POST['business'])){$_SESSION['business'] = $business;}
+            $marketing = isset($_POST['marketing']) ? 1 : 0;  
+            if(isset($_POST['marketing'])){$_SESSION['marketing'] = $marketing;}
+            $datascience = isset($_POST['datascience']) ? 1 : 0;  
+            if(isset($_POST['datascience'])){$_SESSION['datascience'] = $datascience;}
 
 
-            if(!isset($_POST['profiles']) || sizeof($_POST['profiles'])<1 ) {    
+            if($frontend==0 && $backend==0 && $fullstack==0 && $graphics==0 && $content==0 && $business==0 && $marketing==0 && $datascience==0) {    
                 $_SESSION['confirm'] = "Please select at least one interested profile";
                 header("Refresh: 0; url=index.php#info");
                 exit;
@@ -81,18 +91,17 @@ require '../../register/vendor/autoload.php';
         $dbname = $dbn;
         $tbname = $tbn;
 
-        try {
+        // try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        
+            
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $date_clicked = date('Y-m-d H:i:s');
     
             $sql = $conn->prepare("INSERT INTO $tbname (dated,name,email,mobile,course,semester,collegename,yourinfo,frontend,backend,
-                    fullstack,graphic,content,business,marketing,datascience) VALUES (:dated,:name,:email,:mobile,:course,:semester,:collegename,
-                    :yourinfo,:frontend,:backend,:fullstack,:graphic,:content,:business,:marketing,:datascience)");
-            $do = $sql->execute(['dated' => $date_clicked, 'name' => $name, 'email' => $email,'mobile' => $mobile,'course' => $course, 'semester' => $semester,'collegename' => $collegename,
-                 'yourinfo' => $yourinfo, 'frontend' => isset($_POST['frontend'], 'backend' => isset($_POST['backend'], 'fullstack' => isset($_POST['fullstack'],
-                 'graphic' => isset($_POST['graphic'], 'content' => isset($_POST['content'], 'business' => isset($_POST['business'], 'marketing' => isset($_POST['marketing'], 'datascience' => isset($_POST['datascience']]);
+                    fullstack,graphics,content,business,marketing,datascience,resumelink) VALUES (:dated,:name,:email,:mobile,:course,:semester,:collegename,
+                    :yourinfo,:frontend,:backend,:fullstack,:graphics,:content,:business,:marketing,:datascience,:resumelink)");
+
+            $do = $sql->execute(['dated' => $date_clicked, 'name' => $name, 'email' => $email,'mobile' => $mobile,'course' => $course, 'semester' => $semester,'collegename' => $collegename, 'yourinfo' => $yourinfo, 'frontend' => $frontend, 'backend' => $backend, 'fullstack' => $fullstack, 'graphics' => $graphics, 'content' => $content, 'business' => $business, 'marketing' => $marketing, 'datascience' => $datascience, 'resumelink' => $resumelink]);
 
             if($do){
                 $_SESSION['confirm'] = "You have been registered successfully."; 
@@ -110,6 +119,7 @@ require '../../register/vendor/autoload.php';
                 unset($_SESSION['graphics']);
                 unset($_SESSION['marketing']);
                 unset($_SESSION['datascience']);
+                unset($_SESSION['resumelink']);
                 header("Refresh: 0; url=index.php#info");
                 exit;
             }
@@ -121,14 +131,17 @@ require '../../register/vendor/autoload.php';
                 exit;
             }
 
-        }
+        // }
         
-        catch(PDOException $e){
-            $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
-            try again after some time. If problem persists please feel free to contact any person mentioned below ";
-            header("Refresh: 0; url=index.php#info");
-            exit;
-        }
+        // catch(PDOException $e){
+        //     if($conn) {
+        //         print("Hey");
+        //     }
+        //     $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
+        //     try again after some time. If problem persists please feel free to contact any person mentioned below ";
+        //     // header("Refresh: 0; url=index.php#info");
+        //     exit;
+        // }
         $clicked = false;
         $conn = null;
     }
