@@ -81,11 +81,11 @@
 		<main>
 			<nav class="pages-nav">
 				<div class="pages-nav__item"><a class="link link--page" href="#page-home" style="color: black;font-size: 20px;">HOME</a></div>
-				<div class="pages-nav__item"><a class="link link--page" href="#page-software" style="color: black;font-size: 20px;">EVENTS</a></div>
-				<div class="pages-nav__item"><a class="link link--page" href="#page-custom" style="color: black;font-size: 20px;">SPONSORS</a></div>
-				<div class="pages-nav__item"><a class="link link--page" href="#page-training" style="color: black;font-size: 20px;">TEAM</a></div>
-				<div class="pages-nav__item"><a class="link link--page " href="#page-buy" style="color: black;font-size: 20px;">GALLERY</a></div>
-				<div class="pages-nav__item"><a class="link link--page " href="#page-blog" style="color: black;font-size: 20px;">DEVELOPERS</a></div>
+				<div class="pages-nav__item"><a class="link link--page" href="#page-software" style="color: black;font-size: 20px;" id="eventPage">EVENTS</a></div>
+				<div class="pages-nav__item"><a class="link link--page" href="#page-custom" style="color: black;font-size: 20px;" id="sponsorPage">SPONSORS</a></div>
+				<div class="pages-nav__item"><a class="link link--page" href="#page-training" style="color: black;font-size: 20px;" id="teamPage">TEAM</a></div>
+				<div class="pages-nav__item"><a class="link link--page " href="#page-buy" style="color: black;font-size: 20px;" id="galleryPage">GALLERY</a></div>
+				<div class="pages-nav__item"><a class="link link--page " href="#page-blog" style="color: black;font-size: 20px;" id="devPage">DEVELOPERS</a></div>
 				<div class="pages-nav__item"><a class="link link--page " href="#" style="color: black;font-size: 20px;">WORKSHOPS</a></div>
 				<div class="pages-nav__item"><a class="link link--page " href="#" style="color: black;font-size: 20px;">TALKS</a></div>
 				<div class="pages-nav__item"><a class="link link--page " href="#" style="color: black;font-size: 20px;">CONTACT</a></div>
@@ -142,7 +142,7 @@
 								<h3 class="content__title" style="color: white;">Events</h3>
 								<!-- <p class="content__author">Nikimo Westlane</p> -->
 								<p class="content__desc">The neverending quest, once and forever.</p>
-								<a href="../events1/events.html" class="content__link">Discover</a>
+								<!-- <a href="../events1/events.html" class="content__link">Discover</a> -->
 							</div>
 						</div>
 					</div>
@@ -162,7 +162,7 @@
 								-->					<h3 class="content__title" style="color: white;">Sponsors</h3>
 								<!-- 	<p class="content__author">Gregory Mourisha</p> -->
 								<p class="content__desc">It takes both sides to build a bridge ;)</p>
-								<a href="../sponsors" class="content__link">Discover</a>
+								<<!-- a href="../sponsors" class="content__link">Discover</a> -->
 							</div>
 						</div>
 					</div>
@@ -182,7 +182,7 @@
 								<h3 class="content__title" style="color: white;">Team</h3>
 								<!-- <p class="content__author">Walter Mastricht</p> -->
 								<p class="content__desc">Alone we can do so little. Together we can do so much.</p>
-								<a href="../team/" class="content__link">Discover</a>
+								<!-- <a href="../team/" class="content__link">Discover</a> -->
 							</div>
 						</div>
 					</div>	
@@ -202,7 +202,7 @@
 								<h3 class="content__title" style="color: white;">Gallery</h3>
 								<!-- <p class="content__author">Frank Cherry</p> -->
 								<p class="content__desc">Let's revisit past and relive those moments.</p>
-								<a href="../gallery/" class="content__link">Discover</a>
+								<!-- <a href="../gallery/" class="content__link">Discover</a> -->
 							</div>
 						</div>
 					</div>	
@@ -223,7 +223,7 @@
 								<i class="fas fa-code content__img" style="color: black;opacity: 0.5;width: 360px; height: 360px;"></i>
 								<h3 class="content__title" style="color: white;">Developers</h3>
 								<p class="content__desc">Only work nothing more.</p>
-								<a href="#" class="content__link">Discover</a>
+								<!-- <a href="#" class="content__link">Discover</a> -->
 							</div>
 						</section>
 					</div>	
@@ -247,6 +247,54 @@
 					$("#know_more, #theme").fadeIn(6500);
 
 				}, 1000);
+			});
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#eventPage").click(function()  {
+					setTimeout(function() {
+						$("#page-software").fadeOut(500);
+					}, 1000);
+					setTimeout(function() {
+						window.location = "../events1/events.html";
+					}, 1500).fadeOut(1500);
+				});
+
+				$("#sponsorPage").click(function()  {
+					setTimeout(function() {
+						$("#page-custom").fadeOut(500);
+					}, 1000);
+					setTimeout(function() {
+						window.location = "../sponsors";
+					}, 1500).fadeOut(1500);
+				});
+
+				$("#devPage").click(function()  {
+					setTimeout(function() {
+						$("#page-blog").fadeOut(500);
+					}, 1000);
+					setTimeout(function() {
+						window.location = "#";
+					}, 1500).fadeOut(1500);
+				});
+
+				$("#galleryPage").click(function()  {
+					setTimeout(function() {
+						$("#page-buy").fadeOut(500);
+					}, 1000);
+					setTimeout(function() {
+						window.location = "../gallery/";
+					}, 1500).fadeOut(1500);
+				});
+
+				$("#teamPage").click(function()  {
+					setTimeout(function() {
+						$("#page-training").fadeOut(500);
+					}, 1000);
+					setTimeout(function() {
+						window.location = "../team/";
+					}, 1500).fadeOut(1500);
+				});
 			});
 		</script>
 	</body>
