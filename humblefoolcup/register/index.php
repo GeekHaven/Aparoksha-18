@@ -136,7 +136,7 @@
                   </div>
               </div>
               <div class="form-group" id="datetime">
-                  <label for="date" class="col-sm-2 control-label">Date and time of arrival at IIITA (MM/DD/YYYY)<sup>*</sup></label>
+                  <label for="date" class="col-sm-2 control-label">Date and time of arrival at IIITA<sup>*</sup></label>
                   <div class="col-sm-9">
                     <div class='input-group date' id='datetimepicker1'>
                       <input id="date" type='text' name="date" class="form-control"/>
