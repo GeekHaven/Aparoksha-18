@@ -117,7 +117,7 @@
               <div class="form-group" id="shirt">
                 <label for="tshirt" class="col-sm-2 control-label">T-Shirt Size<sup>*</sup></label>
                 <div class="col-sm-9">
-                  <select class="form-control" id="tshirt" name-"tshirt">
+                  <select class="form-control" id="tshirt" name="tshirt">
                     <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
