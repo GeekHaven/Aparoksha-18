@@ -1,1 +1,0 @@
-# aparoksha17

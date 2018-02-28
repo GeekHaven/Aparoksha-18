@@ -1,3 +1,0 @@
-1) main.js for workshop.html renamed to workshopScripts.js and moved to js folder.
-2) Styles from one.css copied to style.css and removed link from index.html.
-3) Few small changes made to workshop styles in style.css
