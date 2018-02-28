@@ -89,7 +89,7 @@ date_default_timezone_set('Asia/Kolkata');
                 $uploadOk = 0;
             }
             // Check file size
-            if ($_FILES["input-file-preview"]["size"] > 500000) {
+            if ($_FILES["input-file-preview"]["size"] >= 1048576) {
                 //echo "Sorry, your file is too large.";
                 $uploadOk = 0;
             }
