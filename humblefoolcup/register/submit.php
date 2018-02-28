@@ -124,6 +124,7 @@ date_default_timezone_set('Asia/Kolkata');
             if($do){
                 $_SESSION['confirm'] = "Your details have been recorded. We are looking forward to welcome you at IIITA. All the best :)"; 
                     header("Refresh: 0; url=index.php#info");
+                $_SESSION['done'] = true;
                     exit;
             }
                   

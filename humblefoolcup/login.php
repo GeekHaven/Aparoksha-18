@@ -16,6 +16,8 @@ date_default_timezone_set('Asia/Kolkata');
     $dbpass = getenv('DB_PASS');
     $dbn = getenv('DB_NAME');
     $tbn = getenv('TB_NAME');
+    $dbn1 = getenv('DB_NAME1');
+    $tbn1 = getenv('TB_NAME1');
     $dev = getenv('DEVELOPMENT');
 
     $clicked = false;
@@ -51,6 +53,9 @@ date_default_timezone_set('Asia/Kolkata');
         $dbname = $dbn;
         $tbname = $tbn;
 
+        $dbname1 = $dbn1;
+        $tbname1 = $tbn1;
+
         try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             
@@ -76,6 +81,20 @@ date_default_timezone_set('Asia/Kolkata');
 
                 if($pass === $upass)
                 {
+                    $conn = new PDO("mysql:host=$servername;dbname=$dbname1", $username, $password);
+            
+                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            
+                    $stmt = $conn->prepare("SELECT * FROM $tbname1 WHERE topcoder_handle = :uname");
+                    $stmt->execute(['uname' => $uname]);
+                    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+                    if($user == Null){
+                        $_SESSION['done'] = false;
+                    }
+                    else {
+                        $_SESSION['done'] = true;
+                    }
                     $_SESSION['username'] = $uname;
                     header("Refresh: 0; url=register/index.php");
                     exit;

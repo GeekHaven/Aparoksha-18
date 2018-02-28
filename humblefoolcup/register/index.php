@@ -13,6 +13,7 @@
         exit();
     }
     $user = $_SESSION['username'];
+    $done = $_SESSION['done'];
 ?>
 
 <!DOCTYPE html>
@@ -71,7 +72,13 @@
               <?php if(isset($_SESSION['confirm'])){echo("{$_SESSION['confirm']}"); unset($_SESSION['confirm']);} ?>
             </div>
 
-            <form class="form-horizontal" data-toggle="validator" action="submit.php" role="form" method="post" enctype="multipart/form-data" name="f">
+            <div class="text-center" style="text-align:center; 
+              <?php if($done){echo("display:block;");} else {echo("display:none;");} ?> ">
+              <h2><?php if(done){echo("Your response has been recorded. If you wish to change contact person mentioned below.");} ?>
+            </div>
+
+            <form class="form-horizontal" data-toggle="validator" action="submit.php" role="form" method="post" enctype="multipart/form-data" name="f" style=" 
+              <?php if(!$done){echo("display:block;");} else {echo("display:none;");} ?> ">
               <div class="form-group">
                 <label for="uname" class="col-sm-2 control-label">Name<sup>*</sup></label>
                 <div class="col-sm-9">
