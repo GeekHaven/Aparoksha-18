@@ -33,6 +33,7 @@
 	<link rel="stylesheet" type="text/css" href="css/pater.css" />
 	<link rel="stylesheet" type="text/css" href="css/component.css" />	
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
 
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/modernizr.custom.js"></script>
@@ -52,7 +53,7 @@
 		}
 		#reg {
 			position: absolute;
-			width: 220px;
+			width: 225px;
 			height: 65px;
 			font-size: 20px;
 			font-weight: 700;
@@ -61,7 +62,7 @@
 			text-align: center;
 			border: 1px solid black;
 			padding-top: 0.9em;
-			margin-left: 20em;
+			margin-left: 12em;
 			margin-top: 1.5em;
 			font-family: 'Open Sans', sans-serif;
 			border: 2px solid #F0A21A;
@@ -70,6 +71,31 @@
 			transition-timing-function: linear;
 		}
 		#reg:hover {
+			border: 2px solid #F0A21A;
+			background-color: #F0A21A;
+			color: white;
+			font-weight: 700;
+		}
+		#reg-stu {
+			position: absolute;
+			width: 230px;
+			height: 65px;
+			font-size: 20px;
+			font-weight: 700;
+			color: black;
+			background-color: transparent;
+			text-align: center;
+			border: 1px solid black;
+			padding-top: 0.9em;
+			margin-left: 28em;
+			margin-top: 1.5em;
+			font-family: 'Open Sans', sans-serif;
+			border: 2px solid #F0A21A;
+			transition-property: background-color border;
+			transition-duration: 0.25s;
+			transition-timing-function: linear;
+		}
+		#reg-stu:hover {
 			border: 2px solid #F0A21A;
 			background-color: #F0A21A;
 			color: white;
@@ -120,7 +146,9 @@
 				<div id="rev-1" class="content__title__inner" style="font-size: 100px;color: #000;">Startup Intern Fair</div><br/>
 				<div id="rev-2" class="content__title__inner content__title__inner--offset-1" style="font-size: 70px;color:#E6562A;left: 13.6vw;">March 16-18, <a href="college.html" id="college">IIIT Allahabad</a></div>
 				<div id="regButton">
-					<a href="register" class="btnn btn-4 btn-4c" id="reg">REGISTER</a>
+						<a href="register" class="btn" id="reg">Startup Registration</a>
+						<a href="register-student" class="btn" id="reg-stu">Student Registartion</a>
+					</div>
 				</div>
 			</h2>
 		</section>

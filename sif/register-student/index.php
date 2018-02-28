@@ -67,7 +67,7 @@ unset($_SESSION['profiles']);
         </div>
 
         <div class="col-md-12 contact-form">
-            <h2 class="content-ct" style="font-weight:bold;"><span class="ti-email"></span> Register your startup here</h2>
+            <h2 class="content-ct" style="font-weight:bold;"><span class="ti-email"></span> Register yourself here</h2>
             <h5 class="content-ct" style="font-weight:bold; margin-bottom:3em;"><span class="ti-email"></span>Fields marked with <sup>*</sup> are mandatory</h5>
             
             <div class="alert alert-info col-sm-12" id="info" style="margin-bottom:1em; 
@@ -101,21 +101,37 @@ unset($_SESSION['profiles']);
                   </div>
               </div>
               <div class="form-group">
-                  <label for="company" class="col-sm-2 control-label">Company Name<sup>*</sup></label>
+                  <label for="course" class="col-sm-2 control-label">Course Name<sup>*</sup></label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" id="company" name="companyname" placeholder="" value="<?php if (isset($_SESSION['companyname'])){echo $_SESSION['companyname']; unset($_SESSION['companyname']);} ?>" required>
+                    <input type="text" class="form-control" id="course" name="course" placeholder="e.g. ECE (B.Tech)" value="<?php if (isset($_SESSION['course'])){echo $_SESSION['course']; unset($_SESSION['course']);} ?>" required>
                     <div class="help-block with-errors pull-right"></div>
                     <span class="form-control-feedback" aria-hidden="true"></span>
                   </div>
               </div>
               <div class="form-group">
-                  <label for="info" class="col-sm-2 control-label">Company Info</label>
+                  <label for="semester" class="col-sm-2 control-label">Semester<sup>*</sup></label>
                   <div class="col-sm-9">
-                    <textarea class="form-control" rows="5" id="info" name="companyinfo" placeholder="Provide Info about your startup (optional)"><?php if (isset($_SESSION['companyinfo'])){echo $_SESSION['companyinfo']; unset($_SESSION['companyinfo']);} else{echo '';}?></textarea>
+                    <input type="text" pattern="[0-8]{1}" class="form-control" id="semester" data-error="Please enter a valid semester number" name="semester" placeholder="0-8" value="<?php if (isset($_SESSION['semester'])){echo $_SESSION['semester']; unset($_SESSION['semester']);} ?>" required>
+                    <div class="help-block with-errors pull-right"></div>
+                    <span class="form-control-feedback" aria-hidden="true"></span>
                   </div>
               </div>
               <div class="form-group">
-                  <label for="mobile" class="col-sm-2 control-label">Profiles Hiring<sup>*</sup></label>
+                  <label for="collegename" class="col-sm-2 control-label">College Name<sup>*</sup></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="collegename" name="collegename" placeholder="e.g. IIITA" value="<?php if (isset($_SESSION['collegename'])){echo $_SESSION['collegename']; unset($_SESSION['collegename']);} ?>" required>
+                    <div class="help-block with-errors pull-right"></div>
+                    <span class="form-control-feedback" aria-hidden="true"></span>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="info" class="col-sm-2 control-label">Your Info</label>
+                  <div class="col-sm-9">
+                    <textarea class="form-control" rows="5" id="info" name="yourinfo" placeholder="Provide Info about yourself (optional)"><?php if (isset($_SESSION['yourinfo'])){echo $_SESSION['yourinfo']; unset($_SESSION['yourinfo']);} else{echo '';}?></textarea>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label for="mobile" class="col-sm-2 control-label">Profiles Interested<sup>*</sup></label>
                   <div class="col-sm-10">
                     <div class="checkbox col-sm-3">
                       <label>
@@ -159,113 +175,15 @@ unset($_SESSION['profiles']);
                     </div>
                   </div>
               </div>
-              <br>
-              <h6 class="content-ct" style="font-weight:bold; margin-bottom:2em;"><span class="ti-email"></span>No of profiles required</h6>
-              <div class="row">
-                <div class="form-group col-sm-10 col-md-6" id="frontendfield">
-                    <label for="frontend" class="col-sm-2 col-md-6 control-label">Frontend Developer</label>
-                    <div class="col-sm-3 col-md-5">
-                      <input type="number" class="form-control" id="frontend" name="frontend" placeholder="0" max="15" value="<?php if (isset($_SESSION['frontend'])){echo $_SESSION['frontend']; unset($_SESSION['frontend']);} else {echo 0;}?>" disabled="true">
-                      <div class="help-block with-errors pull-right" id="frontenderror"></div>
-                      <span class="form-control-feedback" aria-hidden="true" id="frontendspan"></span>
-                    </div>
-                </div>
-                <div class="form-group col-sm-10 col-md-6" id="backendfield">
-                    <label for="backend" class="col-sm-2 col-md-6 control-label">Backend Developer</label>
-                    <div class="col-sm-3 col-md-5">
-                      <input type="number" class="form-control" id="backend" name="backend" placeholder="0" max="15" value="<?php if (isset($_SESSION['backend'])){echo $_SESSION['backend']; unset($_SESSION['backend']);} else {echo 0;}?>" disabled="true">
-                      <div class="help-block with-errors pull-right"></div>
-                      <span class="form-control-feedback" aria-hidden="true"></span>
-                    </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="form-group col-sm-10 col-md-6" id="fullstackfield">
-                    <label for="fullstack" class="col-sm-2 col-md-6 control-label">Full Stack Developer</label>
-                    <div class="col-sm-3 col-md-5">
-                      <input type="number" class="form-control" id="fullstack" name="fullstack" placeholder="0" max="15" value="<?php if (isset($_SESSION['fullstack'])){echo $_SESSION['fullstack']; unset($_SESSION['fullstack']);} else {echo 0;}?>" disabled="true">
-                      <div class="help-block with-errors pull-right"></div>
-                      <span class="form-control-feedback" aria-hidden="true"></span>
-                    </div>
-                </div>
-                <div class="form-group col-sm-10 col-md-6" id="graphicsfield">
-                    <label for="graphics" class="col-sm-2 col-md-6 control-label">Graphic Designer</label>
-                    <div class="col-sm-3 col-md-5">
-                      <input type="number" class="form-control" id="graphics" name="graphics" placeholder="0" max="15" value="<?php if (isset($_SESSION['graphics'])){echo $_SESSION['graphics']; unset($_SESSION['graphics']);} else {echo 0;}?>" disabled="true">
-                      <div class="help-block with-errors pull-right"></div>
-                      <span class="form-control-feedback" aria-hidden="true"></span>
-                    </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="form-group col-sm-10 col-md-6" id="contentfield">
-                    <label for="content" class="col-sm-2 col-md-6 control-label">Content Writing</label>
-                    <div class="col-sm-3 col-md-5">
-                      <input type="number" class="form-control" id="content" name="content" placeholder="0" max="15" value="<?php if (isset($_SESSION['content'])){echo $_SESSION['content']; unset($_SESSION['content']);} else {echo 0;}?>" disabled="true">
-                      <div class="help-block with-errors pull-right"></div>
-                      <span class="form-control-feedback" aria-hidden="true"></span>
-                    </div>
-                </div>
-                <div class="form-group col-sm-10 col-md-6" id="businessfield">
-                    <label for="business" class="col-sm-2 col-md-6 control-label">Business Development</label>
-                    <div class="col-sm-3 col-md-5">
-                      <input type="number" class="form-control" id="business" name="business" placeholder="0" max="15" value="<?php if (isset($_SESSION['business'])){echo $_SESSION['business']; unset($_SESSION['business']);} else {echo 0;}?>" disabled="true">
-                      <div class="help-block with-errors pull-right"></div>
-                      <span class="form-control-feedback" aria-hidden="true"></span>
-                    </div>
-                </div>
-                <div class="form-group col-sm-10 col-md-6" id="marketingfield">
-                    <label for="marketing" class="col-sm-2 col-md-6 control-label">Marketing</label>
-                    <div class="col-sm-3 col-md-5">
-                      <input type="number" class="form-control" id="marketing" name="marketing" placeholder="0" max="15" value="<?php if (isset($_SESSION['marketing'])){echo $_SESSION['marketing']; unset($_SESSION['marketing']);} else {echo 0;}?>" disabled="true">
-                      <div class="help-block with-errors pull-right"></div>
-                      <span class="form-control-feedback" aria-hidden="true"></span>
-                    </div>
-                </div>
-                <div class="form-group col-sm-10 col-md-6" id="datasciencefield">
-                    <label for="datascience" class="col-sm-2 col-md-6 control-label">Data Science</label>
-                    <div class="col-sm-3 col-md-5">
-                      <input type="number" class="form-control" id="datascience" name="datascience" placeholder="0" max="15" value="<?php if (isset($_SESSION['datascience'])){echo $_SESSION['datascience']; unset($_SESSION['datascience']);} else {echo 0;}?>" disabled="true">
-                      <div class="help-block with-errors pull-right"></div>
-                      <span class="form-control-feedback" aria-hidden="true"></span>
-                    </div>
-                </div>
-              </div>
               <div class="form-group">
-                <label for="stipend" class="col-sm-2 control-label">Stipend</label>
-                <div class="col-sm-9">
-                  <input type="number" class="form-control" id="stipend" name="stipend" placeholder="Stipend in Rs" value="<?php if (isset($_SESSION['stipend'])){echo $_SESSION['stipend']; unset($_SESSION['stipend']);} ?>" required>
-                  <div class="help-block with-errors pull-right"></div>
-                  <span class="form-control-feedback" aria-hidden="true"></span>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="restrict" class="col-sm-2 control-label">Restriction on branch</label>
-                <div class="col-sm-9">
-                  <input type="text" class="form-control" id="restrict" name="restrict" placeholder="CSE, EE" value="<?php if (isset($_SESSION['restrict'])){echo $_SESSION['restrict']; unset($_SESSION['restrict']);} ?>">
-                  <div class="help-block with-errors pull-right"></div>
-                  <span class="form-control-feedback" aria-hidden="true"></span>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="year" class="col-sm-2 control-label">Preferred graduation year</label>
-                <div class="col-sm-9">
-                  <input type="year" class="form-control" id="year" name="year" placeholder="2017, 2016" value="<?php if (isset($_SESSION['year'])){echo $_SESSION['year']; unset($_SESSION['year']);} ?>">
-                  <div class="help-block with-errors pull-right"></div>
-                  <span class="form-control-feedback" aria-hidden="true"></span>
-                </div>
-              </div>
-              <div class="form-group" style="text-align: center; padding-top: 2em;">
-                  <div class="col-sm-12 col-md-12 col-lg-12">
-                    <div class="checkbox col-sm-12 col-md-12 com-lg-12">
-                      <label>
-                        <input type="checkbox" name="terms" value="terms" id="terms">I accept all terms and conditions related to my registration to Startup and intern fair.
-                      </label>
-                    </div>
+                  <label for="company" class="col-sm-2 control-label">Resume Link<sup>*</sup></label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="resume" name="resumelink" value="<?php if (isset($_SESSION['resumelink'])){echo $_SESSION['resumelink']; unset($_SESSION['resumelink']);} ?>" placeholder="Upload your resume on drive and share drive link" required>
+                    <div class="help-block with-errors pull-right"></div>
+                    <span class="form-control-feedback" aria-hidden="true"></span>
                   </div>
               </div>
-
-                
+              <br> 
               <div class="form-group">
                 <div class="col-sm-12" style="text-align:center; margin-top:1em;">
                   <button type="submit" id="submit" name="sub" class="btn btn-yellow">Submit<i class="fa fa-paper-plane" aria-hidden="true" style="padding-left:0.6em;"></i></button>
