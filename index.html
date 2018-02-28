@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Aparoksha'18</title>
 
-    <title>Aparoksha'18</title>
-
-    <meta name="description" content="Website of Aparoksha'18, The Annual technical fest of IIIT Allahabad">
+	<meta name="description" content="Website of Aparoksha'18, The Annual technical fest of IIIT Allahabad">
     <meta name="keywords" content="fest, technical, IIIT, Allahabad">
     <meta name="author" content="Team Web Operations| Aparoksha'18">
     <meta name="robots" content="index, follow">
@@ -26,156 +24,295 @@
     <meta name="twitter:image:width" content="312">
     <meta name="twitter:image:height" content="141">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Catamaran:300" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+	<link rel="shortcut icon" href="../img/apk-logo-black.svg">
+	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/normalize11.css" />
+	<link rel="stylesheet" type="text/css" href="css/demo11.css" />
+	<link rel="stylesheet" type="text/css" href="css/menu.css" />
+	<script src="js/modernizr-custom.js"></script>
+	<script>
+		document.documentElement.className = 'js';
+		var supportsCssVars = function() {
+			var s = document.createElement('style'),
+			support;
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+			s.innerHTML = "root: { --tmp-var: bold; }";
+			document.head.appendChild(s);
+			support = !!(window.CSS && window.CSS.supports && window.CSS.supports('font-weight', 'var(--tmp-var)'));
+			s.parentNode.removeChild(s);
+			return support;
+		}
+		if (!supportsCssVars()) alert('Please view this demo in a modern browser that supports CSS Variables.')
+	</script>
+<style type="text/css">
+.content__link {
+	border: 2px solid black;
+	background-color: black;
+	border-radius: 5px;
+}
+@media only screen and (max-width: 500px) {
+	.content__title {
+		font-size: 5em;
+	}
+	.content__image {
+		width: 100px;
+		height: 100px;
+	}
+}
+@media only screen and (max-width: 770px) {
+	.content__title {
+		font-size: 5em;
+	}
+	.content__image {
+		width: 100px;
+		height: 100px;
+	}
+}
+@media only screen and (max-width: 1250px) {
+	.content__title {
+		font-size: 6em;
+	}
+	.content__image {
+		width: 100px;
+		height: 100px;
+	}
+}
+#know_more {
+	cursor: default;
+}
+</style>
 </head>
-<body>
+<body class="demo-2 loading" style="background: url(img/bg.png);">
+	<svg class="hidden">
 
-    <div class="containers" style="z-index:-1;">
-        <svg class="background__lights img-responsive" id="lines" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg"
-            x="0px" y="0px" viewbox="0 0 1920 1080" xml:space="preserve" preserveAspectRatio="none">
-            <g class="lines">
-                <rect class="line" x="1253.6" width="4.5" height="1080"></rect>
-                <rect class="line" x="873.3" width="1.8" height="1080"></rect>
-                <rect class="line" x="1100" width="1.8" height="1080"></rect>
-                <rect class="line" x="1547.1" width="4.5" height="1080"></rect>
-                <rect class="line" x="615" width="4.5" height="1080"></rect>
-                <rect class="line" x="684.6" width="1.8" height="1080"></rect>
-                <rect class="line" x="1369.4" width="1.8" height="1080"></rect>
-                <rect class="line" x="1310.2" width="0.9" height="1080"></rect>
-                <rect class="line" x="1233.4" width="0.9" height="1080"></rect>
-                <rect class="line" x="124.2" width="0.9" height="1080"></rect>
-                <rect class="line" x="1818.4" width="4.5" height="1080"></rect>
-                <rect class="line" x="70.3" width="4.5" height="1080"></rect>
-                <rect class="line" x="1618.6" width="1.8" height="1080"></rect>
-                <rect class="line" x="455.9" width="1.8" height="1080"></rect>
-                <rect class="line" x="328.7" width="1.8" height="1080"></rect>
-                <rect class="line" x="300.8" width="4.6" height="1080"></rect>
-                <rect class="line" x="1666.4" width="0.9" height="1080"></rect>
-            </g>
-            <g class="lights">
-                <path class="light1 light" d="M619.5,298.4H615v19.5h4.5V298.4z M619.5,674.8H615v9.8h4.5V674.8z M619.5,135.1H615v5.6h4.5V135.1z         M619.5,55.5H615v68.7h4.5V55.5z"></path>
-                <path class="light2 light" d="M1258.2,531.9h-4.5v8.1h4.5V531.9z M1258.2,497.9h-4.5v17.9h4.5V497.9z M1258.2,0h-4.5v25.3h4.5V0z         M1258.2,252.2h-4.5v42.4h4.5V252.2z"></path>
-                <path class="light3 light" d="M875.1,123.8h-1.8v4h1.8V123.8z M875.1,289.4h-1.8v24.1h1.8V289.4z M875.1,0h-1.8v31.4h1.8V0z M875.1,50.2         h-1.8v11.5h1.8V50.2z"></path>
-                <path class="light4 light" d="M1101.8,983.8h-1.8v8.2h1.8V983.8z M1101.8,1075.9h-1.8v4.1h1.8V1075.9z M1101.8,873.7h-1.8v4.2h1.8V873.7z         M1101.8,851h-1.8v18.2h1.8V851z"></path>
-                <path class="light5 light" d="M686.4,822.7h-1.8v3.8h1.8V822.7z M686.4,928.4h-1.8v23h1.8V928.4z M686.4,1043.8h-1.8v36.2h1.8V1043.8z"></path>
-                <path class="light6 light" d="M1551.6,860.9h-4.4v-34.1h4.4V860.9z M1551.6,533.5h-4.4v-13.9h4.4V533.5z M1551.6,1080h-4.4v-89.1h4.4V1080z"></path>
-                <path class="light7 light" d="M1311.1,707.7h-0.9V698h0.9V707.7z M1311.1,436.8h-0.9v-58.9h0.9V436.8z M1311.1,140.7h-0.9V48h0.9V140.7z"></path>
-                <path class="light8 light" d="M125.1,514.5h-0.9v-9.7h0.9V514.5z M125.1,243.6h-0.9v-58.9h0.9V243.6z"></path>
-                <path class="light9 light" d="M305.4,806.7h-4.6v-42.5h4.6V806.7z M305.4,398.5h-4.6v-17.3h4.6V398.5z M305.4,1080h-4.6V968.8h4.6V1080z"></path>
-                <path class="light10 light" d="M1822.9,170.7h-4.5v13.7h4.5V170.7z M1822.9,435.1h-4.5v6.8h4.5V435.1z M1822.9,55.9h-4.5v4h4.5V55.9z         M1822.9,0h-4.5v48.3h4.5V0z"></path>
-                <path class="light11 light" d="M1666.4,331.5h0.9v9.7h-0.9V331.5z M1666.4,602.4h0.9v58.9h-0.9V602.4z M1666.4,898.5h0.9v92.7h-0.9V898.5z"></path>
-                <path class="light12 light" d="M1620.4,200.7h-1.8v6.4h1.8V200.7z M1620.4,469.1h-1.8v39h1.8V469.1z M1620.4,0h-1.8v51h1.8V0z M1620.4,81.3         h-1.8V100h1.8V81.3z"></path>
-                <path class="light13 light" d="M74.8,201h-4.5v16.2h4.5V201z M74.8,512.3h-4.5v8.1h4.5V512.3z M74.8,65.8h-4.5v4.6h4.5V65.8z M74.8,0h-4.5         v56.8h4.5V0z"></path>
-                <path class="light14 light" d="M1371.2,655.3h-1.8v6.3h1.8V655.3z M1371.2,829.7h-1.8v37.9h1.8V829.7z M1371.2,1020.3h-1.8v59.7h1.8V1020.3z"></path>
-                <path class="light15 light" d="M1234.3,898.1h-0.9v-4.9h0.9V898.1z M1234.3,762.5h-0.9v-29.5h0.9V762.5z M1234.3,614.4h-0.9v-46.4h0.9V614.4z         "></path>
-                <path class="light16 light" d="M457.7,1010.8h-1.8v-18.1h1.8V1010.8z M457.7,507.5h-1.8V398h1.8V507.5z"></path>
-                <path class="light17 light" d="M330.5,170.7h-1.8v13.7h1.8V170.7z M330.5,435.1h-1.8v6.8h1.8V435.1z M330.5,55.9h-1.8v4h1.8V55.9z M330.5,0         h-1.8v48.3h1.8V0z"></path>
-            </g>
-        </svg>
-    </div>
+		<symbol id="shape-demo" viewBox="0 0 200 100">
+			<title>shape demo</title>
+			<path d="M 6.144,74.1 C 20.4,107.4 70.13,94.33 94.22,95.74 121.3,97.41 130.8,101.1 154.7,99.38 178.6,97.72 201.9,78.95 199.4,46.86 197.1,14.96 174.9,4.781 161.4,1.827 147.9,-1.128 119.8,8.284 105.6,8.766 85.34,9.449 81.91,7.628 51.08,2.334 17.26,-3.482 -8.105,40.84 6.144,74.1 Z" />
+		</symbol>
+	</svg>
 
-    <div class="row">
-        <div class="col-sm-5 col-xs-5 text-right" id="head-logo" style="padding: 0; width:4.5em;">
-            <img src="img/apk-logo-white.svg" style="padding: 0px 0px 0px 0px; background-blend-mode:screen;" height="40px" width="40px">
-        </div>
-        <div class="social col-lg-2 col-md-2 col-sm-2 col-xs-2 text-left" style="padding: 0px 0.8em;">
-            <h2 class="top-heading" style="padding-top:0.18em; font-size:1.5em;">APAROKSHA</h2>
-            <h5 class="top-heading" style="color: white; margin:0px auto; letter-spacing:0.1em; font-size:1em; text-transform: uppercase;">IIIT Allahabad</h5>
-        </div>
-        <div class="links col-lg-9 col-md-9 col-sm-9 col-xs-12 hidden-xs" style="float:right; padding:0;">
-            <ul style="padding:0px 0px 0px 0px;">
-                <li><a href="register" target="_blank" style="padding: 0.5em 0.2em 1em 0.2em; float:right; font-size:1.1em;">Register</a></li>
-                <li><a href="CA" target="_blank" style="padding: 0.5em 0.2em 1em 0.2em; float:right; font-size:1.1em">Campus Ambassador |</a></li>
-                <li><a href="sponsors" target="_blank" style="padding: 0.5em 0.2em 1em 0.2em; float:right; font-size:1.1em;">Sponsors |</a></li>
-                <li><a href="codered" target="_blank" style="padding: 0.5em 0.2em 1em 0.2em; float:right; font-size:1.1em;">CodeRed |</a></li>
-                <li><a href="humblefoolcup/register" target="_blank" style="padding: 0.5em 0.2em 1em 0.2em; float:right; font-size:1.1em;">HumblefoolCup |</a></li>
-                <li><a href="sif" target="_blank" style="padding: 0.5em 0.2em 1em 0.2em; float:right; font-size:1.1em;">Startup-Intern Fair |</a></li>
-            </ul>
-        </div>
-        <div class="links col-lg-7 col-md-7 col-sm-5 col-xs-12 hidden-lg hidden-md hidden-sm" style="text-align:center;">
-            <hr>
-            <ul style="padding:0px 0px 0px 0px;">
-                <li><a href="register" target="_blank" style="padding: 0.5em 0em 1em 0em; font-size:1em;">Register</a></li>
-                <li><a href="CA" target="_blank" style="padding: 0.5em 0em 1em 0em; font-size:1em">Campus Ambassador</a></li>
-                <li><a href="sponsors" target="_blank" style="padding: 0.5em 0em 1em 0em; font-size:1em;">Sponsors</a></li>
-                <li><a href="codered" target="_blank" style="padding: 0.5em 0em 1em 0em; font-size:1em">CodeRed</a></li>
-                <li><a href="humblefoolcup/register" target="_blank" style="padding: 0.5em 0em 1em 0em; font-size:1em">HumblefoolCup</a></li>
-                <li><a href="sif" target="_blank" style="padding: 0.5em 0em 1em 0em; font-size:1em">Startup-Intern Fair</a></li>
-            </ul>
-        </div>
-    </div>
+		<main>
+			<nav class="pages-nav">
+				<div class="pages-nav__item"><a class="link link--page" href="#page-home" style="color: black;font-size: 20px;">HOME</a></div>
+				<div class="pages-nav__item"><a class="link link--page" href="#page-software" style="color: black;font-size: 20px;" id="eventPage">EVENTS</a></div>
+				<div class="pages-nav__item"><a class="link link--page" href="#page-custom" style="color: black;font-size: 20px;" id="sponsorPage">SPONSORS</a></div>
+				<div class="pages-nav__item"><a class="link link--page" href="#page-training" style="color: black;font-size: 20px;" id="teamPage">TEAM</a></div>
+				<div class="pages-nav__item"><a class="link link--page " href="#page-buy" style="color: black;font-size: 20px;" id="galleryPage">GALLERY</a></div>
+				<div class="pages-nav__item"><a class="link link--page " href="#page-blog" style="color: black;font-size: 20px;" id="devPage">DEVELOPERS</a></div>
+				<div class="pages-nav__item"><a class="link link--page " href="#" style="color: black;font-size: 20px;">WORKSHOPS</a></div>
+				<div class="pages-nav__item"><a class="link link--page " href="#" style="color: black;font-size: 20px;">TALKS</a></div>
+				<div class="pages-nav__item"><a class="link link--page " href="#" style="color: black;font-size: 20px;">CONTACT</a></div>
+				<div class="pages-nav__item"><a class="link link--page " href="#" style="color: black;font-size: 20px;"><sup>*</sup>START UP INTERN FAIR</a></div>
+				<div class="pages-nav__item"><a class="link link--page " href="#" style="color: black;font-size: 20px;"><sup>*</sup>&nbsp;CONFAB</a></div>
+				<div class="pages-nav__item"><a class="link link--page " href="#" style="color: black;font-size: 20px;">CAMPUS AMBASSADOR</a></div>
+				<div class="pages-nav__item"><a class="link link--page " href="#" style="color: black;font-size: 35px;font-weight: 400;">REGISTER</a></div>
+				<div class="pages-nav__item pages-nav__item--social">
+					<a class="link link--social link--faded" href="#"><i class="fab fa-twitter"></i><span class="text-hidden">Twitter</span></a>
+					<a class="link link--social link--faded" href="#"><i class="fas fa-envelope"></i><span class="text-hidden">Mail</span></a>
+					<a class="link link--social link--faded" href="#"><i class="fab fa-facebook-f"></i><span class="text-hidden">Facebook</span></a>
+					<a class="link link--social link--faded" href="#"><i class="fab fa-medium-m"></i><span class="text-hidden">medium</span></a>
+					<a class="link link--social link--faded" href="#"><i class="fab fa-instagram"></i><span class="text-hidden">Instagram</span></a>
+				</div>
+			</nav>
+			<div class="pages-stack">
+				
+					<div class="page" id="page-home">
 
-    <ul id="countdown">
-        <li id="days">
-          <div class="number">00</div>
-          <div class="label">Days</div>
-        </li>
-        <li id="hours">
-          <div class="number">00</div>
-          <div class="label">Hours</div>
-        </li>
-        <li id="minutes">
-          <div class="number">00</div>
-          <div class="label">Minutes</div>
-        </li>
-        <li id="seconds">
-          <div class="number">00</div>
-          <div class="label">Seconds</div>
-        </li>
-    </ul>
+						<div class="morph-wrap">
+							<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
+								<path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
+							</svg>
+						</div>
+					
+						<div class="content content--fixed">
+							<div class="deco deco--title" id="theme">THE DIGITAL RENAISSANCE</div>
+						</div>
 
-    <div class="wrapper">
-        <!-- <h1 style="padding:10% 0em 0em 0em;">Aparoksha'18</h1> -->
-        <h3 style="padding:10% 0em 0em 0em;">16<sup>th</sup> - 18<sup>th</sup> March 2018</h3>  
-        <h5 style="padding:0em 0em 0em 0em; color:white;">We are on our way. Hold tight!</h5>
-    </div>  
+					
+						<div class="content-wrap">
+							<div class="content content--layout content--layout-1">
+								<img class="content__img" src="img/apk-logo-white.svg" alt="Some image" id="im" />
+								<h3 class="content__title" id="tit">&nbsp;&nbsp;&nbsp;paroksha'18</h3>
+								<!-- <p class="content__author">Digital renaissance</p> -->
+								<p class="content__desc" id="col">IIIT ALLAHABAD </p>
+								<a href="#" id="know_more" class="content__link" style="text-transform: uppercase;" >march 16<sup style="text-transform: lowercase;">th</sup> - 18<sup style="text-transform: lowercase;">th</sup> </a>
+							</div>
+						</div>
+					</div>
 
-    <!-- <img src="img/rocket.png" class="img-responsive" alt="" id="rck"> -->
+					<div class="page" id="page-software">
 
-    <div class="container-fluid row"  style="z-index:10;" id="footer">
-        <div class="col-xs-5 col-md-1 col-lg-1 col-sm-5" style="padding: 1.7em 1em 0em 0em;"><b><a href="2017/index.html">APAROKSHA'17</a></b></div>  
-        <div class="col-xs-5 col-md-1 col-sm-5 col-lg-1" style="padding: 1.7em 1em 0em 1em;"><b><a href="2016/index.html">APAROKSHA'16</a></b></div>
-        <div class="social col-lg-10 col-md-10 col-sm-5 col-xs-12 text-right" style="padding: 0px 0px;">
-            <ul style="padding: 0em 0em 2em 0em;">
-                <li><a href="https://www.facebook.com/aparoksha" target="_blank" style="padding-right:5px"><i class="fa fa-facebook fa-2x"></i></a></li>
-                <li><a href="mailto:events@aparoksha.org" target="_blank"><i class="fa fa-envelope fa-2x"></i></a></li>
-                <li><a href="https://twitter.com/aparoksha_org" target="_blank" style="padding-right:5px"><i class="fa fa-twitter fa-2x"></i></a></li>
-                <li><a href="https://medium.com/the-aparoksha-blog" target="_blank" style="padding-right:5px"><i class="fa fa-medium fa-2x"></i></a></li>
-                <li><a href="https://www.instagram.com/aparokshaiiita/" target="_blank" style="padding-right:5px"><i class="fa fa-instagram fa-2x"></i></a></li>
-            </ul>
-        </div>
-    </div>
+						<div class="morph-wrap">
+							<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
+								<path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
+							</svg>
+						</div>
 
+						<div class="content-wrap">
+							<div class="content content--layout content--layout-2">
+								<!-- <img class="content__img" src="img/4.jpg" alt="Some image" /> -->
+								<i class="far fa-calendar-alt content__img" style="color: black;opacity: 0.5;width: 310px; height: 310px;"></i>
+								<h3 class="content__title" style="color: white;">Events</h3>
+								<!-- <p class="content__author">Nikimo Westlane</p> -->
+								<p class="content__desc">The neverending quest, once and forever.</p>
+								<!-- <a href="../events1/events.html" class="content__link">Discover</a> -->
+							</div>
+						</div>
+					</div>
 
+					<div class="page" id="page-custom">
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js'></script>
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/index.js"></script>
-    <script>
-        function openNav() {
-            document.getElementById("myNav").style.height = "100%";
-        }
+						<div class="morph-wrap">
+							<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
+								<path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
+							</svg>
+						</div>
 
-        function closeNav() {
-            document.getElementById("myNav").style.height = "0%";
-        }
-    </script>
+						<div class="content-wrap">
+							<div class="content content--layout content--layout-3">
+								<i class="fas fa-suitcase content__img" style="color: black;opacity: 0.5;width: 320px; height: 320px;"></i>
+								<!-- <img class="content__img" src="img/1.jpg" alt="Some image" />
+								-->					<h3 class="content__title" style="color: white;">Sponsors</h3>
+								<!-- 	<p class="content__author">Gregory Mourisha</p> -->
+								<p class="content__desc">It takes both sides to build a bridge ;)</p>
+								<<!-- a href="../sponsors" class="content__link">Discover</a> -->
+							</div>
+						</div>
+					</div>
 
+					<div class="page" id="page-training">
 
-</body>
-</html>
+						<div class="morph-wrap">
+							<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
+								<path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
+							</svg>
+						</div>
+
+						<div class="content-wrap">
+							<div class="content content--layout content--layout-4">
+								<i class="fas fa-users content__img" style="color: black;opacity: 0.5;width: 370px; height: 370px;"></i>
+								<!-- <img class="content__img" src="img/2.jpg" alt="Some image" /> -->
+								<h3 class="content__title" style="color: white;">Team</h3>
+								<!-- <p class="content__author">Walter Mastricht</p> -->
+								<p class="content__desc">Alone we can do so little. Together we can do so much.</p>
+								<!-- <a href="../team/" class="content__link">Discover</a> -->
+							</div>
+						</div>
+					</div>	
+
+					<div class="page" id="page-buy">
+
+						<div class="morph-wrap">
+							<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
+								<path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
+							</svg>
+						</div>
+
+						<div class="content-wrap">
+							<div class="content content--layout content--layout-1">
+								<i class="fas fa-camera-retro content__img" style="color: black;opacity: 0.5;width: 340px; height: 340px;"></i>
+								<!-- 	<img class="content__img" src="img/5.jpg" alt="Some image" /> -->
+								<h3 class="content__title" style="color: white;">Gallery</h3>
+								<!-- <p class="content__author">Frank Cherry</p> -->
+								<p class="content__desc">Let's revisit past and relive those moments.</p>
+								<!-- <a href="../gallery/" class="content__link">Discover</a> -->
+							</div>
+						</div>
+					</div>	
+					<!-- Related demos -->
+					<div class="page" id="page-blog">
+
+						<div class="morph-wrap">
+							<svg class="morph" width="1400" height="770" viewBox="0 0 1400 770">
+								<path d="M 262.9,252.2 C 210.1,338.2 212.6,487.6 288.8,553.9 372.2,626.5 511.2,517.8 620.3,536.3 750.6,558.4 860.3,723 987.3,686.5 1089,657.3 1168,534.7 1173,429.2 1178,313.7 1096,189.1 995.1,130.7 852.1,47.07 658.8,78.95 498.1,119.2 410.7,141.1 322.6,154.8 262.9,252.2 Z"/>
+							</svg>
+						</div>
+
+						<section class="content content--related">
+							<!-- <h3 class="content__title" style="color: black;">Contact:</h3>
+							<h3 class="content__title" style="font-size: 30px;position: relative; display: inline-block;top: 20%;">  team.aparoksha@iiita.ac.in</h3>
+							<h3 class="content__title" style="font-size: 30px;position: relative; display: inline-block;top: 40%;"> Indian Insitute of Information Technology, Allahabad Uttar Pradesh 211015</h3> -->
+							<div class="content content--layout content--layout-1">
+								<i class="fas fa-code content__img" style="color: black;opacity: 0.5;width: 360px; height: 360px;"></i>
+								<h3 class="content__title" style="color: white;">Developers</h3>
+								<p class="content__desc">Only work nothing more.</p>
+								<!-- <a href="#" class="content__link">Discover</a> -->
+							</div>
+						</section>
+					</div>	
+				</div>
+			</div>
+			<button class="menu-button" style="color: white;"><span>Menu</span></button>
+			<script src="js/classie.js"></script>
+			<script src="js/main.js"></script>
+		</main>
+		<script src="js/imagesloaded22.pkgd.min.js"></script>
+		<script src="js/anime.min.js"></script>
+		<script src="js/scrollMonitor.js"></script>
+		<script src="js/demo0.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#tit, #im, #know_more, #col, #theme").hide();
+				setTimeout(function() {
+					$("#im").fadeIn(500);
+					$("#tit").fadeIn(2500);
+					$("#col").fadeIn(4500);
+					$("#know_more, #theme").fadeIn(6500);
+
+				}, 1000);
+			});
+		</script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#eventPage").click(function()  {
+					setTimeout(function() {
+						$("#page-software").fadeOut(500);
+					}, 1000);
+					setTimeout(function() {
+						window.location = "/events";
+					}, 1500).fadeOut(1500);
+				});
+
+				$("#sponsorPage").click(function()  {
+					setTimeout(function() {
+						$("#page-custom").fadeOut(500);
+					}, 1000);
+					setTimeout(function() {
+						window.location = "/sponsors";
+					}, 1500).fadeOut(1500);
+				});
+
+				$("#devPage").click(function()  {
+					setTimeout(function() {
+						$("#page-blog").fadeOut(500);
+					}, 1000);
+					setTimeout(function() {
+						window.location = "/devPage/index.html";
+					}, 1500).fadeOut(1500);
+				});
+
+				$("#galleryPage").click(function()  {
+					setTimeout(function() {
+						$("#page-buy").fadeOut(500);
+					}, 1000);
+					setTimeout(function() {
+						window.location = "/gallery/";
+					}, 1500).fadeOut(1500);
+				});
+
+				$("#teamPage").click(function()  {
+					setTimeout(function() {
+						$("#page-training").fadeOut(500);
+					}, 1000);
+					setTimeout(function() {
+						window.location = "/team/";
+					}, 1500).fadeOut(1500);
+				});
+			});
+		</script>
+	</body>
+	</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Events</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="pater/pater.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	</head>
+	<body class="loading">
+		<svg class="hidden">
+			<symbol id="icon-arrow" viewBox="0 0 24 24">
+				<title>arrow</title>
+				<polygon points="6.3,12.8 20.9,12.8 20.9,11.2 6.3,11.2 10.2,7.2 9,6 3.1,12 9,18 10.2,16.8 "/>
+			</symbol>
+			<symbol id="icon-drop" viewBox="0 0 24 24">
+				<title>drop</title>
+				<path d="M12,21c-3.6,0-6.6-3-6.6-6.6C5.4,11,10.8,4,11.4,3.2C11.6,3.1,11.8,3,12,3s0.4,0.1,0.6,0.3c0.6,0.8,6.1,7.8,6.1,11.2C18.6,18.1,15.6,21,12,21zM12,4.8c-1.8,2.4-5.2,7.4-5.2,9.6c0,2.9,2.3,5.2,5.2,5.2s5.2-2.3,5.2-5.2C17.2,12.2,13.8,7.3,12,4.8z"/><path d="M12,18.2c-0.4,0-0.7-0.3-0.7-0.7s0.3-0.7,0.7-0.7c1.3,0,2.4-1.1,2.4-2.4c0-0.4,0.3-0.7,0.7-0.7c0.4,0,0.7,0.3,0.7,0.7C15.8,16.5,14.1,18.2,12,18.2z"/>
+			</symbol>
+			<symbol id="icon-cross" viewBox="0 0 24 24">
+				<title>cross</title>
+				<path d="M 5.5,2.5 C 5.372,2.5 5.244,2.549 5.146,2.646 L 2.646,5.146 C 2.451,5.341 2.451,5.659 2.646,5.854 L 8.793,12 2.646,18.15 C 2.451,18.34 2.451,18.66 2.646,18.85 L 5.146,21.35 C 5.341,21.55 5.659,21.55 5.854,21.35 L 12,15.21 18.15,21.35 C 18.24,21.45 18.37,21.5 18.5,21.5 18.63,21.5 18.76,21.45 18.85,21.35 L 21.35,18.85 C 21.55,18.66 21.55,18.34 21.35,18.15 L 15.21,12 21.35,5.854 C 21.55,5.658 21.55,5.342 21.35,5.146 L 18.85,2.646 C 18.66,2.451 18.34,2.451 18.15,2.646 L 12,8.793 5.854,2.646 C 5.756,2.549 5.628,2.5 5.5,2.5 Z"/>
+			</symbol>
+			<symbol id="icon-menu" viewBox="0 0 24 24">
+				<title>menu</title>
+				<path d="M23.8,6H0.1V3h23.7C23.8,3,23.8,6,23.8,6z M23.8,10.5H0.1v3h23.7C23.8,13.5,23.8,10.5,23.8,10.5z M24,18H10v3h14V18z"/>
+			</symbol>
+			<!-- <symbol id="icon-magnifier" viewBox="0 0 490.8 490.8">
+				<title>magnifier</title>
+				<path d="M364.8,299.55c46.3-75.8,36.9-176.3-28.6-241.9c-76.8-76.8-201.8-76.8-278.6,0s-76.8,201.8,0,278.5c65.5,65.5,166,74.9,241.9,28.6L412,477.25c18,18,47.3,18,65.3,0s18-47.3,0-65.3L364.8,299.55z M295.5,295.55c-54.4,54.4-142.8,54.4-197.1,0c-54.4-54.4-54.4-142.8,0-197.1c54.4-54.4,142.8-54.4,197.1,0C349.8,152.75,349.8,241.15,295.5,295.55z M220,171.95h59.4v45.3H220v59.4h-45.3v-59.4h-59.3v-45.3h59.4v-59.4h45.3v59.4H220z"/>
+			</symbol> -->
+		<main>
+			<div class="content">
+				
+				<header class="codrops-header">
+						<div class="row header">
+							<div class="col-sm-5 col-xs-5 col-md-1 text-right" id="head-logo" style="padding: 0; width:4.5em;">
+								<img src="../../img/apk-logo-white.svg" style="padding: 0px 0px 0px 0px;" height="50px" width="40px">
+							</div>
+							<div class="col-md-2 col-sm-3 col-xs-8 text-left" style="padding: 0px 0.8em;">
+								<h2 class="top-heading" style="padding-top:0.18em; font-size:1.5em; margin: 0;">APAROKSHA</h2>								
+								<h5 class="top-heading" style="margin:0px auto; letter-spacing:0.1em; font-size:1em; text-transform: uppercase;">IIIT Allahabad</h5>
+							</div>
+						</div>
+					<h1 class="codrops-header__title">Events</h1>
+					<span style="text-align:center;">Here are some exciting events of Aparoksha</span>
+				</header>
+			</div>
+			<button class="dummy-menu"><svg class="icon icon--menu"><use xlink:href="#icon-menu"></use></svg></button>
+
+			<div class="content hidden-sm hidden-xs">
+				<div class="button_grid">
+					<button class="event-selector grid-item1">All</button>
+					<button class="event-selector grid-item2">Flagship</button>
+					<button class="event-selector grid-item3">Coding</button>
+					<button class="event-selector grid-item5">Hackathon</button>
+					<button class="event-selector grid-item6">Gaming</button>
+					<button class="event-selector grid-item7">Quizzing</button>
+					<button class="event-selector grid-item8">Informal</button>					
+				</div>
+			</div>
+
+			<div class="content">
+				<div class="grid">
+					<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="../../img/hint.jpg" alt="HackInTheNorth"/>
+							<h2 class="product__title">Hack In the North</h2>
+							<h3 class="product__subtitle">36 Hour Hackathon</h3>
+							<p class="product__description"></p>
+							<div class="product__price"></div>
+						</div>
+					</div>
+					<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="../../img/humblefoolcup.jpg" alt="Humblefoolcup"/>
+							<h2 class="product__title">HumblefoolCup 2018</h2>
+							<h3 class="product__subtitle">Coding competition hosted by topcoder</h3>
+							<p class="product__description"></p>
+							<div class="product__price"></div>
+						</div>
+					</div>
+					<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="../../img/sif.svg" alt="img 01"/>
+							<h2 class="product__title">Startup Intern Faie</h2>
+							<h3 class="product__subtitle">Your first step towards success</h3>
+							<p class="product__description"></p>
+							<div class="product__price"></div>
+						</div>
+					</div>
+					<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="../../img/bootroot.jpg" alt="img 01"/>
+							<h2 class="product__title">B00t2root</h2>
+							<h3 class="product__subtitle">Capture the flag event</h3>
+							<p class="product__description"></p>
+							<div class="product__price"></div>
+						</div>
+					</div>
+					<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="../../img/grayhound.jpg" alt="img 03"/>
+							<h2 class="product__title">Grayhound</h2>
+							<h3 class="product__subtitle">Flagship quizzing event</h3>
+							<p class="product__description"></p>
+							<div class="product__price"></div>
+						</div>
+					</div>
+					<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="../../img/frag-fest.png" alt="img 04"/>
+							<h2 class="product__title">Frag-Fest</h2>
+							<h3 class="product__subtitle">Flagship Gaming event</h3>
+							<p class="product__description"></p>
+							<div class="product__price"></div>
+						</div>
+					</div>
+					<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="../../img/topbot.jpg" alt="img 05"/>
+							<h2 class="product__title">TopBot</h2>
+							<h3 class="product__subtitle">Flagship robotics event</h3>
+							<p class="product__description"></p>
+							<div class="product__price"></div>
+						</div>
+					</div>
+					<div class="grid__item">
+						<div class="product">
+							<div class="product__bg"></div>
+							<img class="product__img" src="../../img/codered.png" alt="img 06"/>
+							<h2 class="product__title">CodeRed</h2>
+							<h3 class="product__subtitle">Flagship Coding competition</h3>
+							<p class="product__description"></p>
+							<div class="product__price"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<section class="col-md-12 col-sm-12 content--related" id="footer">
+				<div class="grid-footer">
+					<div class="col-sm-12 col-md-12 footer-item1">
+						<p> Follow us on </p>	
+						<a href="https://www.facebook.com/aparoksha/" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
+						<a href="https://twitter.com/aparoksha_org" target="_blank"><i class="fa fa-twitter fa-2x" aria-hidden="true" style="padding-left:0.4em;"></i></a>
+						<a href="https://www.instagram.com/aparokshaiiita/" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true" style="padding-left:0.4em;"></i></a>
+						<a href="https://medium.com/the-aparoksha-blog" target="_blank"><i class="fa fa-medium fa-2x" aria-hidden="true" style="padding-left:0.4em;"></i></a>
+						<hr style="margin: 1em; border-color:blue;">
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-sm-6 text-left hidden-xs">
+							<p> Quick Links :
+							<a href="https://aproksha.org"> Home |</a>
+							<a href="https://aproksha.org/sif"> Startup Intern Fair |</a>
+							<a href="https://aproksha.org/register/"> Register |</a>
+							<a href="https://aproksha.org/#"> Team </a>
+							</p>
+						</div>
+						<div class="col-md-6 col-sm-6 text-center hidden-sm hidden-lg hidden-md">
+							<p> Quick Links :
+							<a href="https://aproksha.org"> Home |</a>
+							<a href="https://aproksha.org/sif"> Startup Intern Fair |</a>
+							<a href="https://aproksha.org/register/"> Register |</a>
+							<a href="https://aproksha.org/#"> Team </a>
+							</p>
+						</div>
+						<div class="col-md-6 col-sm-6 hidden-xs text-right">
+							<p> Contact us at: <a href="mailto:events@aproksha.org">events@aparoksha.org</a> </p>
+						</div>
+						<div class="col-md-6 hidden-md hidden-lg hidden-sm text-center">
+							<p> Contact us at: <a href="mailto:events@aproksha.org">events@aparoksha.org</a> </p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/anime.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>
