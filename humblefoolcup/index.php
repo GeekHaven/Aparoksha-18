@@ -118,8 +118,7 @@
             <h4> For event related information:</h3>
               <hr>
               <p>Hariom Niranjan</p>
-              <p> events@aparoksha.org </p>
-              <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-9981250963</p>
+              <p> team.aparoksha@iiita.ac.in </p>
           </div>
         </div>
         <div class="row footer-credit">
