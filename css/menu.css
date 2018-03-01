@@ -24,7 +24,7 @@ html.js,
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 50vh;
+	height: 100vh;
 	padding: 30px;
 	pointer-events: none;
 	opacity: 0;
@@ -42,15 +42,73 @@ html.js,
 	opacity: 1;
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
+	background: url(../img/bg.png);
+	background-color: white;
+	z-index: 100;
+	overflow: auto;
 }
 
-.pages-nav__item {
-	width: 33%;
-	padding: 1em;
+nav.pages-nav.pages-nav--open::-webkit-scrollbar {
+    display: none;
 }
 
-.js .pages-nav__item {
-	padding: 0 10%;
+.hor-layer {
+	position: relative;
+	width: 96%;
+	margin: 0% 4%;
+}
+
+.ver-tall{
+	height: 47vh;
+}
+
+.ver-tall a{
+	height: 100%;
+}
+
+.ver-short{
+	height: 30vh;
+}
+
+.ver-social {
+	height: 5vh
+}
+
+.hor-layer .lng{
+	display: inline-table;
+	height: 100%;
+	width: 32%;
+}
+
+.hor-layer .itm{
+	height: 90%;
+	border:1px solid black; 
+	margin: 5%;
+	color: white;
+	font-size: 20px;
+	background-image:url('../img/apk-logo.png');
+	background-size: cover;
+	transition: all 0.2s;
+	text-overflow: ellipsis;
+}
+
+.hor-layer .itm:hover{
+	font-size: 21px;
+	text-shadow: 1px 1px 3px #7b7676;
+	box-shadow: 3px 3px 5px #444444;
+	/*margin: 4%;*/
+}
+
+.hor-layer .link--half{
+	height: 44% !important;
+	margin-bottom: 0px;
+}
+
+.ver-short .link--page {
+	width: 16%;
+	height: 90%;
+	margin: 1.5%;
+	display: inline-table;
 }
 
 .pages-nav .pages-nav__item--social {
@@ -283,9 +341,10 @@ html.js,
 		width: 50%;
 		min-height: 50px;
 	}
-	.link--page {
+	.ver-short .link--page {
 		overflow: hidden;
-		white-space: nowrap;
+		margin: 0px !important;
+		width: 17%;
 		text-overflow: ellipsis;
 	}
 	.link--social {
@@ -293,7 +352,7 @@ html.js,
 	}
 }
 
-@media screen and (max-width: 40em) {
+@media screen and (max-width: 50em) {
 	.js .pages-nav {
 		display: block;
 		padding: 10px 20px 0 20px;
@@ -321,6 +380,43 @@ html.js,
 	}
 	.poster {
 		margin: 1em;
+	}
+	.ver-tall, .ver-small {
+		height: 0px;
+	}
+	.hor-layer {
+		height: auto;
+		width: 90%;
+	}
+	.hor-layer .lng {
+	    display: block;
+	    height: auto; 
+	    width: auto; 
+	}
+	.hor-layer .link--half {
+		margin: 4px 0px;
+	}
+	.ver-short .link--page {
+	    width: 100%;
+	    height: auto;
+	    margin: 10px;
+	    display: block;
+	}
+	.hor-layer .itm{
+		height: auto;
+		border-width: 0px; 
+		color: black;
+		font-size: 20px;
+		margin: 2vh 5px;
+		background-image:none;
+	}
+	.hor-layer .itm:hover{
+		font-size: 20px;
+		text-shadow: 1px 1px 3px #7b7676;
+		box-shadow: none;
+	}
+	.ver-social .link--social{
+		margin: 2vh 2vw;
 	}
 }
 
