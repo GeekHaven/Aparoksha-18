@@ -66,7 +66,7 @@ function mailsend($email,$orderid, $name){
                             Name: '.$name.'<br>
                             Order ID: '.$orderid.'<br><br>
 
-                            Check full order details <a href="https://aparoksha.org/tshirt/order/status.php?orderid='.$orderid.'>here</a>.<br><br> 
+                            Check full order details <a href="https://aparoksha.org/tshirt/order/status.php?orderid='.$orderid.'">here</a>.<br><br> 
                             Thanks, <br> Team Aparoksha';
 
         $mail->send();

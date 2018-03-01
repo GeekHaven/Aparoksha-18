@@ -24,7 +24,7 @@ unset($_SESSION['events']);
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".side-menu">
-      <a href="../index.html" style="text-decoration: none;color: black;"><i class="fa fa-arrow-left" aria-hidden="true" style="color: black; font-size: 25px;padding-left: 1%;padding-top: 1%;padding-bottom: 1%;"></i>&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size: 20px;font-weight: 400;">BACK</b></a>
+      <a href="../../" style="text-decoration: none;color: black;"><i class="fa fa-arrow-left" aria-hidden="true" style="color: black; font-size: 25px;padding-left: 1%;padding-top: 1%;padding-bottom: 1%;"></i>&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size: 20px;font-weight: 400;">BACK</b></a>
       <div class="container-fluid">
         <div class="row hero-header" id="home">
           <div class="col-md-12">
@@ -74,7 +74,7 @@ unset($_SESSION['events']);
           </div>
         </div>
 
-        <h3>Prize Chart</h3>
+        <h3>Price Chart</h3>
         <table class="table table-bordered">
           <thead>
             <tr>
@@ -214,7 +214,7 @@ unset($_SESSION['events']);
               <div class="form-group">
                 <label for="amount" class="col-sm-2 control-label">Amount Paid<sup>*</sup></label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount in Rs." value="" required disabled="true">
+                  <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount in Rs." value="" required readonly="readonly">
                   <div class="help-block with-errors pull-right"></div>
                   <span class="form-control-feedback" aria-hidden="true"></span>
                 </div>

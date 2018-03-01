@@ -22,12 +22,12 @@ session_start();
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".side-menu">
-    <a href="../index.html" style="text-decoration: none;color: black;"><i class="fa fa-arrow-left" aria-hidden="true" style="color: black; font-size: 25px;padding-left: 1%;padding-top: 1%;padding-bottom: 1%;"></i>&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size: 20px;font-weight: 400;">BACK</b></a>
+    <a href="../../" style="text-decoration: none;color: black;"><i class="fa fa-arrow-left" aria-hidden="true" style="color: black; font-size: 25px;padding-left: 1%;padding-top: 1%;padding-bottom: 1%;"></i>&nbsp;&nbsp;&nbsp;&nbsp;<b style="font-size: 20px;font-weight: 400;">BACK</b></a>
       <div class="container-fluid">
         <div class="row hero-header" id="home">
           <div class="col-md-12">
           <a href="https://aparoksha.org"><img src="../../img/apk-logo.png" id="apk-logo" class="logo img-circle img responsive"></a>
-            <h1>Aparoksha'18 Registration</h1>
+            <h1>Aparoksha'18| Merchandise Orders</h1>
             <h3>Technical fest of IIITA</h3>
             <h4>16<sup>th</sup> to 18<sup>th</sup>  March, 2018</h4>
           </div>
@@ -37,7 +37,10 @@ session_start();
         </div>
       </div>
 
-      <div class="container">
+      <div class="text-center">
+       <h5>Check back later. In progress </h5>
+      </div>
+      <!-- <div class="container">
         <div class="row me-row content-ct">
           <div class="col-md-4" style="margin-top:1em;">
             <a href="index.php" class="btn btn-lg btn-red">Register<i class="fa fa-calendar" aria-hidden="true" style="padding-left:0.6em;"></i>
@@ -109,7 +112,7 @@ session_start();
             </tr>
         </tbody>
     </table>
-  </div>
+  </div> -->
     
       <div class="container-fluid footer">
         <div class="col-sm-12" style="text-align:center; margin-top:1em; margin-bottom:0.5em;">
