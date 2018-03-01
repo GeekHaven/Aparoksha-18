@@ -226,8 +226,8 @@ main {
 }
 
 .content--fixed {
-	position: fixed;
-	top: 0;
+	position: absolute;
+	top: 2vw;
 	left: 0;
 	display: grid;
 	align-content: space-between;
