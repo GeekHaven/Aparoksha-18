@@ -44,7 +44,7 @@ html.js,
 	transform: translate3d(0, 0, 0);
 	background: url(../img/bg.png);
 	background-color: white;
-	z-index: 100;
+	z-index: 101;
 	overflow: auto;
 }
 
@@ -81,7 +81,7 @@ nav.pages-nav.pages-nav--open::-webkit-scrollbar {
 }
 
 .hor-layer .itm{
-	height: 90%;
+	height: 95%;
 	border:1px solid black; 
 	margin: 5%;
 	color: white;
@@ -98,6 +98,19 @@ nav.pages-nav.pages-nav--open::-webkit-scrollbar {
 	box-shadow: 3px 3px 5px #444444;
 	/*margin: 4%;*/
 }
+
+.hor-layer .n-sml{
+	height: 45vh;
+}
+
+.hor-layer .sml{
+	height: 20vh;
+}
+
+.hor-layer .v-sml{
+	height: 27vh
+}
+
 
 .hor-layer .link--half{
 	height: 44% !important;
