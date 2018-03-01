@@ -122,15 +122,15 @@ session_start();
           <div class="col-md-6 contact-form">
             <h4> For website issues:</h4>
               <hr>
-              <p> Team Web Operations </p>
+              <p> Pradeep Gangwar </p>
               <p> pradeepgangwar39@gmail.com </p>
+              <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-9458120350</p>
           </div>
           <div class="col-md-6 contact-form" style="text-align:right;">
-            <h4> For event related information:</h4>
+            <h4> For merchandise issues:</h4>
               <hr>
-              <p> Ashutosh Chandra </p>
-              <p> events@aparoksha.org </p>
-              <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-9919241909</p>
+              <p> Sai Rakshit </p>
+              <p> finance@aparoksha.org </p>
           </div>
         </div>
         <div class="row footer-credit">

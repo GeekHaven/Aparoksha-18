@@ -57,7 +57,7 @@ unset($_SESSION['events']);
               <ul>
                 <li style="list-style-type: disc;"> Make payment to UPI mentioned below via <b>TEZ</b>, <b>PhonePe</b> or <b>Paytm</b> UPI services only. </li>
                 <li style="list-style-type: disc;"> For faster review of your payment do not forget to mention your name and University ID/ AADHAR number with the transaction message </li>
-                <li style="list-style-type: disc;"> Once your payment is confirmed note your transaction number and keep it woth you. </li>
+                <li style="list-style-type: disc;"> Once your payment is confirmed note your transaction number and keep it with you. </li>
                 <li style="list-style-type: disc;"> Fill merchandise form and mention your transaction ID and and Payment method. </li>
                 <li style="list-style-type: disc;"> When you are done just wait and once your payment is confirmed you can view the same on check you status page </li>
               </ul>
@@ -70,7 +70,7 @@ unset($_SESSION['events']);
             </button>
           </div>
           <div class="col-md-6" style="margin-top:1em;">
-            <a href="check.php" class="btn btn-lg btn-primary">9981250963@ybl<i class="fa fa-rupee" aria-hidden="true" style="padding-left:0.6em;"></i></a>
+            <button href="" class="btn btn-lg btn-primary">9981250963@ybl<i class="fa fa-rupee" aria-hidden="true" style="padding-left:0.6em;"></i></button>
           </div>
         </div>
 
@@ -287,17 +287,17 @@ unset($_SESSION['events']);
         </div>
         <div class="row contact">
           <div class="col-md-6 contact-form">
-            <h4> For order issues:</h3>
+            <h4> For website issues:</h3>
               <hr>
               <p> Pradeep Gangwar </p>
               <p> pradeepgangwar39@gmail.com </p>
               <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-9458120350</p>
           </div>
           <div class="col-md-6 contact-form" style="text-align:right;">
-            <h4> For event related information:</h3>
+            <h4> For merchandise issues:</h3>
               <hr>
-              <p> Hariom Niranjan </p>
-              <p> team.aparoksha@iiita.ac.in </p>
+              <p>Sai Rakshit</p>
+              <p> finance@aparoksha.org </p>
           </div>
         </div>
         <div class="row footer-credit">

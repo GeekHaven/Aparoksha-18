@@ -46,7 +46,6 @@
             <h2 class="content-ct" style="font-weight:bold; margin-bottom:0em;"><span class="ti-email"></span>Login to HumblefoolCup</h2>
             <h4 class="text-left" style="font-weight:bold; margin-top:2em;"> Instructions: </h4>
             <ul class="text-left" style="margin-bottom:2em;">
-                <li> Only those who contested in <b>HumblefoolCup Prelims</b> and are in <b>top 50</b> will be allowed to login. </li>
                 <li> Your password is combination of your <b>first name</b> (in lowercase) and your <b>topcoder handle</b> (Case sensitive) separated by underscore </li>
                 <li> For example: if your handel is <b>Abc</b> and first name is <b>XyZ</b> then your password will be <b>xyz_Abc</b> </li>
             </ul> 
