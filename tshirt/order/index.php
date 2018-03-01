@@ -128,6 +128,14 @@ unset($_SESSION['events']);
                 </div>
               </div>
               <div class="form-group">
+                <label for="uemail" class="col-sm-2 control-label">Email<sup>*</sup></label>
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="uemail" name="uemail" placeholder="Your Email (We will send a email to this)" value="" required>
+                  <div class="help-block with-errors pull-right"></div>
+                  <span class="form-control-feedback" aria-hidden="true"></span>
+                </div>
+              </div>
+              <div class="form-group">
                 <label for="college" class="col-sm-2 control-label">College<sup>*</sup></label>
                 <div class="col-sm-9">
                   <select class="form-control" id="college" name="college" required>
@@ -180,18 +188,6 @@ unset($_SESSION['events']);
                 </div>
               </div>
               <div class="form-group">
-                <label for="tsize" class="col-sm-2 control-label">T-Shirt Size<sup>*</sup></label>
-                <div class="col-sm-9">
-                  <select class="form-control" id="tsize" name="tsize">
-                    <option value="XS">XS</option>
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group">
                 <label for="quantity" class="col-sm-2 control-label">Quantity<sup>*</sup></label>
                 <div class="col-sm-9">
                   <select class="form-control" id="quantity" name="quantity">
@@ -204,9 +200,21 @@ unset($_SESSION['events']);
                 </div>
               </div>
               <div class="form-group">
+                <label for="tsize" class="col-sm-2 control-label">T-Shirt Size<sup>*</sup></label>
+                <div class="col-sm-9">
+                  <select class="form-control" id="tsize" name="tsize">
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
                 <label for="amount" class="col-sm-2 control-label">Amount Paid<sup>*</sup></label>
                 <div class="col-sm-9">
-                  <input type="number" pattern="[0-9]{10}" class="form-control" id="amount" name="amount" placeholder="Amount in Rs." value="" required>
+                  <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount in Rs." value="" required disabled="true">
                   <div class="help-block with-errors pull-right"></div>
                   <span class="form-control-feedback" aria-hidden="true"></span>
                 </div>
@@ -243,6 +251,9 @@ unset($_SESSION['events']);
                 </div>
               </div>
                 
+              <div class="text-center" style="margin-top=2em;">
+                <h6> Make sure you have paid amount specified in amount field. </h6>
+              </div>  
               <div class="form-group">
                 <div class="col-sm-12" style="text-align:center; margin-top:1em;">
                   <button type="submit" id="submit" name="sub" class="btn btn-yellow">Submit<i class="fa fa-paper-plane" aria-hidden="true" style="padding-left:0.6em;"></i></button>

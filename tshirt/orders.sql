@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
--- https://www.phpmyadmin.net/
+-- version 4.5.4.1deb2ubuntu2
+-- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Mar 01, 2018 at 03:58 PM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 7.1.1
+-- Generation Time: Mar 01, 2018 at 04:15 PM
+-- Server version: 5.7.21-0ubuntu0.16.04.1
+-- PHP Version: 7.0.22-0ubuntu0.16.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `apk`
+-- Database: `tshirt`
 --
 
 -- --------------------------------------------------------
@@ -29,7 +29,10 @@ SET time_zone = "+00:00";
 CREATE TABLE `orders` (
   `id` int(5) NOT NULL,
   `order_time` varchar(30) NOT NULL,
+  `order_no` varchar(100) NOT NULL,
   `name` varchar(100) NOT NULL,
+  `email` varchar(200) NOT NULL,
+  `mailed` enum('true','false') NOT NULL,
   `college` varchar(30) NOT NULL,
   `mobile` varchar(15) NOT NULL,
   `room` varchar(30) NOT NULL,
