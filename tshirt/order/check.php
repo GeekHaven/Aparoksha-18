@@ -178,8 +178,9 @@
           <div class="col-md-6 contact-form" style="text-align:right;">
             <h4> For merchandise issues:</h4>
               <hr>
-              <p> Sai Rakshit </p>
+              <p>Somendra Agrawal</p>
               <p> finance@aparoksha.org </p>
+              <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-7233020977</p>
           </div>
         </div>
         <div class="row footer-credit">

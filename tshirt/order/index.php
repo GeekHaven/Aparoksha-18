@@ -55,10 +55,10 @@ unset($_SESSION['events']);
           <div class="col-md-12 text-left" style="margin-top:1em;">
               <h3> Instructions: </h3>
               <ul>
-                <li style="list-style-type: disc;"> Make payment to UPI mentioned below via <b>TEZ</b>, <b>PhonePe</b> or <b>Paytm</b> UPI services only. </li>
-                <li style="list-style-type: disc;"> For faster review of your payment do not forget to mention your name and University ID/ AADHAR number with the transaction message </li>
+                <li style="list-style-type: disc;"> Make payment to Mobile Number mentioned below via <b>TEZ</b>, <b>PhonePe</b> or <b>Paytm</b> UPI services only. </li>
+                <li style="list-style-type: disc;"> For faster review of your payment do not forget to mention your <b>Email ID</b> and <b>University ID/ AADHAR number</b> with the transaction message </li>
                 <li style="list-style-type: disc;"> Once your payment is confirmed note your transaction number and keep it with you. </li>
-                <li style="list-style-type: disc;"> Fill merchandise form and mention your transaction ID and and Payment method. </li>
+                <li style="list-style-type: disc;"> Fill merchandise form and mention your <b>transaction ID</b> and and <b>Payment method</b>. </li>
                 <li style="list-style-type: disc;"> When you are done just wait and once your payment is confirmed you can view the same on check you status page </li>
               </ul>
           </div>
@@ -70,7 +70,7 @@ unset($_SESSION['events']);
             </button>
           </div>
           <div class="col-md-6" style="margin-top:1em;">
-            <button href="" class="btn btn-lg btn-primary">9981250963@ybl<i class="fa fa-rupee" aria-hidden="true" style="padding-left:0.6em;"></i></button>
+            <button href="" class="btn btn-lg btn-primary">9981250963<i class="fa fa-rupee" aria-hidden="true" style="padding-left:0.6em;"></i></button>
           </div>
         </div>
 
@@ -296,8 +296,9 @@ unset($_SESSION['events']);
           <div class="col-md-6 contact-form" style="text-align:right;">
             <h4> For merchandise issues:</h3>
               <hr>
-              <p>Sai Rakshit</p>
+              <p>Somendra Agrawal</p>
               <p> finance@aparoksha.org </p>
+              <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-7233020977</p>
           </div>
         </div>
         <div class="row footer-credit">

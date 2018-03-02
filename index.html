@@ -149,7 +149,7 @@
 							Talks
 						</div>
 					</a>
-					<a class="link link--page " href="#" >
+					<a class="link link--page " href="#" id="tech-tours" >
 						<div class="itm v-sml">
 							Tech Tours
 						</div>
@@ -370,6 +370,12 @@
 				$("#ca").click(function()  {
 					setTimeout(function() {
 						window.location = "CA/";
+					}, 100).fadeOut(1500);
+				});
+
+				$("#tech-tours").click(function()  {
+					setTimeout(function() {
+						window.location = "tech-tours/";
 					}, 100).fadeOut(1500);
 				});
 
