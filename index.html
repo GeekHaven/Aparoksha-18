@@ -114,7 +114,6 @@
 					<div class="lng">
 						<a class="link link--page" href="#page-software" id="eventPage">
 							<div class="itm n-sml" >
-
 								Events
 							</div>
 						</a>
@@ -142,7 +141,6 @@
 				<div class="hor-layer ver-short">
 					<a class="link link--page " href="#page-buy" id="galleryPage">
 						<div class="itm v-sml">
-
 							GALLERY
 						</div>
 					</a>
@@ -153,17 +151,16 @@
 					</a>
 					<a class="link link--page " href="#" >
 						<div class="itm v-sml">
-							CONTACT
+							Tech Tours
 						</div>
 					</a>
-					<a class="link link--page " href="sif/" target="_blank" >
+					<a class="link link--page " href="#" id="sif" >
 						<div class="itm v-sml">
 							Startup Intern fair
 						</div>
 					</a>
-					<a class="link link--page " href="CA/" href="_blank" >
+					<a class="link link--page " href="#" id="ca" >
 						<div class="itm v-sml">
-
 							Campus Ambassador
 						</div>
 					</a>
@@ -351,7 +348,7 @@
 						$("#page-software").fadeOut(500);
 					}, 1000);
 					setTimeout(function() {
-						window.location = "/events";
+						window.location = "events/";
 					}, 1500).fadeOut(1500);
 				});
 
@@ -360,8 +357,20 @@
 						$("#page-custom").fadeOut(500);
 					}, 1000);
 					setTimeout(function() {
-						window.location = "/sponsors";
+						window.location = "sponsors/";
 					}, 1500).fadeOut(1500);
+				});
+
+				$("#sif").click(function()  {
+					setTimeout(function() {
+						window.location = "sif/";
+					}, 100).fadeOut(1500);
+				});
+
+				$("#ca").click(function()  {
+					setTimeout(function() {
+						window.location = "CA/";
+					}, 100).fadeOut(1500);
 				});
 
 				$("#devPage").click(function()  {
@@ -369,7 +378,7 @@
 						$("#page-blog").fadeOut(500);
 					}, 1000);
 					setTimeout(function() {
-						window.location = "/devPage/index.html";
+						window.location = "devPage/index.html";
 					}, 1500).fadeOut(1500);
 				});
 
@@ -378,7 +387,7 @@
 						$("#page-buy").fadeOut(500);
 					}, 1000);
 					setTimeout(function() {
-						window.location = "/gallery/";
+						window.location = "gallery/";
 					}, 1500).fadeOut(1500);
 				});
 
@@ -387,7 +396,7 @@
 						$("#page-training").fadeOut(500);
 					}, 1000);
 					setTimeout(function() {
-						window.location = "/team/";
+						window.location = "team/";
 					}, 1500).fadeOut(1500);
 				});
 			});
