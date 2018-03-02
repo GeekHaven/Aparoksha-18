@@ -16,13 +16,84 @@
 	<link rel="stylesheet" type="text/css" href="css/style2.css" />
 	<script src="js/modernizr-custom.js"></script>
 	<style type="text/css">
-		.img-wrap {
-			filter: grayscale(100%);
+	.img-wrap {
+		filter: grayscale(100%);
+	}
+	.img-wrap:hover {
+		filter: grayscale(0%);
+	}
+
+	.buttons1 {
+		display: table;
+		height: 100%;
+		width: 100%;
+	}
+
+	.container1 {
+		display: table-cell;
+		padding: 1em;
+		text-align: center;
+		vertical-align: middle;
+	}
+	.btn {
+		color: #fff;
+		cursor: pointer;
+		display: block;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 45px;
+		margin: 0 auto 2em;
+		max-width: 160px;
+		position: relative;
+		text-decoration: none;
+		text-transform: uppercase;
+		vertical-align: middle;
+		width: 100%;
+	}
+	@media (min-width: 400px) {
+		.btn {
+			display: inline-block;
+			margin-right: 2.5em;
 		}
-		.img-wrap:hover {
-			filter: grayscale(0%);
+		.btn:nth-of-type(even) {
+			margin-right: 0;
 		}
-	</style>
+	}
+	@media (min-width: 600px) {
+		.btn:nth-of-type(even) {
+			margin-right: 2.5em;
+		}
+		.btn:nth-of-type(5) {
+			margin-right: 0;
+		}
+	}
+	.btn:hover {
+		text-decoration: none;
+	}
+	.btn-3 {
+		background: #e3403a;
+		border: 1px solid #da251f;
+		-webkit-box-shadow: 0px 2px 0 #d6251f, 2px 4px 6px #e02a24;
+		box-shadow: 0px 2px 0 #d6251f, 2px 4px 6px #e02a24;
+		font-weight: 900;
+		letter-spacing: 1px;
+		-webkit-transition: all 150ms linear;
+		transition: all 150ms linear;
+	}
+
+	.btn-3:hover {
+		background: #e02c26;
+		border: 1px solid rgba(0, 0, 0, 0.05);
+		-webkit-box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+		box-shadow: 1px 1px 2px rgba(255, 255, 255, 0.2);
+		color: #ec817d;
+		text-decoration: none;
+		text-shadow: -1px -1px 0 #c2211c;
+		-webkit-transition: all 250ms linear;
+		transition: all 250ms linear;
+	}
+
+</style>
 </head>
 
 <body class="demo-2" style="background: url(img/bg.png);">
@@ -36,14 +107,14 @@
 		</svg>
 		<header class="codrops-header">
 			<div class="codrops-links">
-					<a class="codrops-icon" href="../" style="color: black;font-size: 35px;"><svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg></a>
-					
-				</div>
-		
+				<a class="codrops-icon" href="../" style="color: black;font-size: 35px;"><svg class="icon icon--arrow"><use xlink:href="#icon-arrow"></use></svg></a>
+
+			</div>
+
 		</header>
 		<div class="content">
 			<!-- <h1 style="text-align: center;font-size: 50px; text-transform: uppercase;font-weight: 400;letter-spacing: 2px;">Events</h1> -->
-		
+
 			<div class="grid">
 				<div class="grid__item" data-size="1280x853">
 					<h1 style="color: black;font-size: 45px;letter-spacing: 1px;">FLAGSHIP</h1>
@@ -53,25 +124,37 @@
 						<div class="description description--grid">
 							<h3>Hack In The North</h3>
 							<p>Hack in the North, a student-held hackathon in India will host it's third edition this March.</em></p>
-							<!-- <div class="details">
+							<div class="details">
 								<ul>
-									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
-									<li><i class="icon icon-focal_length"></i><span>22.5mm</span></li>
-									<li><i class="icon icon-aperture"></i><span>&fnof;/5.6</span></li>
-									<li><i class="icon icon-exposure_time"></i><span>1/1000</span></li>
-									<li><i class="icon icon-iso"></i><span>80</span></li>
+									<li><span>Organiser : </span></li>
+
+									
 								</ul>
-							</div> -->
+							</div>
+							<div class="details">
+								<ul>
+
+									<li><span>Contact : </span></li>
+									
+								</ul>
+							</div>
+							<div class="details">
+								<section class="buttons1">
+									<div class="container1">
+										<a href="https://twitter.com/Dave_Conner" class="btn btn-3"><span>Hover</span></a>
+									</div>
+								</section>
+							</div>
 						</div>
 					</a>
 				</div>
 				<div class="grid__item" data-size="1280x1280">
-					<a href="img/codeRed.png" class="img-wrap"><img src="img/codeRed.png" alt="img07" />
-						<div class="description description--grid">
+					<a  class="img-wrap"><img src="img/codeRed.png" alt="img07" />
+						<div class="description description--grid" style="background-color: white;">
 							<h3>CodeRed</h3>
 							<p>An All-India Coding Competition.
-A Flagship Event of Aparoksha'18 , the Tech-Fest of IIIT Allahabad
-</em></p>
+								A Flagship Event of Aparoksha'18 , the Tech-Fest of IIIT Allahabad
+							</em></p>
 							<!-- <div class="details">
 								<ul>
 									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
@@ -211,7 +294,7 @@ A Flagship Event of Aparoksha'18 , the Tech-Fest of IIIT Allahabad
 				</div>
 				
 				<div class="grid__item" data-size="837x1280">
-						<h1 style="color: black;font-size: 45px;letter-spacing: 1px;">CODING</h1>
+					<h1 style="color: black;font-size: 45px;letter-spacing: 1px;">CODING</h1>
 					
 				</div>
 				<div class="grid__item" data-size="1280x961">
@@ -422,8 +505,8 @@ A Flagship Event of Aparoksha'18 , the Tech-Fest of IIIT Allahabad
 						</div>
 					</a>
 				</div>
-					<div class="grid__item" data-size="837x1280">
-				<a href="events/electrobuzz.jpg" class="img-wrap"><img src="events/electrobuzz.jpg" alt="img03" />
+				<div class="grid__item" data-size="837x1280">
+					<a href="events/electrobuzz.jpg" class="img-wrap"><img src="events/electrobuzz.jpg" alt="img03" />
 						<div class="description description--grid">
 							<h3>Electrobuzz</h3>
 							<p>We all love animals. Why do we call some 'pets' and others 'dinner'? <em>&mdash; K.D. Lang</em></p>
@@ -723,8 +806,8 @@ A Flagship Event of Aparoksha'18 , the Tech-Fest of IIIT Allahabad
 						<div class="description description--grid">
 							<h3>CodeRed</h3>
 							<p>An All-India Coding Competition.
-A Flagship Event of Aparoksha'18 , the Tech-Fest of IIIT Allahabad
-</em></p>
+								A Flagship Event of Aparoksha'18 , the Tech-Fest of IIIT Allahabad
+							</em></p>
 							<!-- <div class="details">
 								<ul>
 									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
@@ -879,7 +962,7 @@ A Flagship Event of Aparoksha'18 , the Tech-Fest of IIIT Allahabad
 				</div>
 				
 				<div class="grid__item" data-size="1280x1131">
-				<a href="img/fragfest.png" class="img-wrap"><img src="img/fragfest.png" alt="img10" />
+					<a href="img/fragfest.png" class="img-wrap"><img src="img/fragfest.png" alt="img10" />
 						<div class="description description--grid">
 							<h3>Frag-Fest</h3>
 							<p></em></p>
@@ -901,8 +984,8 @@ A Flagship Event of Aparoksha'18 , the Tech-Fest of IIIT Allahabad
 						<div class="description description--grid">
 							<h3>CodeRed</h3>
 							<p>An All-India Coding Competition.
-A Flagship Event of Aparoksha'18 , the Tech-Fest of IIIT Allahabad
-</em></p>
+								A Flagship Event of Aparoksha'18 , the Tech-Fest of IIIT Allahabad
+							</em></p>
 							<!-- <div class="details">
 								<ul>
 									<li><i class="icon icon-camera"></i><span>Canon PowerShot S95</span></li>
@@ -1095,42 +1178,42 @@ A Flagship Event of Aparoksha'18 , the Tech-Fest of IIIT Allahabad
 					}
 				};
 
-			new GridFx(document.querySelector('.grid'), {
-				imgPosition : {
-					x : -0.5,
-					y : 1
-				},
-				onOpenItem : function(instance, item) {
-					instance.items.forEach(function(el) {
-						if(item != el) {
-							var delay = Math.floor(Math.random() * 50);
-							el.style.WebkitTransition = 'opacity .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1), -webkit-transform .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1)';
-							el.style.transition = 'opacity .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1), transform .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1)';
-							el.style.WebkitTransform = 'scale3d(0.1,0.1,1)';
-							el.style.transform = 'scale3d(0.1,0.1,1)';
-							el.style.opacity = 0;
-						}
-					});
-				},
-				onCloseItem : function(instance, item) {
-					instance.items.forEach(function(el) {
-						if(item != el) {
-							el.style.WebkitTransition = 'opacity .4s, -webkit-transform .4s';
-							el.style.transition = 'opacity .4s, transform .4s';
-							el.style.WebkitTransform = 'scale3d(1,1,1)';
-							el.style.transform = 'scale3d(1,1,1)';
-							el.style.opacity = 1;
+				new GridFx(document.querySelector('.grid'), {
+					imgPosition : {
+						x : -0.5,
+						y : 1
+					},
+					onOpenItem : function(instance, item) {
+						instance.items.forEach(function(el) {
+							if(item != el) {
+								var delay = Math.floor(Math.random() * 50);
+								el.style.WebkitTransition = 'opacity .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1), -webkit-transform .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1)';
+								el.style.transition = 'opacity .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1), transform .5s ' + delay + 'ms cubic-bezier(.7,0,.3,1)';
+								el.style.WebkitTransform = 'scale3d(0.1,0.1,1)';
+								el.style.transform = 'scale3d(0.1,0.1,1)';
+								el.style.opacity = 0;
+							}
+						});
+					},
+					onCloseItem : function(instance, item) {
+						instance.items.forEach(function(el) {
+							if(item != el) {
+								el.style.WebkitTransition = 'opacity .4s, -webkit-transform .4s';
+								el.style.transition = 'opacity .4s, transform .4s';
+								el.style.WebkitTransform = 'scale3d(1,1,1)';
+								el.style.transform = 'scale3d(1,1,1)';
+								el.style.opacity = 1;
 
-							onEndTransition(el, function() {
-								el.style.transition = 'none';
-								el.style.WebkitTransform = 'none';
-							});
-						}
-					});
-				}
-			});
-		})();
-	</script>
-</body>
+								onEndTransition(el, function() {
+									el.style.transition = 'none';
+									el.style.WebkitTransform = 'none';
+								});
+							}
+						});
+					}
+				});
+			})();
+		</script>
+	</body>
 
-</html>
+	</html>
