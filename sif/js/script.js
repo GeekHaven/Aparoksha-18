@@ -63,6 +63,14 @@ $(document).ready(function()  {
             $('#datascience').prop('disabled', false);
         }        
     });
+    $('#terms').change(function () {
+        if (!this.checked) {
+            $('#submit').prop('disabled', true);
+        }
+        else {
+            $('#submit').prop('disabled', false);
+        }        
+    });
     if(!$("#terms").checked) {
         $('#submit').prop('disabled', true);
     }
