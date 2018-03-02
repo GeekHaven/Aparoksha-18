@@ -119,14 +119,14 @@ unset($_SESSION['events']);
             </div>
 
             <form class="form-horizontal" data-toggle="validator" action="submit.php" role="form" method="post" name="f">
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label for="uname" class="col-sm-2 control-label">Name<sup>*</sup></label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" id="uname" name="uname" placeholder="Your Name" value="" required>
                   <div class="help-block with-errors pull-right"></div>
                   <span class="form-control-feedback" aria-hidden="true"></span>
                 </div>
-              </div>
+              </div> -->
               <div class="form-group">
                 <label for="uemail" class="col-sm-2 control-label">Email<sup>*</sup></label>
                 <div class="col-sm-9">
@@ -144,7 +144,7 @@ unset($_SESSION['events']);
                   </select>
                 </div>
               </div>
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label for="hostel" class="col-sm-2 control-label">Hostel Number<sup>*</sup></label>
                 <div class="col-sm-9">
                   <select class="form-control" id="hostel" name="hostel" required>
@@ -160,15 +160,15 @@ unset($_SESSION['events']);
                     <option value="Research Scholar Apts">Research Scholar Apts</option>
                   </select>
                 </div>
-              </div>
-              <div class="form-group">
+              </div> -->
+              <!-- <div class="form-group">
                 <label for="room" class="col-sm-2 control-label">Room No.<sup>*</sup></label>
                 <div class="col-sm-9">
                   <input type="text" class="form-control" id="room" name="room" placeholder="Room No." value="" required>
                   <div class="help-block with-errors pull-right"></div>
                   <span class="form-control-feedback" aria-hidden="true"></span>
                 </div>
-              </div>
+              </div> -->
               <div class="form-group">
                 <label for="mobile" class="col-sm-2 control-label">Mobile<sup>*</sup></label>
                 <div class="col-sm-9">
@@ -227,7 +227,7 @@ unset($_SESSION['events']);
                   <span class="form-control-feedback" aria-hidden="true"></span>
                 </div>
               </div>
-              <div class="form-group" id="datetime">
+              <!-- <div class="form-group" id="datetime">
                   <label for="paidon" class="col-sm-2 control-label">Paid On<sup>*</sup></label>
                   <div class="col-sm-9">
                     <div class='input-group date' id='datetimepicker1'>
@@ -239,7 +239,7 @@ unset($_SESSION['events']);
                     <div class="help-block with-errors pull-right"></div>
                     <span class="form-control-feedback" aria-hidden="true"></span>
                   </div>
-              </div>
+              </div> -->
               <div class="form-group">
                 <label for="tranvia" class="col-sm-2 control-label">Paid Via<sup>*</sup></label>
                 <div class="col-sm-9">

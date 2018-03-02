@@ -35,7 +35,6 @@
         if($order != null){
             $_SESSION['confirm'] = "Your order details are shown below"; 
             $verified = $order['verified'];
-            $name = $order['name'];
             $ttype = $order['t_type'];
             $tsize = $order['t_size'];
             $quantity = $order['t_quantity'];
@@ -136,10 +135,6 @@
  <div class="container-fluid" style="<?php if(isset($_GET['orderid']) && $order!=null ){echo("display:block;");} else {echo("display:none;");} ?>">
     <table class="table table-sm " style="width:80%; margin-left:auto; margin-right:auto;">
         <tbody>
-            <tr>
-                <th scope="row" align="center">Name</th>
-                <td align="center"><?php echo $name; ?></td>
-            </tr>
             <tr>
                 <th scope="row" align="center">T-Shirt Type</th>
                 <td align="center"><?php echo $ttype; ?></td>

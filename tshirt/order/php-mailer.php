@@ -17,7 +17,7 @@ if(!$clicked){
     header("Refresh: 1; url=index.php");
 }
 
-function mailsend($email,$orderid, $name){
+function mailsend($email,$orderid){
 
     //Load composer's autoloader
     require '../../register/vendor/autoload.php';
@@ -46,7 +46,7 @@ function mailsend($email,$orderid, $name){
 
         //Recipients
         $mail->setFrom('events@aparoksha.org', 'Aparoksha, IIITA');
-        $mail->addAddress($email, $name);     // Add a recipient
+        $mail->addAddress($email, $orderid);     // Add a recipient
         // $mail->addAddress('ellen@example.com');               // Name is optional
         // $mail->addReplyTo('info@example.com', 'Information');
         //$mail->addCC('cc@example.com');
@@ -61,12 +61,11 @@ function mailsend($email,$orderid, $name){
         $mail->Subject = 'TShirt Order: Aparoksha Merchandise';
         $mail->Body    = 'Greetings!<br><br>Thanks for ordering merchandise, We have received
                             your request, It can some time to verify your transaction. You can check your transaction 
-                            verification status <a href="https://aparoksha.org/tshirt/order/status.php?orderid='.$orderid.'">here</a>. Here is your order detail:<br><br>
+                            verification status <a href="https://aparoksha.org/tshirt/order/check.php?orderid='.$orderid.'">here</a>. Here is your order detail:<br><br>
                             
-                            Name: '.$name.'<br>
                             Order ID: '.$orderid.'<br><br>
 
-                            Check full order details <a href="https://aparoksha.org/tshirt/order/status.php?orderid='.$orderid.'">here</a>.<br><br> 
+                            Check full order details <a href="https://aparoksha.org/tshirt/order/check.php?orderid='.$orderid.'">here</a>.<br><br> 
                             Thanks, <br> Team Aparoksha';
 
         $mail->send();

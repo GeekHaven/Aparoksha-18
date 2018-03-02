@@ -36,19 +36,19 @@ date_default_timezone_set('Asia/Kolkata');
 
     else{
         //ToDo Client Side handling of empty data
-        if(isset($_POST['uname']) && isset($_POST['uemail']) && isset($_POST['college']) && isset($_POST['hostel']) && isset($_POST['room'])
-            && isset($_POST['ttype']) && isset($_POST['mobile']) && isset($_POST['paidon']) && isset($_POST['tranid']) && isset($_POST['amount'])){
-            $name = htmlentities($_POST['uname']);
+        if(isset($_POST['uemail']) && isset($_POST['college']) && isset($_POST['ttype']) && isset($_POST['mobile']) 
+           && isset($_POST['tranid']) && isset($_POST['amount'])){
+           // $name = htmlentities($_POST['uname']);
             $email = htmlentities($_POST['uemail']);
             $college = htmlentities($_POST['college']);
-            $hostel = htmlentities($_POST['hostel']);
-            $room = htmlentities($_POST['room']);
+           // $hostel = htmlentities($_POST['hostel']);
+           // $room = htmlentities($_POST['room']);
             $mobile = htmlentities($_POST['mobile']);
             $ttype = htmlentities($_POST['ttype']);
             $tsize = htmlentities($_POST['tsize']);
             $quantity = htmlentities($_POST['quantity']);
             $tranid = htmlentities($_POST['tranid']);
-            $paidon = htmlentities($_POST['paidon']);
+          //  $paidon = htmlentities($_POST['paidon']);
             $tranvia = htmlentities($_POST['tranvia']);
             $amount = htmlentities($_POST['amount']);
             $verified = "false";
@@ -73,7 +73,7 @@ date_default_timezone_set('Asia/Kolkata');
         
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            if(mailsend($email,$orderno,$name)) {
+            if(mailsend($email,$orderno)) {
                 $mailed = "true";
             }
             else {
@@ -93,10 +93,10 @@ date_default_timezone_set('Asia/Kolkata');
                 }
             }
 
-            $sql = $conn->prepare("INSERT INTO $tbname (order_time,order_no,name,email,mailed,college,mobile,room,hostel,t_type,t_size,t_quantity,amount_paid,trans_id,paid_on,paid_via,verified) VALUES 
-                                                        (:order_time,:order_no,:name,:email,:mailed,:college,:mobile,:room,:hostel,:t_type,:t_size,:t_quantity,:amount_paid,:trans_id,:paid_on,:paid_via,:verified)");
-            $do = $sql->execute(['order_time' => $date_clicked , 'order_no' => $orderno, 'name' => $name, 'email' => $email, 'mailed' => $mailed, 'college' => $college,'mobile' => $mobile,'room' => $room, 'hostel' => $hostel, 't_type' => $ttype,
-                                    't_size' => $tsize, 't_quantity' => $quantity, 'amount_paid' => $amount, 'trans_id' => $tranid, 'paid_on' => $paidon, 'paid_via' => $tranvia, 'verified' => $verified ]);
+            $sql = $conn->prepare("INSERT INTO $tbname (order_time,order_no,email,mailed,college,mobile,t_type,t_size,t_quantity,amount_paid,trans_id,paid_via,verified) VALUES 
+                                                        (:order_time,:order_no,:email,:mailed,:college,:mobile,:t_type,:t_size,:t_quantity,:amount_paid,:trans_id,:paid_via,:verified)");
+            $do = $sql->execute(['order_time' => $date_clicked , 'order_no' => $orderno, 'email' => $email, 'mailed' => $mailed, 'college' => $college,'mobile' => $mobile, 't_type' => $ttype,
+                                    't_size' => $tsize, 't_quantity' => $quantity, 'amount_paid' => $amount, 'trans_id' => $tranid, 'paid_via' => $tranvia, 'verified' => $verified ]);
 
             if($do){
                 $_SESSION['confirm'] = "Your order has been placed successfully. Check your mail for further details."; 
