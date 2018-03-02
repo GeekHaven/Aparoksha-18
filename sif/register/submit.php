@@ -100,6 +100,7 @@ require '../../register/vendor/autoload.php';
             $sql = $conn->prepare("INSERT INTO $tbname (dated,name,email,mobile,companyname,companyinfo,frontend,backend,
                     fullstack,graphic,content,business,marketing,datascience,stipend,restriction,yearallowed) VALUES (:dated,:name,:email,:mobile,:companyname,
                     :companyinfo,:frontend,:backend,:fullstack,:graphic,:content,:business,:marketing,:datascience,:stipend,:restriction,:yearallowed)");
+
             $do = $sql->execute(['dated' => $date_clicked, 'name' => $name, 'email' => $email,'mobile' => $mobile,'companyname' => $companyname,
                  'companyinfo' => $companyinfo, 'frontend' => $frontend, 'backend' => $backend, 'fullstack' => $fullstack,
                  'graphic' => $graphics, 'content' => $content, 'business' => $business, 'marketing' => $marketing, 'datascience' => $datascience, 'stipend' => $stipend, 'restriction' => $restrict,

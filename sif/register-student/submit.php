@@ -91,7 +91,7 @@ require '../../register/vendor/autoload.php';
         $dbname = $dbn;
         $tbname = $tbn;
 
-        // try {
+        try {
             $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
             
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -131,17 +131,14 @@ require '../../register/vendor/autoload.php';
                 exit;
             }
 
-        // }
+        }
         
-        // catch(PDOException $e){
-        //     if($conn) {
-        //         print("Hey");
-        //     }
-        //     $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
-        //     try again after some time. If problem persists please feel free to contact any person mentioned below ";
-        //     // header("Refresh: 0; url=index.php#info");
-        //     exit;
-        // }
+        catch(PDOException $e){
+            $_SESSION['confirm'] = "Oops! looks like we have ran into some trouble with registering you. Please
+            try again after some time. If problem persists please feel free to contact any person mentioned below ";
+            header("Refresh: 0; url=index.php#info");
+            exit;
+        }
         $clicked = false;
         $conn = null;
     }
