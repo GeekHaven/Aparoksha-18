@@ -144,9 +144,9 @@
 							GALLERY
 						</div>
 					</a>
-					<a class="link link--page " href="#">
+					<a class="link link--page " href="#" id="merchandise">
 						<div class="itm v-sml">
-							Talks
+							Merchandise orders
 						</div>
 					</a>
 					<a class="link link--page " href="#" id="tech-tours" >
@@ -364,6 +364,12 @@
 				$("#sif").click(function()  {
 					setTimeout(function() {
 						window.location = "sif/";
+					}, 100).fadeOut(1500);
+				});
+
+				$("#merchandise").click(function()  {
+					setTimeout(function() {
+						window.location = "merchandise/";
 					}, 100).fadeOut(1500);
 				});
 

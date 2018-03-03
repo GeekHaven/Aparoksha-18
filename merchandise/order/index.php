@@ -55,19 +55,6 @@ unset($_SESSION['events']);
           <img class="modal-content" id="img01">
         </div>
 
-        <div class="row me-row">
-          <div class="col-md-12 text-left" style="margin-top:1em;">
-              <h3> Instructions: </h3>
-              <ul>
-                <li style="list-style-type: disc;"> Make payment to Mobile Number mentioned below via <b>TEZ</b>, <b>PhonePe</b> or <b>Paytm</b> UPI services only. </li>
-                <li style="list-style-type: disc;"> For faster review of your payment do not forget to mention your <b>Email ID</b> and <b>University ID/ AADHAR number</b> with the transaction message </li>
-                <li style="list-style-type: disc;"> Once your payment is confirmed note your transaction number and keep it with you. </li>
-                <li style="list-style-type: disc;"> Fill merchandise form and mention your <b>transaction ID</b> and and <b>Payment method</b>. </li>
-                <li style="list-style-type: disc;"> When you are done just wait and once your payment is confirmed you can view the same on check you status page </li>
-              </ul>
-          </div>
-        </div>
-
         <div class="row me-row content-ct">
           <div class="col-md-6" style="margin-top:1em;">
             <button class="btn btn-lg btn-success btn-disabled" onclick="return false;">Payment To<i class="fa fa-angle-double-right" aria-hidden="true" style="padding-left:0.6em;"></i>
@@ -266,6 +253,22 @@ unset($_SESSION['events']);
               </div>
             </form>
           </div>
+
+          <div class="row me-row">
+          <div class="col-md-12 text-left" style="margin-top:1em;">
+              <h2 class="text-center" class="margin-bottom:2em;"> Instructions: </h2>
+              <ul>
+                <li style="list-style-type: disc;"> Make payment to Mobile Number mentioned below via <b>TEZ</b>, <b>PhonePe</b> or <b>Paytm</b> UPI services only. </li>
+                <li style="list-style-type: disc;"> For faster review of your payment do not forget to mention your <b>Email ID</b> and <b>University ID/ AADHAR number</b> and other poosible details with the transaction message </li>
+                <li style="list-style-type: disc;"> Once your payment is confirmed note your transaction number and keep it with you. </li>
+                <li style="list-style-type: disc;"> Fill merchandise form and mention your <b>transaction ID</b> and and <b>Payment method</b>. </li>
+                <li style="list-style-type: disc;"> When you are done just wait and once your payment is confirmed you can view the same on check you status page </li>
+                <li style="list-style-type: disc;"> If you face any problems feel free to ask any person mentioned below. </li>
+              </ul>
+          </div>
+        </div>
+
+
       </div>
 
       <!-- <div class="container-fluid tickets" id="tickets">
