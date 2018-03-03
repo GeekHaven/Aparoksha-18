@@ -42,13 +42,17 @@ unset($_SESSION['events']);
       <div class="container">
 
         <div class="row me-row">
-          <h3> Type A: </h3>
-          <div class="col-md-6" style="margin-top:1em;">
-             <img src="../../img/t1-front.jpg" class="img-responsive" height="75%" width="75%">
+          <h3> Samples (Click to zoom) </h3>
+          <div class="col-md-12" style="margin-top:1em;">
+            <img src="../../img/t_both.jpg" class="img-responsive" style="height:400px;" id="myImg">
           </div>
-          <div class="col-md-6" style="margin-top:1em;">
-             <img src="../../img/t1-back.jpg" class="img-responsive" height="75%" width="75%">
-          </div>
+          <!-- <div class="col-md-6" style="margin-top:1em;">
+             <img src="../../img/t1-back.jpg" class="img-responsive" style="height:400px;" id="myImg1">
+          </div> -->
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <img class="modal-content" id="img01">
         </div>
 
         <div class="row me-row">
@@ -84,11 +88,11 @@ unset($_SESSION['events']);
           </thead>
           <tbody>
             <tr>
-              <td>Type A</td>
+              <td>Type A (Digital Renaissance)</td>
               <td><i class="fa fa-rupee" aria-hidden="true" style="padding-right:0.6em;"></i>300/-</td>
             </tr>
             <tr>
-              <td>Type B</td>
+              <td>Type B (UFO)</td>
               <td><i class="fa fa-rupee" aria-hidden="true" style="padding-right:0.6em;"></i>300/-</td>
             </tr>
             <tr>
@@ -181,8 +185,8 @@ unset($_SESSION['events']);
                 <label for="ttype" class="col-sm-2 control-label">T-Shirt Type<sup>*</sup></label>
                 <div class="col-sm-9">
                   <select class="form-control" id="ttype" name="ttype">
-                    <option value="A">Type A</option>
-                    <option value="B">Type B</option>
+                    <option value="A">Type A (Digital Renaissance)</option>
+                    <option value="B">Type B (UFO)</option>
                     <option value="Combo">Combo (Type A + Type B)</option>
                   </select>
                 </div>
