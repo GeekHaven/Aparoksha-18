@@ -70,7 +70,7 @@ unset($_SESSION['events']);
             </button>
           </div>
           <div class="col-md-6" style="margin-top:1em;">
-            <button href="" class="btn btn-lg btn-primary">9981250963<i class="fa fa-rupee" aria-hidden="true" style="padding-left:0.6em;"></i></button>
+            <button href="" class="btn btn-lg btn-primary">9664087084</button>
           </div>
         </div>
 
@@ -85,15 +85,15 @@ unset($_SESSION['events']);
           <tbody>
             <tr>
               <td>Type A</td>
-              <td>300 only</td>
+              <td><i class="fa fa-rupee" aria-hidden="true" style="padding-right:0.6em;"></i>300/-</td>
             </tr>
             <tr>
               <td>Type B</td>
-              <td>300 only</td>
+              <td><i class="fa fa-rupee" aria-hidden="true" style="padding-right:0.6em;"></i>300/-</td>
             </tr>
             <tr>
               <td>Combo (Type A + Type B) Same size</td>
-              <td>550 only</td>
+              <td><i class="fa fa-rupee" aria-hidden="true" style="padding-right:0.6em;"></i>550/-</td>
             </tr>
           </tbody>
         </table>
@@ -208,6 +208,7 @@ unset($_SESSION['events']);
                     <option value="M">M</option>
                     <option value="L">L</option>
                     <option value="XL">XL</option>
+                    <option value="XXL">XXL</option>
                   </select>
                 </div>
               </div>
@@ -298,7 +299,7 @@ unset($_SESSION['events']);
               <hr>
               <p>Somendra Agrawal</p>
               <p> finance@aparoksha.org </p>
-              <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-7233020977</p>
+              <p><i class="fa fa-phone" aria-hidden="true" style="padding-right:5px;"></i>+91-9664087084</p>
           </div>
         </div>
         <div class="row footer-credit">
