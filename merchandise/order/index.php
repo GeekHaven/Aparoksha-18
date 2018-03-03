@@ -121,7 +121,7 @@ unset($_SESSION['events']);
               <div class="form-group">
                 <label for="uemail" class="col-sm-2 control-label">Email<sup>*</sup></label>
                 <div class="col-sm-9">
-                  <input type="text" class="form-control" id="uemail" name="uemail" placeholder="Your Email (We will send a email to this)" value="" required>
+                  <input type="email" class="form-control" id="uemail" name="uemail" placeholder="Your Email (We will send a email to this)" value="" required>
                   <div class="help-block with-errors pull-right"></div>
                   <span class="form-control-feedback" aria-hidden="true"></span>
                 </div>
@@ -163,7 +163,7 @@ unset($_SESSION['events']);
               <div class="form-group">
                 <label for="mobile" class="col-sm-2 control-label">Mobile<sup>*</sup></label>
                 <div class="col-sm-9">
-                  <input type="tel" pattern="[0-9]{10}" class="form-control" id="mobile" name="mobile" placeholder="xxxxxxxx" value="" required>
+                  <input type="tel" pattern="[0-9]{10}" class="form-control" id="mobile" name="mobile" placeholder="xxxxxxxx" value="" data-error="Please enter a 10 digit mobile number" required>
                   <div class="help-block with-errors pull-right"></div>
                   <span class="form-control-feedback" aria-hidden="true"></span>
                 </div>

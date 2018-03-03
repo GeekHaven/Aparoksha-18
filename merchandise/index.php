@@ -1,4 +1,4 @@
 <?php
-    header("Location: https://aparoksha.org/tshirt/order");
+    header("Location: https://aparoksha.org/merchandise/order");
     exit;
 ?>

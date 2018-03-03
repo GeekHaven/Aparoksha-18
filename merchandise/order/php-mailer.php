@@ -61,11 +61,11 @@ function mailsend($email,$orderid){
         $mail->Subject = 'TShirt Order: Aparoksha Merchandise';
         $mail->Body    = 'Greetings!<br><br>Thanks for ordering merchandise, We have received
                             your request, It can some time to verify your transaction. You can check your transaction 
-                            verification status <a href="https://aparoksha.org/tshirt/order/check.php?orderid='.$orderid.'">here</a>. Here is your order detail:<br><br>
+                            verification status <a href="https://aparoksha.org/tshirt/merchandise/check.php?orderid='.$orderid.'">here</a>. Here is your order detail:<br><br>
                             
                             Order ID: '.$orderid.'<br><br>
 
-                            Check full order details <a href="https://aparoksha.org/tshirt/order/check.php?orderid='.$orderid.'">here</a>.<br><br> 
+                            Check full order details <a href="https://aparoksha.org/tshirt/merchandise/check.php?orderid='.$orderid.'">here</a>.<br><br> 
                             Thanks, <br> Team Aparoksha';
 
         $mail->send();
