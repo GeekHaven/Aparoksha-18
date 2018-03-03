@@ -85,7 +85,7 @@
           <div class="col-md-12">
           <a href="https://aparoksha.org"><img src="../../img/apk-logo.png" id="apk-logo" class="logo img-circle img responsive"></a>
             <h1>Aparoksha'18| Merchandise Orders</h1>
-            <h3>Technical fest of IIITA</h3>
+            <h3>Annual Technical fest of IIITA</h3>
             <h4>16<sup>th</sup> to 18<sup>th</sup>  March, 2018</h4>
           </div>
           <!-- <div class="col-md-5">
@@ -96,12 +96,9 @@
 
       <div class="container">
         <div class="row me-row content-ct">
-          <div class="col-md-6" style="margin-top:1em;">
+          <div class="col-md-12" style="margin-top:1em;">
             <a href="index.php" class="btn btn-lg btn-red">Order<i class="fa fa-calendar" aria-hidden="true" style="padding-left:0.6em;"></i>
             </a>
-          </div>
-          <div class="col-md-6" style="margin-top:1em;">
-            <a href="#" class="btn btn-lg btn-yellow">Check your status<i class="fa fa-binoculars" aria-hidden="true" style="padding-left:0.6em;"></i></a>
           </div>
         </div>
 

@@ -11,7 +11,7 @@ unset($_SESSION['events']);
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Aparoksha 2018 registrations are open. Dates are 16th- 18th March 2018. Exciting events">
   <meta name="author" content="Aproksha 2018">
-  <title>Aparoksha Merchandise</title>
+  <title>Aparoksha Merchandise orders</title>
 
   <!-- Bootstrap -->
   <link href="../../css/bootstrap.min.css" rel="stylesheet">
@@ -30,7 +30,7 @@ unset($_SESSION['events']);
           <div class="col-md-12">
           <a href="https://aparoksha.org"><img src="../../img/apk-logo.png" id="apk-logo" class="logo img-circle img responsive"></a>
             <h1>Aparoksha'18| Merchandise Orders</h1>
-            <h3>Technical fest of IIITA</h3>
+            <h3> Annual Technical fest of IIITA</h3>
             <h4>16<sup>th</sup> to 18<sup>th</sup>  March, 2018</h4>
           </div>
           <!-- <div class="col-md-5">
@@ -92,11 +92,7 @@ unset($_SESSION['events']);
         <hr style="border-width:4px;">
 
         <div class="row me-row content-ct">
-          <div class="col-md-6" style="margin-top:1em;">
-            <button class="btn btn-lg btn-red btn-disabled" onclick="return false;">Order<i class="fa fa-calendar" aria-hidden="true" style="padding-left:0.6em;"></i>
-            </button>
-          </div>
-          <div class="col-md-6" style="margin-top:1em;">
+          <div class="col-md-12" style="margin-top:1em;">
             <a href="check.php" class="btn btn-lg btn-yellow">Check your status<i class="fa fa-binoculars" aria-hidden="true" style="padding-left:0.6em;"></i></a>
           </div>
         </div>
@@ -258,8 +254,8 @@ unset($_SESSION['events']);
           <div class="col-md-12 text-left" style="margin-top:1em;">
               <h2 class="text-center" class="margin-bottom:2em;"> Instructions: </h2>
               <ul>
-                <li style="list-style-type: disc;"> Make payment to Mobile Number mentioned below via <b>TEZ</b>, <b>PhonePe</b> or <b>Paytm</b> UPI services only. </li>
-                <li style="list-style-type: disc;"> For faster review of your payment do not forget to mention your <b>Email ID</b> and <b>University ID/ AADHAR number</b> and other poosible details with the transaction message </li>
+                <li style="list-style-type: disc;"> Make payment to 9664087084 via <b>TEZ</b>, <b>PhonePe</b> or <b>Paytm</b> UPI services only. </li>
+                <li style="list-style-type: disc;"> For faster review of your payment do not forget to mention your <b>Email ID</b> and other poosible details with the transaction message </li>
                 <li style="list-style-type: disc;"> Once your payment is confirmed note your transaction number and keep it with you. </li>
                 <li style="list-style-type: disc;"> Fill merchandise form and mention your <b>transaction ID</b> and and <b>Payment method</b>. </li>
                 <li style="list-style-type: disc;"> When you are done just wait and once your payment is confirmed you can view the same on check you status page </li>
