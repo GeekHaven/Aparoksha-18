@@ -56,12 +56,24 @@ unset($_SESSION['events']);
         </div>
 
         <div class="row me-row content-ct">
-          <div class="col-md-6" style="margin-top:1em;">
-            <button class="btn btn-lg btn-success btn-disabled" onclick="return false;">Payment To<i class="fa fa-angle-double-right" aria-hidden="true" style="padding-left:0.6em;"></i>
+          <div class="col-md-12" style="margin-top:1em;">
+            <button class="btn btn-lg btn-success btn-disabled" onclick="return false;">Payment To<i class="fa fa-angle-double-down" aria-hidden="true" style="padding-left:0.6em;"></i>
             </button>
           </div>
-          <div class="col-md-6" style="margin-top:1em;">
-            <button href="" class="btn btn-lg btn-primary">9664087084</button>
+        </div>
+
+        <div class="row me-row content-ct">
+          <div class="col-md-4" style="margin-top:1em;">
+            <img src="../../img/paytm.jpg" class="img-responsive" style="height:400px;" id="">
+            <h3> Paytm </h3>
+          </div>
+          <div class="col-md-4" style="margin-top:1em;">
+            <img src="../../img/phonepe.jpg" class="img-responsive" style="height:400px;" id="">
+            <h3> PhonePE </h3>
+          </div>
+          <div class="col-md-4" style="margin-top:1em;">
+            <img src="../../img/tez.jpg" class="img-responsive" style="height:400px;" id="">
+            <h3> Tez </h3>
           </div>
         </div>
 
@@ -254,7 +266,7 @@ unset($_SESSION['events']);
           <div class="col-md-12 text-left" style="margin-top:1em;">
               <h2 class="text-center" class="margin-bottom:2em;"> Instructions: </h2>
               <ul>
-                <li style="list-style-type: disc;"> Make payment to 9664087084 via <b>TEZ</b>, <b>PhonePe</b> or <b>Paytm</b> UPI services only. </li>
+                <li style="list-style-type: disc;"> Make payment to QR code given via <b>TEZ</b>, <b>PhonePe</b> or <b>Paytm</b> UPI services only. </li>
                 <li style="list-style-type: disc;"> For faster review of your payment do not forget to mention your <b>Email ID</b> and other poosible details with the transaction message </li>
                 <li style="list-style-type: disc;"> Once your payment is confirmed note your transaction number and keep it with you. </li>
                 <li style="list-style-type: disc;"> Fill merchandise form and mention your <b>transaction ID</b> and and <b>Payment method</b>. </li>
