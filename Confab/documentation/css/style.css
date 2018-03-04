@@ -1,0 +1,163 @@
+@import url(../../../../../fonts.googleapis.com/css_633db5c0.css);
+
+body{ font-family: 'Open Sans', sans-serif; -webkit-font-smoothing: antialiased; font-size:14px; color:#4b4b4b; line-height:25px; letter-spacing: 0.02em }
+a{ color: #000; outline: 0; }
+a:hover{ color: #575757; }
+img { -webkit-backface-visibility: hidden; max-width:100%; height:auto; }
+video { background-size: cover; display: table-cell; vertical-align: middle; width: 100%; }
+ul{ margin: 0px; padding:0px; }
+input, textarea, select{ border: 1px solid #dfdfdf; letter-spacing: 1px; font-size: 11px;  padding: 8px 15px; width: 100%; margin: 0 0 20px 0; text-transform: uppercase; max-width: 100%; resize: none;}
+input[type="submit"] { width: auto}
+input[type="button"], input[type="text"], input[type="email"], input[type="search"], input[type="password"], textarea, input[type="submit"] { -webkit-appearance: none;  border-radius: 0; }
+input:focus, textarea:focus{ border: 1px solid #989898; }
+input[type="submit"]:focus { border:none !important}
+iframe { border: 0;}
+ul { list-style: none outside none; }
+ul, ol, dl {list-style-position: outside;}
+::selection { color: #000; background:#dcdcdc; }
+::-moz-selection { color:#000; background:#dcdcdc; }
+::-webkit-input-placeholder { color: #999; text-overflow: ellipsis; }
+:-moz-placeholder { color: #999 !important; text-overflow: ellipsis; opacity:1; }
+::-moz-placeholder { color: #999 !important; text-overflow: ellipsis; opacity:1; } 
+:-ms-input-placeholder { color: #999 !important; text-overflow: ellipsis; opacity:1; }
+::-webkit-scrollbar { width:12px }
+::-webkit-scrollbar-track { -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.3); -moz-box-shadow:inset 0 0 6px rgba(0,0,0,.3); box-shadow:inset 0 0 6px rgba(0,0,0,.3); }
+::-webkit-scrollbar-thumb { background:rgba(210,210,210,.8); -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,.5); -moz-box-shadow:inset 0 0 6px rgba(0,0,0,.5); box-shadow:inset 0 0 6px rgba(0,0,0,.5); }
+::-webkit-scrollbar-thumb:window-inactive { background:rgba(210,210,210,.4) }
+
+.new-demo {background: #e70303 none repeat scroll 0 0;color: #fff;font-size: 12px;margin-right: 8px;padding: 2px 10px 0;position: relative;top: -1px;}
+/* other */
+.text-center {text-align: center !important}
+.no-padding {padding:0 !important}
+.no-padding-left {padding-left:0 !important}
+.no-padding-right {padding-right:0 !important}
+.no-padding-top {padding-top:0 !important}
+.no-margin {margin: 0 !important}
+.no-margin-bottom {margin-bottom: 0 !important}
+.text-uppercase {text-transform: uppercase !important}
+.text-medium {font-size: 12px !important}
+.text-small {font-size: 11px !important}
+p {margin: 0 0 30px 0}
+section {margin: 0 0 100px 0; min-height: 900px}
+strong {font-weight: 600;}
+.width-100 {width: 100% !important}
+.margin-bottom-20 { margin-bottom: 35px !important}
+
+
+/* letter spacing */
+.no-letter-spacing { letter-spacing: 0px !important}
+.letter-spacing-1 { letter-spacing:1px !important}
+.letter-spacing-2 { letter-spacing:2px !important}
+.letter-spacing-3 { letter-spacing:3px !important}
+.letter-spacing-4 { letter-spacing:4px !important}
+.letter-spacing-5 { letter-spacing:5px !important}
+.letter-spacing-6 { letter-spacing:6px !important}
+
+/* heading */
+h1 {margin-top: 0; padding: 50px 0 25px 0; font-size: 30px; font-weight: 600}
+h2 {font-size: 16px; padding-bottom: 15px; padding-top: 50px; font-weight: 600; margin: 0}
+h3 {font-size: 14px; padding-bottom: 15px; padding-top: 50px; font-weight: 600; margin: 0}
+h1,h2,h3,h4,h5 {color: #282828}
+
+/* scroll to top */
+.scrollToTop, .scrollToTop:focus { display: none; font-weight: bold; height: 30px; padding: 0; position: fixed; right: 45px; text-align: center; text-decoration: none; top: 91%; width: 30px; background-color: #878787; z-index: 555; line-height: 28px; text-decoration: none; top: 91%; border-radius: 100%; }
+.scrollToTop i {line-height: 30px; position: relative; color: #fff; }
+.scrollToTop:hover { background-color: #000; text-decoration: none;}
+
+header {background: #000}
+#masthead { padding: 20px;}
+#masthead h1 { font-size: 55px; line-height: 1; }
+#masthead .well { margin-top:13%; background-color:#111155;  }
+.icon-bar { background-color:#fff; }
+.nav li ul { display:none }
+.nav li.active ul { display:block }
+.affix-top,.affix{ position: static;}
+.nav a:focus {outline: 0; border: 0; background-color: transparent !important; color: #000}
+#sidebar.affix-top { position: static;  }
+#sidebar.affix { position: fixed; top:0; width: 249px;  }
+.container-fullwidth {padding: 0 60px}
+.docs-navigation { height: 100%; left: 0; position: absolute; width: 270px; border-right: 1px solid #f2f2f2  }
+.nav li {border-bottom: 1px solid #f2f2f2; text-transform: uppercase }
+.nav-stacked  li + li {margin-top: 0}
+.nav li a {color:#4b4b4b; font-weight: 600; padding: 15px;  }
+.nav li a:hover { background-color: #f9f9f9}
+.nav li.active, .nav li.active a:hover, .sec-link:focus { background-color: #000 ;  }
+.nav li.active a {color: #fff}
+.nav li ul li {padding: 15px; background-color: #fff}
+.nav li.active ul li a {color:#4b4b4b; font-size: 11px; display: block; padding: 10px 45px; text-decoration: none }
+.nav li.active ul li a:hover { background-color: #f9f9f9; }
+.nav li.active ul li:last-child {border-bottom: none}
+.nav li.active ul li.active:focus { background-color: #f9f9f9; }
+.nav li ul li.active a:after {  content: "\f105"; font-family:'FontAwesome';  position: absolute; top: 11px; right: 15px; font-size: 14px; font-weight: normal}
+.nav li.active ul li.active, .nav li.active ul li.active a:focus { background-color: #f9f9f9}
+.nav li.active ul li { padding: 0; position: relative}
+.docs-content { position: relative; margin-left: 320px; padding: 2% 15% 5% 2%}
+.line { border-top: 1px solid #efefef; clear: both; margin: 50px 0; position: relative; width: 100%; display: inline-block }
+pre {padding: 35px; white-space: pre-wrap; background-color: #f9f9f9; border: 1px solid rgba(0,0,0,.07); border-radius: 0; margin: 25px 0}
+.label {border-radius: 0; margin-right: 15px;}
+.docs-content ul li, .docs-content ol li {margin-top: 10px;}
+.comment{ color: #009900 !important; display: inline-block; margin: 10px 0;}
+.comment:last-child {margin: 10px 0 0 0}
+.docs-content a {font-weight: 600; text-decoration: underline}
+.docs-content a:visited { color: #000}
+.docs-content ul {padding-left: 45px}
+.docs-content ul li { list-style: disc;}
+.columns [class^="col-"], .bootstrap-grid [class^="col-"] { border: 1px solid #e2e2e2; background: #f9f9f9;}
+.columns code, .bootstrap-grid code {background: #fff; margin: 10px 0; padding: 0 10px; display: inline-block;}
+.last-section {min-height: 850px}
+.button {background: #000; color: #fff !important; padding: 10px 20px; border-radius: 0; text-decoration: none !important; margin: 25px 0; outline: 0; border: 0; text-transform: uppercase; display: inline-block }
+.button:hover {background: #797979; color: #fff !important; padding: 10px 20px; border-radius: 0; text-decoration: none !important}
+.button:focus {background: #000 !important; color: #fff !important; border:2px solid #000; padding: 10px 20px; }
+.fa-examples div { border: 1px solid #e5e5e5; font-size: 13px; margin: -1px 0 0 -1px; padding: 15px 0 15px 15px; color: #868686; }
+.fa-examples div:hover { background-color: #fafafa}
+.fa-examples i {color:#555555; font-size:14px; letter-spacing: 0; margin-right: 5px;}
+.fa-examples span {margin-left: 6px;  display: none }
+.glyphs .box1 {    border: 1px solid #e5e5e5; display: block; float: left; font-size: 13px; margin: -1px 0 0 -1px; padding: 0; width: 33%; padding: 20px; text-align: left}
+.glyphs .box1 span { font-size: 30px; vertical-align: middle; width: 50px;}
+.themify-icon-section {clear: both; overflow: hidden; }
+.themify-icon-container { width: 240px;  padding: 10px 0; float: left; position: relative; text-align: left; }
+.themify-icon-container [class^="ti-"], .themify-icon-container [class*=" ti-"] {display: inline-block; vertical-align: middle; font-size: 18px}
+.themify-icon-name {  margin-left: 15px;}
+.portfolio-details-page [class^="col-"]{ padding-top: 35px; padding-bottom: 35px}
+.portfolio-details-page img {border: 1px solid #e5e5e5}
+.credits li {margin-top: 0 !important}
+.credits li a {font-size: 13px; font-weight: normal; text-decoration: none}
+.demos [class^="col-"]{ padding-top: 15px; padding-bottom: 15px}
+.demos img {padding: 5px}
+.copyright { padding: 30px 25px; display: block}
+
+.portfolio {padding: 90px 0; position: relative; }
+.portfolio h4 a {text-align: center; font-weight: 600; text-transform: uppercase; font-size: 13px; text-decoration: none}
+.portfolio .screenshot {margin-bottom: 55px}
+.portfolio .portfolio-bg-top {position: absolute; left: 0; display: inline-block; top: -140px; }
+.portfolio .portfolio-bg-bottom {position: absolute; left: 0; display: inline-block; bottom: -42px; right: 0; width: 100%; text-align: center; }
+.portfolio .screenshot h4 {margin-top: 30px; font-size: 16px; }
+.portfolio .screenshot {padding: 0 20px; text-align: center}
+.portfolio .screenshot:nth-child(4n+1) { clear: both; }
+
+.screenshot figure {top: 0; transition: all 0.3s ease 0s; }
+.screenshot figure:hover {top: -10px; transition: all 0.3s ease 0s; }
+.screenshot img {border: 1px solid #e7e7e7; transition: all 0.3s ease 0s;}
+figure { margin: 0; position: relative; overflow: hidden; top: 0; }
+figure .gallery-img { opacity: 1; overflow: hidden; transition: all 0.3s ease 0s; }
+figure:hover .gallery-img { opacity: 0.8; transition: all 0.3s ease 0s; }
+figure:hover figcaption { opacity: 1; transition: all 0.3s ease 0s;}
+figcaption {position: absolute; opacity: 0; z-index: 3; cursor: pointer; text-align: center; background: rgba(18,18,18,0.8); top:0; width: 100%; height: 100%; transition: all 0.3s ease 0s; }
+figure figcaption h3 { font-size: 12px; margin: 0; padding: 12px 20px; position: relative; text-align: center; top: 50%; transform: translateY(-100%); z-index: 2; color: #000; display: inline-block; background: #fff; border-radius: 25px; transition: all 0.3s ease 0s;}
+figure:hover figcaption h3 {transform: translateY(-50%); transition: all 0.3s ease 0s;}
+
+
+/* ===================================
+    Demo page
+====================================== */
+
+.buy-theme {transition-timing-function: ease-in-out; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-duration: .2s; -moz-transition-duration: .2s; -webkit-transition-duration: .2s; -o-transition-duration: .2s; position:fixed; top:130px; right: -70px; background: #fff; z-index: 1000; -moz-box-shadow:0 0 10px rgba(0,0,0,0.2);-webkit-box-shadow:0 0 10px rgba(0,0,0,0.2);box-shadow:0 0 10px rgba(0,0,0,0.2); z-index: 10}
+.buy-theme i {font-size: 16px; vertical-align: middle; position: relative; top: -1px; color: #6f6f6f}
+.all-demo i {font-size: 15px; vertical-align: middle; position: relative; top: -1px; color: #6f6f6f}
+.buy-theme:hover, .all-demo:hover {transition-timing-function: ease-in-out; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-duration: .2s; -moz-transition-duration: .2s; -webkit-transition-duration: .2s; -o-transition-duration: .2s; right: 0px; background: #ff214f}
+.buy-theme span, .all-demo span {padding:0 9px; position: relative; top:0; opacity: 0}
+.buy-theme:hover span, .all-demo:hover span {opacity: 1; color: #fff}
+.buy-theme:hover i, .all-demo:hover i {color: #fff}
+.buy-theme a, .all-demo a { color: #232323; font-size: 10px; text-transform: uppercase; padding:2px 10px; display: block; text-decoration: none; font-weight: 500 }
+.all-demo {transition-timing-function: ease-in-out; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-duration: .2s; -moz-transition-duration: .2s; -webkit-transition-duration: .2s; -o-transition-duration: .2s; position:fixed; top:172px; right: -102px; background: #fff; z-index: 1000; -moz-box-shadow:0 0 10px rgba(0,0,0,0.2);-webkit-box-shadow:0 0 10px rgba(0,0,0,0.2);box-shadow:0 0 10px rgba(0,0,0,0.2); z-index: 10}
+
