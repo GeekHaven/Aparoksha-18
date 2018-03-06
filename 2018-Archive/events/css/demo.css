@@ -21,6 +21,19 @@
 	box-sizing: border-box;
 }
 
+.icon {
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	margin: 0 auto;
+	fill: currentColor;
+}
+
+.codrops-icon {
+	display: inline-block;
+	padding: 0 0.65em;
+}
+
 .clearfix:before,
 .clearfix:after {
 	display: table;
