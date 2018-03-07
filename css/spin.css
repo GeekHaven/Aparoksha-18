@@ -1,8 +1,13 @@
 #logo-spin {
     animation-name: spin;
     animation-duration: 5000ms;
-    animation-iteration-count: infinite;
     animation-timing-function: linear; 
+}
+
+#logo-spin:hover {
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-timing-function: linear;
 }
 
 @keyframes spin {
