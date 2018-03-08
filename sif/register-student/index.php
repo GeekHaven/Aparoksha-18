@@ -1,6 +1,6 @@
 <?php
 session_start();
-unset($_SESSION['profiles']);
+//unset($_SESSION['profiles']);
 ?>
 
 <!DOCTYPE html>
@@ -176,9 +176,9 @@ unset($_SESSION['profiles']);
                   </div>
               </div>
               <div class="form-group">
-                  <label for="company" class="col-sm-2 control-label">Resume Link<sup>*</sup></label>
+                  <label for="resumelink" class="col-sm-2 control-label">Resume Link<sup>*</sup></label>
                   <div class="col-sm-9">
-                    <input type="text" class="form-control" id="resume" name="resumelink" value="<?php if (isset($_SESSION['resumelink'])){echo $_SESSION['resumelink']; unset($_SESSION['resumelink']);} ?>" placeholder="Upload your resume on drive and share drive link" required>
+                    <input type="text" class="form-control" id="resumelink" name="resumelink" value="<?php if (isset($_SESSION['resumelink'])){echo $_SESSION['resumelink']; unset($_SESSION['resumelink']);} ?>" placeholder="Upload your resume on drive and share drive link" required>
                     <div class="help-block with-errors pull-right"></div>
                     <span class="form-control-feedback" aria-hidden="true"></span>
                   </div>
