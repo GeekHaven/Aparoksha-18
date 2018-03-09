@@ -353,7 +353,7 @@ textarea.input-bg {background-color: #f7f7f7; border-radius: 4px; border: 1px so
 /* opacity */
 .opacity-very-light {position: absolute; height: 100%; width: 100%; opacity: 0.2; top:0; left: 0;}
 .opacity-light {position: absolute; height: 100%; width: 100%; opacity: 0.3; top:0; left: 0;}
-.opacity-extra-medium {position: absolute; height: 100%; width: 100%; opacity: 0.5; top:0; left: 0;}
+.opacity-extra-medium {position: absolute; width: 100%; top:0; left: 0;}
 .opacity-medium {position: absolute; height: 100%; width: 100%; opacity: 0.75; top:0; left: 0;}
 .opacity-full {position: absolute; height: 100%; width: 100%; opacity: 0.8; top:0; left: 0;}
 .opacity-full-dark {position: absolute; height: 100%; width: 100%; opacity: 0.9; top:0; left: 0;}
