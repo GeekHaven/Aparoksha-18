@@ -5,8 +5,8 @@ session_start();
 //destroy facebook session if user clicks reset
 require_once __DIR__ . '/facebook/php-graph-sdk-5.6.1/src/Facebook/autoload.php';
 	$fb = new Facebook\Facebook([
-	  'app_id' => '790121091171242',
-	  'app_secret' => '3b7ade821b6126aedfe8dfff52c19ee4',
+	  'app_id' => '657518504639656',
+	  'app_secret' => '2babbc4daca70551497f7783c3f229b8',
 	  'default_graph_version' => 'v2.5',
 	]);
 

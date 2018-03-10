@@ -7,8 +7,8 @@ session_start();
 // require_once( 'db.php' );
  echo "Hello";
 $fb = new Facebook\Facebook([
-  'app_id' => '385488418535595',
-  'app_secret' => 'd2468a0678422cac607bb7b7bfc53246',
+  'app_id' => '657518504639656',
+  'app_secret' => '2babbc4daca70551497f7783c3f229b8',
   'default_graph_version' => 'v2.5',
 ]);  
   
