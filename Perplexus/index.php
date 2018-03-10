@@ -2,11 +2,11 @@
 	session_start();
 	require_once __DIR__ . '/facebook/php-graph-sdk-5.6.1/src/Facebook/autoload.php';
 	$fb = new Facebook\Facebook([
-	  'app_id' => '385488418535595',
-	  'app_secret' => 'd2468a0678422cac607bb7b7bfc53246',
+	  'app_id' => '790121091171242',
+	  'app_secret' => '3b7ade821b6126aedfe8dfff52c19ee4',
 	  'default_graph_version' => 'v2.5',
 	]);
-	$redirect = "http://effe.org.in/Perplexus/play.php";
+	$redirect = "https://aparoksha.org/Perplexus/play.php";
     $helper = $fb->getRedirectLoginHelper();
     
 	if (isset($_SESSION['facebook_access_token'] )) {
@@ -51,7 +51,7 @@ h1{font-family:Arial, Helvetica, sans-serif;color:#999999;}
     <div class = "col-lg-6">
       <div class="type-wrap center">
             <div id="typed-strings">
-                <span style="letter-spacing:3px">    Effervescence '17 welcomes you</span>
+                <span style="letter-spacing:3px">    Aparoksha 2018 welcomes you</span>
                 <p>     We are back with Perplexus 2.0 </p>
                 <p>     Let's get started. Login with facebook to  continue.</p>
             </div>
