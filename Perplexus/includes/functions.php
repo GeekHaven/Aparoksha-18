@@ -3,11 +3,24 @@ class Users {
 	public $table_name = 'users';
 	public static $con;
 	function __construct(){
+
+		require_once __DIR__ . '../vendor/autoload.php';
+
+		$dotenv = new Dotenv\Dotenv(__DIR__);
+		if (file_exists('.env')) {
+			$dotenv->load('.env');
+		}
+
+		$dbhost = getenv('DB_HOST');
+		$dbuser = getenv('DB_USER');
+		$dbpass = getenv('DB_PASS');
+		$dbn = getenv('DB_NAME');
+		
 		//database configuration
-		$dbServer = 'localhost'; //Define database server host
-		$dbUsername = 'ae5f7c0d_perp'; //Define database username
-		$dbPassword = 'perp@2016'; //Define database password
-		$dbName = 'ae5f7c0d_perplexus'; //Define database name
+		$dbServer = $dbhost; //Define database server host
+		$dbUsername = $dbuser; //Define database username
+		$dbPassword = $dbpass; //Define database password
+		$dbName = $dbn; //Define database name
 		
 		//connect databse
 		

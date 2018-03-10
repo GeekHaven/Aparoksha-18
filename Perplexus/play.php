@@ -169,7 +169,7 @@ if (isset($accessToken)) {
                             </ul>
                         </div>
                     </li>
-                    <li><a href="https://effe.org.in/Perplexus" class="collapsible-header waves-effect "><i class="fa fa-money"></i> Perplexus 2.0</i></a>
+                    <li><a href="https://aparoksha.org/Perplexus" class="collapsible-header waves-effect "><i class="fa fa-money"></i> Perplexus 2.0</i></a>
                     </li>
                     <li><a href="#contact" class="collapsible-header waves-effect"><i class="fa fa-pencil"></i> Contact</a>
                     </li>
