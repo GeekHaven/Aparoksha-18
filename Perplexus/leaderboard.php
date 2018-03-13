@@ -69,7 +69,7 @@ tr img{
 
             <ul class="nav navbar-nav pull-right">
                  <div class="breadcrumb-dn">
-                <p>Effe'17 :: Perplexus 2.0</p>
+                <p>Aparoksha'18 :: Perplexus 2.0</p>
             </div>
                 </ul>
         </nav>
@@ -112,16 +112,17 @@ tr img{
         $dbPassword = $dbpass; //Define database password
         $dbName = $dbn; //Define database name
 
-$conn = new mysqli($dbServer, $dbUsername, $dbPassword, $dbName);
-$rank=1;
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-$sql = "SELECT * FROM users ORDER BY score DESC, qtime;";
-$result = $conn->query($sql);
+        $conn = new PDO("mysql:host=$dbServer;dbname=$dbName", $dbUsername, $dbPassword);
+    
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
- while($row = mysqli_fetch_array($result))
+		$stmt = $conn->prepare("SELECT * FROM users ORDER BY score DESC, qtime;");
+		$stmt->execute();
+		$user = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$rank=1;
+
+ while($row =  $stmt->fetchAll(PDO::FETCH_ASSOC))
  {
  echo "<tr>";
   echo "<td>".$rank."</td>";
@@ -132,7 +133,7 @@ $result = $conn->query($sql);
   $rank++;
  }
 
-mysqli_close($conn);
+ $conn = null;
 
         ?>
 
