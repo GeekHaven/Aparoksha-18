@@ -1,5 +1,7 @@
 <?php
 session_start();
+require __DIR__.'/vendor/autoload.php';
+
 // include_once("config.php");
  include_once("includes/functions.php");
 //destroy facebook session if user clicks reset
@@ -68,9 +70,34 @@ if (isset($accessToken)) {
 }
 	if($fbuser){
 	    $user = new Users();
-	    $user_data = $user->checkUser('facebook',$user_profile['id'],$user_profile['first_name'],$user_profile['last_name'],$user_profile['email'],$user_profile['gender'],$user_profile['locale'],$picture['url']);
-		$data_query = mysqli_query($user->connect,"SELECT * from users WHERE oauth_uid = ".$fbuser->getId());
-		$data = mysqli_fetch_array($data_query);
+		$user_data = $user->checkUser('facebook',$user_profile['id'],$user_profile['first_name'],$user_profile['last_name'],$user_profile['email'],$user_profile['gender'],$user_profile['locale'],$picture['url']);
+	
+		$dotenv = new Dotenv\Dotenv(__DIR__);
+
+		if (file_exists(__DIR__.'.env')) {
+			$dotenv->load('.env');
+		}
+		
+		
+		$dbhost = getenv('DB_HOST');
+		$dbuser = getenv('DB_USER');
+		$dbpass = getenv('DB_PASS');
+		$dbn = getenv('DB_NAME');
+		
+		//database configuration
+		$dbServer = $dbhost; //Define database server host
+		$dbUsername = $dbuser; //Define database username
+		$dbPassword = $dbpass; //Define database password
+		$dbName = $dbn; //Define database name
+		$table_name = 'users';
+
+		$conn = new PDO("mysql:host=$dbServer;dbname=$dbName", $dbUsername, $dbPassword);
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		
+		$stmt = $conn->prepare("SELECT * from users WHERE oauth_uid = ".$fbuser->getId());
+		$stmt->execute();
+		$data = $stmt->fetch(PDO::FETCH_ASSOC);
+
 		$score = 0;
 		$i = 1;
 		while($data["q".$i] != 0 && $i <= 30){
@@ -80,20 +107,23 @@ if (isset($accessToken)) {
 		if($score>=30){
 			header("Location: leaderboard.php");
 		}
-		$ques_query = mysqli_query($user->connect,"SELECT * FROM questions WHERE ques = ".($score + 1));
-         $ques_result = mysqli_fetch_array($ques_query);
-         $content = $ques_result['content'];
-		 $output = "";
+		$ques_query = $conn->prepare("SELECT * FROM questions WHERE ques = ".($score + 1));
+		$ques_query->execute();
+		$ques_result = $ques_query->fetch(PDO::FETCH_ASSOC);
+        $content = $ques_result['content'];
+		$output = "";
 		
 		if(isset($_POST['submit']) && $score<=30){
 		$ques = $score + 1;
 		 $answer = $_POST['answer'];
 		 //echo "hdfuhd";
-		 $query = mysqli_query($user->connect,"SELECT * FROM questions WHERE ques = ".$ques);
-		 $result = mysqli_fetch_array($query);
+		 $query = $conn->prepare("SELECT * FROM questions WHERE ques = ".$ques);
+		 $query->execute();
+		 $result = $query->fetchAll(PDO::FETCH_ASSOC);
 		 $qans = $result['answer'];
 		 if(md5($answer) == $qans){
-		 	if(mysqli_query($user->connect,"UPDATE users SET q".$ques." = 1, score = ".$ques.", qtime = now() WHERE oauth_uid = ".$user_profile['id'])){
+			$query1 = $conn->prepare("UPDATE users SET q".$ques." = 1, score = ".$ques.", qtime = now() WHERE oauth_uid = ".$user_profile['id']);
+		 	if($query1->execute()){
 	
 		 		header("Location: play.php");
 		 	} else {
@@ -123,7 +153,7 @@ if (isset($accessToken)) {
     
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Effe'17 :: Perplexus 2.0</title>
+    <title>Aparoksha'18 | Perplexus 2.0</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
 
@@ -150,7 +180,7 @@ if (isset($accessToken)) {
             <li>
                 <div class="logo-wrapper waves-light sn-avatar-wrapper">
                     <a href="#">
-                        <img src=<?php echo '"'.$image.'"' ?> class="img-circle">
+                        <img src=<?php echo '"'.$picture['url'].'"' ?> class="img-circle">
                     </a>
                 </div>
             </li>

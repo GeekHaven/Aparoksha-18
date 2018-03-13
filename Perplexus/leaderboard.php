@@ -92,11 +92,27 @@ tr img{
         <tbody class = "table-hover">
         <?php
 
-$servername = "localhost";
-$username = "ae5f7c0d_perp";
-$password = "perp@2016";
-$dbname = "ae5f7c0d_perplexus";
-$conn = new mysqli($servername, $username, $password, $dbname);
+        require __DIR__.'/vendor/autoload.php';
+
+        $dotenv = new Dotenv\Dotenv(__DIR__);
+
+        if (file_exists(__DIR__.'.env')) {
+            $dotenv->load('.env');
+        }
+
+
+        $dbhost = getenv('DB_HOST');
+        $dbuser = getenv('DB_USER');
+        $dbpass = getenv('DB_PASS');
+        $dbn = getenv('DB_NAME');
+
+        //database configuration
+        $dbServer = $dbhost; //Define database server host
+        $dbUsername = $dbuser; //Define database username
+        $dbPassword = $dbpass; //Define database password
+        $dbName = $dbn; //Define database name
+
+$conn = new mysqli($dbServer, $dbUsername, $dbPassword, $dbName);
 $rank=1;
 // Check connection
 if ($conn->connect_error) {

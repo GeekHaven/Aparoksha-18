@@ -1,16 +1,20 @@
 <?php
+
+require '/var/www/html/Perplexus/vendor/autoload.php';
+
+
 class Users {
 	public $table_name = 'users';
-	public static $con;
+	public static $conn;
 	function __construct(){
 
-		require_once __DIR__ . '../vendor/autoload.php';
-
 		$dotenv = new Dotenv\Dotenv(__DIR__);
-		if (file_exists('.env')) {
+
+		if (file_exists('/var/www/html/Perplexus/includes/.env')) {
 			$dotenv->load('.env');
 		}
-
+		
+		
 		$dbhost = getenv('DB_HOST');
 		$dbuser = getenv('DB_USER');
 		$dbpass = getenv('DB_PASS');
@@ -21,28 +25,41 @@ class Users {
 		$dbUsername = $dbuser; //Define database username
 		$dbPassword = $dbpass; //Define database password
 		$dbName = $dbn; //Define database name
-		
-		//connect databse
-		
-		$con = mysqli_connect($dbServer,$dbUsername,$dbPassword,$dbName);
-		if(mysqli_connect_errno()){
-			die("Failed to connect with MySQL: ".mysqli_connect_error());
-		}else{
-			$this->connect = $con;
-		}
+
+		$conn = new PDO("mysql:host=$dbServer;dbname=$dbName", $dbUsername, $dbPassword);
+    
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	}
 	
 	function checkUser($oauth_provider,$oauth_uid,$fname,$lname,$email,$gender,$locale,$picture){
+		//database configuration
+		$dbServer = $dbhost; //Define database server host
+		$dbUsername = $dbuser; //Define database username
+		$dbPassword = $dbpass; //Define database password
+		$dbName = $dbn; //Define database name
+		$table_name = 'users';
 		
-		$prev_query = mysqli_query($this->connect,"SELECT * FROM ".$this->table_name." WHERE oauth_provider = '".$oauth_provider."' AND oauth_uid = '".$oauth_uid."'") or die(mysql_error($this->connect));
-		if(mysqli_num_rows($prev_query)>0){
-			$update = mysqli_query($this->connect,"UPDATE $this->table_name SET oauth_provider = '".$oauth_provider."', oauth_uid = '".$oauth_uid."', fname = '".$fname."', lname = '".$lname."', email = '".$email."', gender = '".$gender."', locale = '".$locale."', picture = '".$picture."', modified = '".date("Y-m-d H:i:s")."' WHERE oauth_provider = '".$oauth_provider."' AND oauth_uid = '".$oauth_uid."'");
-		}else{
-			$insert = mysqli_query($this->connect,"INSERT INTO $this->table_name SET oauth_provider = '".$oauth_provider."', oauth_uid = '".$oauth_uid."', fname = '".$fname."', lname = '".$lname."', email = '".$email."', gender = '".$gender."', locale = '".$locale."', picture = '".$picture."', created = '".date("Y-m-d H:i:s")."', modified = '".date("Y-m-d H:i:s")."'");
+		$conn = new PDO("mysql:host=$dbServer;dbname=$dbName", $dbUsername, $dbPassword);
+    
+		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+		$stmt = $conn->prepare("SELECT * FROM $table_name WHERE oauth_provider = :oauth_provider AND oauth_uid = :oauth_uid");
+		$stmt->execute(['oauth_provider' => $oauth_provider, 'oauth_uid' => $oauth_uid]);
+		$user = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		
+		if($user != null){
+			$stmt1 = $conn->prepare("UPDATE $table_name SET oauth_provider = '".$oauth_provider."', oauth_uid = '".$oauth_uid."', fname = '".$fname."', lname = '".$lname."', email = '".$email."', gender = '".$gender."', locale = '".$locale."', picture = '".$picture."', modified = '".date("Y-m-d H:i:s")."' WHERE oauth_provider = '".$oauth_provider."' AND oauth_uid = '".$oauth_uid."'");
+			$stmt1->execute();
 		}
-		
-		$query = mysqli_query($this->connect,"SELECT * FROM $this->table_name WHERE oauth_provider = '".$oauth_provider."' AND oauth_uid = '".$oauth_uid."'");
-		$result = mysqli_fetch_array($query);
+		else{
+			$stmt1 = $conn->prepare("INSERT INTO $table_name SET oauth_provider = '".$oauth_provider."', oauth_uid = '".$oauth_uid."', fname = '".$fname."', lname = '".$lname."', email = '".$email."', gender = '".$gender."', locale = '".$locale."', picture = '".$picture."', created = '".date("Y-m-d H:i:s")."', modified = '".date("Y-m-d H:i:s")."'");
+			$stmt1->execute();
+		}
+
+		$stmt2 = $conn->prepare("SELECT * FROM $table_name WHERE oauth_provider = :oauth_provider AND oauth_uid = :oauth_uid");
+		$stmt2->execute(['oauth_provider' => $oauth_provider, 'oauth_uid' => $oauth_uid]);
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+
 		return $result;
 	}
 }
