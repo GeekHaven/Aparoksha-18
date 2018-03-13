@@ -70,7 +70,7 @@ if (isset($accessToken)) {
 }
 	if($fbuser){
 	    $user = new Users();
-		$user_data = $user->checkUser('facebook',$user_profile['id'],$user_profile['first_name'],$user_profile['last_name'],$user_profile['email'],$user_profile['gender'],$user_profile['locale'],$picture['url']);
+		$user_data = $user->checkUser('facebook',$user_profile['id'],$user_profile['first_name'],$user_profile['last_name'],$user_profile['email'],$picture['url']);
 	
 		$dotenv = new Dotenv\Dotenv(__DIR__);
 

@@ -31,7 +31,20 @@ class Users {
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	}
 	
-	function checkUser($oauth_provider,$oauth_uid,$fname,$lname,$email,$gender,$locale,$picture){
+	function checkUser($oauth_provider,$oauth_uid,$fname,$lname,$email,$picture){
+
+		$dotenv = new Dotenv\Dotenv(__DIR__);
+
+		if (file_exists('/var/www/html/Perplexus/includes/.env')) {
+			$dotenv->load('.env');
+		}
+		
+		
+		$dbhost = getenv('DB_HOST');
+		$dbuser = getenv('DB_USER');
+		$dbpass = getenv('DB_PASS');
+		$dbn = getenv('DB_NAME');
+		
 		//database configuration
 		$dbServer = $dbhost; //Define database server host
 		$dbUsername = $dbuser; //Define database username
@@ -46,6 +59,9 @@ class Users {
 		$stmt = $conn->prepare("SELECT * FROM $table_name WHERE oauth_provider = :oauth_provider AND oauth_uid = :oauth_uid");
 		$stmt->execute(['oauth_provider' => $oauth_provider, 'oauth_uid' => $oauth_uid]);
 		$user = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		$gender = "";
+		$locale = "";
 		
 		if($user != null){
 			$stmt1 = $conn->prepare("UPDATE $table_name SET oauth_provider = '".$oauth_provider."', oauth_uid = '".$oauth_uid."', fname = '".$fname."', lname = '".$lname."', email = '".$email."', gender = '".$gender."', locale = '".$locale."', picture = '".$picture."', modified = '".date("Y-m-d H:i:s")."' WHERE oauth_provider = '".$oauth_provider."' AND oauth_uid = '".$oauth_uid."'");
