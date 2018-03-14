@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Perplexus 17</title>
+    <title>Perplexus| Aparoksha'18</title>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
@@ -60,7 +60,7 @@ tr img{
 
            
             <div class="breadcrumb-dn" style="margin-left: 10px;">
-                <a href="index.php"><h5>PERPLEXUS 2.0</h5></a>
+                <a href="index.php"><h5>PERPLEXUS</h5></a>
             </div>
             <div class="breadcrumb-dn" style="margin-left: 20px;">
                 <a href="https://www.facebook.com/events/1992044107749486/?active_tab=discussion" target="_blank"><h5 style="color:red;">HINTS AND GIVEAWAYS ARE BEING POSTED HERE.</h5></a>
@@ -69,7 +69,7 @@ tr img{
 
             <ul class="nav navbar-nav pull-right">
                  <div class="breadcrumb-dn">
-                <p>Aparoksha'18 :: Perplexus 2.0</p>
+                <p>Aparoksha'18 | Perplexus </p>
             </div>
                 </ul>
         </nav>

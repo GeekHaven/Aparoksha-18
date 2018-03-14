@@ -52,7 +52,7 @@ h1{font-family:Arial, Helvetica, sans-serif;color:#999999;}
       <div class="type-wrap center">
             <div id="typed-strings">
                 <span style="letter-spacing:3px">    Aparoksha 2018 welcomes you</span>
-                <p>     We are back with Perplexus 2.0 </p>
+                <p>     We are back with Perplexus </p>
                 <p>Let's get started. Login with facebook to  continue.</p>
             </div>
             <span id="typed" style="white-space:pre;"></span>

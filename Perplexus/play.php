@@ -156,7 +156,7 @@ if (isset($accessToken)) {
     
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Aparoksha'18 | Perplexus 2.0</title>
+    <title>Aparoksha'18 | Perplexus</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
 
@@ -202,7 +202,7 @@ if (isset($accessToken)) {
                             </ul>
                         </div>
                     </li>
-                    <li><a href="https://aparoksha.org/Perplexus" class="collapsible-header waves-effect "><i class="fa fa-money"></i> Perplexus 2.0</i></a>
+                    <li><a href="https://www.facebook.com/events/575909092763183/" class="collapsible-header waves-effect "><i class="fa fa-money"></i> Perplexus 2.0</i></a>
                     </li>
                     <li><a href="#contact" class="collapsible-header waves-effect"><i class="fa fa-pencil"></i> Contact</a>
                     </li>
@@ -307,8 +307,9 @@ if (isset($accessToken)) {
         <h2>CONTACT</h2>
         <div class="content" >
             <ol>
-            <li>VikaSh - <a href="https://www.facebook.com/TheAWENEST">Contact on Facebook</a></li>
-            <li>Abhishek - +91 8603111470 - <a href = "https://www.facebook.com/abhishekdnandan">Contact on Facebook</a></li>
+            <li>Siddhant Srivastava <a href="https://www.facebook.com/siddhant.srivastav.3">Contact on Facebook</a></li>
+            <li>Ravi Chandra <a href = "https://www.facebook.com/ravi.charan.5680">Contact on Facebook</a></li>
+			<li>Abhishek D Nandan <a href = "https://www.facebook.com/abhishekdnandan">Contact on Facebook</a></li>
             
             </ol>
         </div>
