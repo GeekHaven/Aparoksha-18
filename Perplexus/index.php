@@ -37,7 +37,7 @@
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<title>Perplexus::Effervescence '17</title>
+<title>Perplexus| Aparoksha 18</title>
 <style type="text/css">
 h1{font-family:Arial, Helvetica, sans-serif;color:#999999;}
 </style>
@@ -53,7 +53,7 @@ h1{font-family:Arial, Helvetica, sans-serif;color:#999999;}
             <div id="typed-strings">
                 <span style="letter-spacing:3px">    Aparoksha 2018 welcomes you</span>
                 <p>     We are back with Perplexus 2.0 </p>
-                <p>     Let's get started. Login with facebook to  continue.</p>
+                <p>Let's get started. Login with facebook to  continue.</p>
             </div>
             <span id="typed" style="white-space:pre;"></span>
         </div>

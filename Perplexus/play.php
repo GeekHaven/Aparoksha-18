@@ -117,9 +117,12 @@ if (isset($accessToken)) {
 		$ques = $score + 1;
 		 $answer = $_POST['answer'];
 		 //echo "hdfuhd";
+		 echo $ques;
 		 $query = $conn->prepare("SELECT * FROM questions WHERE ques = ".$ques);
 		 $query->execute();
-		 $result = $query->fetchAll(PDO::FETCH_ASSOC);
+		 $result = $query->fetch(PDO::FETCH_ASSOC);
+		 echo $answer;
+		 echo $result;
 		 $qans = $result['answer'];
 		 if(md5($answer) == $qans){
 			$query1 = $conn->prepare("UPDATE users SET q".$ques." = 1, score = ".$ques.", qtime = now() WHERE oauth_uid = ".$user_profile['id']);
