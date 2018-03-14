@@ -220,7 +220,7 @@ if (isset($accessToken)) {
         <nav class="navbar navbar-fixed-top scrolling-navbar double-nav">
 
             <div class="pull-left">
-                <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i><span style="margin-left: 10px;">Perplexus 2.0</span></a>
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i><span style="margin-left: 10px;">Perplexus</span></a>
 
             </div>
 
