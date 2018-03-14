@@ -202,7 +202,7 @@ if (isset($accessToken)) {
                             </ul>
                         </div>
                     </li>
-                    <li><a href="https://www.facebook.com/events/575909092763183/" class="collapsible-header waves-effect "><i class="fa fa-money"></i> Perplexus 2.0</i></a>
+                    <li><a href="https://www.facebook.com/events/575909092763183/" class="collapsible-header waves-effect "><i class="fa fa-money"></i> Perplexus 3.0</i></a>
                     </li>
                     <li><a href="#contact" class="collapsible-header waves-effect"><i class="fa fa-pencil"></i> Contact</a>
                     </li>
