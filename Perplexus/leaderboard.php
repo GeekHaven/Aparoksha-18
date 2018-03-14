@@ -92,37 +92,25 @@ tr img{
         <tbody class = "table-hover">
         <?php
 
-        require __DIR__.'/vendor/autoload.php';
-
-        $dotenv = new Dotenv\Dotenv(__DIR__);
-
-        if (file_exists(__DIR__.'.env')) {
-            $dotenv->load('.env');
-        }
-
-
-        $dbhost = getenv('DB_HOST');
-        $dbuser = getenv('DB_USER');
-        $dbpass = getenv('DB_PASS');
-        $dbn = getenv('DB_NAME');
 
         //database configuration
-        $dbServer = $dbhost; //Define database server host
-        $dbUsername = $dbuser; //Define database username
-        $dbPassword = $dbpass; //Define database password
-        $dbName = $dbn; //Define database name
+        $dbServer = "localhost"; //Define database server host
+        $dbUsername = "root"; //Define database username
+        $dbPassword = ""; //Define database password
+        $dbName = "perplexus"; //Define database name
 
         $conn = new PDO("mysql:host=$dbServer;dbname=$dbName", $dbUsername, $dbPassword);
     
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-		$stmt = $conn->prepare("SELECT * FROM users ORDER BY score DESC, qtime;");
+		$stmt = $conn->prepare("SELECT * FROM users ORDER BY score DESC, qtime");
 		$stmt->execute();
-		$user = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 $rank=1;
 
- while($row =  $stmt->fetchAll(PDO::FETCH_ASSOC))
+$rows =  $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+foreach( $rows as $row)
  {
  echo "<tr>";
   echo "<td>".$rank."</td>";
