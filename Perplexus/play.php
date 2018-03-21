@@ -202,7 +202,7 @@ if (isset($accessToken)) {
                             </ul>
                         </div>
                     </li>
-                    <li><a href="https://www.facebook.com/events/575909092763183/" class="collapsible-header waves-effect "><i class="fa fa-money"></i> Perplexus 2.0</i></a>
+                    <li><a href="https://www.facebook.com/events/575909092763183/" class="collapsible-header waves-effect "><i class="fa fa-money"></i> Perplexus 3.0</i></a>
                     </li>
                     <li><a href="#contact" class="collapsible-header waves-effect"><i class="fa fa-pencil"></i> Contact</a>
                     </li>
@@ -220,7 +220,7 @@ if (isset($accessToken)) {
         <nav class="navbar navbar-fixed-top scrolling-navbar double-nav">
 
             <div class="pull-left">
-                <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i><span style="margin-left: 10px;">Perplexus 2.0</span></a>
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i><span style="margin-left: 10px;">Perplexus</span></a>
 
             </div>
 
