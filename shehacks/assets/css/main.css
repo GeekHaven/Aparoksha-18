@@ -4096,3 +4096,11 @@
     font-size: 1rem;
     margin: .5rem 0 0;
 }
+
+.dark-text {
+	color: #333333;
+}
+
+.dark-background {
+	background-image: linear-gradient(to bottom right, #212121 0%, black 100%);
+}
